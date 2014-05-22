@@ -1,0 +1,27 @@
+/*	Filter
+--------------------------------------*/
+ul.isotope-acoc-filter,
+ul.masonry-acoc-filter{ margin:0; padding:0; list-style-type:none !important; margin-bottom:20px !important; display:block; overflow:hidden; }
+ul.isotope-acoc-filter li,
+ul.masonry-acoc-filter li{ 
+	margin:0; 
+	padding:0; 
+	list-style-type:none !important; 
+	float:left; 
+	padding:4px 8px;
+	background:#06C; 
+	color:#FFF !important; 
+	margin-right:3px; 
+	cursor:pointer; 
+}
+ul.isotope-acoc-filter li.active,
+ul.masonry-acoc-filter li.active{ background:#333; }
+
+
+/*	pagenav
+--------------------------------------*/
+.pagenav-acoc {clear: both;}
+.pagenav-acoc span,
+.pagenav-acoc a {border: 1px solid #EEEEEE; padding: 5px 10px; text-decoration:none;}
+.pagenav-acoc a:hover {border: 1px solid #DDDDDD;}
+.pagenav-acoc span.current {background: #FAFAFA; color: #444444; font-weight: 600;}
