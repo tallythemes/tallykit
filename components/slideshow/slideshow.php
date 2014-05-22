@@ -12,7 +12,6 @@
 // Exit if accessed directly
 if ( !defined( 'ABSPATH' ) ) exit;
 
-echo 'saaaa';
 
 
 /*************************** POST TYPE **************************

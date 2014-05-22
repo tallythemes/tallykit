@@ -25,3 +25,8 @@ define('TALLYKIT', 'TallyThemes' );
 define('TALLYKIT_URL', site_url(str_replace( $path_abs, '', $path_dir )) );
 define('TALLYKIT_DRI', $path_dir );
 define('TALLYKIT_VERSION', 1.0 );
+
+include('includes/custom-functions.php');
+include('acoc/acoc.php');
+
+tallykit_components_loader();
