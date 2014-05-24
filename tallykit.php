@@ -21,12 +21,24 @@ TALLYKIT
 $path_dir = trailingslashit(str_replace('\\','/',dirname(__FILE__)));
 $path_abs = trailingslashit(str_replace('\\','/',ABSPATH));
 
-define('TALLYKIT', 'TallyThemes' );
+define('TALLYKIT', 'TallyKit' );
 define('TALLYKIT_URL', site_url(str_replace( $path_abs, '', $path_dir )) );
 define('TALLYKIT_DRI', $path_dir );
 define('TALLYKIT_VERSION', 1.0 );
 
-include('includes/custom-functions.php');
-include('acoc/acoc.php');
+define('TALLYKIT_COMPONENTS_URL', TALLYKIT_URL.'components/' );
+define('TALLYKIT_COMPONENTS_DRI', TALLYKIT_DRI.'components/' );
 
-tallykit_components_loader();
+define('TALLYKIT_THEME_URL', get_template_directory_uri().'/tallykit/' );
+define('TALLYKIT_THEME_DRI', get_template_directory().'/tallykit/' );
+
+define('TALLYKIT_CHILD_URL', get_stylesheet_directory_uri().'/tallykit/' );
+define('TALLYKIT_CHILD_DRI', get_stylesheet_directory().'/tallykit/' );
+
+
+include('includes/custom-functions.php');
+include('includes/acoc-loader.php');
+
+if ( function_exists( 'acoc_forceLoadFirst' ) ) {
+	tallykit_components_loader();
+}

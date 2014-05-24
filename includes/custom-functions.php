@@ -15,7 +15,6 @@ function tallykit_components_loader(){
 				
 				if(file_exists($file_path) && file_exists($active_file_path)){ include($file_path); }
 								
-				//echo $name."\n";
 			}
 		}
 	}
