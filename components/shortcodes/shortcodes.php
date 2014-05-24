@@ -69,6 +69,9 @@ function tallykit_shortcodes_script_loader(){
 	wp_enqueue_script( 'google-map');
 	wp_enqueue_script( 'jquery-gomap');
 	
+	wp_enqueue_script( 'tallykit-shortcodes', TALLYKIT_COMPONENTS_URL.'shortcodes/assets/js/shortcodes.js', array('jquery'), '1.0', true );
+	wp_enqueue_style( 'tallykit-shortcodes', TALLYKIT_COMPONENTS_URL.'shortcodes/assets/css/shortcodes.css', '', '1.0' );
+	
 }
 
  
@@ -250,7 +253,7 @@ function tallykit_shortcodes_sc_heading(){
  *
  * @uses class acoc_tinymce_register  
  */
-   
+   new acoc_tinymce_register;
  
  
  
