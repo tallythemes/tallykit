@@ -577,8 +577,26 @@ function tallykit_shortcodes_sc_tab_item( $atts, $content = null ) {
 
 /*---------|- callout -|-------------------------------------*/
 add_shortcode('tk_callout', 'tallykit_shortcodes_sc_callout');
-function tallykit_shortcodes_sc_callout(){
+function tallykit_shortcodes_sc_callout( $atts, $content = null ) {
+	extract( shortcode_atts( array(
+		'title'	=> 'This is a Simple Callout Title',
+		'class'	=> '',
+		'button_text'	=> 'Button Text',
+		'button_link'	=> '#',
+		'button_link_target'	=> '',
+		'style'	=> 'button-right', //center, button-left, button-right
+		'border'	=> 'left', //top, left, right, bottom, none
+		'background'	=> 'no', //yes, no
+	), $atts ) );
 	
+	$output = '<div class="tallykit-shortcode-callout '.$class.'>';
+		$output = '<div class="tallykit-shortcode-callout-inner>';
+			if($title){ $output .= '<h3>'.$title.'</h3>'; }
+			$html .= '<div class="con">'.do_shortcode($content).'</div>';
+		$output .= '</div>';
+	$output .= '</div>';
+	
+	return $output;
 }
 
 
@@ -599,32 +617,67 @@ function tallykit_shortcodes_sc_toggle( $atts, $content = null ) {
 
 /*---------|- tooltip -|-------------------------------------*/
 add_shortcode('tk_tooltip', 'tallykit_shortcodes_sc_tooltip');
-function tallykit_shortcodes_sc_tooltip(){
-	
+function tallykit_shortcodes_sc_tooltip($atts, $content = null) {
+	extract(shortcode_atts(array(
+		'title' => 'none',
+	), $atts));
+
+	$html = '<span class="tallykit-shortcode-tooltip" title="'.$title.'">';
+		$html .= do_shortcode($content);
+	$html .= '</span>';
+
+	return $html;
 }
 
 
 
 /*---------|- video -|-------------------------------------*/
 add_shortcode('tk_video', 'tallykit_shortcodes_sc_video');
-function tallykit_shortcodes_sc_video(){
+function tallykit_shortcodes_sc_video($atts, $content = null) {
+	extract(shortcode_atts(array(
+		'w' => '',
+		'h' => '',
+		'src' => '',
+		'class' => '',
+		'html5' => 'no',
+		'poster' => '',
+	), $atts));
 	
+	$output = '<div class="tallykit-shortcode-video '.$class.' tallykit-shortcode-video-html5-'.$html5.'">';
+		if($html5 == 'yes'){
+			$output .= do_shortcode('[video src="'.$src.'" poster="'.$poster.'"]');
+		}else{
+			$output .= wp_oembed_get($src, array('width'=>$w, 'height'=>$h));
+		}
+	$output .= '</div>';
+	
+	if($src != ''){ return $output; }
 }
 
 
 
 /*---------|- audio -|-------------------------------------*/
 add_shortcode('tk_audio', 'tallykit_shortcodes_sc_audio');
-function tallykit_shortcodes_sc_audio(){
+function tallykit_shortcodes_sc_audio($atts, $content = null) {
+	extract(shortcode_atts(array(
+		'w' => '',
+		'h' => '',
+		'src' => '',
+		'class' => '',
+		'html5' => 'no',
+		'poster' => '',
+	), $atts));
 	
-}
-
-
-
-/*---------|- heading -|-------------------------------------*/
-add_shortcode('tk_heading', 'tallykit_shortcodes_sc_heading');
-function tallykit_shortcodes_sc_heading(){
+	$output = '<div class="tallykit-shortcode-audio '.$class.' tallykit-shortcode-audio-html5-'.$html5.'">';
+		if($html5 == 'yes'){
+			if($poster != ''){$output .= '<img src="'.$poster.'" alt="'.$src.'">';}
+			$output .= do_shortcode('[audio src="'.$src.'"]');
+		}else{
+			$output .= wp_oembed_get($src, array('width'=>$w, 'height'=>$h));
+		}
+	$output .= '</div>';
 	
+	if($src != ''){ return $output; }
 }
 
 

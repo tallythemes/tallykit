@@ -18,6 +18,7 @@ jQuery(document).ready(function($){
 	});
 	
 	$("h3.tallykit-shortcode-toggle-trigger").click(function(){$(this).toggleClass("active").next().slideToggle("fast");return false;});
+	$('.tallykit-shortcode-tooltip').tooltip({track: true});
 	
 	$("a[rel^='prettyPhoto']").prettyPhoto({
 		animation_speed: 'fast', /* fast/slow/normal */

@@ -343,3 +343,52 @@
 
 .tallykit-shortcode-toggle .tallykit-shortcode-toggle-trigger.active:after, .tallykit-shortcode-toggle .tallykit-shortcode-toggle-trigger.active:hover:after{ content: '\f460'; }
 .tallykit-shortcode-toggle .tallykit-shortcode-toggle-container { display: none; overflow: hidden; padding: 15px; border: 1px solid #ddd; border-top: 0px; }
+
+
+
+/*---------------------------------------------
+     ToolTip
+--------------------------------------------- */
+.ui-tooltip {
+	padding: 8px;
+	position: absolute;
+	z-index: 9999;
+	max-width: 300px;
+	-webkit-box-shadow: 0 0 5px #aaa;
+	box-shadow: 0 0 5px #aaa;
+	background:#FFF;
+}
+body .ui-tooltip {
+	border-width: 2px;
+}
+
+
+/*---------------------------------------------
+     Video
+--------------------------------------------- */
+.tallykit-shortcode-video{ margin-bottom:20px; }
+
+.tallykit-shortcode-video-html5-no{ position: relative; padding-bottom: 56.25%; /* 16:9 */ padding-top: 25px;	height: 0; }
+.tallykit-shortcode-video-html5-no iframe{ position: absolute; top: 0;left: 0;width: 100%;height: 100%; }
+
+.tallykit-shortcode-video-html5-yes .wp-video,
+.tallykit-shortcode-video-html5-yes .wp-video .wp-video-shortcode,
+.tallykit-shortcode-video-html5-yes .wp-video .wp-video-shortcode .mejs-poster,
+.tallykit-shortcode-video-html5-yes .wp-video .wp-video-shortcode .mejs-poster .mejs-overlay.mejs-layer,
+.tallykit-shortcode-video-html5-yes .wp-video .wp-video-shortcode .mejs-overlay.mejs-layer.mejs-overlay-play{ width:100% !important; }
+
+
+/*---------------------------------------------
+     audio
+--------------------------------------------- */
+.tallykit-shortcode-audio{ margin-bottom:20px; }
+.tallykit-shortcode-audio img{ margin-bottom:-10px; }
+
+.tallykit-shortcode-audio-html5-no{ position: relative; padding-bottom: 56.25%; /* 16:9 */ padding-top: 25px;	height: 0; }
+.tallykit-shortcode-audio-html5-no iframe{ position: absolute; top: 0;left: 0;width: 100%;height: 100%; }
+
+.tallykit-shortcode-audio-html5-yes .wp-audio,
+.tallykit-shortcode-audio-html5-yes .wp-audio .wp-audio-shortcode,
+.tallykit-shortcode-audio-html5-yes .wp-audio .wp-audio-shortcode .mejs-poster,
+.tallykit-shortcode-audio-html5-yes .wp-audio .wp-audio-shortcode .mejs-poster .mejs-overlay.mejs-layer,
+.tallykit-shortcode-audio-html5-yes .wp-audio .wp-audio-shortcode .mejs-overlay.mejs-layer.mejs-overlay-play{ width:100% !important; }
