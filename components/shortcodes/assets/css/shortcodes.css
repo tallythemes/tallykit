@@ -1,0 +1,345 @@
+/*---------------------------------------------
+     Accordion
+--------------------------------------------- */
+.tallykit-shortcode-accordion h3.tallykit-shortcode-accordion-trigger { display: block; color: #555; display: block; padding: 15px; border: 1px solid #ddd; background: #f9f9f9 ; outline: 0; text-transform: none; letter-spacing: normal; font-weight: normal; font-size: 1em; line-height: 1.5em; margin: 10px 0 0 !important; cursor: pointer; }
+.tallykit-shortcode-accordion h3.tallykit-shortcode-accordion-trigger:after{ font-family: dashicons; content: '\f132'; float: left; padding-top: 2px; }
+.tallykit-shortcode-accordion h3.tallykit-shortcode-accordion-trigger a { color: #555; text-decoration: none !important; }
+.tallykit-shortcode-accordion .ui-state-focus { outline: none }
+.tallykit-shortcode-accordion .tallykit-shortcode-accordion-trigger:hover { background-color: #eee; text-decoration: none; }
+.tallykit-shortcode-accordion .tallykit-shortcode-accordion-trigger.ui-state-active { background-color: #eee; text-decoration: none; }
+.tallykit-shortcode-accordion .tallykit-shortcode-accordion-trigger.ui-state-active:after{ content: '\f460'; }
+.tallykit-shortcode-accordion .tallykit-shortcode-accordion-trigger.ui-state-active a { color: #000 }
+.tallykit-shortcode-accordion .ui-accordion-content { background-color: #fff; padding: 15px; border: 1px solid #ddd; border-top: 0px; }
+.tallykit-shortcode-accordion .ui-accordion-content p:last-child { margin: 0px }
+.tallykit-shortcode-accordion .ui-icon { margin-right: 7px }
+
+
+
+/*---------------------------------------------
+     alert-messages
+--------------------------------------------- */
+.tallykit-shortcode-alert {
+  position:relative;
+  padding: 8px 35px 8px 14px;
+  margin-bottom: 20px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  background-color: #fcf8e3;
+  border: 1px solid #fbeed5;
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+}
+.tallykit-shortcode-alert,
+.tallykit-shortcode-alert h4 { color: #c09853; }
+.tallykit-shortcode-alert h4.tallykit-shortcode-alert-heading { margin: 0; }
+.tallykit-shortcode-alert-success { color: #468847;background-color: #dff0d8;border-color: #d6e9c6; }
+.tallykit-shortcode-alert-success h4 {color: #468847;}
+.tallykit-shortcode-alert-danger,
+.tallykit-shortcode-alert-error { color: #b94a48;background-color: #f2dede;border-color: #eed3d7; }
+.tallykit-shortcode-alert-danger h4,
+.tallykit-shortcode-alert-error h4 { color: #b94a48; }
+.tallykit-shortcode-alert-info { color: #3a87ad; background-color: #d9edf7;border-color: #bce8f1; }
+.tallykit-shortcode-alert-info h4 { color: #3a87ad;}
+.tallykit-shortcode-alert-block { padding-top: 14px;padding-bottom: 14px; }
+.tallykit-shortcode-alert-block > p,
+.tallykit-shortcode-alert-block > ul { margin-bottom: 0; }
+.tallykit-shortcode-alert-block p + p { margin-top: 5px; }
+.tallykit-shortcode-alert-close { font-size: 20px;font-weight: bold;line-height: 20px;color: #000;text-shadow: 0 1px 0 #fff;opacity: .2;filter: alpha(opacity=20);position:absolute;line-height: 20px;right:5px;top:6px; cursor:pointer; }
+
+
+
+/*---------------------------------------------
+     Button
+--------------------------------------------- */
+.tallykit-shortcode-button{  
+	display:inline-block;
+	padding:10px 20px;
+	font-size:inherit;
+	color:#FFF !important;
+	text-shadow:0px 1px 2px rgba(0, 0, 0, 0.3);
+	background:#d44646;
+	margin-bottom:10px; 
+	margin-right:10px;
+	
+	transition: 1s;
+	-webkit-transition: 1s; /* Safari */
+	
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+.tallykit-shortcode-button:hover{ color:#FFF; text-decoration:none; opacity:0.7; }
+.tallykit-shortcode-button.tallykit-shortcode-button-full-width{ display:block; text-align:center; }
+
+/*--icon*/
+.tallykit-shortcode-button i.fa{ font-size:120%; color:#FFF !important;}
+.tallykit-shortcode-button.icon-left i.fa{ margin-right:8px; }
+.tallykit-shortcode-button.icon-right i.fa{ margin-left:8px; }
+
+/*--size--*/
+.tallykit-shortcode-button.size-1x{ font-size:9px; padding:0px 6px; text-shadow: 0px 2px 3px rgba(0, 0, 0, 0); }
+.tallykit-shortcode-button.size-2x{ padding:6px 18px; font-size:12px; }
+.tallykit-shortcode-button.size-3x{ font-size:inherit; padding:10px 30px; }
+.tallykit-shortcode-button.size-4x{ font-size:16px; padding:14px 38px; }
+.tallykit-shortcode-button.size-5x{ font-size:22px; padding:20px 50px; }
+
+/*--color--*/
+.tallykit-shortcode-button.color-red{ background:#d01d10; }
+.tallykit-shortcode-button.color-orange{ background:#fb6909; }
+.tallykit-shortcode-button.color-blue{ background:#1571f0; }
+.tallykit-shortcode-button.color-black{ background:#505050; }
+.tallykit-shortcode-button.color-pink{ background:#e3618d; }
+.tallykit-shortcode-button.color-rosy{ background:#e84a5f; }
+.tallykit-shortcode-button.color-green{ background:#5fb139; }
+.tallykit-shortcode-button.color-brown{ background:#604848 ; }
+.tallykit-shortcode-button.color-purple{ background:#524656; }
+.tallykit-shortcode-button.color-gold{ background:#faaa00; }
+.tallykit-shortcode-button.color-teal{ background:#286061; }
+
+
+
+/*---------------------------------------------
+     checklist
+--------------------------------------------- */
+.tallykit-shortcode-checklist ul{
+	list-style:none;
+	margin:0;
+	padding:0;
+	margin-top:10px;
+}
+.tallykit-shortcode-checklist ul li:before{
+	display:inline-block;
+	height:18px;
+	width:18px;
+	content:' ';
+	float:left;
+	margin-right:0;
+	margin-left:-25px;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+}
+.tallykit-shortcode-checklist.tallykit-shortcode-checklist-circle-yes li:before{
+	-moz-border-radius:50%;
+	-webkit-border-radius:50%;
+	border-radius:50%;
+	text-align:center;
+	font-size:9px;
+}
+.tallykit-shortcode-checklist.tallykit-shortcode-checklist-circle-no li:before{
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	text-align:center;
+	font-size:9px;
+}
+.tallykit-shortcode-checklist ul li{
+	line-height:18px;
+	margin:0;
+	padding:0;
+	margin-bottom:15px;
+	padding-left:25px;
+}
+.tallykit-shortcode-checklist.tallykit-shortcode-checklist-icon-check ul li:before{ content:'\f00c'; }
+.tallykit-shortcode-checklist.tallykit-shortcode-checklist-icon-star ul li:before{ content:'\f006'; }
+.tallykit-shortcode-checklist.tallykit-shortcode-checklist-icon-arrow ul li:before{ content:'\f105'; }
+.tallykit-shortcode-checklist.tallykit-shortcode-checklist-icon-asterik ul li:before{ content:'\f069'; }
+.tallykit-shortcode-checklist.tallykit-shortcode-checklist-icon-cross ul li:before{content:'\f00d';}
+.tallykit-shortcode-checklist.tallykit-shortcode-checklist-icon-plus ul li:before{ content:'\f067'; }
+
+
+/*---------------------------------------------
+     Column
+--------------------------------------------- */
+.tallykit-shortcode-one-half { width: 48% }
+.tallykit-shortcode-one-third { width: 30.66% }
+.tallykit-shortcode-two-third { width: 65.33% }
+.tallykit-shortcode-one-fourth { width: 22% }
+.tallykit-shortcode-three-fourth { width: 74% }
+.tallykit-shortcode-one-fifth { width: 16.8% }
+.tallykit-shortcode-two-fifth { width: 37.6% }
+.tallykit-shortcode-three-fifth { width: 58.4% }
+.tallykit-shortcode-four-fifth { width: 67.2% }
+.tallykit-shortcode-one-sixth { width: 13.33% }
+.tallykit-shortcode-five-sixth { width: 82.67% }
+.tallykit-shortcode-one-half, 
+.tallykit-shortcode-one-third, 
+.tallykit-shortcode-two-third, 
+.tallykit-shortcode-three-fourth, 
+.tallykit-shortcode-one-fourth, 
+.tallykit-shortcode-one-fifth, 
+.tallykit-shortcode-two-fifth, 
+.tallykit-shortcode-three-fifth, 
+.tallykit-shortcode-four-fifth, 
+.tallykit-shortcode-one-sixth, 
+.tallykit-shortcode-five-sixth{ position: relative; margin-right: 4%; margin-bottom: 2em; float: left; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.tallykit-shortcode-column-last { margin-right: 0!important; clear: right; }
+.tallykit-shortcode-column-last:after { content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0; }
+.tallykit-shortcode-one-half, .tallykit-shortcode-one-third, .tallykit-shortcode-two-third, .tallykit-shortcode-three-fourth, .tallykit-shortcode-one-fourth, .tallykit-shortcode-one-fifth, .tallykit-shortcode-two-fifth, .tallykit-shortcode-three-fifth, .tallykit-shortcode-four-fifth, .tallykit-shortcode-one-sixth, .tallykit-shortcode-five-sixth { }
+
+
+
+/*---------------------------------------------
+     Divider
+--------------------------------------------- */
+.tallykit-shortcode-divider-style-none{height:1px;background-color:rgba(0,0,0,0);}
+.tallykit-shortcode-divider-style-single{height:1px;background-color:#e7e6e6;}
+.tallykit-shortcode-divider-style-double{height:6px;border-top:1px solid #e7e6e6;border-bottom:1px solid #e7e6e6;}
+.tallykit-shortcode-divider-style-dotted{border-bottom:2px dotted #e7e6e6;}
+.tallykit-shortcode-divider-style-dashed{border-bottom:2px dashed #e7e6e6;}
+.tallykit-shortcode-divider-style-shadow{background:transparent url(../images/sep-shadow.png) no-repeat top center ;height:7px;width:100%;}
+
+
+
+/*---------------------------------------------
+     dropcap
+--------------------------------------------- */
+.tallykit-shortcode-dropcap { font-size:62px; margin-right:6px; padding-top:11px; text-transform: uppercase; float: left; position: relative; top: 5px; padding-bottom:11px;}
+.tallykit-shortcode-dropcap-style-circle{ 
+	-moz-border-radius:50%;
+	-webkit-border-radius:50%;
+	border-radius:50%;
+	font-size:50px;
+	margin-right:12px; 
+	padding-top:20px;
+	padding-bottom:20px;
+	padding-left:14px;
+	padding-right:14px;
+	text-transform: uppercase; 
+	bottom: 5px; 
+	top:0;
+	background:#666;
+	color:#FFF !important;
+}
+.tallykit-shortcode-dropcap-style-box{
+	font-size:50px;
+	margin-right:12px; 
+	padding-top:20px;
+	padding-bottom:20px;
+	padding-left:14px;
+	padding-right:14px;
+	text-transform: uppercase; 
+	bottom: 5px; 
+	top:0;
+	background:#666;
+	color:#FFF !important;
+}
+.tallykit-shortcode-dropcap-style-round{
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	border-radius:4px;
+	font-size:50px;
+	margin-right:12px; 
+	padding-top:20px;
+	padding-bottom:20px;
+	padding-left:14px;
+	padding-right:14px;
+	text-transform: uppercase; 
+	bottom: 5px; 
+	top:0;
+	background:#666;
+	color:#FFF !important;
+}
+
+
+
+/*---------------------------------------------
+     Icon
+--------------------------------------------- */
+.tallykit-shortcode-icon{  }
+
+.tallykit-shortcode-icon-shape-circle{ 
+	-moz-border-radius:50%;
+	-webkit-border-radius:50%;
+	border-radius:50%;
+}
+.tallykit-shortcode-icon-shape-round{  
+	-moz-border-radius:9px;
+	-webkit-border-radius:9px;
+	border-radius:9px;
+}
+
+.tallykit-shortcode-icon-size-1x{ height:18px; width:18px; font-size:9px; line-height:18px; text-align:center; }
+.tallykit-shortcode-icon-size-2x{ height:28px; width:28px; font-size:14px; line-height:28px; text-align:center; }
+.tallykit-shortcode-icon-size-3x{ height:40px; width:40px; font-size:20px; line-height:40px; text-align:center; }
+.tallykit-shortcode-icon-size-4x{ height:60px; width:60px; font-size:30px; line-height:60px; text-align:center; }
+.tallykit-shortcode-icon-size-5x{ height:80px; width:80px; font-size:40px; line-height:80px; text-align:center; }
+.tallykit-shortcode-icon-size-6x{ height:100px; width:100px; font-size:50px; line-height:100px; text-align:center; }
+
+.tallykit-shortcode-icon-style-background{ display:inline-block; }
+.tallykit-shortcode-icon-style-border{ border-style:solid; border-width:2px; }
+
+.tallykit-shortcode-icon-effect-rotate {
+	-webkit-transition-duration: 0.8s;
+	-moz-transition-duration: 0.8s;
+	-o-transition-duration: 0.8s;
+	transition-duration: 0.8s;
+	-webkit-transition-property: -webkit-transform;
+	-moz-transition-property: -moz-transform;
+	-o-transition-property: -o-transform;
+	transition-property: transform;
+	overflow: hidden;
+}
+.tallykit-shortcode-icon-effect-rotate:hover {
+	-webkit-transform: rotate(360deg);
+	-moz-transform: rotate(360deg);
+	-o-transform: rotate(360deg);
+}
+.tallykit-shortcode-icon-effect-fade:hover{ opacity:0.7; }
+
+.tallykit-shortcode-icon-align-left{ float:left; margin-right:20px; margin-bottom:10px; }
+.tallykit-shortcode-icon-align-right{ float:right; margin-left:20px; margin-bottom:10px; }
+.tallykit-shortcode-icon-align-center{ margin:0 auto; }
+
+
+
+/*---------------------------------------------
+     progressBar
+--------------------------------------------- */
+.tallykit-shortcode-CounterCircle-wrapper{;display:inline-block;position:relative;text-align:center;}
+.tallykit-shortcode-CounterCircle-content{font-size:50px;width:220px;height:220px;text-align:center;line-height:220px;position:absolute;top:0;left:0;}
+.tallykit-shortcode-CounterCircle-content{margin:0 !important; float:none !important; font-size:19px !important;}
+
+.tallykit-shortcode-counterBox-wrapper{border:1px solid #e7e6e6;width:100%;padding:2%;display:inline-block;margin-right:1%;}
+.tallykit-shortcode-counterBox-percentage{font-size:50px;line-height:50px;}
+
+.tallykit-shortcode-progressBar {	background: #e6e7e8; height: 37px;	border-bottom:1px solid #f0f1f1; position: relative; margin-bottom: 10px; }
+.tallykit-shortcode-progressBar-content {	background:#a0ce4e;	height: 37px; border-bottom:1px solid #c0dc8f; }
+.tallykit-shortcode-progressBar-title {	font-size: 13px;color: #ffffff !important;font-weight: normal;position: absolute;top: 10px;left: 13px;}
+.tallykit-shortcode-progressBar-percentage {font-size: 13px;color: #626363;font-weight: normal;position: absolute;top: 10px;left: 90%;}
+
+
+/*---------------------------------------------
+     Tabs
+--------------------------------------------- */
+.tallykit-shortcode-tabs ul.ui-tabs-nav { display: block; margin: 0; padding: 0; margin-left: 1px;  }
+.tallykit-shortcode-tabs ul.ui-tabs-nav li { display: block; width: auto; height: 40px; padding: 0 !important; float: left !important; margin: 0 !important; outline: none; }
+.tallykit-shortcode-tabs ul.ui-tabs-nav li a { display: block; text-decoration: none; width: auto; height: 39px; padding: 0px 20px; line-height: 40px; border: solid 1px #ddd; border-width: 1px 1px 0 0; margin: 0; background-color: #f5f5f5; font-size: 1em; color: #444; outline: none; }
+.tallykit-shortcode-tabs ul.ui-tabs-nav li a:hover { color: #333; background: #eee; }
+.tallykit-shortcode-tabs ul.ui-tabs-nav .ui-state-active a { background: #fff; height: 40px; position: relative; top: -4px; padding-top: 4px; border-left-width: 1px; margin: 0 0 0 -1px; color: #111 !important; -moz-border-radius-topleft: 2px; -webkit-border-top-left-radius: 2px; border-top-left-radius: 2px; -moz-border-radius-topright: 2px; -webkit-border-top-right-radius: 2px; border-top-right-radius: 2px; }
+.tallykit-shortcode-tabs ul.ui-tabs-nav .ui-state-active a:hover { background: #fff }
+.tallykit-shortcode-tabs ul.ui-tabs-nav li:first-child .ui-state-active a { margin-left: 0 }
+.tallykit-shortcode-tabs ul.ui-tabs-nav li:first-child a { border-width: 1px 1px 0 1px }
+.tallykit-shortcode-tabs .tab-content { background: #fff; padding: 20px; border: solid 1px #ddd; margin-top:-1px; }
+.tallykit-shortcode-tabs ul.tabs:before, ul.tabs:after { content: '\0020'; display: block; overflow: hidden; visibility: hidden; width: 0; height: 0; }
+.tallykit-shortcode-tabs ul.tabs:after { clear: both }
+.tallykit-shortcode-tabs ul.tabs { zoom: 1 }
+.tallykit-shortcode-tabs .ui-tabs-hide { display: none }
+.tallykit-shortcode-tabs:before, ul.tallykit-shortcode-tabs:after { content: '\0020'; display: block; overflow: hidden; visibility: hidden; width: 0; height: 0; }
+.tallykit-shortcode-tabs:after { clear: both }
+.tallykit-shortcode-tabs { zoom: 1 }
+.tallykit-shortcode-tabs .ui-tabs-hide { display: none }
+
+
+/*---------------------------------------------
+     toggle
+--------------------------------------------- */
+.tallykit-shortcode-toggle .tallykit-shortcode-toggle-trigger { display: block; color: #555; display: block; padding: 15px; border: 1px solid #ddd;  outline: 0; text-transform: none; letter-spacing: normal; font-weight: normal; font-size: 1em; line-height: 1.5em; margin: 0; margin-top: 12px; cursor: pointer; }
+
+.tallykit-shortcode-toggle .tallykit-shortcode-toggle-trigger:after{ font-family: dashicons; content: '\f132'; float: left; padding-top: 2px; padding-right:7px; }
+.tallykit-shortcode-toggle .tallykit-shortcode-toggle-trigger:hover { background-color: #eee; text-decoration: none; }
+.tallykit-shortcode-toggle .tallykit-shortcode-toggle-trigger.active, .tallykit-shortcode-toggle .tallykit-shortcode-toggle-trigger.active:hover { color: #000; background-color: #eee; text-decoration: none; }
+
+.tallykit-shortcode-toggle .tallykit-shortcode-toggle-trigger.active:after, .tallykit-shortcode-toggle .tallykit-shortcode-toggle-trigger.active:hover:after{ content: '\f460'; }
+.tallykit-shortcode-toggle .tallykit-shortcode-toggle-container { display: none; overflow: hidden; padding: 15px; border: 1px solid #ddd; border-top: 0px; }
