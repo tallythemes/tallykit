@@ -720,7 +720,7 @@ $tinymce_fields[] = array(
 	)
 );
 
-/*---------|- tk_alert -|----------*/
+/*---------|- alert -|----------*/
 $tinymce_fields[] = array(
 	'title' => 'Alert',
 	'shortcode' => 'tk_alert',
@@ -768,6 +768,540 @@ $tinymce_fields[] = array(
 			'std' => 'Sample content for the Alart box.',
 			'des' => '',
 			'content' => 'yes',//yes, no
+		),
+	)
+);
+
+
+/*---------|- Button -|----------*/
+$tinymce_fields[] = array(
+	'title' => 'Button',
+	'shortcode' => 'tk_button',
+	'content' => 'no',//yes, no
+	'fields' => array(
+		array(
+			'id' => 'text',
+			'class' => '',
+			'label' => 'Button Text',
+			'type' => 'text',
+			'std' => 'Button',
+			'des' => '',
+		),
+		array(
+			'id' => 'link',
+			'class' => '',
+			'label' => 'Button Link',
+			'type' => 'text',
+			'std' => '#',
+			'des' => '',
+		),
+		array(
+			'id' => 'target',
+			'class' => '',
+			'label' => 'Link Target',
+			'type' => 'text',
+			'std' => '#',
+			'des' => '',
+			'options' => array(
+				array('value' => '_self', 'label' => '_self'),
+				array('value' => '_blank', 'label' => '_blank'),
+			)
+		),
+		array(
+			'id' => 'title',
+			'class' => '',
+			'label' => 'Button Title',
+			'type' => 'text',
+			'std' => '#',
+			'des' => '',
+		),
+		array(
+			'id' => 'color',
+			'class' => '',
+			'label' => 'Color',
+			'type' => 'select',
+			'std' => '',
+			'des' => '',
+			'options' => array(
+				array('value' => 'none', 'label' => 'none'),
+				array('value' => 'red', 'label' => 'red'),
+				array('value' => 'orange', 'label' => 'orange'),
+				array('value' => 'blue', 'label' => 'blue'),
+				array('value' => 'black', 'label' => 'black'),
+				array('value' => 'pink', 'label' => 'pink'),
+				array('value' => 'rosy', 'label' => 'rosy'),
+				array('value' => 'green', 'label' => 'green'),
+				array('value' => 'brown', 'label' => 'brown'),
+				array('value' => 'purple', 'label' => 'purple'),
+				array('value' => 'gold', 'label' => 'gold'),
+				array('value' => 'teal', 'label' => 'teal'),
+			)
+		),
+		array(
+			'id' => 'size',
+			'class' => '',
+			'label' => 'Size',
+			'type' => 'select',
+			'std' => '',
+			'des' => '',
+			'options' => array(
+				array('value' => '1x', 'label' => '1x'),
+				array('value' => '2x', 'label' => '2x'),
+				array('value' => '3x', 'label' => '3x'),
+				array('value' => '4x', 'label' => '4x'),
+				array('value' => '5x', 'label' => '5x'),
+			)
+		),
+		array(
+			'id' => 'rel',
+			'class' => '',
+			'label' => 'Rel',
+			'type' => 'text',
+			'std' => '',
+			'des' => '',
+		),
+		array(
+			'id' => 'class',
+			'class' => '',
+			'label' => 'Class',
+			'type' => 'text',
+			'std' => '',
+			'des' => '',
+		),
+		array(
+			'id' => 'border_radius',
+			'class' => '',
+			'label' => 'Border Radius',
+			'type' => 'text',
+			'std' => '',
+			'des' => 'Example: 4px',
+		),
+		array(
+			'id' => 'bg_color',
+			'class' => '',
+			'label' => 'Backgroun Color',
+			'type' => 'text',
+			'std' => '',
+			'des' => 'Example: #000000',
+		),
+		array(
+			'id' => 'text_color',
+			'class' => '',
+			'label' => 'Text Color',
+			'type' => 'text',
+			'std' => '',
+			'des' => 'Example: #ffffff',
+		),
+		array(
+			'id' => 'icon_left',
+			'class' => '',
+			'label' => 'Icon left',
+			'type' => 'text',
+			'std' => '',
+			'des' => 'Add Icon class from here http://fontawesome.io/cheatsheet/',
+		),
+		array(
+			'id' => 'icon_right',
+			'class' => '',
+			'label' => 'Icon right',
+			'type' => 'text',
+			'std' => '',
+			'des' => 'Add Icon class from here http://fontawesome.io/cheatsheet/',
+		),
+		array(
+			'id' => 'full_width',
+			'class' => '',
+			'label' => 'Full Width',
+			'type' => 'select',
+			'std' => 'no',
+			'des' => '',
+			'options' => array(
+				array('value' => 'no', 'label' => 'no'),
+				array('value' => 'yes', 'label' => 'yes'),
+			)
+		),
+	)
+);
+
+
+/*---------|- checklist -|----------*/
+$tinymce_fields[] = array(
+	'title' => 'Checklist',
+	'shortcode' => 'tk_checklist',
+	'content' => 'yes',//yes, no
+	'fields' => array(
+		array(
+			'id' => 'icon',
+			'class' => '',
+			'label' => 'Icon',
+			'type' => 'select',
+			'std' => 'arrow',
+			'des' => '',
+			'options' => array(
+				array('value' => 'arrow', 'label' => 'arrow'),
+				array('value' => 'check', 'label' => 'check'),
+				array('value' => 'asterik', 'label' => 'asterik'),
+				array('value' => 'cross', 'label' => 'cross'),
+				array('value' => 'plus', 'label' => 'plus'),
+			)
+		),
+		array(
+			'id' => 'iconcolor',
+			'class' => '',
+			'label' => 'Icon color',
+			'type' => 'text',
+			'std' => '',
+			'des' => 'Example: #ffffff',
+		),
+		array(
+			'id' => 'iconbg',
+			'class' => '',
+			'label' => 'Icon Background Color',
+			'type' => 'text',
+			'std' => '',
+			'des' => 'Example: #000000',
+		),
+		array(
+			'id' => 'iconsize',
+			'class' => '',
+			'label' => 'Icon Size',
+			'type' => 'text',
+			'std' => '',
+			'des' => 'Example: 9px',
+		),
+		array(
+			'id' => 'circle',
+			'class' => '',
+			'label' => 'Icon Circle',
+			'type' => 'select',
+			'std' => '',
+			'des' => '',
+			'options' => array(
+				array('value' => 'yes', 'label' => 'yes'),
+				array('value' => 'no', 'label' => 'no'),
+			)
+		),
+		array(
+			'id' => 'content',
+			'class' => '',
+			'label' => 'Content',
+			'type' => 'textarea',
+			'std' => '<ul>
+	<li>This is a list item.</li>
+	<li>Another list item.</li>
+	<li>Oops! another list item</li>
+	<li>Ok it is the last item</li>
+</ul>',
+			'des' => '',
+			'content' => 'yes',
+		),
+	)
+);
+
+
+/*---------|- column -|----------*/
+$tinymce_fields[] = array(
+	'title' => 'Column',
+	'shortcode' => 'tk_column',
+	'content' => 'yes',//yes, no
+	'fields' => array(
+		array(
+			'id' => 'size',
+			'class' => '',
+			'label' => 'Size',
+			'type' => 'select',
+			'std' => '',
+			'des' => '',
+			'options' => array(
+				array('value' => 'one-half', 'label' => 'one-half'),
+				array('value' => 'one-third', 'label' => 'one-third'),
+				array('value' => 'one-fourth', 'label' => 'one-fourth'),
+				array('value' => 'three-fourth', 'label' => 'three-fourth'),
+				array('value' => 'one-fifth', 'label' => 'one-fifth'),
+				array('value' => 'two-fifth', 'label' => 'two-fifth'),
+				array('value' => 'three-fifth', 'label' => 'three-fifth'),
+				array('value' => 'four-fifth', 'label' => 'four-fifth'),
+				array('value' => 'one-sixth', 'label' => 'one-sixth'),
+				array('value' => 'five-sixth', 'label' => 'five-sixth'),
+			)
+		),
+		array(
+			'id' => 'position',
+			'class' => '',
+			'label' => 'Position',
+			'type' => 'select',
+			'std' => '',
+			'des' => '',
+			'options' => array(
+				array('value' => 'first', 'label' => 'first'),
+				array('value' => 'last', 'label' => 'last'),
+			)
+		),
+		array(
+			'id' => 'content',
+			'class' => '',
+			'label' => 'Content',
+			'type' => 'textarea',
+			'std' => '.......Sample column content.........',
+			'des' => '',
+			'content' => 'yes',
+		),
+		array(
+			'id' => 'class',
+			'class' => '',
+			'label' => 'Class',
+			'type' => 'text',
+			'std' => '',
+			'des' => '',
+		),
+		array(
+			'id' => 'bg_color',
+			'class' => '',
+			'label' => 'Background Color',
+			'type' => 'text',
+			'std' => '',
+			'des' => 'Example: #000000',
+		),
+		array(
+			'id' => 'text_color',
+			'class' => '',
+			'label' => 'Text Color',
+			'type' => 'text',
+			'std' => '',
+			'des' => 'Example: #000000',
+		),
+		array(
+			'id' => 'heading_color',
+			'class' => '',
+			'label' => 'Heading Color',
+			'type' => 'text',
+			'std' => '',
+			'des' => 'Example: #000000',
+		),
+		array(
+			'id' => 'link_color',
+			'class' => '',
+			'label' => 'Link Color',
+			'type' => 'text',
+			'std' => '',
+			'des' => 'Example: #000000',
+		),
+		array(
+			'id' => 'padding',
+			'class' => '',
+			'label' => 'Padding',
+			'type' => 'text',
+			'std' => '',
+			'des' => 'Example: 30px',
+		),
+		array(
+			'id' => 'text_align',
+			'class' => '',
+			'label' => 'Text align',
+			'type' => 'select',
+			'std' => '',
+			'des' => '',
+			'options' => array(
+				array('value' => 'left', 'label' => 'left'),
+				array('value' => 'right', 'label' => 'right'),
+				array('value' => 'center', 'label' => 'center'),
+			)
+		),
+		
+	)
+);
+
+/*---------|- divider -|----------*/
+$tinymce_fields[] = array(
+	'title' => 'Divider',
+	'shortcode' => 'tk_divider',
+	'content' => 'no',//yes, no
+	'fields' => array(
+		array(
+			'id' => 'style',
+			'class' => '',
+			'label' => 'Style',
+			'type' => 'select',
+			'std' => '',
+			'des' => '',
+			'options' => array(
+				array('value' => 'none', 'label' => 'none'),
+				array('value' => 'single', 'label' => 'single'),
+				array('value' => 'double', 'label' => 'double'),
+				array('value' => 'dotted', 'label' => 'dotted'),
+				array('value' => 'dashed', 'label' => 'dashed'),
+				array('value' => 'shadow', 'label' => 'shadow'),
+			)
+		),
+		array(
+			'id' => 'margin_top',
+			'class' => '',
+			'label' => 'Top Margin',
+			'type' => 'text',
+			'std' => '20px',
+			'des' => 'Example: 30px',
+		),
+		array(
+			'id' => 'margin_bottom',
+			'class' => '',
+			'label' => 'Bottom Margin',
+			'type' => 'text',
+			'std' => '20px',
+			'des' => 'Example: 30px',
+		),		
+	)
+);
+
+/*---------|- dropcap -|----------*/
+$tinymce_fields[] = array(
+	'title' => 'Dropcap',
+	'shortcode' => 'tk_dropcap',
+	'content' => 'yes',//yes, no
+	'fields' => array(
+		array(
+			'id' => 'style',
+			'class' => '',
+			'label' => 'Style',
+			'type' => 'select',
+			'std' => '',
+			'des' => '',
+			'options' => array(
+				array('value' => 'none', 'label' => 'none'),
+				array('value' => 'circle', 'label' => 'circle'),
+				array('value' => 'box', 'label' => 'box'),
+				array('value' => 'round', 'label' => 'round'),
+			)
+		),
+		array(
+			'id' => 'content',
+			'class' => '',
+			'label' => 'Content',
+			'type' => 'text',
+			'std' => 'A',
+			'des' => '',
+			'content' => 'yes',//yes, no
+		),		
+	)
+);
+
+/*---------|- icon -|----------*/
+$tinymce_fields[] = array(
+	'title' => 'Icon',
+	'shortcode' => 'tk_icon',
+	'content' => 'no',//yes, no
+	'fields' => array(
+		array(
+			'id' => 'icon',
+			'class' => '',
+			'label' => 'Icon',
+			'type' => 'text',
+			'std' => 'fa-arrows',
+			'des' => 'Please enter the class name of icon. You can copy and past the icon class from this URL <a href="http://fontawesome.io/cheatsheet/" target="_blank">http://fontawesome.io/cheatsheet/</a>',
+		),
+		array(
+			'id' => 'shape',
+			'class' => '',
+			'label' => 'Shape',
+			'type' => 'select',
+			'std' => '',
+			'des' => '',
+			'content' => 'no',//yes, no
+			'options' => array(
+				array('value' => 'none', 'label' => 'none'),
+				array('value' => 'circle', 'label' => 'circle'),
+				array('value' => 'round', 'label' => 'round'),
+			)
+		),
+		array(
+			'id' => 'style',
+			'class' => '',
+			'label' => 'Style',
+			'type' => 'select',
+			'std' => '',
+			'des' => '',
+			'content' => 'no',//yes, no
+			'options' => array(
+				array('value' => 'none', 'label' => 'none'),
+				array('value' => 'background', 'label' => 'background'),
+				array('value' => 'border', 'label' => 'border'),
+			)
+		),
+		array(
+			'id' => 'color',
+			'class' => '',
+			'label' => 'Color',
+			'type' => 'text',
+			'std' => '#666',
+			'des' => 'Example: <strong>#666</strong>',
+			'content' => 'no',//yes, no
+		),	
+		array(
+			'id' => 'size',
+			'class' => '',
+			'label' => 'Size',
+			'type' => 'select',
+			'std' => '2x',
+			'des' => '',
+			'content' => 'no',//yes, no
+			'options' => array(
+				array('value' => '1x', 'label' => '1x'),
+				array('value' => '2x', 'label' => '2x'),
+				array('value' => '3x', 'label' => '3x'),
+				array('value' => '4x', 'label' => '4x'),
+				array('value' => '5x', 'label' => '5x'),
+				array('value' => '6x', 'label' => '6x'),
+			)
+		),
+		array(
+			'id' => 'effect',
+			'class' => '',
+			'label' => 'Effect',
+			'type' => 'select',
+			'std' => '',
+			'des' => '',
+			'content' => 'no',//yes, no
+			'options' => array(
+				array('value' => 'none', 'label' => 'none'),
+				array('value' => 'rotate', 'label' => 'rotate'),
+				array('value' => 'fade', 'label' => 'fade'),
+			)
+		),
+		array(
+			'id' => 'align',
+			'class' => '',
+			'label' => 'Align',
+			'type' => 'select',
+			'std' => '',
+			'des' => '',
+			'content' => 'no',//yes, no
+			'options' => array(
+				array('value' => 'none', 'label' => 'none'),
+				array('value' => 'left', 'label' => 'left'),
+				array('value' => 'right', 'label' => 'right'),
+				array('value' => 'center', 'label' => 'center'),
+			)
+		),
+		array(
+			'id' => 'link',
+			'class' => '',
+			'label' => 'Link',
+			'type' => 'text',
+			'std' => '',
+			'des' => '',
+			'content' => 'no',//yes, no
+		),	
+		array(
+			'id' => 'link_target',
+			'class' => '',
+			'label' => 'Link Target',
+			'type' => 'select',
+			'std' => '',
+			'des' => '',
+			'content' => 'no',//yes, no
+			'options' => array(
+				array('value' => '_self', 'label' => '_self'),
+				array('value' => '_blank', 'label' => '_blank'),
+			)
 		),
 	)
 );
