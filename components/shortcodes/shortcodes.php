@@ -38,6 +38,9 @@ $tallykit_shortcodes_template_dri = new acoc_template_file_loader($settings);
  
  
  
+ 
+ 
+ 
 /***************************** Sctipts ******************************
  *
  * Register CSS and JavaSctipts
@@ -90,13 +93,6 @@ function tallykit_shortcodes_script_loader(){
  *
  * @uses filter add_shortcode  
 **/
-
-/*---------|- Name -|-------------------------------------*/
-add_shortcode('tk_', 'tallykit_shortcodes_sc_');
-function tallykit_shortcodes_sc_(){
-	
-}
-
 
 
 /*---------|- accordion -|-------------------------------------*/
@@ -583,16 +579,17 @@ function tallykit_shortcodes_sc_callout( $atts, $content = null ) {
 		'class'	=> '',
 		'button_text'	=> 'Button Text',
 		'button_link'	=> '#',
-		'button_link_target'	=> '',
+		'button_link_target'	=> '_self', // _blank, _self
 		'style'	=> 'button-right', //center, button-left, button-right
 		'border'	=> 'left', //top, left, right, bottom, none
 		'background'	=> 'no', //yes, no
 	), $atts ) );
 	
-	$output = '<div class="tallykit-shortcode-callout '.$class.'>';
+	$output = '<div class="tallykit-shortcode-callout style-'.$style.' border-'.$style.'  background-'.$background.' '.$class.'>';
 		$output = '<div class="tallykit-shortcode-callout-inner>';
 			if($title){ $output .= '<h3>'.$title.'</h3>'; }
-			$html .= '<div class="con">'.do_shortcode($content).'</div>';
+			$output .= '<div class="con">'.do_shortcode($content).'</div>';
+			if($button_link){ $output .= '<a href="'.$button_link.'" target="'.$button_link_target.'">'.$button_text.'</a>'; }
 		$output .= '</div>';
 	$output .= '</div>';
 	
@@ -693,6 +690,96 @@ function tallykit_shortcodes_sc_audio($atts, $content = null) {
  *
  * @uses class acoc_tinymce_register  
  */
+$tinymce_fields = array();
+
+/*---------|- audio -|----------*/
+$tinymce_fields[] = array(
+	'title' => 'Accordion',
+	'shortcode' => 'tk_accordion',
+	'content' => 'yes',//yes, no
+	'fields' => array(
+		array(
+			'id' => 'class',
+			'class' => '',
+			'label' => 'class',
+			'type' => 'text',
+			'std' => '',
+			'des' => '',
+		),
+		array(
+			'id' => 'content',
+			'class' => '',
+			'label' => 'Child Items',
+			'type' => 'textarea',
+			'std' => '[tk_accordion_item title="title one"].........Sample Text is here.......[/tk_accordion_item]
+			[tk_accordion_item title="title one"].........Sample Text is here.......[/tk_accordion_item]
+			[tk_accordion_item title="title one"].........Sample Text is here.......[/tk_accordion_item]',
+			'des' => '',
+			'content' => 'yes',//yes, no
+		),
+	)
+);
+
+/*---------|- tk_alert -|----------*/
+$tinymce_fields[] = array(
+	'title' => 'Alert',
+	'shortcode' => 'tk_alert',
+	'content' => 'yes',//yes, no
+	'fields' => array(
+		array(
+			'id' => 'title',
+			'class' => '',
+			'label' => 'Title',
+			'type' => 'text',
+			'std' => 'Alart Sample Title',
+			'des' => '',
+		),
+		array(
+			'id' => 'type',
+			'class' => '',
+			'label' => 'Type',
+			'type' => 'select',
+			'std' => '',
+			'des' => '',
+			'options' => array(
+				array('value' => 'info', 'label' => 'info'),
+				array('value' => 'danger', 'label' => 'danger'),
+				array('value' => 'success', 'label' => 'success'),
+				array('value' => 'error', 'label' => 'error'),
+			)
+		),
+		array(
+			'id' => 'close',
+			'class' => '',
+			'label' => 'Close',
+			'type' => 'select',
+			'std' => '',
+			'des' => '',
+			'options' => array(
+				array('value' => 'yes', 'label' => 'yes'),
+				array('value' => 'no', 'label' => 'no'),
+			)
+		),
+		array(
+			'id' => 'content',
+			'class' => '',
+			'label' => 'Content Text',
+			'type' => 'textarea',
+			'std' => 'Sample content for the Alart box.',
+			'des' => '',
+			'content' => 'yes',//yes, no
+		),
+	)
+);
+
+$settings = array(
+	'uid' => 'tallykit_shortcode_tinymce',
+	'button_title' => '[ ]',
+	'button_url' => '',
+	'title' => 'Insert Shortcodes',
+	'options' => $tinymce_fields,
+);
+$register_tallykit_shortcode_tinymce = new acoc_tinymce_register($settings);
  
  
  
