@@ -692,7 +692,7 @@ function tallykit_shortcodes_sc_audio($atts, $content = null) {
  */
 $tinymce_fields = array();
 
-/*---------|- audio -|----------*/
+/*---------|- Accordion -|----------*/
 $tinymce_fields[] = array(
 	'title' => 'Accordion',
 	'shortcode' => 'tk_accordion',
@@ -1571,6 +1571,354 @@ $tinymce_fields[] = array(
 			'std' => 'Web Development - 70%',
 			'des' => '',
 			'content' => 'yes',//yes, no
+		),
+	)
+);
+
+/*---------|- Counter (circle) -|----------*/
+$tinymce_fields[] = array(
+	'title' => 'Counter (circle)',
+	'shortcode' => 'tk_counter_circle',
+	'content' => 'yes',//yes, no
+	'fields' => array(
+		array(
+			'id' => 'value',
+			'class' => '',
+			'label' => 'Bar value',
+			'type' => 'text',
+			'std' => '70',
+			'des' => 'Example: 70 (1 to 100)',
+		),
+		array(
+			'id' => 'content',
+			'class' => '',
+			'label' => 'Text',
+			'type' => 'text',
+			'std' => 'Skill - 70%',
+			'des' => '',
+			'content' => 'yes',//yes, no
+		),
+		array(
+			'id' => 'filled_color',
+			'class' => '',
+			'label' => 'Filled Color',
+			'type' => 'text',
+			'std' => '#45b900',
+			'des' => '',
+		),
+		array(
+			'id' => 'unfilled_color',
+			'class' => '',
+			'label' => 'Unfilled Color',
+			'type' => 'text',
+			'std' => '#f0f0f0',
+			'des' => '',
+		),
+	)
+);
+
+/*---------|- tab -|----------*/
+$tinymce_fields[] = array(
+	'title' => 'Tab',
+	'shortcode' => 'tk_tab',
+	'content' => 'yes',//yes, no
+	'fields' => array(
+		array(
+			'id' => 'content',
+			'class' => '',
+			'label' => 'Child Items',
+			'type' => 'textarea',
+			'std' => '[tk_tab_item title="title one"]......One...Sample Text is here.......[/tk_tab_item]
+			[tk_tab_item title="title Two"]......Two...Sample Text is here.......[/tk_tab_item]
+			[tk_tab_item title="title Three"]......Three...Sample Text is here.......[/tk_tab_item]',
+			'des' => '',
+			'content' => 'yes',//yes, no
+		),
+	)
+);
+
+/*---------|- callout -|----------*/
+$tinymce_fields[] = array(
+	'title' => 'Callout',
+	'shortcode' => 'tk_callout',
+	'content' => 'yes',//yes, no
+	'fields' => array(
+		array(
+			'id' => 'title',
+			'class' => '',
+			'label' => 'Title',
+			'type' => 'text',
+			'std' => '',
+			'des' => '',
+		),
+		array(
+			'id' => 'content',
+			'class' => '',
+			'label' => 'Text',
+			'type' => 'textarea',
+			'std' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eget varius neque. Mauris egestas tellus eu libero viverra, quis faucibus nisi bibendum. ',
+			'des' => '',
+			'content' => 'yes',//yes, no
+		),
+		array(
+			'id' => 'button_text',
+			'class' => '',
+			'label' => 'Button Text',
+			'type' => 'text',
+			'std' => 'Button Text',
+			'des' => '',
+		),
+		array(
+			'id' => 'button_link',
+			'class' => '',
+			'label' => 'Button Link',
+			'type' => 'text',
+			'std' => '#',
+			'des' => '',
+		),
+		array(
+			'id' => 'button_link_target',
+			'class' => '',
+			'label' => 'Button Link Target',
+			'type' => 'select',
+			'std' => '_self',
+			'des' => '',
+			'options' => array(
+				array('value' => '_self', 'label' => '_self'),
+				array('value' => '_blank', 'label' => '_blank'),
+			)
+		),
+		array(
+			'id' => 'style',
+			'class' => '',
+			'label' => 'Style',
+			'type' => 'select',
+			'std' => 'center',
+			'des' => '',
+			'options' => array(
+				array('value' => 'center', 'label' => 'center'),
+				array('value' => 'button-left', 'label' => 'button-left'),
+				array('value' => 'button-right', 'label' => 'button-right'),
+			)
+		),
+		array(
+			'id' => 'border',
+			'class' => '',
+			'label' => 'Border',
+			'type' => 'text',
+			'std' => 'select',
+			'des' => '',
+			'options' => array(
+				array('value' => 'top', 'label' => 'top'),
+				array('value' => 'left', 'label' => 'left'),
+				array('value' => 'right', 'label' => 'right'),
+				array('value' => 'bottom', 'label' => 'bottom'),
+				array('value' => 'none', 'label' => 'none'),
+			)
+		),
+		array(
+			'id' => 'background',
+			'class' => '',
+			'label' => 'Background',
+			'type' => 'select',
+			'std' => 'yes',
+			'des' => '',
+			'options' => array(
+				array('value' => 'yes', 'label' => 'yes'),
+				array('value' => 'no', 'label' => 'no'),
+			)
+		),
+		array(
+			'id' => 'class',
+			'class' => '',
+			'label' => 'Class',
+			'type' => 'text',
+			'std' => '',
+			'des' => '',
+		),
+	)
+);
+
+
+/*---------|- toggle -|----------*/
+$tinymce_fields[] = array(
+	'title' => 'Toggle',
+	'shortcode' => 'tk_toggle',
+	'content' => 'yes',//yes, no
+	'fields' => array(
+		array(
+			'id' => 'title',
+			'class' => '',
+			'label' => 'Title',
+			'type' => 'text',
+			'std' => 'Toggle Title',
+			'des' => '',
+		),
+		array(
+			'id' => 'content',
+			'class' => '',
+			'label' => 'Content',
+			'type' => 'textarea',
+			'std' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eget varius neque. Mauris egestas tellus eu libero viverra, quis faucibus nisi bibendum. ',
+			'des' => '',
+			'content' => 'yes',//yes, no
+		),
+		array(
+			'id' => 'class',
+			'class' => '',
+			'label' => 'Class',
+			'type' => 'text',
+			'std' => '',
+			'des' => '',
+		),
+	)
+);
+
+/*---------|- tooltip -|----------*/
+$tinymce_fields[] = array(
+	'title' => 'Tooltip',
+	'shortcode' => 'tk_tooltip',
+	'content' => 'yes',//yes, no
+	'fields' => array(
+		array(
+			'id' => 'title',
+			'class' => '',
+			'label' => 'Title',
+			'type' => 'text',
+			'std' => 'Tooltip Title',
+			'des' => '',
+		),
+		array(
+			'id' => 'content',
+			'class' => '',
+			'label' => 'Content',
+			'type' => 'textarea',
+			'std' => 'This is a Tooltip',
+			'des' => '',
+			'content' => 'yes',//yes, no
+		),
+	)
+);
+
+/*---------|- video -|----------*/
+$tinymce_fields[] = array(
+	'title' => 'Video',
+	'shortcode' => 'tk_video',
+	'content' => 'no',//yes, no
+	'fields' => array(
+		array(
+			'id' => 'html5',
+			'class' => '',
+			'label' => 'Video Type',
+			'type' => 'select',
+			'std' => 'no',
+			'des' => '',
+			'options' => array(
+				array('value' => 'no', 'label' => 'html5'),
+				array('value' => 'yes', 'label' => 'oembed'),
+			)
+		),
+		array(
+			'id' => 'src',
+			'class' => '',
+			'label' => 'Src',
+			'type' => 'text',
+			'std' => 'https://www.youtube.com/watch?v=_YbVJoMYwJ0',
+			'des' => 'If you select html5 video you have to enter a .mp4 video with full URL. Or if you select oembed, just copy and past the video url like youtube, vimeo',
+		),
+		array(
+			'id' => 'w',
+			'class' => '',
+			'label' => 'Width Of the video',
+			'type' => 'text',
+			'std' => '',
+			'des' => '',
+		),
+		array(
+			'id' => 'h',
+			'class' => '',
+			'label' => 'Height of the video',
+			'type' => 'text',
+			'std' => '',
+			'des' => '',
+		),
+		array(
+			'id' => 'poster',
+			'class' => '',
+			'label' => 'Poster',
+			'type' => 'text',
+			'std' => '',
+			'des' => 'Enter a Poster Image for the html5 video',
+		),
+		array(
+			'id' => 'class',
+			'class' => '',
+			'label' => 'class',
+			'type' => 'text',
+			'std' => '',
+			'des' => '',
+		),
+	)
+);
+
+
+/*---------|- audio -|----------*/
+$tinymce_fields[] = array(
+	'title' => 'Audio',
+	'shortcode' => 'tk_audio',
+	'content' => 'no',//yes, no
+	'fields' => array(
+		array(
+			'id' => 'html5',
+			'class' => '',
+			'label' => 'Audio Type',
+			'type' => 'select',
+			'std' => 'no',
+			'des' => '',
+			'options' => array(
+				array('value' => 'no', 'label' => 'html5'),
+				array('value' => 'yes', 'label' => 'oembed'),
+			)
+		),
+		array(
+			'id' => 'src',
+			'class' => '',
+			'label' => 'Src',
+			'type' => 'text',
+			'std' => 'https://soundcloud.com/lmpradio/dj-danny-s-memorial-day-weekend-mix-2014-lmp',
+			'des' => 'If you select html5 audio you have to enter a .mp3 audio with full URL. Or if you select oembed, just copy and past the audio url like soundcloud',
+		),
+		array(
+			'id' => 'w',
+			'class' => '',
+			'label' => 'Width Of the Audio',
+			'type' => 'text',
+			'std' => '',
+			'des' => '',
+		),
+		array(
+			'id' => 'h',
+			'class' => '',
+			'label' => 'Height of the Audio',
+			'type' => 'text',
+			'std' => '',
+			'des' => '',
+		),
+		array(
+			'id' => 'poster',
+			'class' => '',
+			'label' => 'Poster',
+			'type' => 'text',
+			'std' => '',
+			'des' => 'Enter a Poster Image for the html5 Audio',
+		),
+		array(
+			'id' => 'class',
+			'class' => '',
+			'label' => 'class',
+			'type' => 'text',
+			'std' => '',
+			'des' => '',
 		),
 	)
 );
