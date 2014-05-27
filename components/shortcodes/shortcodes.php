@@ -1306,6 +1306,276 @@ $tinymce_fields[] = array(
 	)
 );
 
+/*---------|- highlight -|----------*/
+$tinymce_fields[] = array(
+	'title' => 'Highlight',
+	'shortcode' => 'tk_highlight',
+	'content' => 'yes',//yes, no
+	'fields' => array(
+		array(
+			'id' => 'color',
+			'class' => '',
+			'label' => 'Color',
+			'type' => 'select',
+			'std' => '',
+			'des' => '',
+			'options' => array(
+				array('value' => 'yellow', 'label' => 'yellow'),
+				array('value' => 'black', 'label' => 'black'),
+			)
+		),
+		array(
+			'id' => 'content',
+			'class' => '',
+			'label' => 'Content',
+			'type' => 'text',
+			'std' => 'Welcome to WordPress. This is your first post.',
+			'des' => '',
+			'content' => 'yes',//yes, no
+		),		
+	)
+);
+
+/*---------|- lightbox -|----------*/
+$tinymce_fields[] = array(
+	'title' => 'Lightbox',
+	'shortcode' => 'tk_lightbox',
+	'content' => 'yes',//yes, no
+	'fields' => array(
+		array(
+			'id' => 'src',
+			'class' => '',
+			'label' => 'SRC',
+			'type' => 'text',
+			'std' => '',
+			'des' => 'Enter the full URL including <code>http://</code>',
+		),
+		array(
+			'id' => 'title',
+			'class' => '',
+			'label' => 'Title',
+			'type' => 'text',
+			'std' => '',
+			'des' => '',
+		),
+		array(
+			'id' => 'class',
+			'class' => '',
+			'label' => 'Class',
+			'type' => 'text',
+			'std' => '',
+			'des' => '',
+		),
+		array(
+			'id' => 'content',
+			'class' => '',
+			'label' => 'Content',
+			'type' => 'text',
+			'std' => 'lightbox content will be here.',
+			'des' => '',
+			'content' => 'yes',//yes, no
+		),		
+	)
+);
+
+
+/*---------|- map -|----------*/
+$tinymce_fields[] = array(
+	'title' => 'Map',
+	'shortcode' => 'tk_map',
+	'content' => 'no',//yes, no
+	'fields' => array(
+		array(
+			'id' => 'address',
+			'class' => '',
+			'label' => 'Address',
+			'type' => 'textarea',
+			'std' => 'Gold ST, New York, USA',
+			'des' => 'use "|" to add multiple address',
+		),
+		array(
+			'id' => 'type',
+			'class' => '',
+			'label' => 'Type',
+			'type' => 'select',
+			'std' => '',
+			'des' => '',
+			'options' => array(
+				array('value' => 'ROADMAP', 'label' => 'ROADMAP'),
+				array('value' => 'SATELLITE', 'label' => 'SATELLITE'),
+				array('value' => 'HYBRID', 'label' => 'HYBRID'),
+				array('value' => 'TERRAIN', 'label' => 'TERRAIN'),
+			)
+		),
+		array(
+			'id' => 'width',
+			'class' => '',
+			'label' => 'Width',
+			'type' => 'text',
+			'std' => '100%',
+			'des' => '',
+		),
+		array(
+			'id' => 'height',
+			'class' => '',
+			'label' => 'Height',
+			'type' => 'text',
+			'std' => '300px',
+			'des' => '',
+		),
+		array(
+			'id' => 'zoom',
+			'class' => '',
+			'label' => 'Zoom',
+			'type' => 'text',
+			'std' => '15',
+			'des' => '',
+		),	
+		array(
+			'id' => 'scrollwheel',
+			'class' => '',
+			'label' => 'Scroll Wheel',
+			'type' => 'select',
+			'std' => '',
+			'des' => '',
+			'options' => array(
+				array('value' => 'true', 'label' => 'true'),
+				array('value' => 'false', 'label' => 'false'),
+			)
+		),	
+		array(
+			'id' => 'scale',
+			'class' => '',
+			'label' => 'Scale',
+			'type' => 'select',
+			'std' => '',
+			'des' => '',
+			'options' => array(
+				array('value' => 'true', 'label' => 'true'),
+				array('value' => 'false', 'label' => 'false'),
+			)
+		),
+		array(
+			'id' => 'popup',
+			'class' => '',
+			'label' => 'Popup',
+			'type' => 'select',
+			'std' => '',
+			'des' => '',
+			'options' => array(
+				array('value' => 'true', 'label' => 'true'),
+				array('value' => 'false', 'label' => 'false'),
+			)
+		),
+		array(
+			'id' => 'zoom_pancontrol',
+			'class' => '',
+			'label' => 'Zoom Pancontrol',
+			'type' => 'select',
+			'std' => '',
+			'des' => '',
+			'options' => array(
+				array('value' => 'true', 'label' => 'true'),
+				array('value' => 'false', 'label' => 'false'),
+			)
+		),
+		array(
+			'id' => 'icon',
+			'class' => '',
+			'label' => 'Icon Image URL',
+			'type' => 'text',
+			'std' => NULL,
+			'des' => 'Enter the full URL including <code>http://</code>',
+		),
+	)
+);
+
+/*---------|- Blog -|----------*/
+$tinymce_fields[] = array(
+	'title' => 'Blog',
+	'shortcode' => 'tk_blog',
+	'content' => 'no',//yes, no
+	'fields' => array(
+		array(
+			'id' => 'address',
+			'class' => '',
+			'label' => 'Address',
+			'type' => 'textarea',
+			'std' => 'Gold ST, New York, USA',
+			'des' => 'use "|" to add multiple address',
+		),
+	)
+);
+
+/*---------|- Progress Bar -|----------*/
+$tinymce_fields[] = array(
+	'title' => 'Progress Bar',
+	'shortcode' => 'tk_progress_bar',
+	'content' => 'yes',//yes, no
+	'fields' => array(
+		array(
+			'id' => 'value',
+			'class' => '',
+			'label' => 'Bar value',
+			'type' => 'text',
+			'std' => '70',
+			'des' => 'Example: 70 (1 to 100)',
+		),
+		array(
+			'id' => 'content',
+			'class' => '',
+			'label' => 'Text',
+			'type' => 'text',
+			'std' => 'Web Development - 70%',
+			'des' => '',
+			'content' => 'yes',//yes, no
+		),
+		array(
+			'id' => 'filled_color',
+			'class' => '',
+			'label' => 'Filled Color',
+			'type' => 'text',
+			'std' => '#45b900',
+			'des' => '',
+		),
+		array(
+			'id' => 'unfilled_color',
+			'class' => '',
+			'label' => 'Unfilled Color',
+			'type' => 'text',
+			'std' => '#f0f0f0',
+			'des' => '',
+		),
+	)
+);
+
+/*---------|- Counter Box -|----------*/
+$tinymce_fields[] = array(
+	'title' => 'Counter Box',
+	'shortcode' => 'tk_counter_box',
+	'content' => 'yes',//yes, no
+	'fields' => array(
+		array(
+			'id' => 'value',
+			'class' => '',
+			'label' => 'Bar value',
+			'type' => 'text',
+			'std' => '70',
+			'des' => 'Example: 70 (1 to 100)',
+		),
+		array(
+			'id' => 'content',
+			'class' => '',
+			'label' => 'Text',
+			'type' => 'text',
+			'std' => 'Web Development - 70%',
+			'des' => '',
+			'content' => 'yes',//yes, no
+		),
+	)
+);
+
+
 $settings = array(
 	'uid' => 'tallykit_shortcode_tinymce',
 	'button_title' => '[ ]',
@@ -1335,6 +1605,7 @@ if( !function_exists('tallykit_shortcodes_fix_shortcodes') ) {
 			']</p>'		=> ']', 
 			']<br />'	=> ']'
 		);
+		
 		$content = strtr($content, $array);
 		return $content;
 	}
