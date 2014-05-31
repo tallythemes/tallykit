@@ -302,7 +302,16 @@ new acoc_metabox_register($settings);
  *
  * @uses class acoc_template_file_loader  
 **/
- 
+$settings = array(
+	'child_url'  => TALLYKIT_CHILD_TPL_URL.'portfolio/',
+	'theme_url'  => TALLYKIT_THEME_TPL_URL.'portfolio/',
+	'plugin_url' => TALLYKIT_COMPONENTS_URL.'portfolio/templates/',
+	
+	'child_dri'  => TALLYKIT_CHILD_TPL_DRI.'portfolio/',
+	'theme_dri'  => TALLYKIT_THEME_TPL_DRI.'portfolio/',
+	'plugin_dri' => TALLYKIT_COMPONENTS_DRI.'portfolio/templates/',
+);
+$tallykit_portfolio_template_dri = new acoc_template_file_loader($settings);
  
  
  
@@ -315,7 +324,21 @@ new acoc_metabox_register($settings);
  *
  * @uses action wp_enqueue_scripts  
 **/
- 
+add_action('wp_enqueue_scripts', 'tallykit_portfolio_script_loader');
+function tallykit_portfolio_script_loader(){
+	wp_enqueue_script( 'jquery-easing');
+	wp_enqueue_script( 'jquery-flexslider');
+	wp_enqueue_script( 'jquery-prettyPhoto');
+	wp_enqueue_script( 'jquery-imagesloaded');
+	wp_enqueue_script( 'jquery-isotope');
+	
+	wp_enqueue_style( 'acoc-flexslider');
+	wp_enqueue_style( 'jquery-prettyPhoto');
+	wp_enqueue_style( 'font-awesome');
+	
+	wp_enqueue_script( 'tallykit-shortcodes', TALLYKIT_COMPONENTS_URL.'portfolio/assets/js/portfolio.js', array('jquery'), '1.0', true );
+	wp_enqueue_style( 'tallykit-shortcodes', TALLYKIT_COMPONENTS_URL.'portfolio/assets/css/portfolio.css', '', '1.0' );
+}
  
  
  
@@ -329,6 +352,162 @@ new acoc_metabox_register($settings);
  *
  * @uses filter add_shortcode  
 **/
+
+/*---------|- Grid -|-------------------------------------*/
+add_shortcode('tk_portfolio_grid', 'tallykit_portfolio_sc_grid');
+function tallykit_portfolio_sc_grid( $atts, $content = null ) {
+	extract( shortcode_atts( array(
+			'category'         => '',
+			'exclude_category' => '',
+			'tags'             => '',
+			'exclude_tags'     => '',
+			'relation'         => 'AND',
+			'number'           => 10,
+			'columns'          => 3,
+			'orderby'          => 'post_date',
+			'order'            => 'DESC',
+			'ids'              => '',
+			'margin'		   => '1'
+		), $atts, 'downloads' )
+	);
+	
+	global $tallykit_portfolio_template_dri;
+	
+	
+	$query = array(
+		'post_type'      => 'tallykit_portfolio',
+		'posts_per_page' => absint( $number ),
+		'orderby'        => $orderby,
+		'order'          => $order
+	);
+
+	switch ( $orderby ) {
+		case 'title':
+			$query['orderby'] = 'title';
+		break;
+
+		case 'id':
+			$query['orderby'] = 'ID';
+		break;
+
+		case 'random':
+			$query['orderby'] = 'rand';
+		break;
+
+		default:
+			$query['orderby'] = 'post_date';
+		break;
+	}
+
+	if ( $tags || $category || $exclude_category || $exclude_tags ) {
+		$query['tax_query'] = array(
+			'relation'     => $relation
+		);
+
+		if ( $tags ) {
+			$query['tax_query'][] = array(
+				'taxonomy' => 'download_tag',
+				'terms'    => explode( ',', $tags ),
+				'field'    => 'slug'
+			);
+		}
+
+		if ( $category ) {
+			$query['tax_query'][] = array(
+				'taxonomy' => 'tallykit_portfolio_category',
+				'terms'    => explode( ',', $category ),
+				'field'    => 'slug'
+			);
+		}
+
+		if ( $exclude_category ) {
+			$query['tax_query'][] = array(
+				'taxonomy' => 'download_category',
+				'terms'    => explode( ',', $exclude_category ),
+				'field'    => 'slug',
+				'operator' => 'NOT IN',
+			);
+		}
+
+		if ( $exclude_tags ) {
+			$query['tax_query'][] = array(
+				'taxonomy' => 'tallykit_portfolio_tag',
+				'terms'    => explode( ',', $exclude_tags ),
+				'field'    => 'slug',
+				'operator' => 'NOT IN',
+			);
+		}
+	}
+
+	if( ! empty( $ids ) )
+		$query['post__in'] = explode( ',', $ids );
+
+	if ( get_query_var( 'paged' ) )
+		$query['paged'] = get_query_var('paged');
+	else if ( get_query_var( 'page' ) )
+		$query['paged'] = get_query_var( 'page' );
+	else
+		$query['paged'] = 1;
+
+	
+	ob_start();
+	include($tallykit_portfolio_template_dri->dri().'portfolio-grid.php');
+	$output = ob_get_contents();
+	ob_end_clean();
+	
+	return 	$output;
+}
+
+/*---------|- carousel -|-------------------------------------*/
+add_shortcode('tk_portfolio_carousel', 'tallykit_portfolio_sc_carousel');
+function tallykit_portfolio_sc_carousel( $atts, $content = null  ) {
+	extract( shortcode_atts( array(
+		'title'	=> 'Title',
+		'class'	=> '',
+	), $atts ) );
+	$output = '';
+	
+	return $output; 
+}
+
+
+/*---------|- Slideshow -|-------------------------------------*/
+add_shortcode('tk_portfolio_slideshow', 'tallykit_portfolio_sc_slideshow');
+function tallykit_portfolio_sc_slideshow( $atts, $content = null  ) {
+	extract( shortcode_atts( array(
+		'title'	=> 'Title',
+		'class'	=> '',
+	), $atts ) );
+	$output = '';
+	
+	return $output; 
+}
+
+
+/*---------|- List -|-------------------------------------*/
+add_shortcode('tk_portfolio_list', 'tallykit_portfolio_sc_list');
+function tallykit_portfolio_sc_list( $atts, $content = null  ) {
+	extract( shortcode_atts( array(
+		'title'	=> 'Title',
+		'class'	=> '',
+	), $atts ) );
+	$output = '';
+	
+	return $output; 
+}
+
+
+/*---------|- Single -|-------------------------------------*/
+add_shortcode('tk_portfolio_single', 'tallykit_portfolio_sc_single');
+function tallykit_portfolio_sc_single( $atts, $content = null  ) {
+	extract( shortcode_atts( array(
+		'title'	=> 'Title',
+		'class'	=> '',
+	), $atts ) );
+	$output = '';
+	
+	return $output; 
+}
   
  
  

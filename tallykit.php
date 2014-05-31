@@ -29,11 +29,11 @@ define('TALLYKIT_VERSION', 1.0 );
 define('TALLYKIT_COMPONENTS_URL', TALLYKIT_URL.'components/' );
 define('TALLYKIT_COMPONENTS_DRI', TALLYKIT_DRI.'components/' );
 
-define('TALLYKIT_THEME_URL', get_template_directory_uri().'/tallykit/' );
-define('TALLYKIT_THEME_DRI', get_template_directory().'/tallykit/' );
+define('TALLYKIT_THEME_TPL_URL', get_template_directory_uri().'/tallykit/' );
+define('TALLYKIT_THEME_TPL_DRI', get_template_directory().'/tallykit/' );
 
-define('TALLYKIT_CHILD_URL', get_stylesheet_directory_uri().'/tallykit/' );
-define('TALLYKIT_CHILD_DRI', get_stylesheet_directory().'/tallykit/' );
+define('TALLYKIT_CHILD_TPL_URL', get_stylesheet_directory_uri().'/tallykit/' );
+define('TALLYKIT_CHILD_TPL_DRI', get_stylesheet_directory().'/tallykit/' );
 
 
 include('includes/custom-functions.php');
