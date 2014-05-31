@@ -274,7 +274,6 @@ new acoc_metabox_register($settings);
 **/
 $fields = array();
 
-
 $fields[] = array(
 	'id' => 'heading_1',
 	'class' => '',
@@ -529,13 +528,13 @@ function tallykit_portfolio_sc_grid( $atts, $content = null ) {
 			'tags'             => '',
 			'exclude_tags'     => '',
 			'relation'         => 'AND',
-			'limit'           => 10,
+			'limit'            => 12,
 			'columns'          => 3,
 			'orderby'          => 'post_date',
 			'order'            => 'DESC',
 			'ids'              => '',
 			'filter'		   => 'yes',
-			'margin'		   => '1'
+			'margin'		   => '3'
 		), $atts)
 	);
 	
@@ -640,10 +639,10 @@ function tallykit_portfolio_sc_carousel( $atts, $content = null ) {
 			
 			'controlNav'       => 'true',
 			'directionNav'     => 'true',
-			'itemWidth'        => '0',
-			'itemMargin'       => '0',
-			'minItems'         => '0',
-			'maxItems'         => '0',
+			'itemWidth'        => '100',
+			'itemMargin'       => '10',
+			'minItems'         => '2',
+			'maxItems'         => '3',
 			'move'             => '0',
 		), $atts)
 	);
