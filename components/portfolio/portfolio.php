@@ -75,11 +75,15 @@ $post_columns->add_column('post_thumb',
   array(
 		'label' => __('Thumb', 'tallykit_textdomain'),
 		'type'  => 'text',
-		'text'  => '<img src="http://placehold.it/100x100">'
+		'text'  => ''
 	)
 );
-//remove date column
-$post_columns->remove_column('date');
+add_filter('cpt_columns_text_post_thumb', 'tallykit_portfolio_cpt_column_Thumb_filter');
+function tallykit_portfolio_cpt_column_Thumb_filter(){
+	$meta = get_post_meta(get_the_ID(), 'tallykit_portfolio_archive_image', true);
+	$post_columns_image = ( $meta == "" ) ? 'http://placehold.it/70x70' : $meta;
+	return '<img src="'. $post_columns_image .'" style="max-height:100px; max-width:100px;">';
+}
  
  
  
@@ -243,27 +247,7 @@ $fields[] = array(
 	'filter' => '', //sanitize_text_field, esc_attr
 );
 
-/*$fields[] = array(
-	'id' => $prefix.'images',
-	'class' => '',
-	'label' => __( 'Additioanal Images', 'tallykit_textdomain' ),
-	'type' => 'list_item',
-	'std' => '',
-	'des' => __( 'Add Additioanal images to display as gallery', 'tallykit_textdomain' ),
-	'filter' => '', //sanitize_text_field, esc_attr
-	'settings' => array(
-		array(
-			'id' => 'image',
-			'class' => '',
-			'label' => __( 'image', 'tallykit_textdomain' ),
-			'type' => 'text',
-			'std' => '',
-			'des' => '',
-			'filter' => '', //sanitize_text_field, esc_attr
-		)
-	),
-);*/
-
+/*~ Registering the Metabox ~*/
 $settings = array(
 	'id' => 'tallykit_portfolio_metabox',
 	'title' => __( 'Portfolio Settings', 'tallykit_textdomain' ),
@@ -288,7 +272,33 @@ new acoc_metabox_register($settings);
  *
  * @uses class acoc_setting_api_class  
 **/
- 
+$fields = array();
+
+$fields[] = array(
+	'id' => 'client_url_label',
+	'class' => '',
+	'label' => __( 'Client URL Label', 'tallykit_textdomain' ),
+	'type' => 'text',
+	'std' => '',
+	'des' => __( 'This is the Label of the Client URL', 'tallykit_textdomain' ),
+	'filter' => '', //sanitize_text_field, esc_attr
+);
+
+/*~ Registering the Options ~*/
+$settings = array(
+	'id' => 'tallykit_portfolio_options',
+	'option_name' => 'tallykit_portfolio',
+	'page_title' => "Portfolio Settings",
+	'menu_title' => "Settings",
+	'capability' => 'manage_options',
+	'menu_slug' => 'tallykit_portfolio_options',
+	'parent_slug' => 'edit.php?post_type=tallykit_portfolio',
+	'icon_url' => NULL,
+	'position' => NULL,
+	'fields' => $fields,
+);
+
+new acoc_setting_api_class($settings);
  
  
  
