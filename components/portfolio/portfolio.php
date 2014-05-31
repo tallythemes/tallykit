@@ -274,13 +274,162 @@ new acoc_metabox_register($settings);
 **/
 $fields = array();
 
+
 $fields[] = array(
-	'id' => 'client_url_label',
+	'id' => 'heading_1',
 	'class' => '',
-	'label' => __( 'Client URL Label', 'tallykit_textdomain' ),
+	'label' => __( 'Image Size', 'tallykit_textdomain' ),
+	'type' => 'heading',
+	'std' => '',
+	'des' => __( 'The following options affect image size on the frontend.', 'tallykit_textdomain' ),
+	'filter' => '', //sanitize_text_field, esc_attr
+);
+$fields[] = array(
+	'id' => 'archive_image_w',
+	'class' => '',
+	'label' => __( 'Archive Image Width', 'tallykit_textdomain' ),
 	'type' => 'text',
 	'std' => '',
-	'des' => __( 'This is the Label of the Client URL', 'tallykit_textdomain' ),
+	'des' => __( 'You can change the Width of the archive image. Leave it blank if you want to use the default. Example: <code>300</code>', 'tallykit_textdomain' ),
+	'filter' => '', //sanitize_text_field, esc_attr
+);
+$fields[] = array(
+	'id' => 'archive_image_h',
+	'class' => '',
+	'label' => __( 'Archive Image Height', 'tallykit_textdomain' ),
+	'type' => 'text',
+	'std' => '',
+	'des' => __( 'You can change the Height of the archive image. Leave it blank if you want to use the default. Example: <code>300</code>', 'tallykit_textdomain' ),
+	'filter' => '', //sanitize_text_field, esc_attr
+);
+
+$fields[] = array(
+	'id' => 'single_image_w',
+	'class' => '',
+	'label' => __( 'Single Page Image Width', 'tallykit_textdomain' ),
+	'type' => 'text',
+	'std' => '',
+	'des' => __( 'You can change the Width of the Single Page image. Leave it blank if you want to use the default. Example: <code>960</code>', 'tallykit_textdomain' ),
+	'filter' => '', //sanitize_text_field, esc_attr
+);
+$fields[] = array(
+	'id' => 'single_image_h',
+	'class' => '',
+	'label' => __( 'Single Page Image Height', 'tallykit_textdomain' ),
+	'type' => 'text',
+	'std' => '',
+	'des' => __( 'You can change the Height of the Single Page image. Leave it blank if you want to use the default. Example: <code>300</code>', 'tallykit_textdomain' ),
+	'filter' => '', //sanitize_text_field, esc_attr
+);
+
+$fields[] = array(
+	'id' => 'heading_2',
+	'class' => '',
+	'label' => __( 'Portfolio PostType Options', 'tallykit_textdomain' ),
+	'type' => 'heading',
+	'std' => '',
+	'des' => __( 'The following options affect Portfolio PostType\'s <strong>slug</strong> and  <strong>label</strong>', 'tallykit_textdomain' ),
+	'filter' => '', //sanitize_text_field, esc_attr
+);
+$fields[] = array(
+	'id' => 'singuler_post_label',
+	'class' => '',
+	'label' => __( 'Singuler Post Label', 'tallykit_textdomain' ),
+	'type' => 'text',
+	'std' => '',
+	'des' => __( 'This will affect on the backend only.', 'tallykit_textdomain' ),
+	'filter' => '', //sanitize_text_field, esc_attr
+);
+$fields[] = array(
+	'id' => 'plural_post_label',
+	'class' => '',
+	'label' => __( 'Plural Post Label', 'tallykit_textdomain' ),
+	'type' => 'text',
+	'std' => '',
+	'des' => __( 'This will affect on the backend only.', 'tallykit_textdomain' ),
+	'filter' => '', //sanitize_text_field, esc_attr
+);
+$fields[] = array(
+	'id' => 'post_slug',
+	'class' => '',
+	'label' => __( 'Post Slug', 'tallykit_textdomain' ),
+	'type' => 'text',
+	'std' => 'portfolio-item',
+	'des' => __( 'This is the base slug of the portfoio', 'tallykit_textdomain' ),
+	'filter' => '', //sanitize_text_field, esc_attr
+);
+
+$fields[] = array(
+	'id' => 'heading_3',
+	'class' => '',
+	'label' => __( 'Portfolio Category Options', 'tallykit_textdomain' ),
+	'type' => 'heading',
+	'std' => '',
+	'des' => __( 'The following options affect Portfolio Category\'s <strong>slug</strong> and  <strong>label</strong>', 'tallykit_textdomain' ),
+	'filter' => '', //sanitize_text_field, esc_attr
+);
+$fields[] = array(
+	'id' => 'singuler_cat_label',
+	'class' => '',
+	'label' => __( 'Singuler Category Label', 'tallykit_textdomain' ),
+	'type' => 'text',
+	'std' => '',
+	'des' => __( 'This will affect on the backend only.', 'tallykit_textdomain' ),
+	'filter' => '', //sanitize_text_field, esc_attr
+);
+$fields[] = array(
+	'id' => 'plural_cat_label',
+	'class' => '',
+	'label' => __( 'Plural Category Label', 'tallykit_textdomain' ),
+	'type' => 'text',
+	'std' => '',
+	'des' => __( 'This will affect on the backend only.', 'tallykit_textdomain' ),
+	'filter' => '', //sanitize_text_field, esc_attr
+);
+$fields[] = array(
+	'id' => 'cat_slug',
+	'class' => '',
+	'label' => __( 'Category Slug', 'tallykit_textdomain' ),
+	'type' => 'text',
+	'std' => 'portfolio_category',
+	'des' => __( 'This is the base slug of the Category', 'tallykit_textdomain' ),
+	'filter' => '', //sanitize_text_field, esc_attr
+);
+
+$fields[] = array(
+	'id' => 'heading_3',
+	'class' => '',
+	'label' => __( 'Portfolio Tags Options', 'tallykit_textdomain' ),
+	'type' => 'heading',
+	'std' => '',
+	'des' => __( 'The following options affect Portfolio Category\'s <strong>slug</strong> and  <strong>label</strong>', 'tallykit_textdomain' ),
+	'filter' => '', //sanitize_text_field, esc_attr
+);
+$fields[] = array(
+	'id' => 'singuler_tag_label',
+	'class' => '',
+	'label' => __( 'Singuler Tag Label', 'tallykit_textdomain' ),
+	'type' => 'text',
+	'std' => '',
+	'des' => __( 'This will affect on the backend only.', 'tallykit_textdomain' ),
+	'filter' => '', //sanitize_text_field, esc_attr
+);
+$fields[] = array(
+	'id' => 'plural_tag_label',
+	'class' => '',
+	'label' => __( 'Plural Tag Label', 'tallykit_textdomain' ),
+	'type' => 'text',
+	'std' => '',
+	'des' => __( 'This will affect on the backend only.', 'tallykit_textdomain' ),
+	'filter' => '', //sanitize_text_field, esc_attr
+);
+$fields[] = array(
+	'id' => 'tag_slug',
+	'class' => '',
+	'label' => __( 'Tags Slug', 'tallykit_textdomain' ),
+	'type' => 'text',
+	'std' => 'portfolio_tag',
+	'des' => __( 'This is the base slug of the Tag', 'tallykit_textdomain' ),
 	'filter' => '', //sanitize_text_field, esc_attr
 );
 
@@ -312,16 +461,24 @@ new acoc_setting_api_class($settings);
  *
  * @uses class acoc_template_file_loader  
 **/
-$settings = array(
-	'child_url'  => TALLYKIT_CHILD_TPL_URL.'portfolio/',
-	'theme_url'  => TALLYKIT_THEME_TPL_URL.'portfolio/',
-	'plugin_url' => TALLYKIT_COMPONENTS_URL.'portfolio/templates/',
+function tallykit_portfolio_template_path($type='url'){
+	$settings = array(
+		'child_url'  => TALLYKIT_CHILD_TPL_URL.'portfolio/',
+		'theme_url'  => TALLYKIT_THEME_TPL_URL.'portfolio/',
+		'plugin_url' => TALLYKIT_COMPONENTS_URL.'portfolio/templates/',
+		
+		'child_dri'  => TALLYKIT_CHILD_TPL_DRI.'portfolio/',
+		'theme_dri'  => TALLYKIT_THEME_TPL_DRI.'portfolio/',
+		'plugin_dri' => TALLYKIT_COMPONENTS_DRI.'portfolio/templates/',
+	);
+	$template = new acoc_template_file_loader($settings);
 	
-	'child_dri'  => TALLYKIT_CHILD_TPL_DRI.'portfolio/',
-	'theme_dri'  => TALLYKIT_THEME_TPL_DRI.'portfolio/',
-	'plugin_dri' => TALLYKIT_COMPONENTS_DRI.'portfolio/templates/',
-);
-$tallykit_portfolio_template_dri = new acoc_template_file_loader($settings);
+	if($type == 'url'){
+		return $template->url();
+	}else{
+		return $template->dri();
+	}
+}
  
  
  
@@ -372,21 +529,20 @@ function tallykit_portfolio_sc_grid( $atts, $content = null ) {
 			'tags'             => '',
 			'exclude_tags'     => '',
 			'relation'         => 'AND',
-			'number'           => 10,
+			'limit'           => 10,
 			'columns'          => 3,
 			'orderby'          => 'post_date',
 			'order'            => 'DESC',
 			'ids'              => '',
+			'filter'		   => 'yes',
 			'margin'		   => '1'
-		), $atts, 'downloads' )
+		), $atts)
 	);
-	
-	global $tallykit_portfolio_template_dri;
 	
 	
 	$query = array(
 		'post_type'      => 'tallykit_portfolio',
-		'posts_per_page' => absint( $number ),
+		'posts_per_page' => absint( $limit ),
 		'orderby'        => $orderby,
 		'order'          => $order
 	);
@@ -416,7 +572,7 @@ function tallykit_portfolio_sc_grid( $atts, $content = null ) {
 
 		if ( $tags ) {
 			$query['tax_query'][] = array(
-				'taxonomy' => 'download_tag',
+				'taxonomy' => 'tallykit_portfolio_tag',
 				'terms'    => explode( ',', $tags ),
 				'field'    => 'slug'
 			);
@@ -432,7 +588,7 @@ function tallykit_portfolio_sc_grid( $atts, $content = null ) {
 
 		if ( $exclude_category ) {
 			$query['tax_query'][] = array(
-				'taxonomy' => 'download_category',
+				'taxonomy' => 'tallykit_portfolio_category',
 				'terms'    => explode( ',', $exclude_category ),
 				'field'    => 'slug',
 				'operator' => 'NOT IN',
@@ -461,7 +617,7 @@ function tallykit_portfolio_sc_grid( $atts, $content = null ) {
 
 	
 	ob_start();
-	include($tallykit_portfolio_template_dri->dri().'portfolio-grid.php');
+	include(tallykit_portfolio_template_path('dri').'portfolio-grid.php');
 	$output = ob_get_contents();
 	ob_end_clean();
 	
@@ -470,40 +626,324 @@ function tallykit_portfolio_sc_grid( $atts, $content = null ) {
 
 /*---------|- carousel -|-------------------------------------*/
 add_shortcode('tk_portfolio_carousel', 'tallykit_portfolio_sc_carousel');
-function tallykit_portfolio_sc_carousel( $atts, $content = null  ) {
+function tallykit_portfolio_sc_carousel( $atts, $content = null ) {
 	extract( shortcode_atts( array(
-		'title'	=> 'Title',
-		'class'	=> '',
-	), $atts ) );
-	$output = '';
+			'category'         => '',
+			'exclude_category' => '',
+			'tags'             => '',
+			'exclude_tags'     => '',
+			'relation'         => 'AND',
+			'limit'            => 10,
+			'orderby'          => 'post_date',
+			'order'            => 'DESC',
+			'ids'              => '',
+			
+			'controlNav'       => 'true',
+			'directionNav'     => 'true',
+			'itemWidth'        => '0',
+			'itemMargin'       => '0',
+			'minItems'         => '0',
+			'maxItems'         => '0',
+			'move'             => '0',
+		), $atts)
+	);
 	
-	return $output; 
+	
+	$query = array(
+		'post_type'      => 'tallykit_portfolio',
+		'posts_per_page' => absint( $limit ),
+		'orderby'        => $orderby,
+		'order'          => $order
+	);
+
+	switch ( $orderby ) {
+		case 'title':
+			$query['orderby'] = 'title';
+		break;
+
+		case 'id':
+			$query['orderby'] = 'ID';
+		break;
+
+		case 'random':
+			$query['orderby'] = 'rand';
+		break;
+
+		default:
+			$query['orderby'] = 'post_date';
+		break;
+	}
+
+	if ( $tags || $category || $exclude_category || $exclude_tags ) {
+		$query['tax_query'] = array(
+			'relation'     => $relation
+		);
+
+		if ( $tags ) {
+			$query['tax_query'][] = array(
+				'taxonomy' => 'tallykit_portfolio_tag',
+				'terms'    => explode( ',', $tags ),
+				'field'    => 'slug'
+			);
+		}
+
+		if ( $category ) {
+			$query['tax_query'][] = array(
+				'taxonomy' => 'tallykit_portfolio_category',
+				'terms'    => explode( ',', $category ),
+				'field'    => 'slug'
+			);
+		}
+
+		if ( $exclude_category ) {
+			$query['tax_query'][] = array(
+				'taxonomy' => 'tallykit_portfolio_category',
+				'terms'    => explode( ',', $exclude_category ),
+				'field'    => 'slug',
+				'operator' => 'NOT IN',
+			);
+		}
+
+		if ( $exclude_tags ) {
+			$query['tax_query'][] = array(
+				'taxonomy' => 'tallykit_portfolio_tag',
+				'terms'    => explode( ',', $exclude_tags ),
+				'field'    => 'slug',
+				'operator' => 'NOT IN',
+			);
+		}
+	}
+
+	if( ! empty( $ids ) )
+		$query['post__in'] = explode( ',', $ids );
+
+	if ( get_query_var( 'paged' ) )
+		$query['paged'] = get_query_var('paged');
+	else if ( get_query_var( 'page' ) )
+		$query['paged'] = get_query_var( 'page' );
+	else
+		$query['paged'] = 1;
+
+	
+	ob_start();
+	include(tallykit_portfolio_template_path('dri').'portfolio-carousel.php');
+	$output = ob_get_contents();
+	ob_end_clean();
+	
+	return 	$output;
 }
 
 
 /*---------|- Slideshow -|-------------------------------------*/
 add_shortcode('tk_portfolio_slideshow', 'tallykit_portfolio_sc_slideshow');
-function tallykit_portfolio_sc_slideshow( $atts, $content = null  ) {
+function tallykit_portfolio_sc_slideshow( $atts, $content = null ) {
 	extract( shortcode_atts( array(
-		'title'	=> 'Title',
-		'class'	=> '',
-	), $atts ) );
-	$output = '';
+			'category'         => '',
+			'exclude_category' => '',
+			'tags'             => '',
+			'exclude_tags'     => '',
+			'relation'         => 'AND',
+			'limit'            => 10,
+			'orderby'          => 'post_date',
+			'order'            => 'DESC',
+			'ids'              => '',
+			
+			'animation'        => 'slide',
+			'direction'        => 'horizontal',
+			'smoothHeight'     => 'false',
+			'slideshow'        => 'true',
+			'animationLoop'    => 'true',
+			'slideshowSpeed'   => '7000',
+			'animationSpeed'   => '600',
+			'controlNav'       => 'true',
+			'directionNav'     => 'true',
+		), $atts)
+	);
 	
-	return $output; 
+	$query = array(
+		'post_type'      => 'tallykit_portfolio',
+		'posts_per_page' => absint( $limit ),
+		'orderby'        => $orderby,
+		'order'          => $order
+	);
+
+	switch ( $orderby ) {
+		case 'title':
+			$query['orderby'] = 'title';
+		break;
+
+		case 'id':
+			$query['orderby'] = 'ID';
+		break;
+
+		case 'random':
+			$query['orderby'] = 'rand';
+		break;
+
+		default:
+			$query['orderby'] = 'post_date';
+		break;
+	}
+
+	if ( $tags || $category || $exclude_category || $exclude_tags ) {
+		$query['tax_query'] = array(
+			'relation'     => $relation
+		);
+
+		if ( $tags ) {
+			$query['tax_query'][] = array(
+				'taxonomy' => 'tallykit_portfolio_tag',
+				'terms'    => explode( ',', $tags ),
+				'field'    => 'slug'
+			);
+		}
+
+		if ( $category ) {
+			$query['tax_query'][] = array(
+				'taxonomy' => 'tallykit_portfolio_category',
+				'terms'    => explode( ',', $category ),
+				'field'    => 'slug'
+			);
+		}
+
+		if ( $exclude_category ) {
+			$query['tax_query'][] = array(
+				'taxonomy' => 'tallykit_portfolio_category',
+				'terms'    => explode( ',', $exclude_category ),
+				'field'    => 'slug',
+				'operator' => 'NOT IN',
+			);
+		}
+
+		if ( $exclude_tags ) {
+			$query['tax_query'][] = array(
+				'taxonomy' => 'tallykit_portfolio_tag',
+				'terms'    => explode( ',', $exclude_tags ),
+				'field'    => 'slug',
+				'operator' => 'NOT IN',
+			);
+		}
+	}
+
+	if( ! empty( $ids ) )
+		$query['post__in'] = explode( ',', $ids );
+
+	if ( get_query_var( 'paged' ) )
+		$query['paged'] = get_query_var('paged');
+	else if ( get_query_var( 'page' ) )
+		$query['paged'] = get_query_var( 'page' );
+	else
+		$query['paged'] = 1;
+
+	
+	ob_start();
+	include(tallykit_portfolio_template_path('dri').'portfolio-slideshow.php');
+	$output = ob_get_contents();
+	ob_end_clean();
+	
+	return 	$output;
 }
 
 
 /*---------|- List -|-------------------------------------*/
 add_shortcode('tk_portfolio_list', 'tallykit_portfolio_sc_list');
-function tallykit_portfolio_sc_list( $atts, $content = null  ) {
+function tallykit_portfolio_sc_list( $atts, $content = null ) {
 	extract( shortcode_atts( array(
-		'title'	=> 'Title',
-		'class'	=> '',
-	), $atts ) );
-	$output = '';
+			'category'         => '',
+			'exclude_category' => '',
+			'tags'             => '',
+			'exclude_tags'     => '',
+			'relation'         => 'AND',
+			'limit'            => 5,
+			'orderby'          => 'post_date',
+			'order'            => 'DESC',
+			'ids'              => '',
+			'filter'		   => 'yes',
+		), $atts)
+	);
 	
-	return $output; 
+	$query = array(
+		'post_type'      => 'tallykit_portfolio',
+		'posts_per_page' => absint( $limit ),
+		'orderby'        => $orderby,
+		'order'          => $order
+	);
+
+	switch ( $orderby ) {
+		case 'title':
+			$query['orderby'] = 'title';
+		break;
+
+		case 'id':
+			$query['orderby'] = 'ID';
+		break;
+
+		case 'random':
+			$query['orderby'] = 'rand';
+		break;
+
+		default:
+			$query['orderby'] = 'post_date';
+		break;
+	}
+
+	if ( $tags || $category || $exclude_category || $exclude_tags ) {
+		$query['tax_query'] = array(
+			'relation'     => $relation
+		);
+
+		if ( $tags ) {
+			$query['tax_query'][] = array(
+				'taxonomy' => 'tallykit_portfolio_tag',
+				'terms'    => explode( ',', $tags ),
+				'field'    => 'slug'
+			);
+		}
+
+		if ( $category ) {
+			$query['tax_query'][] = array(
+				'taxonomy' => 'tallykit_portfolio_category',
+				'terms'    => explode( ',', $category ),
+				'field'    => 'slug'
+			);
+		}
+
+		if ( $exclude_category ) {
+			$query['tax_query'][] = array(
+				'taxonomy' => 'tallykit_portfolio_category',
+				'terms'    => explode( ',', $exclude_category ),
+				'field'    => 'slug',
+				'operator' => 'NOT IN',
+			);
+		}
+
+		if ( $exclude_tags ) {
+			$query['tax_query'][] = array(
+				'taxonomy' => 'tallykit_portfolio_tag',
+				'terms'    => explode( ',', $exclude_tags ),
+				'field'    => 'slug',
+				'operator' => 'NOT IN',
+			);
+		}
+	}
+
+	if( ! empty( $ids ) )
+		$query['post__in'] = explode( ',', $ids );
+
+	if ( get_query_var( 'paged' ) )
+		$query['paged'] = get_query_var('paged');
+	else if ( get_query_var( 'page' ) )
+		$query['paged'] = get_query_var( 'page' );
+	else
+		$query['paged'] = 1;
+
+	
+	ob_start();
+	include(tallykit_portfolio_template_path('dri').'portfolio-list.php');
+	$output = ob_get_contents();
+	ob_end_clean();
+	
+	return 	$output;
 }
 
 
