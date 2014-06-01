@@ -114,6 +114,35 @@ $tinymce_fields[] = array(
 				array('label' => 'ASC', 'value' => 'ASC'),
 			)
 		),
+		array(
+			'id' => 'ids',
+			'class' => '',
+			'label' => 'Portfolio IDs',
+			'type' => 'post_multi_select',
+			'std' => '',
+			'des' => '',
+			'post_type' => 'tallykit_portfolio'
+		),
+		array(
+			'id' => 'filter',
+			'class' => '',
+			'label' => 'Filter',
+			'type' => 'select',
+			'std' => 'yes',
+			'des' => '',
+			'options' => array(
+				array('label' => 'yes', 'value' => 'yes'),
+				array('label' => 'no', 'value' => 'no'),
+			)
+		),
+		array(
+			'id' => 'margin',
+			'class' => '',
+			'label' => 'Column Margin',
+			'type' => 'text',
+			'std' => '3',
+			'des' => '',
+		),
 	)
 );
 
