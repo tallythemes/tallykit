@@ -1,11 +1,11 @@
 <?php
 $flexslider2 = new acoc_flexslider2_html(array(
-	'controlNav'       => $controlNav,
-	'directionNav'     => $directionNav,
-	'itemWidth'        => $itemWidth,
-	'itemMargin'       => $itemMargin,
-	'minItems'         => $minItems,
-	'maxItems'         => $maxItems,
+	'controlNav'       => $control_nav,
+	'directionNav'     => $direction_nav,
+	'itemWidth'        => $item_width,
+	'itemMargin'       => $item_margin,
+	'minItems'         => $min_items,
+	'maxItems'         => $max_items,
 	'move'             => $move,
 ));
 $portfolio_query = new WP_Query( $query );

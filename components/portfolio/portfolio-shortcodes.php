@@ -126,12 +126,12 @@ function tallykit_portfolio_sc_carousel( $atts, $content = null ) {
 			'order'            => 'DESC',
 			'ids'              => '',
 			
-			'controlNav'       => 'true',
-			'directionNav'     => 'true',
-			'itemWidth'        => '100',
-			'itemMargin'       => '10',
-			'minItems'         => '2',
-			'maxItems'         => '3',
+			'control_nav'       => 'true',
+			'direction_nav'     => 'true',
+			'item_width'        => '100',
+			'item_margin'       => '10',
+			'min_items'         => '2',
+			'max_items'         => '3',
 			'move'             => '0',
 		), $atts)
 	);

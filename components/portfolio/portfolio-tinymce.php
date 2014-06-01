@@ -147,6 +147,175 @@ $tinymce_fields[] = array(
 );
 
 
+
+/*---------|- Portfolio carousel -|----------*/
+$tinymce_fields[] = array(
+	'title' => 'Portfolio Carousel',
+	'shortcode' => 'tk_portfolio_carousel',
+	'content' => 'no',//yes, no
+	'fields' => array(
+		array(
+			'id' => 'category',
+			'class' => '',
+			'label' => 'Category',
+			'type' => 'taxonomy_multi_select',
+			'std' => 'no',
+			'des' => __( 'Select one or more category to filter your query', 'tallykit_textdomain' ),
+			'taxonomy' => 'tallykit_portfolio_category'
+		),
+		array(
+			'id' => 'exclude_category',
+			'class' => '',
+			'label' => 'Exclude Category',
+			'type' => 'taxonomy_multi_select',
+			'std' => '',
+			'des' => __( 'Select one or more category to Exclude from your query', 'tallykit_textdomain' ),
+			'taxonomy' => 'tallykit_portfolio_category'
+		),
+		array(
+			'id' => 'tags',
+			'class' => '',
+			'label' => 'Tags',
+			'type' => 'taxonomy_multi_select',
+			'std' => 'no',
+			'des' => __( 'Select one or more Tag to filter your query', 'tallykit_textdomain' ),
+			'taxonomy' => 'tallykit_portfolio_tag'
+		),
+		array(
+			'id' => 'exclude_tags',
+			'class' => '',
+			'label' => 'Exclude Tags',
+			'type' => 'taxonomy_multi_select',
+			'std' => '',
+			'des' => __( 'Select one or more Tag to Exclude from your query', 'tallykit_textdomain' ),
+			'taxonomy' => 'tallykit_portfolio_tag'
+		),
+		array(
+			'id' => 'relation',
+			'class' => '',
+			'label' => 'Relation',
+			'type' => 'select',
+			'std' => '',
+			'des' => __( 'Query Relation with tags and Category', 'tallykit_textdomain' ),
+			'options' => array(
+				array('label' => 'AND', 'value' => 'AND'),
+				array('label' => 'OR', 'value' => 'OR'),
+			)
+		),
+		array(
+			'id' => 'limit',
+			'class' => '',
+			'label' => 'Limit',
+			'type' => 'text',
+			'std' => '12',
+			'des' => __( 'How many Portfolio item you want to display?', 'tallykit_textdomain' ),
+		),
+		array(
+			'id' => 'orderby',
+			'class' => '',
+			'label' => 'Orderby',
+			'type' => 'select',
+			'std' => 'post_date',
+			'des' => '',
+			'options' => array(
+				array('label' => 'post_date', 'value' => 'post_date'),
+				array('label' => 'none', 'value' => 'none'),
+				array('label' => 'ID', 'value' => 'ID'),
+				array('label' => 'title', 'value' => 'title'),
+				array('label' => 'name', 'value' => 'name'),
+				array('label' => 'date', 'value' => 'date'),
+				array('label' => 'menu_order', 'value' => 'menu_order'),
+			)
+		),
+		array(
+			'id' => 'order',
+			'class' => '',
+			'label' => 'Order',
+			'type' => 'select',
+			'std' => 'DESC',
+			'des' => '',
+			'options' => array(
+				array('label' => 'DESC', 'value' => 'DESC'),
+				array('label' => 'ASC', 'value' => 'ASC'),
+			)
+		),
+		array(
+			'id' => 'ids',
+			'class' => '',
+			'label' => 'Portfolio IDs',
+			'type' => 'post_multi_select',
+			'std' => '',
+			'des' => '',
+			'post_type' => 'tallykit_portfolio'
+		),
+		array(
+			'id' => 'control_nav',
+			'class' => '',
+			'label' => 'controlNav',
+			'type' => 'select',
+			'std' => 'true',
+			'des' => '',
+			'options' => array(
+				array('label' => 'true', 'value' => 'true'),
+				array('label' => 'false', 'value' => 'false'),
+			)
+		),
+		array(
+			'id' => 'direction_nav',
+			'class' => '',
+			'label' => 'directionNav',
+			'type' => 'select',
+			'std' => 'true',
+			'des' => '',
+			'options' => array(
+				array('label' => 'true', 'value' => 'true'),
+				array('label' => 'false', 'value' => 'false'),
+			)
+		),
+		array(
+			'id' => 'item_width',
+			'class' => '',
+			'label' => 'itemWidth',
+			'type' => 'text',
+			'std' => '100',
+			'des' => '',
+		),
+		array(
+			'id' => 'item_margin',
+			'class' => '',
+			'label' => 'itemMargin',
+			'type' => 'text',
+			'std' => '10',
+			'des' => '',
+		),
+		array(
+			'id' => 'min_items',
+			'class' => '',
+			'label' => 'minItems',
+			'type' => 'text',
+			'std' => '2',
+			'des' => '',
+		),
+		array(
+			'id' => 'max_items',
+			'class' => '',
+			'label' => 'maxItems',
+			'type' => 'text',
+			'std' => '4',
+			'des' => '',
+		),
+		array(
+			'id' => 'move',
+			'class' => '',
+			'label' => 'move',
+			'type' => 'text',
+			'std' => '0',
+			'des' => '',
+		),
+	)
+);
+
+
 $settings = array(
 	'uid' => 'tallykit_portfolio_tinymce',
 	'button_title' => 'Portfolio',
