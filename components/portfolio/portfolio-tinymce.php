@@ -318,7 +318,7 @@ $tinymce_fields[] = array(
 
 $settings = array(
 	'uid' => 'tallykit_portfolio_tinymce',
-	'button_title' => 'Portfolio',
+	'button_title' => '<div class="dashicons dashicons-portfolio" style="line-height:24px;"></div>',
 	'button_url' => '',
 	'title' => 'Portfolio Shortcodes',
 	'options' => $tinymce_fields,

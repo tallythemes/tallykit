@@ -318,7 +318,7 @@ $tinymce_fields[] = array(
 
 $settings = array(
 	'uid' => 'tallykit_testimonial_tinymce',
-	'button_title' => 'Testimonial',
+	'button_title' => '<div class="dashicons dashicons-testimonial" style="line-height:24px;"></div>',
 	'button_url' => '',
 	'title' => 'Testimonial Shortcodes',
 	'options' => $tinymce_fields,

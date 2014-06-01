@@ -30,7 +30,7 @@ $settings = array(
 	'labels'             => $labels,
 	'rewrite'            => array( 'slug' => 'people-item' ),
 	'supports'           => array( 'title', 'editor' ),
-	'menu_icon'          => 'dashicons-people',
+	'menu_icon'          => 'dashicons-groups',
 );
 new acoc_post_type_register($settings);
 

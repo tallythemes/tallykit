@@ -9,9 +9,9 @@
 **/
 $tinymce_fields = array();
 
-/*---------|- Testimonial Grid -|----------*/
+/*---------|- People Grid -|----------*/
 $tinymce_fields[] = array(
-	'title' => 'Testimonial Grid',
+	'title' => 'People Grid',
 	'shortcode' => 'tk_people_grid',
 	'content' => 'no',//yes, no
 	'fields' => array(
@@ -69,7 +69,7 @@ $tinymce_fields[] = array(
 			'label' => 'Limit',
 			'type' => 'text',
 			'std' => '12',
-			'des' => __( 'How many Testimonial item you want to display?', 'tallykit_textdomain' ),
+			'des' => __( 'How many People item you want to display?', 'tallykit_textdomain' ),
 		),
 		array(
 			'id' => 'columns',
@@ -117,7 +117,7 @@ $tinymce_fields[] = array(
 		array(
 			'id' => 'ids',
 			'class' => '',
-			'label' => 'Testimonial IDs',
+			'label' => 'People IDs',
 			'type' => 'post_multi_select',
 			'std' => '',
 			'des' => '',
@@ -148,9 +148,9 @@ $tinymce_fields[] = array(
 
 
 
-/*---------|- Testimonial carousel -|----------*/
+/*---------|- People carousel -|----------*/
 $tinymce_fields[] = array(
-	'title' => 'Testimonial Carousel',
+	'title' => 'People Carousel',
 	'shortcode' => 'tk_people_carousel',
 	'content' => 'no',//yes, no
 	'fields' => array(
@@ -208,7 +208,7 @@ $tinymce_fields[] = array(
 			'label' => 'Limit',
 			'type' => 'text',
 			'std' => '12',
-			'des' => __( 'How many Testimonial item you want to display?', 'tallykit_textdomain' ),
+			'des' => __( 'How many People item you want to display?', 'tallykit_textdomain' ),
 		),
 		array(
 			'id' => 'orderby',
@@ -242,7 +242,7 @@ $tinymce_fields[] = array(
 		array(
 			'id' => 'ids',
 			'class' => '',
-			'label' => 'Testimonial IDs',
+			'label' => 'People IDs',
 			'type' => 'post_multi_select',
 			'std' => '',
 			'des' => '',
@@ -318,9 +318,9 @@ $tinymce_fields[] = array(
 
 $settings = array(
 	'uid' => 'tallykit_people_tinymce',
-	'button_title' => 'Testimonial',
+	'button_title' => '<div class="dashicons dashicons-groups" style="line-height:24px;"></div>',
 	'button_url' => '',
-	'title' => 'Testimonial Shortcodes',
+	'title' => 'People Shortcodes',
 	'options' => $tinymce_fields,
 );
 $register_tallykit_shortcode_tinymce = new acoc_tinymce_register($settings);

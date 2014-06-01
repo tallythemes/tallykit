@@ -1926,7 +1926,7 @@ $tinymce_fields[] = array(
 
 $settings = array(
 	'uid' => 'tallykit_shortcode_tinymce',
-	'button_title' => '[ ]',
+	'button_title' => '<div class="dashicons dashicons-editor-code" style="line-height:27px;"></div>',
 	'button_url' => '',
 	'title' => 'Insert Shortcodes',
 	'options' => $tinymce_fields,
