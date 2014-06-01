@@ -19,6 +19,6 @@ function tallykit_portfolio_script_loader(){
 	wp_enqueue_style( 'jquery-prettyPhoto');
 	wp_enqueue_style( 'font-awesome');
 	
-	wp_enqueue_script( 'tallykit-shortcodes', TALLYKIT_COMPONENTS_URL.'portfolio/assets/js/portfolio.js', array('jquery'), '1.0', true );
-	wp_enqueue_style( 'tallykit-shortcodes', TALLYKIT_COMPONENTS_URL.'portfolio/assets/css/portfolio.css', '', '1.0' );
+	wp_enqueue_script( 'tallykit-portfolio', TALLYKIT_COMPONENTS_URL.'portfolio/assets/js/portfolio.js', array('jquery'), '1.0', true );
+	wp_enqueue_style( 'tallykit-portfolio', TALLYKIT_COMPONENTS_URL.'portfolio/assets/css/portfolio.css', '', '1.0' );
 }
