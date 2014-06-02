@@ -7,10 +7,12 @@ $flexslider2 = new acoc_flexslider2_html(array(
 	'minItems'         => $min_items,
 	'maxItems'         => $max_items,
 	'move'             => $move,
+	'prevText' => '',
+	'nextText' => '',
 ));
 $portfolio_query = new WP_Query( $query );
 ?>
-<div class="tallykit_portfolio_slideshow acoc-flexslider2-skin">
+<div class="tallykit_portfolio_slideshow acoc-flexslider2-skin acoc-carousel-skin">
 	<?php if( $portfolio_query->have_posts()): ?>
     	<?php $flexslider2->start(); ?>
         	<?php while ( $portfolio_query->have_posts() ) : $portfolio_query->the_post(); ?>

@@ -237,14 +237,14 @@ function tallykit_portfolio_sc_slideshow( $atts, $content = null ) {
 			'ids'              => '',
 			
 			'animation'        => 'slide',
-			'direction'        => 'horizontal',
-			'smoothHeight'     => 'false',
+			'direction'     => '',
+			'smooth_height'     => 'false',
 			'slideshow'        => 'true',
-			'animationLoop'    => 'true',
-			'slideshowSpeed'   => '7000',
-			'animationSpeed'   => '600',
-			'controlNav'       => 'true',
-			'directionNav'     => 'true',
+			'animation_loop'    => 'true',
+			'slideshow_speed'   => '7000',
+			'animation_speed'   => '600',
+			'control_nav'       => 'true',
+			'direction_nav'     => 'true',
 		), $atts)
 	);
 	
@@ -443,6 +443,11 @@ function tallykit_portfolio_sc_single( $atts, $content = null  ) {
 	), $atts ) );
 	
 	$output = '';
+	
+	$query = array(
+		'post_type'      => 'tallykit_portfolio',
+		'p'          => $id
+	);
 	
 	ob_start();
 	include(tallykit_portfolio_template_path('dri').'portfolio-single.php');

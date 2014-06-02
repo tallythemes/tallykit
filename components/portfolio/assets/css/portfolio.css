@@ -1,0 +1,46 @@
+@charset "utf-8";
+/* CSS Document */
+
+.acoc-flexslider2-skin .wfs-direction-nav a:before{
+	line-height:normal;
+}
+.tallykit_portfolio_item a:hover{ text-decoration:none; }
+.tallykit_portfolio_item .tallykit_portfolio_item_details{ background-color: rgba(247, 247, 247, 0.79); padding: 15px 10px 10px 10px; }
+.tallykit_portfolio_item .tallykit_portfolio_item_heading{
+	 font-weight:normal; font-size: 18px; line-height:18px; color: #444; letter-spacing: -0.5px; margin-bottom:0px;
+}
+.tallykit_portfolio_item .tallykit_portfolio_item_heading:hover{ text-decoration:none; }
+.tallykit_portfolio_item .tallykit_portfolio_item_subheading{ line-height: 22px; font-size: 11px; color: #999; }
+
+.tallykit_portfolio_item a.tallykit_portfolio_item_image{ }
+
+
+/*
+-----------------------------------------------------
+Carousel Skin (defolt)
+-----------------------------------------------------
+*/
+.acoc-carousel-skin .tallykit_portfolio_item a:hover{ text-decoration:none; }
+.acoc-carousel-skin .tallykit_portfolio_item .tallykit_portfolio_item_details{ background-color: rgba(247, 247, 247, 0.79); padding: 15px 10px 10px 10px; }
+.acoc-carousel-skin .tallykit_portfolio_item .tallykit_portfolio_item_heading{
+	 font-weight:normal; font-size: 18px; line-height:18px; color: #444; letter-spacing: -0.5px; margin-bottom:0px;
+}
+.acoc-carousel-skin .tallykit_portfolio_item .tallykit_portfolio_item_heading:hover{ text-decoration:none; }
+.acoc-carousel-skin .tallykit_portfolio_item .tallykit_portfolio_item_subheading{ line-height: 22px; font-size: 11px; color: #999; }
+
+
+
+.acoc-carousel-skin .acoc-flexslider2 ul.wfs-direction-nav li a:before{ font-size: 10px !important;}
+.acoc-carousel-skin .acoc-flexslider2 ul.wfs-direction-nav li a{ 
+	opacity: 1!important;
+	width: 18px!important;
+	height: 21px!important;
+	line-height: 20px;
+	background-color: rgba(128, 128, 128, 0.35);
+	text-align: center;
+	overflow: inherit;
+	top: -4%;
+	color:#FFF !important;
+}
+.acoc-carousel-skin .acoc-flexslider2 ul.wfs-direction-nav li a.wfs-prev{ left: 96% !important; }
+.acoc-carousel-skin .acoc-flexslider2 ul.wfs-direction-nav li a.wfs-next { right:0px !important; }

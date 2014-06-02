@@ -2,13 +2,13 @@
 $flexslider2 = new acoc_flexslider2_html(array(
 	'animation'        => $animation,
 	'direction'        => $direction,
-	'smoothHeight'     => $smoothHeight,
+	'smoothHeight'     => $smooth_height,
 	'slideshow'        => $slideshow,
-	'animationLoop'    => $animationLoop,
-	'slideshowSpeed'   => $slideshowSpeed,
-	'animationSpeed'   => $animationSpeed,
-	'controlNav'       => $controlNav,
-	'directionNav'     => $directionNav,
+	'animationLoop'    => $animation_loop,
+	'slideshowSpeed'   => $slideshow_speed,
+	'animationSpeed'   => $animation_speed,
+	'controlNav'       => $control_nav,
+	'directionNav'     => $direction_nav,
 ));
 $portfolio_query = new WP_Query( $query );
 ?>
