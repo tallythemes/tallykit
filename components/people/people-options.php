@@ -19,21 +19,40 @@ $fields[] = array(
 	'filter' => '', //sanitize_text_field, esc_attr
 );
 $fields[] = array(
-	'id' => 'image_w',
+	'id' => 'archive_image_w',
 	'class' => '',
-	'label' => __( 'Image Width', 'tallykit_textdomain' ),
+	'label' => __( 'Archive Image Width', 'tallykit_textdomain' ),
 	'type' => 'text',
 	'std' => '',
-	'des' => __( 'You can change the Width of the image. Leave it blank if you want to use the default. Example: <code>300</code>', 'tallykit_textdomain' ),
+	'des' => __( 'You can change the Width of the archive image. Leave it blank if you want to use the default. Example: <code>300</code>', 'tallykit_textdomain' ),
 	'filter' => '', //sanitize_text_field, esc_attr
 );
 $fields[] = array(
-	'id' => 'image_h',
+	'id' => 'archive_image_h',
 	'class' => '',
-	'label' => __( 'Image Height', 'tallykit_textdomain' ),
+	'label' => __( 'Archive Image Height', 'tallykit_textdomain' ),
 	'type' => 'text',
 	'std' => '',
-	'des' => __( 'You can change the Height of the image. Leave it blank if you want to use the default. Example: <code>300</code>', 'tallykit_textdomain' ),
+	'des' => __( 'You can change the Height of the archive image. Leave it blank if you want to use the default. Example: <code>300</code>', 'tallykit_textdomain' ),
+	'filter' => '', //sanitize_text_field, esc_attr
+);
+
+$fields[] = array(
+	'id' => 'single_image_w',
+	'class' => '',
+	'label' => __( 'Single Page Image Width', 'tallykit_textdomain' ),
+	'type' => 'text',
+	'std' => '',
+	'des' => __( 'You can change the Width of the Single Page image. Leave it blank if you want to use the default. Example: <code>960</code>', 'tallykit_textdomain' ),
+	'filter' => '', //sanitize_text_field, esc_attr
+);
+$fields[] = array(
+	'id' => 'single_image_h',
+	'class' => '',
+	'label' => __( 'Single Page Image Height', 'tallykit_textdomain' ),
+	'type' => 'text',
+	'std' => '',
+	'des' => __( 'You can change the Height of the Single Page image. Leave it blank if you want to use the default. Example: <code>300</code>', 'tallykit_textdomain' ),
 	'filter' => '', //sanitize_text_field, esc_attr
 );
 

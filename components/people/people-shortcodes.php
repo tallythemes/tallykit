@@ -189,13 +189,13 @@ function tallykit_people_sc_slideshow( $atts, $content = null ) {
 			
 			'animation'        => 'slide',
 			'direction'        => 'horizontal',
-			'smoothHeight'     => 'false',
+			'smooth_height'     => 'false',
 			'slideshow'        => 'true',
-			'animationLoop'    => 'true',
-			'slideshowSpeed'   => '7000',
-			'animationSpeed'   => '600',
-			'controlNav'       => 'true',
-			'directionNav'     => 'true',
+			'animation_loop'    => 'true',
+			'slideshow_speed'   => '7000',
+			'animation_speed'   => '600',
+			'control_nav'       => 'true',
+			'direction_nav'     => 'true',
 		), $atts)
 	);
 	
@@ -257,6 +257,30 @@ function tallykit_people_sc_slideshow( $atts, $content = null ) {
 	
 	ob_start();
 	include(tallykit_people_template_path('dri').'people-slideshow.php');
+	$output = ob_get_contents();
+	ob_end_clean();
+	
+	return 	$output;
+}
+
+
+
+/*---------|- Single -|-------------------------------------*/
+add_shortcode('tk_people_single', 'tallykit_people_sc_single');
+function tallykit_people_sc_single( $atts, $content = null  ) {
+	extract( shortcode_atts( array(
+		'id'	=> '',
+	), $atts ) );
+	
+	$output = '';
+	
+	$query = array(
+		'post_type'      => 'tallykit_people',
+		'p'          => $id
+	);
+	
+	ob_start();
+	include(tallykit_people_template_path('dri').'people-single.php');
 	$output = ob_get_contents();
 	ob_end_clean();
 	
