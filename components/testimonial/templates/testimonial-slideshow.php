@@ -2,13 +2,13 @@
 $flexslider2 = new acoc_flexslider2_html(array(
 	'animation'        => $animation,
 	'direction'        => $direction,
-	'smoothHeight'     => $smoothHeight,
+	'smoothHeight'     => $smooth_height,
 	'slideshow'        => $slideshow,
-	'animationLoop'    => $animationLoop,
-	'slideshowSpeed'   => $slideshowSpeed,
-	'animationSpeed'   => $animationSpeed,
-	'controlNav'       => $controlNav,
-	'directionNav'     => $directionNav,
+	'animationLoop'    => $animation_loop,
+	'slideshowSpeed'   => $slideshow_speed,
+	'animationSpeed'   => $animation_speed,
+	'controlNav'       => $control_nav,
+	'directionNav'     => $direction_nav,
 ));
 $testimonial_query = new WP_Query( $query );
 ?>
@@ -24,6 +24,6 @@ $testimonial_query = new WP_Query( $query );
         <div style="clear:both;"></div>
         <?php wp_reset_postdata(); ?>
     <?php else: ?>
-    	<?php _e('No Portfolio found.', 'tallykit_testimonial'); ?>
+    	<?php _e('No Testimonial found.', 'tallykit_testimonial'); ?>
     <?php endif; ?>
 </div>

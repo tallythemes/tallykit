@@ -189,13 +189,13 @@ function tallykit_testimonial_sc_slideshow( $atts, $content = null ) {
 			
 			'animation'        => 'slide',
 			'direction'        => 'horizontal',
-			'smoothHeight'     => 'false',
+			'smooth_height'     => 'false',
 			'slideshow'        => 'true',
-			'animationLoop'    => 'true',
-			'slideshowSpeed'   => '7000',
-			'animationSpeed'   => '600',
-			'controlNav'       => 'true',
-			'directionNav'     => 'true',
+			'animation_loop'    => 'true',
+			'slideshow_speed'   => '7000',
+			'animation_speed'   => '600',
+			'control_nav'       => 'true',
+			'direction_nav'     => 'true',
 		), $atts)
 	);
 	

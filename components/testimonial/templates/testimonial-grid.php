@@ -16,6 +16,6 @@ $testimonial_query = new WP_Query( $query );
         <?php wp_reset_postdata(); ?>
         <?php echo acoc_paginate($testimonial_query); ?>
     <?php else: ?>
-    	<?php _e('No Portfolio found.', 'tallykit_testimonial'); ?>
+    	<?php _e('No testimonial found.', 'tallykit_testimonial'); ?>
     <?php endif; ?>
 </div>
