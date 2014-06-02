@@ -9,10 +9,13 @@ $flexslider2 = new acoc_flexslider2_html(array(
 	'animationSpeed'   => $animation_speed,
 	'controlNav'       => $control_nav,
 	'directionNav'     => $direction_nav,
+	
+	'prevText' => '',
+	'nextText' => '',
 ));
 $testimonial_query = new WP_Query( $query );
 ?>
-<div class="tallykit_testimonial_slideshow acoc-flexslider2-skin">
+<div class="tallykit_testimonial_slideshow acoc-flexslider2-skin tk_testimonial_slider">
 	<?php if( $testimonial_query->have_posts()): ?>
     	<?php $flexslider2->start(); ?>
         	<?php while ( $testimonial_query->have_posts() ) : $testimonial_query->the_post(); ?>

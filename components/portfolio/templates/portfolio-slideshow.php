@@ -9,6 +9,8 @@ $flexslider2 = new acoc_flexslider2_html(array(
 	'animationSpeed'   => $animation_speed,
 	'controlNav'       => $control_nav,
 	'directionNav'     => $direction_nav,
+	'prevText' => '',
+	'nextText' => '',
 ));
 $portfolio_query = new WP_Query( $query );
 ?>

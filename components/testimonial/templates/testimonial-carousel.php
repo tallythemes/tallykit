@@ -7,6 +7,9 @@ $flexslider2 = new acoc_flexslider2_html(array(
 	'minItems'         => $min_items,
 	'maxItems'         => $max_items,
 	'move'             => $move,
+	
+	'prevText' => '',
+	'nextText' => '',
 ));
 $testimonial_query = new WP_Query( $query );
 ?>
