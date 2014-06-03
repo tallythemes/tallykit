@@ -2,7 +2,7 @@
 $isotope = new acoc_isotope_html(array('column'=>$columns, 'margin'=>$margin));
 $portfolio_query = new WP_Query( $query );
 ?>
-<div class="tallykit_portfolio">
+<div class="tallykit_portfolio th_grid_skin">
 	<?php if( $portfolio_query->have_posts()): ?>
     	<?php if($filter == 'yes'){ $isotope->filter('tallykit_portfolio_category'); } ?>
     	<?php $isotope->start(); ?>

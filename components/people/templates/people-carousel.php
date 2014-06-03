@@ -7,10 +7,13 @@ $flexslider2 = new acoc_flexslider2_html(array(
 	'minItems'         => $min_items,
 	'maxItems'         => $max_items,
 	'move'             => $move,
+	
+	'prevText' => '',
+	'nextText' => '',
 ));
 $people_query = new WP_Query( $query );
 ?>
-<div class="tallykit_people_slideshow acoc-flexslider2-skin">
+<div class="tallykit_people_slideshow acoc-flexslider2-skin tk_people_carousel ">
 	<?php if( $people_query->have_posts()): ?>
     	<?php $flexslider2->start(); ?>
         	<?php while ( $people_query->have_posts() ) : $people_query->the_post(); ?>

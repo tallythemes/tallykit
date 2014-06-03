@@ -34,6 +34,36 @@ $tinymce_fields[] = array(
 			'taxonomy' => 'tallykit_testimonial_category'
 		),
 		array(
+			'id' => 'tags',
+			'class' => '',
+			'label' => 'Tags',
+			'type' => 'taxonomy_multi_select',
+			'std' => 'no',
+			'des' => __( 'Select one or more Tag to filter your query', 'tallykit_textdomain' ),
+			'taxonomy' => 'tallykit_testimonial_tag'
+		),
+		array(
+			'id' => 'exclude_tags',
+			'class' => '',
+			'label' => 'Exclude Tags',
+			'type' => 'taxonomy_multi_select',
+			'std' => '',
+			'des' => __( 'Select one or more Tag to Exclude from your query', 'tallykit_textdomain' ),
+			'taxonomy' => 'tallykit_testimonial_tag'
+		),
+		array(
+			'id' => 'relation',
+			'class' => '',
+			'label' => 'Relation',
+			'type' => 'select',
+			'std' => '',
+			'des' => __( 'Query Relation with tags and Category', 'tallykit_textdomain' ),
+			'options' => array(
+				array('label' => 'AND', 'value' => 'AND'),
+				array('label' => 'OR', 'value' => 'OR'),
+			)
+		),
+		array(
 			'id' => 'limit',
 			'class' => '',
 			'label' => 'Limit',
@@ -141,6 +171,36 @@ $tinymce_fields[] = array(
 			'std' => '',
 			'des' => __( 'Select one or more category to Exclude from your query', 'tallykit_textdomain' ),
 			'taxonomy' => 'tallykit_testimonial_category'
+		),
+		array(
+			'id' => 'tags',
+			'class' => '',
+			'label' => 'Tags',
+			'type' => 'taxonomy_multi_select',
+			'std' => 'no',
+			'des' => __( 'Select one or more Tag to filter your query', 'tallykit_textdomain' ),
+			'taxonomy' => 'tallykit_testimonial_tag'
+		),
+		array(
+			'id' => 'exclude_tags',
+			'class' => '',
+			'label' => 'Exclude Tags',
+			'type' => 'taxonomy_multi_select',
+			'std' => '',
+			'des' => __( 'Select one or more Tag to Exclude from your query', 'tallykit_textdomain' ),
+			'taxonomy' => 'tallykit_testimonial_tag'
+		),
+		array(
+			'id' => 'relation',
+			'class' => '',
+			'label' => 'Relation',
+			'type' => 'select',
+			'std' => '',
+			'des' => __( 'Query Relation with tags and Category', 'tallykit_textdomain' ),
+			'options' => array(
+				array('label' => 'AND', 'value' => 'AND'),
+				array('label' => 'OR', 'value' => 'OR'),
+			)
 		),
 		array(
 			'id' => 'limit',
@@ -280,6 +340,36 @@ $tinymce_fields[] = array(
 			'std' => '',
 			'des' => __( 'Select one or more category to Exclude from your query', 'tallykit_textdomain' ),
 			'taxonomy' => 'tallykit_testimonial_category'
+		),
+		array(
+			'id' => 'tags',
+			'class' => '',
+			'label' => 'Tags',
+			'type' => 'taxonomy_multi_select',
+			'std' => 'no',
+			'des' => __( 'Select one or more Tag to filter your query', 'tallykit_textdomain' ),
+			'taxonomy' => 'tallykit_testimonial_tag'
+		),
+		array(
+			'id' => 'exclude_tags',
+			'class' => '',
+			'label' => 'Exclude Tags',
+			'type' => 'taxonomy_multi_select',
+			'std' => '',
+			'des' => __( 'Select one or more Tag to Exclude from your query', 'tallykit_textdomain' ),
+			'taxonomy' => 'tallykit_testimonial_tag'
+		),
+		array(
+			'id' => 'relation',
+			'class' => '',
+			'label' => 'Relation',
+			'type' => 'select',
+			'std' => '',
+			'des' => __( 'Query Relation with tags and Category', 'tallykit_textdomain' ),
+			'options' => array(
+				array('label' => 'AND', 'value' => 'AND'),
+				array('label' => 'OR', 'value' => 'OR'),
+			)
 		),
 		array(
 			'id' => 'limit',

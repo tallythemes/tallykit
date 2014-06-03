@@ -7,10 +7,12 @@ $flexslider2 = new acoc_flexslider2_html(array(
 	'minItems'         => $min_items,
 	'maxItems'         => $max_items,
 	'move'             => $move,
+	'prevText' => '',
+	'nextText' => '',
 ));
 $logo_query = new WP_Query( $query );
 ?>
-<div class="tallykit_logo_slideshow acoc-flexslider2-skin">
+<div class="tallykit_logo_slideshow acoc-flexslider2-skin tk_logo_carousel">
 	<?php if( $logo_query->have_posts()): ?>
     	<?php $flexslider2->start(); ?>
         	<?php while ( $logo_query->have_posts() ) : $logo_query->the_post(); ?>

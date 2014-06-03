@@ -1,6 +1,8 @@
 @charset "utf-8";
 /* CSS Document */
 
+.tallykit_portfolio.th_grid_skin .tallykit_portfolio_item_details{ margin-top: -6px; }
+ 
 .acoc-flexslider2-skin .wfs-direction-nav a:before{
 	line-height:normal;
 }
@@ -12,7 +14,7 @@
 .tallykit_portfolio_item .tallykit_portfolio_item_heading:hover{ text-decoration:none; }
 .tallykit_portfolio_item .tallykit_portfolio_item_subheading{ line-height: 22px; font-size: 11px; color: #999; }
 
-.tallykit_portfolio_item a.tallykit_portfolio_item_image{ }
+.tallykit_portfolio_item a.tallykit_portfolio_item_image{  }
 
 
 /*
@@ -66,7 +68,7 @@ Carousel Skin (defolt)
 	display: block;
 	width: 10px;
 	height: 10px;
-	padding:5px 5px; 
+	padding:4px 5px 6px 5px; 
 	position: relative; 
 	top: 20px; 
 	right:5px;
@@ -79,7 +81,7 @@ Carousel Skin (defolt)
 	-moz-transition: all .3s ease; 
 	transition: all .3s ease; 
 	text-align:center;
-	background-color:rgba(221, 220, 220, 0.64);
+	background-color:rgba(119, 119, 119, 0.64);
 	line-height: 10px;
 }
 
@@ -99,13 +101,13 @@ Carousel Skin (defolt)
 	width: 11px; 
 	height: 3px; 
 	display: block; 
-	background: rgba(0,0,0,0.5); 
+	background: rgba(0,0,0,0.1); 
 	cursor: pointer; 
 	text-indent: -99999px; 
 	
 }
-.tallykit_portfolio_slideshow.acoc-carousel-skin .wfs-control-paging li a:hover { background: #333; background: rgba(0,0,0,0.7); }
-.tallykit_portfolio_slideshow.acoc-carousel-skin .wfs-control-paging li a.wfs-active { background: #000; background: rgba(0,0,0,0.9); cursor: default; }
+.tallykit_portfolio_slideshow.acoc-carousel-skin .wfs-control-paging li a:hover { background: rgba(0,0,0,0.4); }
+.tallykit_portfolio_slideshow.acoc-carousel-skin .wfs-control-paging li a.wfs-active { background: rgba(0,0,0,0.4); cursor: default; }
 
 .tallykit_portfolio_slideshow.acoc-carousel-skin .wfs-control-nav {top: 5px; left:0; bottom:auto; right:auto; width:auto; }
 
@@ -118,9 +120,9 @@ Single Page (defolt)
 -----------------------------------------------------
 */
 .tk_portfolio_single_content{ width: 60%; display: inline-block; float: left ;}
-.tk_portfolio_single_content h3 { margin-bottom: 10px; margin-top: 10px; font-size:17px; }
+.tk_portfolio_single_content h3 { margin-bottom: 10px; margin-top: 30px; font-size:17px; }
 .tk_portfolio_single_info{ width: 34.2%; display: inline-block; float: right; }
-.tk_portfolio_single_info h3 { margin-bottom: 10px; margin-top: 10px; font-size:17px; }
+.tk_portfolio_single_info h3 { margin-bottom: 10px; margin-top: 30px; font-size:17px; }
 
 .tk_portfolio_single_info ul{ margin-left:0px; }
 .tk_portfolio_single_info ul li {

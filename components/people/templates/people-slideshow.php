@@ -9,10 +9,13 @@ $flexslider2 = new acoc_flexslider2_html(array(
 	'animationSpeed'   => $animation_speed,
 	'controlNav'       => $control_nav,
 	'directionNav'     => $direction_nav,
+	
+	'prevText' => '',
+	'nextText' => '',
 ));
 $people_query = new WP_Query( $query );
 ?>
-<div class="tallykit_people_slideshow acoc-flexslider2-skin">
+<div class="tallykit_people_slideshow acoc-flexslider2-skin tk_people_slider">
 	<?php if( $people_query->have_posts()): ?>
     	<?php $flexslider2->start(); ?>
         	<?php while ( $people_query->have_posts() ) : $people_query->the_post(); ?>

@@ -9,10 +9,12 @@ $flexslider2 = new acoc_flexslider2_html(array(
 	'animationSpeed'   => $animation_speed,
 	'controlNav'       => $control_nav,
 	'directionNav'     => $direction_nav,
+	'prevText' => '',
+	'nextText' => '',
 ));
 $logo_query = new WP_Query( $query );
 ?>
-<div class="tallykit_logo_slideshow acoc-flexslider2-skin">
+<div class="tallykit_logo_slideshow acoc-flexslider2-skin tk_logo_slider">
 	<?php if( $logo_query->have_posts()): ?>
     	<?php $flexslider2->start(); ?>
         	<?php while ( $logo_query->have_posts() ) : $logo_query->the_post(); ?>
