@@ -1,12 +1,12 @@
 <?php
 /**
- * TallyKit Testimonial
+ * TallyKit People
  *
  * This file generate portfolio post type, shortcode, 
  * widgets, theme compat and other require elements
  *
  * @package TallyKit
- * @subpackage Testimonial
+ * @subpackage People
 */
  
 // Exit if accessed directly
@@ -15,7 +15,6 @@ if ( !defined( 'ABSPATH' ) ) exit;
 include('people-types.php');
 include('people-metabox.php');
 include('people-options.php');
-include('people-template.php');
 include('people-template.php');
 include('people-script.php'); 
 include('people-shortcodes.php');

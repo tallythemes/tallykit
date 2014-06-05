@@ -1,3 +1,38 @@
+
+.tallykit_logo_item{
+position: relative;
+border: solid 1px #EAE9E9;
+background-color: #F4F4F4;
+}
+.tallykit_logo_item .tallykit_logo_item-d img {
+max-width: 100%;
+border-radius: 0;
+box-shadow: 0 1px 4px rgba(0, 0, 0, 0);
+width: 100%;
+}
+.tallykit_logo_item .tallykit_logo_item_image{
+position: absolute;
+height: 100%;
+width: 100%;
+text-align: center;
+text-decoration: none;
+vertical-align: middle;
+top: 0px;
+}
+.tallykit_logo_item .tallykit_logo_item_image:before {
+content: '';
+display: inline-block;
+height: 100%;
+vertical-align: middle;
+}
+
+.tallykit_logo_item .tallykit_logo_item_image .tk-item-content{
+display: inline-block;
+width: 90%;
+vertical-align: middle;
+height: auto;
+}
+
 /*
 -----------------------------------------------------
 Carousel Skin (defolt)
