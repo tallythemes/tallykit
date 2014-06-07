@@ -27,7 +27,7 @@ function tallykit_testimonial_sc_grid( $atts, $content = null ) {
 	
 	$query = array(
 		'post_type'      => 'tallykit_testimonial',
-		'posts_per_page' => absint( $limit ),
+		'posts_per_page' => $limit,
 		'orderby'        => $orderby,
 		'order'          => $order
 	);
