@@ -10,9 +10,23 @@
 $fields = array(); 
 
 $fields[] = array(
+	'id' => 'tallykit_parallax_active',
+	'class' => '',
+	'label' => __( 'Active', 'tallykit_textdomain' ),
+	'type' => 'select',
+	'std' => '',
+	'des' => __( 'Select "yes" to active parallax sections on this page.', 'tallykit_textdomain' ),
+	'filter' => '', //sanitize_text_field, esc_attr
+	'size' => '',
+	'options' => array(
+		array('label'=>'No', 'value'=>'no'),
+		array('label'=>'Yes', 'value'=>'yes'),
+	),
+);
+$fields[] = array(
 	'id' => 'tallykit_parallax_sections',
 	'class' => '',
-	'label' => __( 'Archive Page Image (600x400)', 'tallykit_textdomain' ),
+	'label' => __( 'Parallax Sections', 'tallykit_textdomain' ),
 	'type' => 'parallax',
 	'std' => '',
 	'des' => __( 'Click on "Add Section" to add new sections', 'tallykit_textdomain' ),
