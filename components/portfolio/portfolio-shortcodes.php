@@ -30,7 +30,7 @@ function tallykit_portfolio_sc_grid( $atts, $content = null ) {
 	
 	$query = array(
 		'post_type'      => 'tallykit_portfolio',
-		'posts_per_page' => absint( $limit ),
+		'posts_per_page' => $limit,
 		'orderby'        => $orderby,
 		'order'          => $order
 	);

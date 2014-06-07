@@ -23,29 +23,46 @@
 				margin:0 auto;
 			}
 			
-			.<?php echo $uclass; ?> .tallykit_parallax_section_inner .tk_title{
+			.<?php echo $uclass; ?> .tallykit_parallax_section_inner .tk_title,
+			.<?php echo $uclass; ?> .tallykit_parallax_section_inner .tk_title span{
 				text-align:<?php echo $section['align-title']; ?>;
 				color:<?php echo $section['heading-color']; ?> !important;
 			}
 			
-			.<?php echo $uclass; ?> .tallykit_parallax_section_inner .tk_subtitle{
+			.<?php echo $uclass; ?> .tallykit_parallax_section_inner .tk_section_header{ text-align:<?php echo $section['align-title']; ?>; }
+			
+			.<?php echo $uclass; ?> .tallykit_parallax_section_inner .tk_subtitle,
+			.<?php echo $uclass; ?> .tallykit_parallax_section_inner .tk_subtitle span{
 				text-align:<?php echo $section['align-title']; ?>;
 				color:<?php echo $section['heading-color']; ?> !important;
 			}
 			
-			.<?php echo $uclass; ?> .tallykit_parallax_section_inner .tk_content{
-				text-align:<?php echo $section['align-content']; ?>;
+			.<?php echo $uclass; ?> .tallykit_parallax_section_inner .tk_content{ text-align:<?php echo $section['align-content']; ?>; }
+			.<?php echo $uclass; ?> .tallykit_parallax_section_inner .tk_content *{
 				color:<?php echo $section['text-color']; ?> !important;
+			}
+			.<?php echo $uclass; ?> .tallykit_parallax_section_inner .tk_content h1,
+			.<?php echo $uclass; ?> .tallykit_parallax_section_inner .tk_content h2,
+			.<?php echo $uclass; ?> .tallykit_parallax_section_inner .tk_content h3,
+			.<?php echo $uclass; ?> .tallykit_parallax_section_inner .tk_content h4,
+			.<?php echo $uclass; ?> .tallykit_parallax_section_inner .tk_content h5,
+			.<?php echo $uclass; ?> .tallykit_parallax_section_inner .tk_content h6{
+				color:<?php echo $section['heading-color']; ?> !important;
 			}
 		</style>
     	<div class="tallykit_parallax_section <?php echo $uclass; ?>">
-        	<div class="tallykit_parallax_section_inner">            	
-            	<?php if($section['title'] != ''): ?>
-                	<h2 class="tk_title"><?php echo $section['title']; ?></h2>
-				<?php endif; ?>
-                <?php if($section['subtitle'] != ''): ?>
-                	<h4 class="tk_subtitle"><?php echo $section['subtitle']; ?></h4>
-				<?php endif; ?>
+        	<div class="tallykit_parallax_section_inner">
+            	<?php if($section['disable-title'] == 'no'): ?>
+                	<div class="tk_section_header">	
+						<?php if($section['title'] != ''): ?>
+                            <h2 class="tk_title"><span><?php echo $section['title']; ?></span></h2>
+                        <?php endif; ?>
+                        <?php if($section['subtitle'] != ''): ?>
+                            <p class="tk_subtitle"><span><?php echo $section['subtitle']; ?></span></p>
+                        <?php endif; ?>
+                        <span class="tk_bottomLine"></span>
+                    </div>
+                <?php endif; ?>
                 
                 <?php if(($section['content'] != 'n/a') || $section['content'] != ''): ?>
                 	<div class="tk_content"><?php echo $section['content']; ?></div>

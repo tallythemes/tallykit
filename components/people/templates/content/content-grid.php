@@ -9,7 +9,7 @@
         </div>
 		<div class="tk_people_item_details">
 			<h3 class="tk_people_item_heading"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-			<span class="tk_people_item_subheading"><?php echo get_post_meta(get_the_ID(), 'tallykit_people_position'); ?></span>
+			<span class="tk_people_item_subheading"><?php echo get_post_meta(get_the_ID(), 'tallykit_people_position', true); ?></span>
 			<div class="tk_people_item_social">
             	<?php
 					$meta1 = get_post_meta(get_the_ID(),'tallykit_people_twitter', true);
