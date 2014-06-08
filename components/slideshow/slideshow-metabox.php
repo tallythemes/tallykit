@@ -13,7 +13,7 @@ $fields[] = array(
 	'id' => 'tallykit_slideshow_sliders',
 	'class' => '',
 	'label' => __( 'Slider Items', 'tallykit_textdomain' ),
-	'type' => 'slideshow2',
+	'type' => 'group',
 	'std' => '',
 	'des' => __( 'Click on Add New to add new slideshow', 'tallykit_textdomain' ),
 	'filter' => '', //sanitize_text_field, esc_attr
@@ -21,24 +21,23 @@ $fields[] = array(
 		array(
 			'id' => 'title',
 			'class' => '',
-			'label' => __( 'Slider Items', 'tallykit_textdomain' ),
+			'label' => __( 'Slider Title', 'tallykit_textdomain' ),
 			'type' => 'text',
 			'std' => '',
-			'des' => __( 'Click on Add New to add new slideshow', 'tallykit_textdomain' ),
+			'des' => '',
 			'filter' => '', //sanitize_text_field, esc_attr
 		),
 		array(
-			'id' => 'titles',
+			'id' => 'image',
 			'class' => '',
-			'label' => __( 'Slider Items', 'tallykit_textdomain' ),
-			'type' => 'text',
+			'label' => __( 'Image', 'tallykit_textdomain' ),
+			'type' => 'image_upload',
 			'std' => '',
-			'des' => __( 'Click on Add New to add new slideshow', 'tallykit_textdomain' ),
+			'des' => '',
 			'filter' => '', //sanitize_text_field, esc_attr
 		)
 	),
 );
-
 
 /*~ Registering the Metabox ~*/
 $settings = array(

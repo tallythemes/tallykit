@@ -29,7 +29,7 @@ $settings = array(
 	'args'               => array(),
 	'labels'             => $labels,
 	'rewrite'            => array( 'slug' => 'slideshow-item' ),
-	'supports'           => array( 'title', 'editor' ),
+	'supports'           => array( 'title' ),
 	'menu_icon'          => 'dashicons-format-gallery',
 );
 new acoc_post_type_register($settings);
