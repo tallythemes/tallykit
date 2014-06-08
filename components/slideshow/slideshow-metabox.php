@@ -13,11 +13,30 @@ $fields[] = array(
 	'id' => 'tallykit_slideshow_sliders',
 	'class' => '',
 	'label' => __( 'Slider Items', 'tallykit_textdomain' ),
-	'type' => 'slideshow',
+	'type' => 'slideshow2',
 	'std' => '',
 	'des' => __( 'Click on Add New to add new slideshow', 'tallykit_textdomain' ),
 	'filter' => '', //sanitize_text_field, esc_attr
-	
+	'fields' => array(
+		array(
+			'id' => 'title',
+			'class' => '',
+			'label' => __( 'Slider Items', 'tallykit_textdomain' ),
+			'type' => 'text',
+			'std' => '',
+			'des' => __( 'Click on Add New to add new slideshow', 'tallykit_textdomain' ),
+			'filter' => '', //sanitize_text_field, esc_attr
+		),
+		array(
+			'id' => 'titles',
+			'class' => '',
+			'label' => __( 'Slider Items', 'tallykit_textdomain' ),
+			'type' => 'text',
+			'std' => '',
+			'des' => __( 'Click on Add New to add new slideshow', 'tallykit_textdomain' ),
+			'filter' => '', //sanitize_text_field, esc_attr
+		)
+	),
 );
 
 
