@@ -1,53 +1,285 @@
 <?php
-/**************************** Metabox *************************
- *
- * Register Metabox
- *
- * @since TallyKit (1.0)
- *
- * @uses class acoc_metabox_register  
-**/
-$fields = array(); $prefix = 'tallykit_slideshow_';
-
-$fields[] = array(
-	'id' => 'tallykit_slideshow_sliders',
-	'class' => '',
-	'label' => __( 'Slider Items', 'tallykit_textdomain' ),
-	'type' => 'group',
-	'std' => '',
-	'des' => __( 'Click on Add New to add new slideshow', 'tallykit_textdomain' ),
-	'filter' => '', //sanitize_text_field, esc_attr
-	'fields' => array(
-		array(
-			'id' => 'title',
-			'class' => '',
-			'label' => __( 'Slider Title', 'tallykit_textdomain' ),
-			'type' => 'text',
-			'std' => '',
-			'des' => '',
-			'filter' => '', //sanitize_text_field, esc_attr
-		),
-		array(
-			'id' => 'image',
-			'class' => '',
-			'label' => __( 'Image', 'tallykit_textdomain' ),
-			'type' => 'image_upload',
-			'std' => '',
-			'des' => '',
-			'filter' => '', //sanitize_text_field, esc_attr
-		)
-	),
-);
-
-/*~ Registering the Metabox ~*/
-$settings = array(
-	'id' => 'tallykit_slideshow_metabox',
-	'title' => __( 'Slideshow Settings', 'tallykit_textdomain' ),
-	'post_type' => 'tallykit_slideshow',
-	'context' => 'advanced', //'normal', 'advanced', or 'side'
-	'priority' => 'high', //'high', 'core', 'default' or 'low'
-	'callback_args' => NULL,
-	'fields' => $fields,
-);
-
-new acoc_metabox_register($settings);
+add_action( 'admin_init', 'tallykit_slideshow_metabox_register' );
+function tallykit_slideshow_metabox_register() {
+	
+	if(function_exists('ot_register_meta_box')):
+		$settings[] = array(
+			'id'          => 'tallykit_slideshow_slider_items',
+			'label'       => __('Slider Items', 'tally_taxdomain'),
+			'desc'        => '',
+			'std'         => '',
+			'type'        => 'list-item',
+			'section'     => 'branding',
+			'rows'        => '',
+			'post_type'   => '',
+			'taxonomy'    => '',
+			'class'       => '',
+			'settings'     => array(
+				 array(
+				 	'id'          => 'type',
+					'label'       => __('Type', 'tally_taxdomain'),
+					'desc'        => '',
+					'std'         => '',
+					'type'        => 'select',
+					'section'     => '',
+					'rows'        => '',
+					'post_type'   => '',
+					'taxonomy'    => '',
+					'class'       => '',
+					'choices'     => array(
+						 array( 'label' => 'Caption Style', 'value' => 'caption' ),
+						 array( 'label' => 'Image Only', 'value' => 'image-only' ),
+						 array( 'label' => 'Content Only', 'value' => 'content-only' ),
+						 array( 'label' => 'Video Only', 'value' => 'video-only' ),
+						 array( 'label' => 'Image - Content', 'value' => 'image-content' ),
+						 array( 'label' => 'Content - Image', 'value' => 'content-image'),
+						 array( 'label' => 'Video - Content', 'value' => 'video-content' ),
+						 array( 'label' => 'Content - Video', 'value' => 'content-video'),
+					)
+				 ),
+				 array(
+				 	'id'          => 'image',
+					'label'       => __('Image', 'tally_taxdomain'),
+					'desc'        => '',
+					'std'         => '',
+					'type'        => 'upload',
+					'section'     => '',
+					'rows'        => '',
+					'post_type'   => '',
+					'taxonomy'    => '',
+					'class'       => '',
+					'condition'   => 'type:is(image-only),type:is(image-content),type:is(caption),type:is(content-image)',
+					'operator'    => 'or'
+				 ),
+				 array(
+				 	'id'          => 'Content',
+					'label'       => __('content', 'tally_taxdomain'),
+					'desc'        => '',
+					'std'         => '',
+					'type'        => 'textarea-simple',
+					'section'     => '',
+					'rows'        => '',
+					'post_type'   => '',
+					'taxonomy'    => '',
+					'class'       => '',
+					'condition'   => 'type:is(caption),type:is(content-only),type:is(image-content),type:is(content-image),type:is(video-content),type:is(content-video)',
+					'operator'    => 'or'
+				 ),
+				  array(
+				 	'id'          => 'video',
+					'label'       => __('Video oEmbed', 'tally_taxdomain'),
+					'desc'        => '',
+					'std'         => '',
+					'type'        => 'textarea-simple',
+					'section'     => '',
+					'rows'        => '',
+					'post_type'   => '',
+					'taxonomy'    => '',
+					'class'       => '',
+					'condition'   => 'type:is(video-only),type:is(video-content),type:is(content-video)',
+					'operator'    => 'or'
+				 ),
+				 array(
+				 	'id'          => 'active_content_color',
+					'label'       => __('Enable Text Color Options', 'tally_taxdomain'),
+					'desc'        => '',
+					'std'         => 'off',
+					'type'        => 'on_off',
+					'section'     => '',
+					'rows'        => '',
+					'post_type'   => '',
+					'taxonomy'    => '',
+					'class'       => '',
+				 ),
+				 array(
+				 	'id'          => 'heading_color',
+					'label'       => __('Heading Color', 'tally_taxdomain'),
+					'desc'        => '',
+					'std'         => '',
+					'type'        => 'colorpicker',
+					'section'     => '',
+					'rows'        => '',
+					'post_type'   => '',
+					'taxonomy'    => '',
+					'class'       => '',
+					'condition'   => 'active_content_color:is(on)',
+					'operator'    => 'or'
+				 ),
+				 array(
+				 	'id'          => 'text_color',
+					'label'       => __('Text Color', 'tally_taxdomain'),
+					'desc'        => '',
+					'std'         => '',
+					'type'        => 'colorpicker',
+					'section'     => '',
+					'rows'        => '',
+					'post_type'   => '',
+					'taxonomy'    => '',
+					'class'       => '',
+					'condition'   => 'active_content_color:is(on)',
+					'operator'    => 'or'
+				 ),
+				 array(
+				 	'id'          => 'link_color',
+					'label'       => __('Link Color', 'tally_taxdomain'),
+					'desc'        => '',
+					'std'         => '',
+					'type'        => 'colorpicker',
+					'section'     => '',
+					'rows'        => '',
+					'post_type'   => '',
+					'taxonomy'    => '',
+					'class'       => '',
+					'condition'   => 'active_content_color:is(on)',
+					'operator'    => 'or'
+				 ),
+				 array(
+				 	'id'          => 'link_hover_color',
+					'label'       => __('Link Hover Color', 'tally_taxdomain'),
+					'desc'        => '',
+					'std'         => '',
+					'type'        => 'colorpicker',
+					'section'     => '',
+					'rows'        => '',
+					'post_type'   => '',
+					'taxonomy'    => '',
+					'class'       => '',
+					'condition'   => 'active_content_color:is(on)',
+					'operator'    => 'or'
+				 ),
+				 
+				 array(
+				 	'id'          => 'active_readmore',
+					'label'       => __('Enable Readmore', 'tally_taxdomain'),
+					'desc'        => '',
+					'std'         => 'off',
+					'type'        => 'on_off',
+					'section'     => '',
+					'rows'        => '',
+					'post_type'   => '',
+					'taxonomy'    => '',
+					'class'       => '',
+				 ),
+				 array(
+				 	'id'          => 'readmore_text',
+					'label'       => __('Readmore Text', 'tally_taxdomain'),
+					'desc'        => '',
+					'std'         => '',
+					'type'        => 'text',
+					'section'     => '',
+					'rows'        => '',
+					'post_type'   => '',
+					'taxonomy'    => '',
+					'class'       => '',
+					'condition'   => 'active_readmore:is(on)',
+					'operator'    => 'or'
+				 ),
+				 array(
+				 	'id'          => 'readmore_link',
+					'label'       => __('Readmore Link', 'tally_taxdomain'),
+					'desc'        => '',
+					'std'         => '',
+					'type'        => 'text',
+					'section'     => '',
+					'rows'        => '',
+					'post_type'   => '',
+					'taxonomy'    => '',
+					'class'       => '',
+					'condition'   => 'active_readmore:is(on)',
+					'operator'    => 'or'
+				 ),
+				 array(
+				 	'id'          => 'readmore_color',
+					'label'       => __('Readmore Button Color', 'tally_taxdomain'),
+					'desc'        => '',
+					'std'         => '',
+					'type'        => 'colorpicker',
+					'section'     => '',
+					'rows'        => '',
+					'post_type'   => '',
+					'taxonomy'    => '',
+					'class'       => '',
+					'condition'   => 'active_readmore:is(on)',
+					'operator'    => 'or'
+				 ),
+				 
+				 array(
+				 	'id'          => 'active_padding',
+					'label'       => __('Enable Padding', 'tally_taxdomain'),
+					'desc'        => '',
+					'std'         => 'off',
+					'type'        => 'on_off',
+					'section'     => '',
+					'rows'        => '',
+					'post_type'   => '',
+					'taxonomy'    => '',
+					'class'       => '',
+				 ),
+				 array(
+				 	'id'          => 'padding_top',
+					'label'       => __('Padding Top', 'tally_taxdomain'),
+					'desc'        => '',
+					'std'         => '',
+					'type'        => 'text',
+					'section'     => '',
+					'rows'        => '',
+					'post_type'   => '',
+					'taxonomy'    => '',
+					'class'       => '',
+					'condition'   => 'active_padding:is(on)',
+					'operator'    => 'or'
+				 ),
+				 array(
+				 	'id'          => 'padding_bottom',
+					'label'       => __('Padding Bottom', 'tally_taxdomain'),
+					'desc'        => '',
+					'std'         => '',
+					'type'        => 'text',
+					'section'     => '',
+					'rows'        => '',
+					'post_type'   => '',
+					'taxonomy'    => '',
+					'class'       => '',
+					'condition'   => 'active_padding:is(on)',
+					'operator'    => 'or'
+				 ),
+				 array(
+				 	'id'          => 'content_width',
+					'label'       => __('Content Width', 'tally_taxdomain'),
+					'desc'        => '',
+					'std'         => '960px',
+					'type'        => 'text',
+					'section'     => '',
+					'rows'        => '',
+					'post_type'   => '',
+					'taxonomy'    => '',
+					'class'       => '',
+				 ),
+				 array(
+				 	'id'          => 'bg',
+					'label'       => __('Background', 'tally_taxdomain'),
+					'desc'        => '',
+					'std'         => '',
+					'type'        => 'background',
+					'section'     => '',
+					'rows'        => '',
+					'post_type'   => '',
+					'taxonomy'    => '',
+					'class'       => '',
+				 ),
+				 
+			)
+		);
+		
+		$metabox = array(
+			'id'        => 'tallykit_slideshow_metabox',
+			'title'     => 'Slider Items',
+			'desc'      => '',
+			'pages'     => array( 'tallykit_slideshow'),
+			'context'   => 'normal',
+			'priority'  => 'high',
+			'fields'    => $settings,
+		);
+		ot_register_meta_box( $metabox );
+	endif;
+}

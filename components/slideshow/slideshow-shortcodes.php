@@ -9,7 +9,7 @@
 **/
 /*---------|- Slideshow -|-------------------------------------*/
 add_shortcode('tk_slideshow', 'tallykit_slideshow_sc');
-function tallykit_slideshow_sc_single( $atts, $content = null  ) {
+function tallykit_slideshow_sc( $atts, $content = null  ) {
 	extract( shortcode_atts( array(
 		'id'	=> '',
 	), $atts ) );
