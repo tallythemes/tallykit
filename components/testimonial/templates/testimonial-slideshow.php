@@ -15,7 +15,7 @@ $flexslider2 = new acoc_flexslider2_html(array(
 ));
 $testimonial_query = new WP_Query( $query );
 ?>
-<div class="tallykit_testimonial_slideshow acoc-flexslider2-skin tk_testimonial_slider">
+<div class="tallykit_testimonial_slideshow acoc-flexslider2-skin tk_testimonial_slider style-3">
 	<?php if( $testimonial_query->have_posts()): ?>
     	<?php $flexslider2->start(); ?>
         	<?php while ( $testimonial_query->have_posts() ) : $testimonial_query->the_post(); ?>

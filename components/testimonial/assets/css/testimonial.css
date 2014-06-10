@@ -1,5 +1,6 @@
 .tallykit_testimonial_item{display:block;position:relative; overflow:inherit; color:#696868;}
-.tallykit_testimonial_item .tk_item_content{
+.tallykit_testimonial_item .tk_item_content,
+body #main .tallykit_testimonial_item .tk_item_content{
 	font-style: italic;
 	position: relative;
 	background: #fcfcfc;
@@ -7,7 +8,11 @@
 	border:1px solid #e1e1e1;
 	border-radius: 3px;
 	-webkit-border-radius: 3px;
-	color:#696868 ;
+	color:#696868 !important;
+}
+.tallykit_testimonial_item .tk_item_content span,
+body #main .tallykit_testimonial_item .tk_item_content span{
+	color: #696868 !important;
 }
 .tallykit_testimonial_item .tk_item_content p:last-child{ margin-bottom:0; }
 .tallykit_testimonial_item .tk_item_content:after{
@@ -24,7 +29,7 @@
 .tallykit_testimonial_item .tk_item_info{ width:100%; height:auto; display:block;position:relative; padding-top:15px; }
 .tallykit_testimonial_item .tk_item_info img{ margin-right:10px; float:left; width:50px!important; height:50px; border-radius: 50%; }
 .tallykit_testimonial_item .tk_author_name{	font-weight:bold; margin-top:12px;}
-.tallykit_testimonial_item .tk_author_position{ }
+.tallykit_testimonial_item .tk_author_position{ font-weight: normal; font-size: 12px; }
 
 .tallykit_testimonial_item .tk_arrow_wrap{ display: block;position: absolute;top: -2px;left: 14px;overflow: hidden;width: 10px;height: 10px;}
 .tallykit_testimonial_item .tk_arrow_wrap .tk_arrow{
@@ -157,7 +162,7 @@ Slidershow (defolt)
 
 
 /* Control Nav */
-.tallykit_testimonial_slideshow.tk_testimonial_slider .wfs-control-nav {position: absolute; bottom: 10px; text-align: center; margin:0; right:0;}
+.tallykit_testimonial_slideshow.tk_testimonial_slider .wfs-control-nav { position:absolute; bottom:10px; text-align:center; margin:0; right:0; display:none !important; }
 .tallykit_testimonial_slideshow.tk_testimonial_slider .wfs-control-nav li {margin: 0 6px; display: inline-block; zoom: 1; *display: inline;}
 .tallykit_testimonial_slideshow.tk_testimonial_slider .wfs-control-paging li a {
 	width: 11px; 
@@ -172,3 +177,176 @@ Slidershow (defolt)
 .tallykit_testimonial_slideshow.tk_testimonial_slider .wfs-control-paging li a.wfs-active { background: #000; background: rgba(0,0,0,0.4); cursor: default; }
 
 .tallykit_testimonial_slideshow.tk_testimonial_slider .wfs-control-nav {top: 5px; left:0; bottom:auto; right:auto; width:auto; }
+
+
+
+
+/*
+-----------------------------------------------------
+Slidershow (STYLE 2)
+-----------------------------------------------------
+*/
+.tallykit_testimonial_slideshow.style-2{ 
+
+}
+
+.tallykit_testimonial_slideshow.style-2 .tallykit_testimonial_item .tk_item_content, 
+body #main .tallykit_testimonial_slideshow.style-2 .tallykit_testimonial_item .tk_item_content{
+	font-style: normal !important;
+	background-color:transparent !important;
+	padding: 0px 0px 0px 0px;
+	border: 0px solid #e1e1e1;
+	border-radius: 0px;
+	
+	line-height:30px;
+	font-size: 20px;
+	text-align:center;
+}
+.tallykit_testimonial_slideshow.style-2 .tallykit_testimonial_item .tk_item_content span, 
+body #main .tallykit_testimonial_slideshow.style-2 .tallykit_testimonial_item .tk_item_content span{
+	font-style: normal !important;
+}
+
+.tallykit_testimonial_slideshow.style-2 .tallykit_testimonial_item .tk_item_info { text-align:center; }
+.tallykit_testimonial_slideshow.style-2 .tallykit_testimonial_item .tk_item_info .tk_arrow_wrap{ display:none; }
+.tallykit_testimonial_slideshow.style-2 .tallykit_testimonial_item .tk_item_info img{ display:none; }
+.tallykit_testimonial_slideshow.style-2 .tallykit_testimonial_item .tk_item_info .tk_author_name br{ display:none; }
+
+.tallykit_testimonial_slideshow.style-2.tk_testimonial_slider .wfs-direction-nav{
+	position:relative;
+	margin-left:46.2%;
+	text-align: center;
+	display: inline-block;
+	float: left;
+	margin-top: 20px;
+}
+.tallykit_testimonial_slideshow.style-2.tk_testimonial_slider .wfs-direction-nav li{ width:30px; height:30px; }
+
+.tallykit_testimonial_slideshow.tk_testimonial_slider.style-2 .wfs-direction-nav a:before{
+	color:#999;
+	font-size: 12px;
+	padding-top: 3px;
+}
+.tallykit_testimonial_slideshow.tk_testimonial_slider.style-2 .wfs-direction-nav a{
+	position: relative;
+	width: 30px;
+	height: 30px;
+	border: 2px solid #333 !important;
+	color:#333;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-ms-border-radius: 4px;
+	border-radius: 4px;
+	opacity: 1;
+	background-color: transparent;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;	
+}
+.tallykit_testimonial_slideshow.tk_testimonial_slider.style-2 .wfs-direction-nav a:hover{ background-color:#333; color:#FFF !important; }
+
+
+/*
+-----------------------------------------------------
+Slidershow (STYLE 3)
+-----------------------------------------------------
+*/
+.tallykit_testimonial_slideshow.style-3{ 
+
+}
+
+.tallykit_testimonial_slideshow.style-3 .tallykit_testimonial_item{ 
+	padding-top:120px;
+}
+.tallykit_testimonial_slideshow.style-3 .tallykit_testimonial_item .tk_item_content, 
+body #main .tallykit_testimonial_slideshow.style-3 .tallykit_testimonial_item .tk_item_content{
+	font-style: normal !important;
+	background-color:transparent !important;
+	padding: 0px 0px 0px 0px;
+	border: 0px solid #e1e1e1;
+	border-radius: 0px;
+	
+	line-height:30px;
+	font-size: 20px;
+	text-align:center;
+}
+.tallykit_testimonial_slideshow.style-3 .tallykit_testimonial_item .tk_item_content span, 
+body #main .tallykit_testimonial_slideshow.style-3 .tallykit_testimonial_item .tk_item_content span{
+	font-style: normal !important;
+}
+
+
+.tallykit_testimonial_slideshow.style-3 .tallykit_testimonial_item .tk_item_info { text-align:center; position:initial; }
+.tallykit_testimonial_slideshow.style-3 .tallykit_testimonial_item .tk_item_info .tk_arrow_wrap{ display:none; }
+.tallykit_testimonial_slideshow.style-3 .tallykit_testimonial_item .tk_item_info img{ 
+	display:inline-block; 
+	width:100px!important; 
+	height:100px; 
+	position: absolute; 
+	top: 0px; 
+	float:none;
+	margin-right:0px;
+}
+.tallykit_testimonial_slideshow.style-3 .tallykit_testimonial_item .tk_item_info .tk_author_name br{ display:none; }
+
+.tallykit_testimonial_slideshow.style-3.tk_testimonial_slider .wfs-direction-nav{
+	position:relative;
+	margin-left:46.2%;
+	text-align: center;
+	display: inline-block;
+	float: left;
+	margin-top: 20px;
+}
+.tallykit_testimonial_slideshow.style-3.tk_testimonial_slider .wfs-direction-nav li{ width:30px; height:30px; }
+
+.tallykit_testimonial_slideshow.tk_testimonial_slider.style-3 .wfs-direction-nav a:before{
+	color:#999;
+	font-size: 12px;
+	padding-top: 3px;
+}
+.tallykit_testimonial_slideshow.tk_testimonial_slider.style-3 .wfs-direction-nav a{
+	position: relative;
+	width: 30px;
+	height: 30px;
+	border: 2px solid #333 !important;
+	color:#333;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-ms-border-radius: 4px;
+	border-radius: 4px;
+	opacity: 1;
+	background-color: transparent;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;	
+}
+.tallykit_testimonial_slideshow.tk_testimonial_slider.style-3 .wfs-direction-nav a:hover{ background-color:#333; color:#FFF !important; }
+
+
+
+/* * ---styles for browsers smaller than 800px;
+================================================== */
+@media only screen and (max-width: 800px) {
+	
+}
+
+
+/*---styles for browsers smaller than 768px;
+================================================== */
+@media only screen and (max-width: 768px) {	
+
+}
+
+/*---styles for browsers smaller than 600px;
+================================================== */
+@media only screen and (max-width: 600px) {	
+.tallykit_testimonial_slideshow.style-3.tk_testimonial_slider .wfs-direction-nav { margin-left: 38.2%; }
+.tallykit_testimonial_slideshow.style-3 .tallykit_testimonial_item .tk_item_content span, 
+body #main .tallykit_testimonial_slideshow.style-3 .tallykit_testimonial_item .tk_item_content span { font-size:16px; line-height:22px; }
+}
+
+/*---styles for browsers smaller than 480px;
+================================================== */
+@media only screen and (max-width: 480px) {	
+
+}

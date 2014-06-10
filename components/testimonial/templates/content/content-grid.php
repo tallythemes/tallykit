@@ -9,7 +9,8 @@
         	<?php if($link): ?><a href="<?php echo get_post_meta(get_the_ID(), 'tallykit_testimonial_link', true); ?>" target="_blank"><?php endif; ?>
 				<?php the_title(); ?>
 			<?php if($link): ?></a><?php endif; ?>
-        </span><br />
-		<span class="tk_author_position"><?php echo get_post_meta(get_the_ID(), 'tallykit_testimonial_position', true); ?></span>
+            <br />
+            <span class="tk_author_position">- <?php echo get_post_meta(get_the_ID(), 'tallykit_testimonial_position', true); ?> -</span>
+        </span>
 	</div>
 </div>

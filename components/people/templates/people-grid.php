@@ -2,7 +2,7 @@
 $isotope = new acoc_isotope_html(array('column'=>$columns, 'margin'=>$margin));
 $people_query = new WP_Query( $query );
 ?>
-<div class="tallykit_people">
+<div class="tallykit_people style-3">
 	<?php if( $people_query->have_posts()): ?>
     	<?php if($filter == 'yes'){ $isotope->filter('tallykit_people_category'); } ?>
     	<?php $isotope->start(); ?>

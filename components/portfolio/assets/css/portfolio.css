@@ -8,11 +8,13 @@
 }
 .tallykit_portfolio_item a:hover{ text-decoration:none; }
 .tallykit_portfolio_item .tallykit_portfolio_item_details{ background-color: rgba(247, 247, 247, 0.79); padding: 15px 10px 10px 10px; }
-.tallykit_portfolio_item .tallykit_portfolio_item_heading{
-	 font-weight:normal; font-size: 18px; line-height:18px; color: #444; letter-spacing: -0.5px; margin-bottom:0px;
+.tallykit_portfolio_item .tallykit_portfolio_item_heading,
+body #main .tallykit_portfolio_item .tallykit_portfolio_item_heading{
+	 font-weight:normal; font-size: 18px; line-height:18px; color: #444 !important; letter-spacing: -0.5px; margin-bottom:0px;
 }
 .tallykit_portfolio_item .tallykit_portfolio_item_heading:hover{ text-decoration:none; }
-.tallykit_portfolio_item .tallykit_portfolio_item_subheading{ line-height: 22px; font-size: 11px; color: #999; }
+.tallykit_portfolio_item .tallykit_portfolio_item_subheading,
+body #main .tallykit_portfolio_item .tallykit_portfolio_item_subheading{ line-height: 22px; font-size: 11px; color: #999 !important; }
 
 .tallykit_portfolio_item a.tallykit_portfolio_item_image{  }
 
