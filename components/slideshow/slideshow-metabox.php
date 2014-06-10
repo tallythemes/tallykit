@@ -5,7 +5,7 @@ function tallykit_slideshow_metabox_register() {
 	if(function_exists('ot_register_meta_box')):
 		$settings[] = array(
 			'id'          => 'tallykit_slideshow_slider_items',
-			'label'       => __('Slider Items', 'tally_taxdomain'),
+			'label'       => __('Slider Items', 'tallykit_textdomain'),
 			'desc'        => '',
 			'std'         => '',
 			'type'        => 'list-item',
@@ -17,7 +17,7 @@ function tallykit_slideshow_metabox_register() {
 			'settings'     => array(
 				 array(
 				 	'id'          => 'type',
-					'label'       => __('Type', 'tally_taxdomain'),
+					'label'       => __('Type', 'tallykit_textdomain'),
 					'desc'        => '',
 					'std'         => '',
 					'type'        => 'select',
@@ -39,7 +39,7 @@ function tallykit_slideshow_metabox_register() {
 				 ),
 				 array(
 				 	'id'          => 'image',
-					'label'       => __('Image', 'tally_taxdomain'),
+					'label'       => __('Image', 'tallykit_textdomain'),
 					'desc'        => '',
 					'std'         => '',
 					'type'        => 'upload',
@@ -53,7 +53,7 @@ function tallykit_slideshow_metabox_register() {
 				 ),
 				 array(
 				 	'id'          => 'Content',
-					'label'       => __('content', 'tally_taxdomain'),
+					'label'       => __('content', 'tallykit_textdomain'),
 					'desc'        => '',
 					'std'         => '',
 					'type'        => 'textarea-simple',
@@ -67,7 +67,7 @@ function tallykit_slideshow_metabox_register() {
 				 ),
 				  array(
 				 	'id'          => 'video',
-					'label'       => __('Video oEmbed', 'tally_taxdomain'),
+					'label'       => __('Video oEmbed', 'tallykit_textdomain'),
 					'desc'        => '',
 					'std'         => '',
 					'type'        => 'textarea-simple',
@@ -81,7 +81,7 @@ function tallykit_slideshow_metabox_register() {
 				 ),
 				 array(
 				 	'id'          => 'active_content_color',
-					'label'       => __('Enable Text Color Options', 'tally_taxdomain'),
+					'label'       => __('Enable Text Color Options', 'tallykit_textdomain'),
 					'desc'        => '',
 					'std'         => 'off',
 					'type'        => 'on_off',
@@ -93,7 +93,7 @@ function tallykit_slideshow_metabox_register() {
 				 ),
 				 array(
 				 	'id'          => 'heading_color',
-					'label'       => __('Heading Color', 'tally_taxdomain'),
+					'label'       => __('Heading Color', 'tallykit_textdomain'),
 					'desc'        => '',
 					'std'         => '',
 					'type'        => 'colorpicker',
@@ -107,7 +107,7 @@ function tallykit_slideshow_metabox_register() {
 				 ),
 				 array(
 				 	'id'          => 'text_color',
-					'label'       => __('Text Color', 'tally_taxdomain'),
+					'label'       => __('Text Color', 'tallykit_textdomain'),
 					'desc'        => '',
 					'std'         => '',
 					'type'        => 'colorpicker',
@@ -121,7 +121,7 @@ function tallykit_slideshow_metabox_register() {
 				 ),
 				 array(
 				 	'id'          => 'link_color',
-					'label'       => __('Link Color', 'tally_taxdomain'),
+					'label'       => __('Link Color', 'tallykit_textdomain'),
 					'desc'        => '',
 					'std'         => '',
 					'type'        => 'colorpicker',
@@ -135,7 +135,7 @@ function tallykit_slideshow_metabox_register() {
 				 ),
 				 array(
 				 	'id'          => 'link_hover_color',
-					'label'       => __('Link Hover Color', 'tally_taxdomain'),
+					'label'       => __('Link Hover Color', 'tallykit_textdomain'),
 					'desc'        => '',
 					'std'         => '',
 					'type'        => 'colorpicker',
@@ -150,7 +150,7 @@ function tallykit_slideshow_metabox_register() {
 				 
 				 array(
 				 	'id'          => 'active_readmore',
-					'label'       => __('Enable Readmore', 'tally_taxdomain'),
+					'label'       => __('Enable Readmore', 'tallykit_textdomain'),
 					'desc'        => '',
 					'std'         => 'off',
 					'type'        => 'on_off',
@@ -162,7 +162,7 @@ function tallykit_slideshow_metabox_register() {
 				 ),
 				 array(
 				 	'id'          => 'readmore_text',
-					'label'       => __('Readmore Text', 'tally_taxdomain'),
+					'label'       => __('Readmore Text', 'tallykit_textdomain'),
 					'desc'        => '',
 					'std'         => '',
 					'type'        => 'text',
@@ -176,7 +176,7 @@ function tallykit_slideshow_metabox_register() {
 				 ),
 				 array(
 				 	'id'          => 'readmore_link',
-					'label'       => __('Readmore Link', 'tally_taxdomain'),
+					'label'       => __('Readmore Link', 'tallykit_textdomain'),
 					'desc'        => '',
 					'std'         => '',
 					'type'        => 'text',
@@ -190,7 +190,7 @@ function tallykit_slideshow_metabox_register() {
 				 ),
 				 array(
 				 	'id'          => 'readmore_color',
-					'label'       => __('Readmore Button Color', 'tally_taxdomain'),
+					'label'       => __('Readmore Button Color', 'tallykit_textdomain'),
 					'desc'        => '',
 					'std'         => '',
 					'type'        => 'colorpicker',
@@ -205,7 +205,7 @@ function tallykit_slideshow_metabox_register() {
 				 
 				 array(
 				 	'id'          => 'active_padding',
-					'label'       => __('Enable Padding', 'tally_taxdomain'),
+					'label'       => __('Enable Padding', 'tallykit_textdomain'),
 					'desc'        => '',
 					'std'         => 'off',
 					'type'        => 'on_off',
@@ -217,7 +217,7 @@ function tallykit_slideshow_metabox_register() {
 				 ),
 				 array(
 				 	'id'          => 'padding_top',
-					'label'       => __('Padding Top', 'tally_taxdomain'),
+					'label'       => __('Padding Top', 'tallykit_textdomain'),
 					'desc'        => '',
 					'std'         => '',
 					'type'        => 'text',
@@ -231,7 +231,7 @@ function tallykit_slideshow_metabox_register() {
 				 ),
 				 array(
 				 	'id'          => 'padding_bottom',
-					'label'       => __('Padding Bottom', 'tally_taxdomain'),
+					'label'       => __('Padding Bottom', 'tallykit_textdomain'),
 					'desc'        => '',
 					'std'         => '',
 					'type'        => 'text',
@@ -245,7 +245,7 @@ function tallykit_slideshow_metabox_register() {
 				 ),
 				 array(
 				 	'id'          => 'content_width',
-					'label'       => __('Content Width', 'tally_taxdomain'),
+					'label'       => __('Content Width', 'tallykit_textdomain'),
 					'desc'        => '',
 					'std'         => '960px',
 					'type'        => 'text',
@@ -257,7 +257,7 @@ function tallykit_slideshow_metabox_register() {
 				 ),
 				 array(
 				 	'id'          => 'bg',
-					'label'       => __('Background', 'tally_taxdomain'),
+					'label'       => __('Background', 'tallykit_textdomain'),
 					'desc'        => '',
 					'std'         => '',
 					'type'        => 'background',
