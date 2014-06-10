@@ -173,7 +173,7 @@
 .tallykit-shortcode-three-fifth, 
 .tallykit-shortcode-four-fifth, 
 .tallykit-shortcode-one-sixth, 
-.tallykit-shortcode-five-sixth{ position: relative; margin-right: 4%; margin-bottom: 2em; float: left; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.tallykit-shortcode-five-sixth{ position: relative; margin-right: 4%; /*margin-bottom: 2em;*/ float: left; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 .tallykit-shortcode-column-last { margin-right: 0!important; clear: right; }
 .tallykit-shortcode-column-last:after { content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0; }
 .tallykit-shortcode-one-half, .tallykit-shortcode-one-third, .tallykit-shortcode-two-third, .tallykit-shortcode-three-fourth, .tallykit-shortcode-one-fourth, .tallykit-shortcode-one-fifth, .tallykit-shortcode-two-fifth, .tallykit-shortcode-three-fifth, .tallykit-shortcode-four-fifth, .tallykit-shortcode-one-sixth, .tallykit-shortcode-five-sixth { }

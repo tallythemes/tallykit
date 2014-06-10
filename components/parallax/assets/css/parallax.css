@@ -1,6 +1,9 @@
 body.parallax #wrapper #main{ padding-bottom:0; padding-top:0; }
 body.parallax #wrapper #main #main-inner{ max-width:100%; width:100%; }
 
+.tallykit_parallax_section{ width:100%; display:block; overflow:hidden; }
+.tallykit_parallax_section:after{ content:" ";  clear:both; width:100%; }
+.tallykit_parallax_section:before{ content:" "; clear:both;  width:100%; }
 .tallykit_parallax_section_inner .tk_section_header{ margin-bottom:30px; }
 .tallykit_parallax_section_inner .tk_title{ text-transform: uppercase; font-weight:bold; font-size:30px; margin-bottom:10px; line-height:30px; }
 .tallykit_parallax_section_inner .tk_subtitle{ font-size:17px; opacity:0.7; line-height:24px; margin-bottom:5px; }

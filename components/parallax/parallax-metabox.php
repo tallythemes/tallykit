@@ -125,8 +125,8 @@ function tallykit_parallax_sections_metabox_register() {
 					'operator'    => 'or'
 				 ),
 				 array(
-				 	'id'          => 'Content',
-					'label'       => __('content', 'tallykit_textdomain'),
+				 	'id'          => 'content',
+					'label'       => __('Content', 'tallykit_textdomain'),
 					'desc'        => '',
 					'std'         => '',
 					'type'        => 'textarea',
