@@ -52,8 +52,8 @@ function tallykit_slideshow_metabox_register() {
 					'operator'    => 'or'
 				 ),
 				 array(
-				 	'id'          => 'Content',
-					'label'       => __('content', 'tally_taxdomain'),
+				 	'id'          => 'content',
+					'label'       => __('Content', 'tally_taxdomain'),
 					'desc'        => '',
 					'std'         => '',
 					'type'        => 'textarea-simple',
