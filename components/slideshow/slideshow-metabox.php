@@ -283,3 +283,99 @@ function tallykit_slideshow_metabox_register() {
 		ot_register_meta_box( $metabox );
 	endif;
 }
+
+
+$prefix = 'tallykit_slideshow_';
+$seeings = array(
+	'id' => 'well_slideshow_slider_setting',
+	'title' => 'Slider Settings',
+	'post_type' => 'tallykit_slideshow',
+	'context' => 'side', //'normal', 'advanced', or 'side'
+	'priority' => 'default', //'high', 'core', 'default' or 'low'
+	'callback_args' => NULL,
+	'fields' => array(
+		array(
+			'id' => $prefix.'h',
+			'class' => '',
+			'label' => 'Slider Height',
+			'type' => 'text',
+			'std' => '400px',
+			'des' => 'For Example <code>96px</code>',
+			'filter' => '',
+			'options' => '',
+		),
+		array(
+			'id' => $prefix.'animation',
+			'class' => '',
+			'label' => 'Animation',
+			'type' => 'select',
+			'std' => '',
+			'des' => '',
+			'filter' => '',
+			'options' => array(
+				array('label'=>'Fade', 'value'=>'fade'),
+				array('label'=>'Slide', 'value'=>'slide'),
+			)
+		),
+		/*array(
+			'id' => $prefix.'smoothHeight',
+			'class' => '',
+			'label' => 'Smooth Height',
+			'type' => 'select',
+			'std' => '',
+			'des' => '',
+			'filter' => '',
+			'options' => array(
+				array('label'=>'false', 'value'=>'false'),
+				array('label'=>'true', 'value'=>'true'),
+			)
+		),*/
+		array(
+			'id' => $prefix.'slideshowSpeed',
+			'class' => '',
+			'label' => 'Slideshow Speed',
+			'type' => 'text',
+			'std' => '7000',
+			'des' => '',
+			'filter' => '',
+			'options' => ''
+		),
+		array(
+			'id' => $prefix.'animationSpeed',
+			'class' => '',
+			'label' => 'Animation Speed',
+			'type' => 'text',
+			'std' => '600',
+			'des' => '',
+			'filter' => '',
+			'options' => ''
+		),
+		array(
+			'id' => $prefix.'controlNav',
+			'class' => '',
+			'label' => 'Control Nav',
+			'type' => 'select',
+			'std' => '',
+			'des' => '',
+			'filter' => '',
+			'options' => array(
+				array('label'=>'true', 'value'=>'true'),
+				array('label'=>'false', 'value'=>'false'),
+			)
+		),
+		array(
+			'id' => $prefix.'directionNav',
+			'class' => '',
+			'label' => 'Direction Nav',
+			'type' => 'select',
+			'std' => '',
+			'des' => '',
+			'filter' => '',
+			'options' => array(
+				array('label'=>'true', 'value'=>'true'),
+				array('label'=>'false', 'value'=>'false'),
+			)
+		),
+	),
+);
+new acoc_metabox_register($seeings);

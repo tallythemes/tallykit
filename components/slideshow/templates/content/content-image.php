@@ -1,3 +1,3 @@
-<div class="tk_image_holder">
-	<img src="<?php echo $sliter_item['image']; ?>" alt="<?php echo $sliter_item['title']; ?>" />
+<div class="tk_slideshow_image_holder">
+	<img src="<?php echo $slider_item['image']; ?>" alt="<?php echo $slider_item['title']; ?>" />
 </div>
