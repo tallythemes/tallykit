@@ -14,7 +14,7 @@
 			<?php endif; ?>
 			
 			/*- Content area -*/
-			.<?php echo $uclass; ?> .tallykit_parallax_section_inner{ width:96%; max-width:<?php echo $section['content_width']; ?>; margin:0 auto; }
+			.<?php echo $uclass; ?> .tallykit_parallax_section_inner{ width:<?php if($section['content_width'] == "100%"){ echo '100%'; }else{ echo "96%"; } ?>; max-width:<?php echo $section['content_width']; ?>; margin:0 auto; }
 			.<?php echo $uclass; ?> .tk_content{ text-align:<?php echo $section['content_align']; ?>; }
 			<?php if($section['active_content_color'] == 'on'): ?>
 				.<?php echo $uclass; ?> .tk_content *{ color:<?php echo $section['text_color']; ?> !important; }
