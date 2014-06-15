@@ -1,4 +1,4 @@
-.tallykit_slideshow_item{ overflow:hidden; }
+.tallykit_slideshow_item{ overflow:hidden; text-align:center; }
 .tallykit_slideshow_item_inner{ margin:0 auto; }
 
 
@@ -30,6 +30,16 @@
 .tk_slideshow_button{ border:solid 2px; padding:7px 30px; margin-top:20px; display:inline-block; border-radius: 4px;text-transform: capitalize; font-weight:bold; }
 .tk_slideshow_button:hover{ text-decoration:none; opacity: 0.8; }
 
+.tk_slideshow_title{ font-size: 56px; line-height: 60px; text-shadow: none; }
+.tk_slideshow_content{
+color: #fff;
+text-align: center;
+font-size: 21px;
+line-height: 1.363157894736842em;
+font-weight: 400;
+margin: 10px 0 15px 0;
+font-weight:400;
+}
 /*---------------------------------------------------------
   Content Video
 ---------------------------------------------------------*/
@@ -113,27 +123,41 @@
 
 /* Direction Nav */
 .tallykit_slideshow .acoc-flexslider2 .wfs-direction-nav {*height: 0;}
+
 .tallykit_slideshow .acoc-flexslider2 .wfs-direction-nav a{ 
+
 	display: block; 
-	width: 40px; 
-	height: 40px; 
+	width: 54px; 
+	height: 54px; 
+	line-height: 54px;
+	font-size: 14px;
 	margin: -20px 0 0; 
 	position: absolute; 
+	border: 2px solid #fff;
 	top: 50%; 
 	z-index: 10; 
 	overflow: hidden; 
-	/*opacity: 0; */
+	-webkit-transition: opacity .3s ease 0s;
+	-moz-transition: opacity .3s ease 0s;
+	-o-transition: opacity .3s ease 0s;
+	transition: opacity .3s ease-in-out;
+	opacity: 0;
 	cursor: pointer; 
-	color:#FFF !important; 
+	color:#DDDCDC !important; 
 	text-shadow: 1px 1px 0 rgba(255,255,255,0.3); 
 	-webkit-transition: all .3s ease; 
 	-moz-transition: all .3s ease; transition: all .3s ease; 
 	
 	line-height:42px;
-	background-color:rgba(0, 0, 0, 0.35);
 	 border-radius: 50%;
 }
-.tallykit_slideshow .acoc-flexslider2 .wfs-direction-nav a:hover{ background-color:#000; }
+.tallykit_slideshow .acoc-flexslider2:hover .wfs-direction-nav a{ 
+	-webkit-transition: opacity .3s ease 0s;
+	-moz-transition: opacity .3s ease 0s;
+	-o-transition: opacity .3s ease 0s;
+	transition: opacity .3s ease-in-out;
+	opacity: 1; 
+}
 .tallykit_slideshow .acoc-flexslider2 .wfs-direction-nav .wfs-prev { left: 10px; text-align: center; }
 .tallykit_slideshow .acoc-flexslider2 .wfs-direction-nav .wfs-next { right: 10px; text-align: center; }
 .tallykit_slideshow .acoc-flexslider2 .wfs-viewport:hover .wfs-prev { opacity: 0.7; left: 10px; }
@@ -141,7 +165,14 @@
 .tallykit_slideshow .acoc-flexslider2 .wfs-viewport:hover .wfs-next:hover,
 .tallykit_slideshow .acoc-flexslider2 .wfs-viewport:hover .wfs-prev:hover { opacity: 1; }
 .tallykit_slideshow .acoc-flexslider2 .wfs-direction-nav .wfs-disabled { opacity: 0!important; filter:alpha(opacity=0); cursor: default; }
-.tallykit_slideshow .acoc-flexslider2 .wfs-direction-nav a:before  { font-family: "flexslider-icon"; font-size:20px; display: inline-block; content: '\f001'; }
+.tallykit_slideshow .acoc-flexslider2 .wfs-direction-nav a:before  { 
+	font-family: "flexslider-icon"; 
+	font-size:20px; 
+	display: inline-block; 
+	content: '\f001'; 
+	line-height: 59px; 
+	font-size: 14px; 
+}
 .tallykit_slideshow .acoc-flexslider2 .wfs-direction-nav a.wfs-next:before  { content: '\f002'; }
 
 /* Pause/Play */
@@ -164,10 +195,10 @@
 
 /* Control Nav */
 .tallykit_slideshow .acoc-flexslider2 .wfs-control-nav {width: 100%; position: absolute; bottom: 10px; text-align: center; margin:0; z-index: 9999;}
-.tallykit_slideshow .acoc-flexslider2 .wfs-control-nav li {margin: 0 6px; display: inline-block; zoom: 1; *display: inline;}
+.tallykit_slideshow .acoc-flexslider2 .wfs-control-nav li {margin: 0 2px; display: inline-block; zoom: 1; *display: inline;}
 .tallykit_slideshow .acoc-flexslider2 .wfs-control-paging li a {
-	width: 11px; 
-	height: 11px; 
+	width: 9px; 
+	height: 9px; 
 	display: block; 
 	background: #666; 
 	background: rgba(0,0,0,0.5); 
@@ -187,8 +218,8 @@
 
 .tallykit_slideshow .acoc-flexslider2 .wfs-control-paging li a{
 	display: inline-block;
-	width: 13px;
-	height:13px;
+	width: 9px;
+	height:9px;
 	-webkit-border-radius: 0px; 
 	-moz-border-radius: 0px; 
 	-o-border-radius: 0px; 
@@ -202,3 +233,32 @@
 .tallykit_slideshow .acoc-flexslider2 .wfs-control-thumbs img {width: 100%; display: block; opacity: .7; cursor: pointer;}
 .tallykit_slideshow .acoc-flexslider2 .wfs-control-thumbs img:hover {opacity: 1;}
 .tallykit_slideshow .acoc-flexslider2 .wfs-control-thumbs .wfs-active {opacity: 1; cursor: default;}
+
+
+
+
+/* * ---styles for browsers smaller than 800px;
+================================================== */
+@media only screen and (max-width: 800px) {
+	
+}
+
+
+/*---styles for browsers smaller than 768px;
+================================================== */
+@media only screen and (max-width: 768px) {	
+
+}
+
+/*---styles for browsers smaller than 600px;
+================================================== */
+@media only screen and (max-width: 600px) {	
+	.tk_slideshow_title{ font-size: 20px; line-height: 30px; }
+	.tk_slideshow_content{ font-size: 15px; }
+}
+
+/*---styles for browsers smaller than 480px;
+================================================== */
+@media only screen and (max-width: 480px) {	
+
+}
