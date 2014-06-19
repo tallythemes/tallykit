@@ -2,7 +2,7 @@
 $isotope = new acoc_isotope_html(array('column'=>$columns, 'margin'=>$margin));
 $testimonial_query = new WP_Query( $query );
 ?>
-<div class="tallykit_testimonial">
+<div class="tallykit_testimonial tk_testimonial_grid">
 	<?php if( $testimonial_query->have_posts()): ?>
     	<?php if($filter == 'yes'){ $isotope->filter('tallykit_testimonial_category'); } ?>
     	<?php $isotope->start(); ?>

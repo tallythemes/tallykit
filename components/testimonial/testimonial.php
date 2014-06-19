@@ -21,3 +21,4 @@ include('testimonial-script.php');
 include('testimonial-shortcodes.php');
 include('testimonial-tinymce.php');
 include('testimonial-widgets.php');
+include('testimonial-color.php');

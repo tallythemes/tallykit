@@ -38,6 +38,7 @@ function load_tallykit(){
 	
 	include('includes/custom-functions.php');
 	include('includes/acoc-loader.php');
+	include('includes/color-management.php');
 	
 	if ( function_exists( 'acoc_forceLoadFirst' ) ) {
 		tallykit_components_loader();

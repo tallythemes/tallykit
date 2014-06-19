@@ -1,4 +1,4 @@
-<div class="tallykit_testimonial_item">
+<div class="tk_testimonial_item">
 	<div class="tk_testimonial_item_content"><?php echo get_the_content(); ?></div>
 	<div class="tk_testimonial_item_info">
     	<div class="tk_testimonial_arrow_wrap"><div class="tk_testimonial_arrow"></div></div>

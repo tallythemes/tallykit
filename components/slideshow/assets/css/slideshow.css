@@ -133,7 +133,7 @@ font-weight:400;
 	font-size: 14px;
 	margin: -20px 0 0; 
 	position: absolute; 
-	border: 2px solid #fff;
+	border: 2px solid #fff !important;;
 	top: 50%; 
 	z-index: 10; 
 	overflow: hidden; 
@@ -143,11 +143,9 @@ font-weight:400;
 	transition: opacity .3s ease-in-out;
 	opacity: 0;
 	cursor: pointer; 
-	color:#DDDCDC !important; 
-	text-shadow: 1px 1px 0 rgba(255,255,255,0.3); 
+	color:#FFF !important; 
 	-webkit-transition: all .3s ease; 
 	-moz-transition: all .3s ease; transition: all .3s ease; 
-	
 	line-height:42px;
 	 border-radius: 50%;
 }
