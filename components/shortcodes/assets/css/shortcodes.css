@@ -22,7 +22,6 @@
   position:relative;
   padding: 8px 35px 8px 14px;
   margin-bottom: 20px;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
   background-color: #fcf8e3;
   border: 1px solid #fbeed5;
   -webkit-border-radius: 4px;
@@ -30,21 +29,21 @@
           border-radius: 4px;
 }
 .tallykit-shortcode-alert,
-.tallykit-shortcode-alert h4 { color: #c09853; }
+body .tallykit-shortcode-alert h4 { color: #c09853; }
 .tallykit-shortcode-alert h4.tallykit-shortcode-alert-heading { margin: 0; }
-.tallykit-shortcode-alert-success { color: #468847;background-color: #dff0d8;border-color: #d6e9c6; }
-.tallykit-shortcode-alert-success h4 {color: #468847;}
-.tallykit-shortcode-alert-danger,
-.tallykit-shortcode-alert-error { color: #b94a48;background-color: #f2dede;border-color: #eed3d7; }
-.tallykit-shortcode-alert-danger h4,
-.tallykit-shortcode-alert-error h4 { color: #b94a48; }
-.tallykit-shortcode-alert-info { color: #3a87ad; background-color: #d9edf7;border-color: #bce8f1; }
-.tallykit-shortcode-alert-info h4 { color: #3a87ad;}
+body .tallykit-shortcode-alert-success { color: #468847 !important;background-color: #dff0d8;border-color: #d6e9c6 !important; }
+body .tallykit-shortcode-alert-success h4 {color: #468847 !important;}
+body .tallykit-shortcode-alert-danger{ color: #FFDBDA !important;background-color: #CF4444;border-color: #CF4444 !important; }
+body .tallykit-shortcode-alert-danger h4{ color:#FFF !important; }
+body .tallykit-shortcode-alert-error { color: #b94a48 !important;background-color: #f2dede;border-color: #eed3d7 !important; }
+body .tallykit-shortcode-alert-error h4 { color: #b94a48 !important; }
+body .tallykit-shortcode-alert-info { color: #3a87ad !important; background-color: #d9edf7;border-color: #bce8f1 !important; }
+body .tallykit-shortcode-alert-info h4 { color: #3a87ad !important;}
 .tallykit-shortcode-alert-block { padding-top: 14px;padding-bottom: 14px; }
 .tallykit-shortcode-alert-block > p,
 .tallykit-shortcode-alert-block > ul { margin-bottom: 0; }
 .tallykit-shortcode-alert-block p + p { margin-top: 5px; }
-.tallykit-shortcode-alert-close { font-size: 20px;font-weight: bold;line-height: 20px;color: #000;text-shadow: 0 1px 0 #fff;opacity: .2;filter: alpha(opacity=20);position:absolute;line-height: 20px;right:5px;top:6px; cursor:pointer; }
+.tallykit-shortcode-alert-close { font-size: 20px;font-weight: bold;line-height: 20px;color: #000 !important;text-shadow: 0 1px 0 #fff;opacity: .2;filter: alpha(opacity=20);position:absolute;line-height: 20px;right:5px;top:6px; cursor:pointer; }
 
 
 
@@ -317,7 +316,7 @@
 .tallykit-shortcode-tabs ul.ui-tabs-nav li { display: block; width: auto; height: 40px; padding: 0 !important; float: left !important; margin: 0 !important; outline: none; }
 .tallykit-shortcode-tabs ul.ui-tabs-nav li a { display: block; text-decoration: none; width: auto; height: 39px; padding: 0px 20px; line-height: 40px; border: solid 1px #ddd; border-width: 1px 1px 0 0; margin: 0; background-color: #f5f5f5; font-size: 1em; color: #444; outline: none; }
 .tallykit-shortcode-tabs ul.ui-tabs-nav li a:hover { color: #333; background: #eee; }
-.tallykit-shortcode-tabs ul.ui-tabs-nav .ui-state-active a { background: #fff; height: 40px; position: relative; top: -4px; padding-top: 4px; border-left-width: 1px; margin: 0 0 0 -1px; color: #111 !important; -moz-border-radius-topleft: 2px; -webkit-border-top-left-radius: 2px; border-top-left-radius: 2px; -moz-border-radius-topright: 2px; -webkit-border-top-right-radius: 2px; border-top-right-radius: 2px; }
+.tallykit-shortcode-tabs ul.ui-tabs-nav .ui-state-active a { background: #fff; height: 40px; position: relative; top: -4px; padding-top: 4px; border-left-width: 1px; margin: 0 0 0 -1px; color: #111; -moz-border-radius-topleft: 2px; -webkit-border-top-left-radius: 2px; border-top-left-radius: 2px; -moz-border-radius-topright: 2px; -webkit-border-top-right-radius: 2px; border-top-right-radius: 2px; }
 .tallykit-shortcode-tabs ul.ui-tabs-nav .ui-state-active a:hover { background: #fff }
 .tallykit-shortcode-tabs ul.ui-tabs-nav li:first-child .ui-state-active a { margin-left: 0 }
 .tallykit-shortcode-tabs ul.ui-tabs-nav li:first-child a { border-width: 1px 1px 0 1px }

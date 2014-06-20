@@ -10,7 +10,7 @@
 				<?php the_title(); ?>
 			<?php if($link): ?></a><?php endif; ?>
             <br />
-            <span class="tk_testimonial_author_position">- <?php echo get_post_meta(get_the_ID(), 'tallykit_testimonial_position', true); ?> -</span>
+            <span class="tk_testimonial_author_position"><?php echo get_post_meta(get_the_ID(), 'tallykit_testimonial_position', true); ?></span>
         </span>
 	</div>
 </div>

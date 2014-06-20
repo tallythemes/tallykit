@@ -14,7 +14,7 @@
 if ( !defined( 'ABSPATH' ) ) exit;
 $component_folder_name = 'shortcodes';
  
- 
+include('shortcodes-color.php');
  
  
 /************************** Template Path ***************************

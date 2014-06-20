@@ -38,7 +38,7 @@ function tallykitkit_color($option_name, $rgba = '', $echo = true){
 	
 	$all_colors = apply_filters('tally_option_std', $options);
 	
-	$get_color = $all_colors[$option_name];
+	if(function_exists('tally_option')){ $get_color = tally_option($option_name); }else{$get_color = $all_colors[$option_name];}
 	
 	if($rgba != ''){ $get_color = 'rgba('.tallykit_hex2rgb($get_color).','.$rgba.')'; }
 	
@@ -68,8 +68,8 @@ function tallykit_colors_do_action_dark(){
 	?>
     <style type="text/css">
 	.color_mood_dark .acoc-fx-nav-style-border .wfs-direction-nav a{ 
-		color:<?php tallykitkit_color('color_border_dark'); ?>; 
-		border-color:<?php tallykitkit_color('color_border_dark'); ?> !important;
+		color:<?php tallykitkit_color('color_text_dark'); ?>; 
+		border-color:<?php tallykitkit_color('color_text_dark'); ?> !important;
 	}
 	
 	.color_mood_dark .acoc-fx-cnav-style-border .wfs-control-paging li a {border-color:<?php tallykitkit_color('color_border_dark'); ?> !important;}

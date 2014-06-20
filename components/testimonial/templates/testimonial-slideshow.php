@@ -15,12 +15,12 @@ $flexslider2 = new acoc_flexslider2_html(array(
 ));
 $testimonial_query = new WP_Query( $query );
 ?>
-<div class="tallykit_testimonial_slideshow acoc-flexslider2-skin tk_testimonial_slider style-1">
+<div class="tallykit_testimonial_slideshow acoc-fx-nav-align-center acoc-fx-nav-valign-bottom acoc-fx-nav-style-border acoc-fx-cnav-style-border acoc-fx-cnav-align-center acoc-fx-cnav-valign-top">
 	<?php if( $testimonial_query->have_posts()): ?>
     	<?php $flexslider2->start(); ?>
         	<?php while ( $testimonial_query->have_posts() ) : $testimonial_query->the_post(); ?>
             	<?php $flexslider2->in_loop_start(); ?>
-                	<?php include(tallykit_testimonial_template_path('dri').'content/content-grid.php'); ?>
+                	<?php include(tallykit_testimonial_template_path('dri').'content/content-slidehow.php'); ?>
                 <?php $flexslider2->in_loop_end(); ?>
             <?php endwhile; ?>
         <?php $flexslider2->end(); ?>
