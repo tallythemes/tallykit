@@ -41,6 +41,13 @@ function tallykit_parallax_wp_content_filter($content){
 
 
 /*Stting for tally framework*/
+add_filter('tally_main_class', 'tallykit_parallax_tally_main_class_filter',20);
+function tallykit_parallax_tally_main_class_filter($class){
+	if(get_post_meta(get_the_ID(), 'tallykit_parallax_active', true) == 'yes'){ $class = '';}
+	return $class;	
+}
+
+
 add_filter('tally_sitebar_layout_option', 'tallykit_parallax_tally_sitebar_layout_option', 12);
 function tallykit_parallax_tally_sitebar_layout_option($layout){
 	if(get_post_meta(get_the_ID(), 'tallykit_parallax_active', true) == 'yes'){ $layout = 'full-width-content';}

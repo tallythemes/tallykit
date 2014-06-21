@@ -51,6 +51,8 @@ function tallykit_colors_do_action_light(){
 	?>
     <style type="text/css">
 	
+	ul.isotope-acoc-filter li, ul.masonry-acoc-filter li{ background:<?php tallykitkit_color('site_accent_color'); ?>; }
+	
 	.color_mood_light .acoc-fx-nav-style-border .wfs-direction-nav a{ 
 		color:<?php tallykitkit_color('color_border_light'); ?>; 
 		border-color:<?php tallykitkit_color('color_border_light'); ?> !important;

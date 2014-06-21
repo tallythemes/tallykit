@@ -19,3 +19,4 @@ include('slideshow-script.php');
 include('slideshow-shortcodes.php');
 include('slideshow-tinymce.php');
 include('slideshow-widgets.php');
+include('slideshow-color.php');

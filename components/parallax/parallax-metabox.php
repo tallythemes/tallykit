@@ -23,17 +23,6 @@ $fields[] = array(
 		array('label'=>'Yes', 'value'=>'yes'),
 	),
 );
-/*$fields[] = array(
-	'id' => 'tallykit_parallax_sections',
-	'class' => '',
-	'label' => __( 'Parallax Sections', 'tallykit_textdomain' ),
-	'type' => 'parallax',
-	'std' => '',
-	'des' => __( 'Click on "Add Section" to add new sections', 'tallykit_textdomain' ),
-	'filter' => '', //sanitize_text_field, esc_attr
-	'size' => '',
-);*/
-
 /*~ Registering the Metabox ~*/
 $settings = array(
 	'id' => 'tallykit_parallax_active',
@@ -181,76 +170,7 @@ function tallykit_parallax_sections_metabox_register() {
 					'post_type'   => '',
 					'taxonomy'    => '',
 					'class'       => '',
-				 ),
-				 array(
-				 	'id'          => 'active_content_color',
-					'label'       => __('Enable Text Color Options', 'tallykit_textdomain'),
-					'desc'        => '',
-					'std'         => 'off',
-					'type'        => 'on_off',
-					'section'     => '',
-					'rows'        => '',
-					'post_type'   => '',
-					'taxonomy'    => '',
-					'class'       => '',
-				 ),
-				 array(
-				 	'id'          => 'heading_color',
-					'label'       => __('Heading Color', 'tallykit_textdomain'),
-					'desc'        => '',
-					'std'         => '',
-					'type'        => 'colorpicker',
-					'section'     => '',
-					'rows'        => '20',
-					'post_type'   => '',
-					'taxonomy'    => '',
-					'class'       => '',
-					'condition'   => 'active_content_color:is(on)',
-					'operator'    => 'or'
-				 ),
-				 array(
-				 	'id'          => 'text_color',
-					'label'       => __('Text Color', 'tallykit_textdomain'),
-					'desc'        => '',
-					'std'         => '',
-					'type'        => 'colorpicker',
-					'section'     => '',
-					'rows'        => '',
-					'post_type'   => '',
-					'taxonomy'    => '',
-					'class'       => '',
-					'condition'   => 'active_content_color:is(on)',
-					'operator'    => 'or'
-				 ),
-				 array(
-				 	'id'          => 'link_color',
-					'label'       => __('Link Color', 'tallykit_textdomain'),
-					'desc'        => '',
-					'std'         => '',
-					'type'        => 'colorpicker',
-					'section'     => '',
-					'rows'        => '',
-					'post_type'   => '',
-					'taxonomy'    => '',
-					'class'       => '',
-					'condition'   => 'active_content_color:is(on)',
-					'operator'    => 'or'
-				 ),
-				 array(
-				 	'id'          => 'link_hover_color',
-					'label'       => __('Link Hover Color', 'tallykit_textdomain'),
-					'desc'        => '',
-					'std'         => '',
-					'type'        => 'colorpicker',
-					'section'     => '',
-					'rows'        => '',
-					'post_type'   => '',
-					'taxonomy'    => '',
-					'class'       => '',
-					'condition'   => 'active_content_color:is(on)',
-					'operator'    => 'or'
-				 ),
-				 			 
+				 ),				 			 
 				 array(
 				 	'id'          => 'active_padding',
 					'label'       => __('Enable Padding', 'tallykit_textdomain'),
@@ -386,7 +306,25 @@ function tallykit_parallax_sections_metabox_register() {
 					'operator'    => 'or',
 				 ),
 				 
-				 
+				 array(
+				 	'id'          => 'color_mood',
+					'label'       => __('Text Color Mood', 'tallykit_textdomain'),
+					'desc'        => __('If your Background color is light you need to select "Dark" OR if the background color is dark you need to select "Light"', 'tallykit_textdomain'),
+					'std'         => 'dark',
+					'type'        => 'select',
+					'section'     => '',
+					'rows'        => '',
+					'post_type'   => '',
+					'taxonomy'    => '',
+					'class'       => '',
+					'condition'   => '',
+					'operator'    => 'or',
+					'choices'     => array(
+						array( 'label' => 'Dark', 'value' => 'dark'),
+						array( 'label' => 'Light', 'value' => 'light'),
+						array( 'label' => 'none', 'value' => 'none'),
+					)
+				 ),
 				 array(
 				 	'id'          => 'bg',
 					'label'       => __('Background', 'tallykit_textdomain'),

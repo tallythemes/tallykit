@@ -20,3 +20,4 @@ include('people-script.php');
 include('people-shortcodes.php');
 include('people-tinymce.php');
 include('people-widgets.php');
+include('people-color.php');

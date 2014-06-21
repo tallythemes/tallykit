@@ -14,7 +14,7 @@ $flexslider2 = new acoc_flexslider2_html(array(
 ));
 $logo_query = new WP_Query( $query );
 ?>
-<div class="tallykit_logo_slideshow acoc-flexslider2-skin tk_logo_slider">
+<div class="tallykit_logo_slideshow  acoc-fx-nav-align-both acoc-fx-nav-valign-center acoc-fx-nav-style-fill acoc-fx-cnav-style-border acoc-fx-cnav-align-center acoc-fx-cnav-valign-top">
 	<?php if( $logo_query->have_posts()): ?>
     	<?php $flexslider2->start(); ?>
         	<?php while ( $logo_query->have_posts() ) : $logo_query->the_post(); ?>

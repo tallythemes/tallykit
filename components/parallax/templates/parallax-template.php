@@ -3,6 +3,7 @@
 	<?php foreach($sections as $section): ?>
     	<?php 
 			$uclass = 'tallykit_parallax_section-'.$i;
+			$color_mood = 'color_mood_'.$section['color_mood'];
 		?>
         <style type="text/css">
 			
@@ -16,17 +17,6 @@
 			/*- Content area -*/
 			.<?php echo $uclass; ?> .tallykit_parallax_section_inner{ width:<?php if($section['content_width'] == "100%"){ echo '100%'; }else{ echo "96%"; } ?>; max-width:<?php echo $section['content_width']; ?>; margin:0 auto; }
 			.<?php echo $uclass; ?> .tk_content{ text-align:<?php echo $section['content_align']; ?>; }
-			<?php if($section['active_content_color'] == 'on'): ?>
-				.<?php echo $uclass; ?> .tk_content *{ color:<?php echo $section['text_color']; ?> !important; }
-				.<?php echo $uclass; ?> .tk_content h1,
-				.<?php echo $uclass; ?> .tk_content h2,
-				.<?php echo $uclass; ?> .tk_content h3,
-				.<?php echo $uclass; ?> .tk_content h4,
-				.<?php echo $uclass; ?> .tk_content h5,
-				.<?php echo $uclass; ?> .tk_content h6{ color:<?php echo $section['heading_color']; ?> !important; }
-				.<?php echo $uclass; ?> .tk_content a{ color:<?php echo $section['link_color']; ?> !important; }
-				.<?php echo $uclass; ?> .tk_content a:hover{ color:<?php echo $section['link_hover_color']; ?> !important; }
-			<?php endif; ?>
 			
 			
 			/*- padding -*/
@@ -58,7 +48,7 @@
 			<?php endif; ?>
 			
 		</style>
-    	<div class="tallykit_parallax_section <?php echo $uclass; ?>" id="<?php echo $section['section_id']; ?>">
+    	<div class="tallykit_parallax_section <?php echo $uclass; ?> <?php echo $color_mood; ?>" id="<?php echo $section['section_id']; ?>">
         	<div class="tallykit_parallax_section_inner">
             	<?php if($section['active_title'] == 'on'): ?>
                 	<div class="tk_section_header">	

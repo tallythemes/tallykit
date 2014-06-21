@@ -65,7 +65,9 @@
 ================================================== */
 .tallykit_testimonial_carousel{  }
 .tallykit_testimonial_carousel.acoc-fx-nav-valign-top .wfs-direction-nav{ top:-25px; }
+.tallykit_testimonial_carousel.acoc-fx-nav-align-right .wfs-direction-nav{ right:0px; }
 .tallykit_testimonial_carousel.acoc-fx-cnav-valign-top .wfs-control-nav{ top:-15px; }
+.tallykit_testimonial_carousel.acoc-fx-cnav-align-left .wfs-control-nav{ left:0; }
 .tallykit_testimonial_carousel.acoc-fx-nav-style-border .wfs-direction-nav a{ height: 14px; width: 14px; line-height: 14px; }
 
 

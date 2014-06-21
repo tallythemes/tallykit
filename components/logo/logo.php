@@ -21,3 +21,4 @@ include('logo-script.php');
 include('logo-shortcodes.php');
 include('logo-tinymce.php');
 include('logo-widgets.php');
+include('logo-color.php');

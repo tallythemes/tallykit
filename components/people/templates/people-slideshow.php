@@ -15,7 +15,7 @@ $flexslider2 = new acoc_flexslider2_html(array(
 ));
 $people_query = new WP_Query( $query );
 ?>
-<div class="tallykit_people_slideshow acoc-flexslider2-skin tk_people_slider">
+<div class="tallykit_people_slideshow acoc-fx-nav-align-both acoc-fx-nav-valign-center acoc-fx-nav-style-fill acoc-fx-cnav-style-border acoc-fx-cnav-align-center acoc-fx-cnav-valign-top">
 	<?php if( $people_query->have_posts()): ?>
     	<?php $flexslider2->start(); ?>
         	<?php while ( $people_query->have_posts() ) : $people_query->the_post(); ?>

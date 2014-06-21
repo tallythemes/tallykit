@@ -21,3 +21,4 @@ include('portfolio-script.php');
 include('portfolio-shortcodes.php');
 include('portfolio-tinymce.php');
 include('portfolio-widgets.php');
+include('portfolio-color.php');
