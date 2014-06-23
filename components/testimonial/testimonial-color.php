@@ -14,10 +14,10 @@ function tallykit_testimonial_colors(){
 
 /*slideshow*/
 .color_mood_light .tk_testimonial_slider_item .tk_testimonial_author_name{ color:<?php tallykitkit_color('color_headings_light'); ?>; }
-.color_mood_light .tk_testimonial_slider_item .tk_testimonial_author_position{ color:<?php tallykitkit_color('color_meta_light'); ?> }
+.color_mood_light .tk_testimonial_slider_item .tk_testimonial_author_position{ color:<?php tallykitkit_color('color_text_light'); ?> }
 
 .color_mood_dark .tk_testimonial_slider_item .tk_testimonial_author_name{ color:<?php tallykitkit_color('color_headings_dark'); ?>; }
-.color_mood_dark .tk_testimonial_slider_item .tk_testimonial_author_position{ color:<?php tallykitkit_color('color_meta_dark'); ?> }
+.color_mood_dark .tk_testimonial_slider_item .tk_testimonial_author_position{ color:<?php tallykitkit_color('color_text_dark'); ?> }
 </style>
 <?php	
 }

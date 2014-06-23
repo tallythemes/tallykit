@@ -14,6 +14,12 @@
 .tallykit-shortcode-accordion .ui-icon { margin-right: 7px }
 
 
+/*---------------------------------------------
+     Map
+--------------------------------------------- */
+.tallykit-shortcode-map img{ max-width:inherit; }
+
+
 
 /*---------------------------------------------
      alert-messages
@@ -53,47 +59,35 @@ body .tallykit-shortcode-alert-info h4 { color: #3a87ad !important;}
 .tallykit-shortcode-button{  
 	display:inline-block;
 	padding:10px 20px;
-	font-size:inherit;
-	color:#FFF !important;
-	text-shadow:0px 1px 2px rgba(0, 0, 0, 0.3);
-	background:#d44646;
 	margin-bottom:10px; 
 	margin-right:10px;
+	text-transform: uppercase;
 	
-	transition: 1s;
-	-webkit-transition: 1s; /* Safari */
-	
+	transition: 0.3s;
+	-webkit-transition: 0.3s; /* Safari */
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 	border-radius: 3px;
 }
-.tallykit-shortcode-button:hover{ color:#FFF; text-decoration:none; opacity:0.7; }
-.tallykit-shortcode-button.tallykit-shortcode-button-full-width{ display:block; text-align:center; }
+.tallykit-shortcode-button:hover{ text-decoration:none; }
+.tallykit-shortcode-button.full-width-yes{ display:block; text-align:center; }
 
 /*--icon*/
-.tallykit-shortcode-button i.fa{ font-size:120%; color:#FFF !important;}
+.tallykit-shortcode-button i.fa{ font-size:120%;}
 .tallykit-shortcode-button.icon-left i.fa{ margin-right:8px; }
 .tallykit-shortcode-button.icon-right i.fa{ margin-left:8px; }
 
 /*--size--*/
-.tallykit-shortcode-button.size-1x{ font-size:9px; padding:0px 6px; text-shadow: 0px 2px 3px rgba(0, 0, 0, 0); }
-.tallykit-shortcode-button.size-2x{ padding:6px 18px; font-size:12px; }
-.tallykit-shortcode-button.size-3x{ font-size:inherit; padding:10px 30px; }
-.tallykit-shortcode-button.size-4x{ font-size:16px; padding:14px 38px; }
-.tallykit-shortcode-button.size-5x{ font-size:22px; padding:20px 50px; }
+.tallykit-shortcode-button.size-1x{ font-size:9px !important; padding:0px 6px; text-shadow: 0px 2px 3px rgba(0, 0, 0, 0); }
+.tallykit-shortcode-button.size-2x{ padding:6px 18px; font-size:12px !important; }
+.tallykit-shortcode-button.size-3x{ font-size:14px !important; padding:9px 30px; font-weight: 400; }
+.tallykit-shortcode-button.size-4x{ font-size:16px !important; padding:14px 38px; }
+.tallykit-shortcode-button.size-5x{ font-size:22px !important; padding:20px 50px; }
 
-/*--color--*/
-.tallykit-shortcode-button.color-red{ background:#d01d10; }
-.tallykit-shortcode-button.color-orange{ background:#fb6909; }
-.tallykit-shortcode-button.color-blue{ background:#1571f0; }
-.tallykit-shortcode-button.color-black{ background:#505050; }
-.tallykit-shortcode-button.color-pink{ background:#e3618d; }
-.tallykit-shortcode-button.color-rosy{ background:#e84a5f; }
-.tallykit-shortcode-button.color-green{ background:#5fb139; }
-.tallykit-shortcode-button.color-brown{ background:#604848 ; }
-.tallykit-shortcode-button.color-purple{ background:#524656; }
-.tallykit-shortcode-button.color-gold{ background:#faaa00; }
-.tallykit-shortcode-button.color-teal{ background:#286061; }
+/*--style--*/
+.tallykit-shortcode-button.style-fill{ background:#333; color:#FFF; border:solid 2px; }
+.tallykit-shortcode-button.style-fill:hover{ background:rgba(0,0,0,0) !important; }
+.tallykit-shortcode-button.style-border{ border:2px solid;  }
 
 
 
@@ -154,7 +148,7 @@ body .tallykit-shortcode-alert-info h4 { color: #3a87ad !important;}
 .tallykit-shortcode-one-half { width: 48% }
 .tallykit-shortcode-one-third { width: 30.66% }
 .tallykit-shortcode-two-third { width: 65.33% }
-.tallykit-shortcode-one-fourth { width: 22% }
+.tallykit-shortcode-one-fourth { width: 21.7%; }
 .tallykit-shortcode-three-fourth { width: 74% }
 .tallykit-shortcode-one-fifth { width: 16.8% }
 .tallykit-shortcode-two-fifth { width: 37.6% }

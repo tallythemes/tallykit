@@ -7,7 +7,11 @@
 /*-----------------------------------------------------
 Carousel
 -----------------------------------------------------*/
-.tallykit_logo_carousel{  }
+.tallykit_logo_carousel{ margin-top:25px; }
+.tallykit_logo_carousel .wfs-direction-nav,
+.tallykit_logo_carousel .wfs-control-nav{ opacity:0.5; }
+.tallykit_logo_carousel .wfs-direction-nav a:hover,
+.tallykit_logo_carousel .wfs-control-nav a:hover{ opacity:0.8; }
 .tallykit_logo_carousel.acoc-fx-nav-valign-top .wfs-direction-nav{ top:-25px; }
 .tallykit_logo_carousel.acoc-fx-nav-align-right .wfs-direction-nav{ right:0px; }
 .tallykit_logo_carousel.acoc-fx-cnav-valign-top .wfs-control-nav{ top:-15px; }
