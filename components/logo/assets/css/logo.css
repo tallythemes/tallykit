@@ -18,6 +18,21 @@ Carousel
 .tallykit_logo_carousel.acoc-fx-cnav-align-left .wfs-control-nav{ left:0; }
 .tallykit_logo_carousel.acoc-fx-nav-style-border .wfs-direction-nav a{ height: 14px; width: 14px; line-height: 14px; }
 
+.tallykit_logo_carousel_item a {
+	display: block;
+	height: auto;
+	float: left;
+	position: relative;
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	-o-transform: translateX(-50%);
+	transform: translateX(-50%);
+	left: 50%;
+}
+
+
+
 
 /*----------------------------------------------------
 Slidershow
