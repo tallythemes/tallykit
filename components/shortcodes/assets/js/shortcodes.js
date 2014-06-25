@@ -50,7 +50,7 @@ jQuery(document).ready(function($){
 		jQuery('.tallykit-shortcode-counterBox-wrapper').waypoint(function() {
 			jQuery(this).find('.display-percentage').each(function() {
 				var percentage = jQuery(this).data('percentage');
-				jQuery(this).countTo({from: 0, to: percentage, speed: 300});
+				jQuery(this).countTo({from: 0, to: percentage, speed: 3000});
 			});
 		}, {
 			triggerOnce: true,
@@ -70,4 +70,5 @@ jQuery(document).ready(function($){
 			offset: '100%'
 		});
 	}
+	
 });

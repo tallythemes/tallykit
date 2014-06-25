@@ -851,6 +851,22 @@ $tinymce_fields[] = array(
 			'des' => 'Example: 70 (1 to 100)',
 		),
 		array(
+			'id' => 'prefix',
+			'class' => '',
+			'label' => 'Bar value',
+			'type' => 'text',
+			'std' => '',
+			'des' => '',
+		),
+		array(
+			'id' => 'suffix',
+			'class' => '',
+			'label' => 'Bar value',
+			'type' => 'text',
+			'std' => '',
+			'des' => '',
+		),
+		array(
 			'id' => 'content',
 			'class' => '',
 			'label' => 'Text',
@@ -976,6 +992,21 @@ $tinymce_fields[] = array(
 			)
 		),
 		array(
+			'id' => 'button_size',
+			'class' => '',
+			'label' => 'Button Size',
+			'type' => 'select',
+			'std' => '3x',
+			'des' => '',
+			'options' => array(
+				array('value' => '1x', 'label' => '1x'),
+				array('value' => '2x', 'label' => '2x'),
+				array('value' => '3x', 'label' => '3x'),
+				array('value' => '4x', 'label' => '4x'),
+				array('value' => '5x', 'label' => '5x'),
+			)
+		),
+		array(
 			'id' => 'style',
 			'class' => '',
 			'label' => 'Style',
@@ -984,35 +1015,11 @@ $tinymce_fields[] = array(
 			'des' => '',
 			'options' => array(
 				array('value' => 'center', 'label' => 'center'),
-				array('value' => 'button-left', 'label' => 'button-left'),
-				array('value' => 'button-right', 'label' => 'button-right'),
-			)
-		),
-		array(
-			'id' => 'border',
-			'class' => '',
-			'label' => 'Border',
-			'type' => 'text',
-			'std' => 'select',
-			'des' => '',
-			'options' => array(
-				array('value' => 'top', 'label' => 'top'),
+				array('value' => 'center-border', 'label' => 'center-border'),
+				array('value' => 'center-border-bg', 'label' => 'center-border-bg'),
 				array('value' => 'left', 'label' => 'left'),
-				array('value' => 'right', 'label' => 'right'),
-				array('value' => 'bottom', 'label' => 'bottom'),
-				array('value' => 'none', 'label' => 'none'),
-			)
-		),
-		array(
-			'id' => 'background',
-			'class' => '',
-			'label' => 'Background',
-			'type' => 'select',
-			'std' => 'yes',
-			'des' => '',
-			'options' => array(
-				array('value' => 'yes', 'label' => 'yes'),
-				array('value' => 'no', 'label' => 'no'),
+				array('value' => 'left-border', 'label' => 'left-border'),
+				array('value' => 'left-border-bg', 'label' => 'left-border-bg'),
 			)
 		),
 		array(
@@ -1022,6 +1029,14 @@ $tinymce_fields[] = array(
 			'type' => 'text',
 			'std' => '',
 			'des' => '',
+		),
+		array(
+			'id' => 'content_width',
+			'class' => '',
+			'label' => 'Content Width',
+			'type' => 'text',
+			'std' => '',
+			'des' => 'Example: <strong>70%</strong>',
 		),
 	)
 );

@@ -82,6 +82,40 @@ function tallykit_shortcode_color_action_hook(){
 		.color_mood_dark .tallykit-shortcode-button.style-border.color-accent:hover{ 
 			border-color:<?php tallykitkit_color('site_accent_color'); ?> !important; background-color:<?php tallykitkit_color('site_accent_color'); ?>; color: #FFF !important; }
 			
+			
+		/*---------------------------------------------
+    		 Callout
+		--------------------------------------------- */
+		/*- style center-border -*/
+		.color_mood_light .tallykit-shortcode-callout.style-center-border{ border-color:<?php tallykitkit_color('color_headings_light'); ?> !important;  }
+		.color_mood_dark .tallykit-shortcode-callout.style-center-border{ border-color:<?php tallykitkit_color('color_headings_dark'); ?> !important;  }
+		
+
+		/*- style center-border-bg -*/
+		.color_mood_light .tallykit-shortcode-callout.style-center-border-bg{ 
+			border-color:<?php tallykitkit_color('color_border_light'); ?>; 
+			background-color:<?php tallykitkit_color('color_inner_bg_light', '0.8'); ?>; 
+		}
+		.color_mood_dark .tallykit-shortcode-callout.style-center-border-bg{ 
+			border-color:<?php tallykitkit_color('color_border_dark'); ?>; 
+			background-color:<?php tallykitkit_color('color_inner_bg_dark', '0.8'); ?>; 
+		}
+		
+		
+		/*- style left-border -*/
+		.color_mood_light .tallykit-shortcode-callout.style-left-border{ border-color:<?php tallykitkit_color('color_headings_light'); ?> !important;  }
+		.color_mood_dark .tallykit-shortcode-callout.style-left-border{ border-color:<?php tallykitkit_color('color_headings_dark'); ?> !important;  }
+		
+		
+		/*- style left-border-bg -*/
+		.color_mood_light .tallykit-shortcode-callout.style-left-border-bg{
+			 border-color:<?php tallykitkit_color('color_border_light'); ?>; 
+			 background-color:<?php tallykitkit_color('color_inner_bg_light', '0.8'); ?>;  
+		}
+		.color_mood_dark .tallykit-shortcode-callout.style-left-border-bg{
+			border-color:<?php tallykitkit_color('color_border_dark'); ?>; 
+			background-color:<?php tallykitkit_color('color_inner_bg_dark', '0.8'); ?>; 
+		}
 		
 	</style>
     <?php	

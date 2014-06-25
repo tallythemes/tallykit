@@ -377,13 +377,18 @@ function tallykit_shortcodes_sc_tk_progress_bar($atts, $content = null) {
 add_shortcode('tk_counter_box', 'tallykit_shortcodes_sc_tk_counter_box');
 function tallykit_shortcodes_sc_tk_counter_box($atts, $content = null) {
 	extract(shortcode_atts(array(
-		'value' => '70'
+		'value' => '70',
+		'prefix' => '',
+		'suffix' => '',
 	), $atts));
+	
+	if($prefix){ $prefix = '<span class="prefix">'.$prefix.'</span>'; }
+	if($suffix){ $prefix = '<span class="suffix">'.$suffix.'</span>'; }
 
 	$output = '';
 	$output .= '<div class="tallykit-shortcode-counterBox-wrapper">';
 		$output .= '<div class="tallykit-shortcode-counterBox-percentage">';
-			$output .= '<span class="display-percentage" data-percentage="'.$value.'">0</span><span class="percent">%</span>';
+			$output .= $prefix.'<span class="display-percentage" data-percentage="'.$value.'">0</span>'.$suffix;
 		$output .= '</div>';
 		$output .= '<div class="tallykit-shortcode-counterBox-content">';
 			$output .= do_shortcode($content);
@@ -480,19 +485,23 @@ function tallykit_shortcodes_sc_callout( $atts, $content = null ) {
 	extract( shortcode_atts( array(
 		'title'	=> 'This is a Simple Callout Title',
 		'class'	=> '',
+		'button_size'	=> '3x',
 		'button_text'	=> 'Button Text',
 		'button_link'	=> '#',
 		'button_link_target'	=> '_self', // _blank, _self
-		'style'	=> 'button-right', //center, button-left, button-right
-		'border'	=> 'left', //top, left, right, bottom, none
-		'background'	=> 'no', //yes, no
+		'style'	=> 'center-border', /* center, center-border, center-border-bg, left, left-border, left-border-bg*/
+		'content_width'	=> '',
 	), $atts ) );
 	
-	$output = '<div class="tallykit-shortcode-callout style-'.$style.' border-'.$style.'  background-'.$background.' '.$class.'>';
-		$output = '<div class="tallykit-shortcode-callout-inner>';
-			if($title){ $output .= '<h3>'.$title.'</h3>'; }
-			$output .= '<div class="con">'.do_shortcode($content).'</div>';
-			if($button_link){ $output .= '<a href="'.$button_link.'" target="'.$button_link_target.'">'.$button_text.'</a>'; }
+	$output = '';
+	
+	if(($content_width != '') && (($style == 'left') || ($style == 'left-border') || ($style == 'left-border-bg') )){ $content_width = 'width:'.$content_width.';'; }
+	
+	$output .= '<div class="tallykit-shortcode-callout style-'.$style.' '.$class.'">';
+		$output .= '<div class="tk-shortcode-callout-inner">';
+			if($title){ $output .= '<h3 class="tk-shortcode-callout-title" style="'.$content_width.'">'.$title.'</h3>'; }
+			if($content){ $output .= '<div class="tk-shortcode-callout-content" style="'.$content_width.'">'.do_shortcode($content).'</div>'; }
+			if($button_link){ $output .= do_shortcode('[tk_button text="'.$button_text.'" link="'.$button_link.'" target="'.$button_link_target.'" color="default" size="'.$button_size.'" style="border" rel="" class="" icon_left="" icon_right="" full_width="no" /]'); }
 		$output .= '</div>';
 	$output .= '</div>';
 	

@@ -325,15 +325,74 @@ body .tallykit-shortcode-alert-info h4 { color: #3a87ad !important;}
 .tallykit-shortcode-tabs .ui-tabs-hide { display: none }
 
 
+
+/*---------------------------------------------
+     Callout
+--------------------------------------------- */
+.tallykit-shortcode-callout{ display:block; }
+.tk-shortcode-callout-inner{ padding:25px; padding-bottom:20px; }
+.tk-shortcode-callout-title{ margin-top:5px; font-size:24px; line-height:30px; }
+.tk-shortcode-callout-content{ margin-bottom:20px; }
+
+/*- style center -*/
+.tallykit-shortcode-callout.style-center{ text-align:center; }
+.tallykit-shortcode-callout.style-center .tk-shortcode-callout-inner{ padding:0 20px !important;  }
+
+/*- style center-border -*/
+.tallykit-shortcode-callout.style-center-border{ text-align:center; border:solid 2px; }
+.tallykit-shortcode-callout.style-center-border .tk-shortcode-callout-inner{  }
+
+/*- style center-border-bg -*/
+.tallykit-shortcode-callout.style-center-border-bg{ text-align:center; border:solid 2px; background:#CCC; }
+.tallykit-shortcode-callout.style-center-border-bg .tk-shortcode-callout-inner{  }
+
+/*- style left -*/
+.tallykit-shortcode-callout.style-left{ text-align:left; position:relative; display:block; overflow:hidden; }
+.tallykit-shortcode-callout.style-left .tk-shortcode-callout-inner{ padding:0 20px !important; }
+.tallykit-shortcode-callout.style-left .tk-shortcode-callout-content,
+.tallykit-shortcode-callout.style-left .tk-shortcode-callout-title{ float:left; width:80%; }
+.tallykit-shortcode-callout.style-left .tallykit-shortcode-button{ position:absolute; right:0; top:50%; margin:0; margin-top:-22px; }
+
+
+/*- style left-border -*/
+.tallykit-shortcode-callout.style-left-border{ text-align:left; position:relative; display:block; overflow:hidden; border:solid 2px; }
+.tallykit-shortcode-callout.style-left-border .tk-shortcode-callout-inner{ padding-bottom:5px !important;  overflow:hidden;}
+.tallykit-shortcode-callout.style-left-border .tk-shortcode-callout-content,
+.tallykit-shortcode-callout.style-left-border .tk-shortcode-callout-title{ float:left; width:80%; }
+.tallykit-shortcode-callout.style-left-border .tallykit-shortcode-button{ position:absolute; right:25px; top:50%; margin:0; margin-top:-22px; }
+
+
+/*- style left-border-bg -*/
+.tallykit-shortcode-callout.style-left-border-bg{ text-align:left; position:relative; display:block; overflow:hidden; border:solid 2px; background:#CCC; }
+.tallykit-shortcode-callout.style-left-border-bg .tk-shortcode-callout-inner{ padding-bottom:5px !important;  overflow:hidden;}
+.tallykit-shortcode-callout.style-left-border-bg .tk-shortcode-callout-content,
+.tallykit-shortcode-callout.style-left-border-bg .tk-shortcode-callout-title{ float:left; width:80%; }
+.tallykit-shortcode-callout.style-left-border-bg .tallykit-shortcode-button{ position:absolute; right:25px; top:50%; margin:0; margin-top:-22px; }
+
+
 /*---------------------------------------------
      toggle
 --------------------------------------------- */
-.tallykit-shortcode-toggle .tallykit-shortcode-toggle-trigger { display: block; color: #555; display: block; padding: 15px; border: 1px solid #ddd;  outline: 0; text-transform: none; letter-spacing: normal; font-weight: normal; font-size: 1em; line-height: 1.5em; margin: 0; margin-top: 12px; cursor: pointer; }
-
+.tallykit-shortcode-toggle .tallykit-shortcode-toggle-trigger{ 
+	display: block; 
+	color: #555; 
+	display: block; 
+	padding: 15px; 
+	border: 1px solid #ddd; 
+	outline: 0; 
+	text-transform: none; 
+	letter-spacing: normal; 
+	font-weight: normal; 
+	font-size: 1em; 
+	line-height: 1.5em; 
+	margin: 0; 
+	margin-top: 12px; 
+	cursor: pointer; 
+}
 .tallykit-shortcode-toggle .tallykit-shortcode-toggle-trigger:after{ font-family: dashicons; content: '\f132'; float: left; padding-top: 2px; padding-right:7px; }
 .tallykit-shortcode-toggle .tallykit-shortcode-toggle-trigger:hover { background-color: #eee; text-decoration: none; }
-.tallykit-shortcode-toggle .tallykit-shortcode-toggle-trigger.active, .tallykit-shortcode-toggle .tallykit-shortcode-toggle-trigger.active:hover { color: #000; background-color: #eee; text-decoration: none; }
-
+.tallykit-shortcode-toggle .tallykit-shortcode-toggle-trigger.active, 
+.tallykit-shortcode-toggle .tallykit-shortcode-toggle-trigger.active:hover { color: #000; background-color: #eee; text-decoration: none; }
 .tallykit-shortcode-toggle .tallykit-shortcode-toggle-trigger.active:after, .tallykit-shortcode-toggle .tallykit-shortcode-toggle-trigger.active:hover:after{ content: '\f460'; }
 .tallykit-shortcode-toggle .tallykit-shortcode-toggle-container { display: none; overflow: hidden; padding: 15px; border: 1px solid #ddd; border-top: 0px; }
 
