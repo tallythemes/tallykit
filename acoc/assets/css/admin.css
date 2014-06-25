@@ -1,0 +1,69 @@
+.acoc-clear{ width:100%; height:1px; clear:both; margin:0; }
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+	fields style
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+.acoc-form-field{ margin-bottom:30px; }
+.acoc-form-field input[type="text"]{width:100%;	clear:right; max-width:100%;}
+.acoc-form-field label{
+	text-align: left;
+	padding: 10px 10px 10px 0;
+	line-height: 1.3;
+	font-weight: 600;
+	display:inline-block;
+	font-size:15px;
+}
+.acoc-form-field span.description{ display: block; opacity: .8; font-style: italic; }
+.acoc-form-field select{ min-width:100px; }
+
+
+/*-- fields style (list_item) --*/
+.field-type-list_item{  }
+.field-type-list_item.acoc-form-field span.description{ margin-top:-10px; margin-bottom:15px; } 
+.field-type-list_item .list-row{ background: #F8F8F8;border: solid 1px #D8D7D7;padding: 20px;border-radius: 3px; margin-bottom:8px; }
+.field-type-list_item .list-heading{  }
+.field-type-list_item .row-list-title{ font-size:16px; text-decoration:none; font-weight:bold; }
+.field-type-list_item .row-list-edit{ float:right; margin-left:10px; text-decoration:none; color:#33AF02; }
+.field-type-list_item .row-list-remove{ float:right; text-decoration:none; color:#FD0000; }
+
+
+/*-- fields style (heading)--*/
+.acoc-form-field.field-type-heading{ margin-bottom:20px; }
+.acoc-form-field.field-type-heading p{ margin-top:3px; margin-bottom:10px; }
+.acoc-form-field.field-type-heading .field-heading{ margin-bottom:10px; font-size:20px; color:#000; font-weight:bold; }
+
+
+/*-- fields style (image_upload)--*/
+.acoc-form-field.field-type-image_upload{ margin-right:110px; }
+.acoc-form-field.field-type-image_upload input[type="text"]{ width:100%; }
+.acoc-form-field.field-type-image_upload .button { width:104px; text-align:center; margin-right:-110px; float:right; margin-top:-29px; }
+.acoc-form-field.field-type-image_upload img{ margin-top:5px; max-width:100%; }
+
+
+/*-- fields style (parallax)--*/
+.acoc-form-field.field-type-parallax{  }
+.acoc-form-field.field-type-parallax ul{  list-style-type:none; }
+.acoc-form-field.field-type-parallax li{ background: #F8F8F8;border: solid 1px #D8D7D7;padding: 20px;border-radius: 3px; margin-bottom:8px; list-style-type:none; }
+.acoc-form-field.field-type-parallax .row-addnew{ margin-bottom:20px; }
+.acoc-form-field.field-type-parallax .row-title{ font-size: 16px; text-decoration: none; }
+.acoc-form-field.field-type-parallax .row-edit{ float: right; margin-left: 10px; text-decoration: none; color: #33AF02; }
+.acoc-form-field.field-type-parallax .row-delete{ float: right; text-decoration: none; color: #FD0000; }
+.acoc-form-field.field-type-parallax .form-table td{ vertical-align: top; }
+.acoc-form-field.field-type-parallax .wp-picker-container{  }
+.acoc-form-field.field-type-parallax label{ text-align: left; padding: 0; padding-bottom:5px; line-height: 1.3; font-weight: 600; display: inline-block; font-size: 13px; }
+.acoc-form-field.field-type-parallax .button-primary.image-upload{ width:150px; text-align:center; max-width:100%; }
+.acoc-form-field.field-type-parallax .preview-image{ width:150px; max-width:100%;  }
+.acoc-form-field.field-type-parallax .bg-image-field{ width:150px; }
+
+
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+/* Style for TinyMCE class
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+.acoc_tinymce_shortcode_holder .acoc_tinymce_toggle_trigger { color: #555; display: block; padding: 15px; border: 1px solid #ddd; margin: 0; margin-top: 12px; cursor: pointer; }
+.acoc_tinymce_shortcode_holder .acoc_tinymce_toggle_trigger:after{ font-family: dashicons; content: '\f132'; float: left; padding-top: 2px; padding-right:7px; }
+.acoc_tinymce_shortcode_holder .acoc_tinymce_toggle_trigger:hover { background-color: #eee; text-decoration: none; }
+.acoc_tinymce_shortcode_holder .acoc_tinymce_toggle_trigger.active, 
+.acoc_tinymce_shortcode_holder .acoc_tinymce_toggle_trigger.active:hover { color: #000; background-color: #eee; text-decoration: none; }
+.acoc_tinymce_shortcode_holder .acoc_tinymce_toggle_trigger.active:after, .acoc_tinymce_shortcode_holder .acoc_tinymce_toggle_trigger.active:hover:after{ content: '\f460'; }
+.acoc_tinymce_shortcode_holder .acoc_tinymce_shortcode_fields { display: none; overflow: hidden; padding: 15px; border: 1px solid #ddd; border-top: 0px; }
