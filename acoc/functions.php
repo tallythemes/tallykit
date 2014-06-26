@@ -82,21 +82,22 @@ function acoc_post_thumbnail($args = array()){
 		'id' => get_the_ID(),		
 		'w' => '100',
 		'h' => '100',
-		'src' => NULL,
 		'crop' => true,
 		'placeholder' => NULL,
 	);
 	$args = array_merge($default, $args);
 	
-	if($args['src'] != ''){
-		return acoc_image_size($args['src'], $args['w'], $args['h'], $args['crop']);
-	}elseif ( function_exists( 'has_post_thumbnail' ) && has_post_thumbnail( get_the_ID() ) ){
-		$thumb_id = get_post_thumbnail_id();
+	$output = acoc_image_size('', $args['w'], $args['h'], $args['crop']);
+	
+	if ( function_exists( 'has_post_thumbnail' ) && has_post_thumbnail( $args['id'] ) ){
+		$thumb_id = get_post_thumbnail_id($args['id']);
 		$thumb_url = wp_get_attachment_image_src($thumb_id, 'full', true);
-		return acoc_image_size($thumb_url[0], $args['w'], $args['h'], $args['crop']);
+		$output = acoc_image_size($thumb_url[0], $args['w'], $args['h'], $args['crop']);
 	}elseif($args['placeholder'] != ''){
-		return $args['placeholder'];
+		$output = $args['placeholder'];
 	}
+	
+	return $output;
 }
 endif;
 
@@ -134,4 +135,30 @@ function acoc_post_taxonomys_link($post_id, $taxonomy, $divider = ", "){
 	else:
 		return '&nbsp;';
 	endif; 
+}
+
+
+/* ACOC post excerpt
+--------------------------------------------------------*/
+function acoc_max_charlength($charlength, $text = NULL) {
+	if ($text) {
+		$excerpt = $text;
+	} else {
+		$excerpt = get_the_excerpt();
+	}
+
+	$charlength++;
+	if (strlen($excerpt)>$charlength) {
+		$subex   = substr($excerpt,0,$charlength-5);
+        $exwords = explode(" ",$subex);
+		$excut   = -(strlen($exwords[count($exwords)-1]));
+		if ($excut<0) {
+			return substr($subex,0,$excut);
+		} else {
+			return $subex;
+		}
+		return '..';
+	} else {
+		return $excerpt;
+	}
 }

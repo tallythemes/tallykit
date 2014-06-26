@@ -117,6 +117,28 @@ function tallykit_shortcode_color_action_hook(){
 			background-color:<?php tallykitkit_color('color_inner_bg_dark', '0.8'); ?>; 
 		}
 		
+		
+		/*---------------------------------------------
+			 Blog
+		--------------------------------------------- */
+		.color_mood_light .tk-shortcode-blog-grid-item{ background-color:<?php tallykitkit_color('color_inner_bg_light'); ?>;   }
+		.color_mood_light .tk-shortcode-blog-grid-item .tk-shortcode-blog-title a{ color:<?php tallykitkit_color('color_headings_light'); ?>;  }
+		.color_mood_light .tk-shortcode-blog-grid-item .tk-shortcode-blog-title a:hover,
+		.color_mood_light .tk-shortcode-blog-grid-item .tk-shortcode-blog-info a:hover{ <?php tallykitkit_color('site_accent_color'); ?> }
+		.color_mood_light .tk-shortcode-blog-grid-item .tk-shortcode-blog-info,
+		.color_mood_light .tk-shortcode-blog-grid-item .tk-shortcode-blog-info span.time,
+		.color_mood_light .tk-shortcode-blog-grid-item .tk-shortcode-blog-info a{ color:<?php tallykitkit_color('color_meta_light'); ?>; }
+		.color_mood_light .tk-shortcode-blog-grid-item .tk-shortcode-blog-info{ background-color:<?php tallykitkit_color('color_border_light', '0.1'); ?>; }
+		
+		.color_mood_dark .tk-shortcode-blog-grid-item{ background-color:<?php tallykitkit_color('color_inner_bg_dark'); ?>;   }
+		.color_mood_dark .tk-shortcode-blog-grid-item .tk-shortcode-blog-title a{ color:<?php tallykitkit_color('color_headings_dark'); ?>;  }
+		.color_mood_dark .tk-shortcode-blog-grid-item .tk-shortcode-blog-title a:hover,
+		.color_mood_dark .tk-shortcode-blog-grid-item .tk-shortcode-blog-info a:hover{ color:<?php tallykitkit_color('site_accent_color'); ?>; }
+		.color_mood_dark .tk-shortcode-blog-grid-item .tk-shortcode-blog-info,
+		.color_mood_dark .tk-shortcode-blog-grid-item .tk-shortcode-blog-info span.time,
+		.color_mood_dark .tk-shortcode-blog-grid-item .tk-shortcode-blog-info a{ color:<?php tallykitkit_color('color_meta_dark'); ?> !important; }
+		.color_mood_dark .tk-shortcode-blog-grid-item .tk-shortcode-blog-info{ background-color:<?php tallykitkit_color('color_border_dark', '0.1'); ?>; }
+		
 	</style>
     <?php	
 }

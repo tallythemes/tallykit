@@ -288,6 +288,19 @@ body .tallykit-shortcode-alert-info h4 { color: #3a87ad !important;}
 
 
 /*---------------------------------------------
+     Blog
+--------------------------------------------- */
+.tk-shortcode-blog-grid-item{ background:#3F3F3F; }
+.tk-shortcode-blog-grid-item .tk-shortcode-blog-image{ }
+.tk-shortcode-blog-grid-item .tk-shortcode-blog-content{ padding-left:20px; padding-right:20px; padding-bottom:20px; padding-top:25px; }
+.tk-shortcode-blog-grid-item .tk-shortcode-blog-title{ font-size:20px; line-height:26px; font-weight:bold; margin-bottom:10px; }
+.tk-shortcode-blog-grid-item .tk-shortcode-blog-title a{  }
+.tk-shortcode-blog-grid-item .tk-shortcode-blog-title a:hover{ text-decoration:none; }
+.tk-shortcode-blog-grid-item .tk-shortcode-blog-text{  }
+.tk-shortcode-blog-grid-item .tk-shortcode-blog-info{ padding-top:10px; padding-bottom:10px; padding-left:20px; padding-right:20px;}
+
+
+/*---------------------------------------------
      progressBar
 --------------------------------------------- */
 .tallykit-shortcode-CounterCircle-wrapper{;display:inline-block;position:relative;text-align:center;}
