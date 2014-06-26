@@ -16,3 +16,4 @@ include('parallax-metabox.php');
 include('parallax-template.php');
 include('parallax-script.php'); 
 include('parallax-shortcodes.php');
+include('parallax-export-import.php');
