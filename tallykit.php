@@ -3,7 +3,7 @@
 Plugin Name: TallyKit
 Plugin URI: https://github.com/tallythemes/tallykit
 Description: A collection of features and functionality for <strong>Tally Framework</strong> theme.
-Version: 0.8
+Version: 0.9
 Author: TallyThemes
 Author URI: http://tallythemes.com/
 
