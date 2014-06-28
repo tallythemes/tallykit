@@ -16,6 +16,6 @@ $logo_query = new WP_Query( $query );
         <?php wp_reset_postdata(); ?>
         <?php echo acoc_paginate($logo_query); ?>
     <?php else: ?>
-    	<?php _e('No Portfolio found.', 'tallykit_logo'); ?>
+    	<?php _e('No Portfolio found.', 'tallykit_textdomain'); ?>
     <?php endif; ?>
 </div>

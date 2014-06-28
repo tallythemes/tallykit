@@ -58,16 +58,16 @@ $post_columns->add_column('title',
 	)
 );
 //add thumbnail column
-$post_columns->add_column('post_thumb',
+$post_columns->add_column('tallykit_prople_post_thumb',
   array(
 		'label' => __('Thumb', 'tallykit_textdomain'),
 		'type'  => 'text',
 		'text'  => ''
 	)
 );
-add_filter('cpt_columns_text_post_thumb', 'tallykit_people_cpt_column_Thumb_filter');
+add_filter('cpt_columns_text_tallykit_prople_post_thumb', 'tallykit_people_cpt_column_Thumb_filter');
 function tallykit_people_cpt_column_Thumb_filter(){
-	$meta = get_post_meta(get_the_ID(), 'tallykit_people_image', true);
+	$meta = get_post_meta(get_the_ID(), 'tallykit_people_archive_image', true);
 	$post_columns_image = ( $meta == "" ) ? 'http://placehold.it/70x70' : $meta;
 	return '<img src="'. $post_columns_image .'" style="max-height:100px; max-width:100px;">';
 }
