@@ -12,11 +12,12 @@ $fields = array(); $prefix = 'tallykit_testimonial_';
 $fields[] = array(
 	'id' => $prefix.'image',
 	'class' => '',
-	'label' => __( 'User Image (300x300)', 'tallykit_textdomain' ),
+	'label' => __( 'User Image (150x150)', 'tallykit_textdomain' ),
 	'type' => 'image_upload',
 	'std' => '',
-	'des' => __( '<strong>Image Size 300x300 px</strong>', 'tallykit_textdomain' ),
+	'des' => __( '<strong>Image Size 150x150 px</strong>', 'tallykit_textdomain' ),
 	'filter' => '', //sanitize_text_field, esc_attr
+	'size' => '150x150',
 );
 $fields[] = array(
 	'id' => $prefix.'position',

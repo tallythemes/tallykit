@@ -5,7 +5,7 @@
     	<?php
 			$image_url = get_post_meta(get_the_ID(), 'tallykit_testimonial_image', true);
 		?>
-		<img src="<?php echo acoc_image_size($image_url, $width = '300', $height = '300', $crop = true); ?>" width="" height="" alt=""  />
+		<img src="<?php echo acoc_image_size($image_url, '150', '150'); ?>" alt="<?php the_title(); ?>"  />
 		<span class="tallykit_testimonial_item_author"><?php the_title(); ?></span><br />
 		<span class="tallykit_testimonial_item_pogition"><?php echo get_post_meta(get_the_ID(), 'tallykit_testimonial_position', true); ?> - <?php echo get_post_meta(get_the_ID(), 'tallykit_testimonial_link', true); ?></span>
 	</div>

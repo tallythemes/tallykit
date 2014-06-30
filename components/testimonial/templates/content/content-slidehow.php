@@ -1,6 +1,6 @@
 <div class="tk_testimonial_slider_item">
 	<?php $image_url = get_post_meta(get_the_ID(), 'tallykit_testimonial_image', true); ?>
-	<img src="<?php echo acoc_image_size($image_url, $width = '300', $height = '300', $crop = true); ?>" width="" height="" alt=""  />
+	<img src="<?php echo acoc_image_size($image_url, '150', '150'); ?>" alt="<?php the_title(); ?>"  />
     
 	<div class="tk_testimonial_item_content"><?php echo get_the_content(); ?></div>
 	<div class="tk_testimonial_item_info">
