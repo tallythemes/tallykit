@@ -6,9 +6,9 @@ $portfolio_query = new WP_Query( $query );
 		<?php while ( $portfolio_query->have_posts() ) : $portfolio_query->the_post(); ?>
 			
             <?php if(get_post_meta(get_the_ID(), 'tallykit_portfolio_video', true) != ''): ?>
-            	<?php echo wp_oembed_get(get_post_meta(get_the_ID(), 'tallykit_portfolio_video', true)); ?>
+            	<div class="tk_portfolio_video_holder"><?php echo wp_oembed_get(get_post_meta(get_the_ID(), 'tallykit_portfolio_video', true)); ?></div>
             <?php else: ?>
-            	<img src="<?php echo acoc_image_size(get_post_meta(get_the_ID(), 'tallykit_portfolio_single_image', true) , $width = '960', $height = '450', $crop = true); ?>" width="" height="" alt="<?php the_title(); ?>"  />
+            	<img src="<?php echo acoc_image_size(get_post_meta(get_the_ID(), 'tallykit_portfolio_single_image', true) , '1000'); ?>" alt="<?php the_title(); ?>"  />
             <?php endif; ?>
             
 			<div class="tk_portfolio_single_content">

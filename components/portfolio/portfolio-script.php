@@ -14,6 +14,7 @@ function tallykit_portfolio_script_loader(){
 	wp_enqueue_script( 'jquery-prettyPhoto');
 	wp_enqueue_script( 'jquery-imagesloaded');
 	wp_enqueue_script( 'jquery-isotope');
+	wp_enqueue_script('jquery-fitvids');
 	
 	wp_enqueue_style( 'acoc-flexslider');
 	wp_enqueue_style( 'jquery-prettyPhoto');

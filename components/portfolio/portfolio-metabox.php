@@ -21,11 +21,12 @@ $fields[] = array(
 $fields[] = array(
 	'id' => $prefix.'single_image',
 	'class' => '',
-	'label' => __( 'Single Page Image (960x400)', 'tallykit_textdomain' ),
+	'label' => __( 'Single Page Image', 'tallykit_textdomain' ),
 	'type' => 'image_upload',
 	'std' => '',
-	'des' => __( 'This image will display on the single page of the portfolio. <strong>Image Size 960x400 px</strong>', 'tallykit_textdomain' ),
+	'des' => __( 'This image will display on the single page of the portfolio. <strong>Minimume image width will be 1000px</strong>', 'tallykit_textdomain' ),
 	'filter' => '', //sanitize_text_field, esc_attr
+	'size' => '1000x400',
 );
 $fields[] = array(
 	'id' => $prefix.'project_url',
