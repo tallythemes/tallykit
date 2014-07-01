@@ -1,21 +1,25 @@
 .tallykit_slideshow_item{ overflow:hidden; text-align:center; }
 .tallykit_slideshow_item_inner{ margin:0 auto; }
 
-.tallykit_slideshow_item.caption:before,
+/*.tallykit_slideshow_item.caption:before,
 .tallykit_slideshow_item.image-only:before,
-.tallykit_slideshow_item.content-only:before,
-.tallykit_slideshow_item.image-content:before,
-.tallykit_slideshow_item.content-image:before,
-.tallykit_slideshow_item.video-content:before,
-.tallykit_slideshow_item.content-video:before{ content: ''; display: inline-block; height: 100%; vertical-align: middle; }
+.tallykit_slideshow_item.caption-only:before,
+.tallykit_slideshow_item.image-caption:before,
+.tallykit_slideshow_item.caption-image:before,
+.tallykit_slideshow_item.video-caption:before,
+.tallykit_slideshow_item.caption-video:before{ content: ''; display: inline-block; height: 100%; vertical-align: middle; }
 
 .tallykit_slideshow_item.caption .tallykit_slideshow_item_inner,
 .tallykit_slideshow_item.image-only .tallykit_slideshow_item_inner,
-.tallykit_slideshow_item.content-only .tallykit_slideshow_item_inner,
-.tallykit_slideshow_item.image-content .tallykit_slideshow_item_inner,
-.tallykit_slideshow_item.content-image .tallykit_slideshow_item_inner,
-.tallykit_slideshow_item.video-content .tallykit_slideshow_item_inner,
-.tallykit_slideshow_item.content-video .tallykit_slideshow_item_inner{ display: inline-block;vertical-align: middle;height: auto; }
+.tallykit_slideshow_item.caption-only .tallykit_slideshow_item_inner,
+.tallykit_slideshow_item.image-caption .tallykit_slideshow_item_inner,
+.tallykit_slideshow_item.caption-image .tallykit_slideshow_item_inner,
+.tallykit_slideshow_item.video-caption .tallykit_slideshow_item_inner,
+.tallykit_slideshow_item.caption-video .tallykit_slideshow_item_inner{ display: inline-block;vertical-align: middle;height: auto; }*/
+
+
+.tallykit_slideshow_item:before{ content: ''; display: inline-block; height: 100%; vertical-align: middle; }
+.tallykit_slideshow_item .tallykit_slideshow_item_inner{ display: inline-block;vertical-align: middle;height: auto; }
 
 .tk_slideshow_button{ border:solid 2px; padding:7px 30px; margin-top:20px; display:inline-block; border-radius: 4px;text-transform: capitalize; font-weight:bold; }
 .tk_slideshow_button:hover{ text-decoration:none; opacity: 0.8; }

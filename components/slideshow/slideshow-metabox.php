@@ -15,6 +15,20 @@ function tallykit_slideshow_metabox_register() {
 			'taxonomy'    => '',
 			'class'       => '',
 			'settings'     => array(
+				array(
+				 	'id'          => 'subtitle',
+					'label'       => __('Sub-Title', 'tally_taxdomain'),
+					'desc'        => '',
+					'std'         => '',
+					'type'        => 'text',
+					'section'     => '',
+					'rows'        => '',
+					'post_type'   => '',
+					'taxonomy'    => '',
+					'class'       => '',
+					'condition'   => 'type:is(caption-center),type:is(caption-left),type:is(caption-right),type:is(image-caption),type:is(caption-image),type:is(video-caption),type:is(caption-video)',
+					'operator'    => 'or'
+				 ),
 				 array(
 				 	'id'          => 'type',
 					'label'       => __('Type', 'tally_taxdomain'),
@@ -27,15 +41,34 @@ function tallykit_slideshow_metabox_register() {
 					'taxonomy'    => '',
 					'class'       => '',
 					'choices'     => array(
-						 array( 'label' => 'Caption Style', 'value' => 'caption' ),
-						 array( 'label' => 'Image Only', 'value' => 'image-only' ),
-						 array( 'label' => 'Content Only', 'value' => 'content-only' ),
-						 array( 'label' => 'Video Only', 'value' => 'video-only' ),
-						 array( 'label' => 'Image - Content', 'value' => 'image-content' ),
-						 array( 'label' => 'Content - Image', 'value' => 'content-image'),
-						 array( 'label' => 'Video - Content', 'value' => 'video-content' ),
-						 array( 'label' => 'Content - Video', 'value' => 'content-video'),
+						array( 'label' => 'Caption Center', 'value' => 'caption-center' ),
+						array( 'label' => 'Caption Left', 'value' => 'caption-left' ),
+						array( 'label' => 'Caption Right', 'value' => 'caption-right' ),
+						array( 'label' => 'Image Only', 'value' => 'image-only' ),
+						array( 'label' => 'Video Only', 'value' => 'video-only' ),
+						array( 'label' => 'Image - Caption', 'value' => 'image-caption' ),
+						array( 'label' => 'Caption - Image', 'value' => 'caption-image'),
+						array( 'label' => 'Video - Caption', 'value' => 'video-caption' ),
+						array( 'label' => 'Caption - Video', 'value' => 'caption-video'),
 					)
+				 ),
+				 array(
+				 	'id'          => 'color_mood',
+					'label'       => __('Color Mood', 'tally_taxdomain'),
+					'desc'        => '',
+					'std'         => '',
+					'type'        => 'select',
+					'section'     => '',
+					'rows'        => '',
+					'post_type'   => '',
+					'taxonomy'    => '',
+					'class'       => '',
+					'choices'     => array(
+						array( 'label' => 'Dark', 'value' => 'dark' ),
+						array( 'label' => 'Light', 'value' => 'light' ),
+					),
+					'condition'   => 'type:is(caption-center),type:is(caption-left),type:is(caption-right),type:is(image-caption),type:is(caption-image),type:is(video-caption),type:is(caption-video)',
+					'operator'    => 'or'
 				 ),
 				 array(
 				 	'id'          => 'image',
@@ -48,7 +81,7 @@ function tallykit_slideshow_metabox_register() {
 					'post_type'   => '',
 					'taxonomy'    => '',
 					'class'       => '',
-					'condition'   => 'type:is(image-only),type:is(image-content),type:is(caption),type:is(content-image)',
+					'condition'   => 'type:is(image-only),type:is(image-caption),type:is(caption-image)',
 					'operator'    => 'or'
 				 ),
 				 array(
@@ -62,7 +95,7 @@ function tallykit_slideshow_metabox_register() {
 					'post_type'   => '',
 					'taxonomy'    => '',
 					'class'       => '',
-					'condition'   => 'type:is(caption),type:is(content-only),type:is(image-content),type:is(content-image),type:is(video-content),type:is(content-video)',
+					'condition'   => 'type:is(caption-center),type:is(caption-left),type:is(caption-right),type:is(image-caption),type:is(caption-image),type:is(video-caption),type:is(caption-video)',
 					'operator'    => 'or'
 				 ),
 				  array(
@@ -76,78 +109,9 @@ function tallykit_slideshow_metabox_register() {
 					'post_type'   => '',
 					'taxonomy'    => '',
 					'class'       => '',
-					'condition'   => 'type:is(video-only),type:is(video-content),type:is(content-video)',
+					'condition'   => 'type:is(video-only),type:is(video-caption),type:is(caption-video)',
 					'operator'    => 'or'
 				 ),
-				 array(
-				 	'id'          => 'active_content_color',
-					'label'       => __('Enable Text Color Options', 'tally_taxdomain'),
-					'desc'        => '',
-					'std'         => 'off',
-					'type'        => 'on_off',
-					'section'     => '',
-					'rows'        => '',
-					'post_type'   => '',
-					'taxonomy'    => '',
-					'class'       => '',
-				 ),
-				 array(
-				 	'id'          => 'heading_color',
-					'label'       => __('Heading Color', 'tally_taxdomain'),
-					'desc'        => '',
-					'std'         => '',
-					'type'        => 'colorpicker',
-					'section'     => '',
-					'rows'        => '',
-					'post_type'   => '',
-					'taxonomy'    => '',
-					'class'       => '',
-					'condition'   => 'active_content_color:is(on)',
-					'operator'    => 'or'
-				 ),
-				 array(
-				 	'id'          => 'text_color',
-					'label'       => __('Text Color', 'tally_taxdomain'),
-					'desc'        => '',
-					'std'         => '',
-					'type'        => 'colorpicker',
-					'section'     => '',
-					'rows'        => '',
-					'post_type'   => '',
-					'taxonomy'    => '',
-					'class'       => '',
-					'condition'   => 'active_content_color:is(on)',
-					'operator'    => 'or'
-				 ),
-				 array(
-				 	'id'          => 'link_color',
-					'label'       => __('Link Color', 'tally_taxdomain'),
-					'desc'        => '',
-					'std'         => '',
-					'type'        => 'colorpicker',
-					'section'     => '',
-					'rows'        => '',
-					'post_type'   => '',
-					'taxonomy'    => '',
-					'class'       => '',
-					'condition'   => 'active_content_color:is(on)',
-					'operator'    => 'or'
-				 ),
-				 array(
-				 	'id'          => 'link_hover_color',
-					'label'       => __('Link Hover Color', 'tally_taxdomain'),
-					'desc'        => '',
-					'std'         => '',
-					'type'        => 'colorpicker',
-					'section'     => '',
-					'rows'        => '',
-					'post_type'   => '',
-					'taxonomy'    => '',
-					'class'       => '',
-					'condition'   => 'active_content_color:is(on)',
-					'operator'    => 'or'
-				 ),
-				 
 				 array(
 				 	'id'          => 'active_readmore',
 					'label'       => __('Enable Readmore', 'tally_taxdomain'),
@@ -159,12 +123,14 @@ function tallykit_slideshow_metabox_register() {
 					'post_type'   => '',
 					'taxonomy'    => '',
 					'class'       => '',
+					'condition'   => 'type:is(caption-center),type:is(caption-left),type:is(caption-right),type:is(image-caption),type:is(caption-image),type:is(video-caption),type:is(caption-video)',
+					'operator'    => 'or'
 				 ),
 				 array(
 				 	'id'          => 'readmore_text',
 					'label'       => __('Readmore Text', 'tally_taxdomain'),
 					'desc'        => '',
-					'std'         => '',
+					'std'         => 'Read More',
 					'type'        => 'text',
 					'section'     => '',
 					'rows'        => '',
@@ -188,21 +154,6 @@ function tallykit_slideshow_metabox_register() {
 					'condition'   => 'active_readmore:is(on)',
 					'operator'    => 'or'
 				 ),
-				 array(
-				 	'id'          => 'readmore_color',
-					'label'       => __('Readmore Button Color', 'tally_taxdomain'),
-					'desc'        => '',
-					'std'         => '',
-					'type'        => 'colorpicker',
-					'section'     => '',
-					'rows'        => '',
-					'post_type'   => '',
-					'taxonomy'    => '',
-					'class'       => '',
-					'condition'   => 'active_readmore:is(on)',
-					'operator'    => 'or'
-				 ),
-				 
 				 array(
 				 	'id'          => 'active_padding',
 					'label'       => __('Enable Padding', 'tally_taxdomain'),

@@ -14,9 +14,7 @@ if(is_array($slider_items)):
 					<?php if(isset($slider_style_item['bg']['background-repeat'])): ?>background-repeat:<?php echo $slider_style_item['bg']['background-repeat'] ?>;<?php endif; ?>
 					<?php if(isset($slider_style_item['bg']['background-size'])): ?>background-size:<?php echo $slider_style_item['bg']['background-size'] ?>;<?php endif; ?>
 				<?php endif; ?>
-			}
-			/*#tallykit_slideshow_item_<?php echo $style_count; ?> .tk_slideshow_video_only_warp .tk_slideshow_video_holder .tk_slideshow_the_video iframe { height:<?php echo get_post_meta($id, 'tallykit_slideshow_h', true ); ?>; }*/
-			
+			}			
 			<?php if($slider_style_item['active_padding'] == 'on'): ?>
 				#tallykit_slideshow_item_<?php echo $style_count; ?> .tallykit_slideshow_item_inner{
 					<?php if($slider_style_item['padding_top'] != ''): ?> padding-top: <?php echo $slider_style_item['padding_top']; ?>px; <?php endif; ?>
@@ -25,28 +23,6 @@ if(is_array($slider_items)):
 			<?php endif; ?>
 			
 			#tallykit_slideshow_item_<?php echo $style_count; ?> .tallykit_slideshow_item_inner{ max-width:<?php echo $slider_style_item['content_width']; ?>; }
-			
-			<?php if($slider_style_item['active_content_color'] == 'on'): ?>
-				<?php if($slider_style_item['text_color'] != ''): ?>
-					#tallykit_slideshow_item_<?php echo $style_count; ?> .tk_slideshow_content_holder .tk_slideshow_content{ color:<?php echo $slider_style_item['text_color']; ?> !important; }
-				<?php endif; ?>
-				<?php if($slider_style_item['text_color'] != ''): ?>
-					#tallykit_slideshow_item_<?php echo $style_count; ?> .tk_slideshow_content_holder .tk_slideshow_title{ color:<?php echo $slider_style_item['heading_color']; ?>; }
-				<?php endif; ?>
-				<?php if($slider_style_item['link_color'] != ''): ?>
-					#tallykit_slideshow_item_<?php echo $style_count; ?> .tk_slideshow_content_holder a{ color:<?php echo $slider_style_item['link_color']; ?>; }
-				<?php endif; ?>
-				<?php if($slider_style_item['link_hover_color'] != ''): ?>
-					#tallykit_slideshow_item_<?php echo $style_count; ?> .tk_slideshow_content_holder a:hover{ color:<?php echo $slider_style_item['link_hover_color']; ?>; }
-				<?php endif; ?>
-			<?php endif; ?>
-			
-			<?php if($slider_style_item['active_readmore'] == 'on'): ?>
-				#tallykit_slideshow_item_<?php echo $style_count; ?> .tk_slideshow_content_holder .tk_slideshow_button{
-					color:<?php echo $slider_style_item['readmore_color']; ?>;
-					border-color:<?php echo $slider_style_item['readmore_color']; ?>;
-				}
-			<?php endif; ?>
 		<?php 
 			$style_count++; 
 			endforeach; 

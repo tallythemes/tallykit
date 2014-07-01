@@ -23,7 +23,7 @@ include(tallykit_slideshow_template_path('dri').'slideshow-style.php');
             $flexslider2->start();
                 foreach($slider_items as $slider_item):
                     $flexslider2->in_loop_start();
-                        echo '<div class="tallykit_slideshow_item '.$slider_item['type'].'" id="tallykit_slideshow_item_'.$i.'">';
+                        echo '<div class="tallykit_slideshow_item '.$slider_item['type'].' color_mood_'.$slider_item['color_mood'].'" id="tallykit_slideshow_item_'.$i.'">';
                             echo '<div class="tallykit_slideshow_item_inner">';
                                 include(tallykit_slideshow_template_path('dri').'_'.$slider_item['type'].'.php');
                             echo '</div>';
