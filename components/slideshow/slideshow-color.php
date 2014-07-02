@@ -3,9 +3,15 @@ add_action('wp_head', 'tallykit_slideshow_color_action_hook');
 function tallykit_slideshow_color_action_hook(){
 	?>
     <style type="text/css">	
-		.color_mood_light .tallykit_logo_item{ background-color:<?php tallykitkit_color('color_inner_bg_light'); ?>;}
-		
-		.color_mood_dark .tallykit_logo_item{ background-color:<?php tallykitkit_color('color_inner_bg_dark'); ?>;}
+		/*border style*/
+		.tallykit_slideshow_item.color_mood_light .tallykit_slideshow_item_inner .tk_slideshow_button{ 
+			border-color:<?php tallykitkit_color('color_headings_light'); ?> !important; color:<?php tallykitkit_color('color_headings_light'); ?> !important; }
+		.tallykit_slideshow_item.color_mood_dark .tallykit_slideshow_item_inner .tk_slideshow_button{ 
+			border-color:<?php tallykitkit_color('color_headings_dark'); ?> !important; color:<?php tallykitkit_color('color_headings_dark'); ?> !important; }
+				
+		.tallykit_slideshow_item.color_mood_light .tallykit_slideshow_item_inner .tk_slideshow_button:hover,
+		.tallykit_slideshow_item.color_mood_dark .tallykit_slideshow_item_inner .tk_slideshow_button:hover{
+			border-color:<?php tallykitkit_color('site_accent_color'); ?> !important; background-color:<?php tallykitkit_color('site_accent_color'); ?>; color: #FFF !important; }
 	</style>
     <?php	
 }
