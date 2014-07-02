@@ -4,7 +4,7 @@ Donate link: http://tallythemes.com/
 Tags: portfolio, faq, testimonials, slideshow, people, shortcodes, woocommerce, bbpress, buddypress, edd, cart66, doc, image gallery, logos, pricing table
 Requires at least: 3.8
 Tested up to: 3.9.1
-Stable tag: 1.0
+Stable tag: 1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -58,3 +58,6 @@ The simplest way to install is to click on 'Plugins' then 'Add' and type 'tallyk
 * Improve Slideshow JavaScript
 * Improve Slideshow coloring option
 * Improve Slideshow Template design
+
+= 1.1 =
+* Maintenance Release 

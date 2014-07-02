@@ -14,7 +14,7 @@
 /*---------------------------------------------------------
   caption Video
 ---------------------------------------------------------*/
-.tallykit_slideshow .tk_slideshow_content_video_warp{width:100%;height:auto;}
+.tallykit_slideshow .tk_slideshow_content_video_warp{width:90%;height:auto; margin:0 auto; }
 .tallykit_slideshow .tk_slideshow_content_video_warp .tk_slideshow_content_holder{float: left;width: 44%;margin-right: 2%;padding-top: 4%;padding-bottom: 0%; line-height: 21px; }
 .tallykit_slideshow .tk_slideshow_content_video_warp .tk_slideshow_content_holder .tk_slideshow_content{ text-align:right; }
 .tallykit_slideshow .tk_slideshow_content_video_warp .tk_slideshow_content_holder .tk_slideshow_title {text-align:right;}
@@ -25,7 +25,7 @@
 /*---------------------------------------------------------
   Video caption
 ---------------------------------------------------------*/
-.tallykit_slideshow .tk_slideshow_video_content_warp{width:100%;height:auto;}
+.tallykit_slideshow .tk_slideshow_video_content_warp{width:90%;height:auto; margin:0 auto;}
 .tallykit_slideshow .tk_slideshow_video_content_warp .tk_slideshow_content_holder{float: left;width: 42%;margin-right: 0%;padding-top: 2%;padding-bottom: 0%;	line-height: 21px;}
 .tallykit_slideshow .tk_slideshow_video_content_warp .tk_slideshow_content_holder .tk_slideshow_content{ text-align:left; }
 .tallykit_slideshow .tk_slideshow_video_content_warp .tk_slideshow_content_holder .tk_slideshow_title {text-align:left;}
@@ -48,7 +48,7 @@
 /*---------------------------------------------------------
   caption Image
 ---------------------------------------------------------*/
-.tallykit_slideshow.tk_slideshow_content_image_warp{width:100%; height:auto;}
+.tallykit_slideshow.tk_slideshow_content_image_warp{width:90%;height:auto; margin:0 auto;}
 .tallykit_slideshow .tk_slideshow_content_image_warp .tk_slideshow_content_holder{float: left;width: 44%;margin-right: 2%;padding-top: 4%;padding-bottom: 0%;	line-height: 21px;}
 .tallykit_slideshow .tk_slideshow_content_image_warp .tk_slideshow_content_holder .tk_slideshow_content{ text-align:right; }
 .tallykit_slideshow .tk_slideshow_content_image_warp .tk_slideshow_content_holder .tk_slideshow_title { text-align:right; }
@@ -59,7 +59,7 @@
 /*---------------------------------------------------------
   Image caption
 ---------------------------------------------------------*/
-.tallykit_slideshow .tk_slideshow_image_content_warp{width:100%; height:auto;}
+.tallykit_slideshow .tk_slideshow_image_content_warp{width:90%;height:auto; margin:0 auto;}
 .tallykit_slideshow .tk_slideshow_image_content_warp .tk_slideshow_content_holder{float: left;width: 42%;margin-right: 0%;padding-top: 2%;padding-bottom: 0%;	line-height: 21px;}
 .tallykit_slideshow .tk_slideshow_image_content_warp .tk_slideshow_content_holder .tk_slideshow_content{ text-align:left; }
 .tallykit_slideshow .tk_slideshow_image_content_warp .tk_slideshow_content_holder .tk_slideshow_title {text-align:left;}
