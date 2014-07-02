@@ -84,7 +84,7 @@
 /*---------------------------------------------------------
   Caption Left
 ---------------------------------------------------------*/
-.tallykit_slideshow .tk_slideshow_caption_left_warp{ width:70%; height:auto; float:left; }
+.tallykit_slideshow .tk_slideshow_caption_left_warp{ width:70%; height:auto; float:left; margin-left:5%; }
 .tallykit_slideshow .tk_slideshow_caption_left_warp .tk_slideshow_content_holder{ text-align:left;}
 .tallykit_slideshow .tk_slideshow_caption_left_warp .tk_slideshow_content_holder .tk_slideshow_content{ text-align:left; }
 
@@ -92,7 +92,7 @@
 /*---------------------------------------------------------
   Caption Right
 ---------------------------------------------------------*/
-.tallykit_slideshow .tk_slideshow_caption_right_warp{ width:70%; height:auto; float:right; }
+.tallykit_slideshow .tk_slideshow_caption_right_warp{ width:70%; height:auto; float:right; margin-right:5%; }
 .tallykit_slideshow .tk_slideshow_caption_right_warp .tk_slideshow_content_holder{ text-align:right;}
 .tallykit_slideshow .tk_slideshow_caption_right_warp .tk_slideshow_content_holder .tk_slideshow_content{ text-align:right; }
 
