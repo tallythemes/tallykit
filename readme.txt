@@ -4,7 +4,7 @@ Donate link: http://tallythemes.com/
 Tags: portfolio, faq, testimonials, slideshow, people, shortcodes, woocommerce, bbpress, buddypress, edd, cart66, doc, image gallery, logos, pricing table
 Requires at least: 3.8
 Tested up to: 3.9.1
-Stable tag: 0.9
+Stable tag: 1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -44,3 +44,17 @@ The simplest way to install is to click on 'Plugins' then 'Add' and type 'tallyk
 = 0.9 =
 * Add New Blog Sshortcode
 * Add export import functionality to the parallax component
+
+= 1.0 =
+* Added new shortcode "Blog Grid"
+* Added export import functionality to the parallax component
+* Fixed some textdomain string issue
+* Improve Portfolio single page Video and image placement
+* Update Portfolio Metabox
+* Improve Portfolio CSS
+* Change Testimonial component images size
+* Update ACOC framework
+* Improve Slideshow CSS
+* Improve Slideshow JavaScript
+* Improve Slideshow coloring option
+* Improve Slideshow Template design
