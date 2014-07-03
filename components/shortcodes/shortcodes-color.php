@@ -58,6 +58,9 @@ function tallykit_shortcode_color_action_hook(){
 		.color_mood_dark .tallykit-shortcode-button.style-fill.color-default{ 
 			background:<?php tallykitkit_color('color_headings_dark'); ?>; color:<?php tallykitkit_color('color_headings_light'); ?>; border-color:<?php tallykitkit_color('color_headings_dark'); ?>  !important; }
 			
+		.color_mood_light .tallykit-shortcode-button.style-fill.color-default:hover{  color:<?php tallykitkit_color('color_headings_light'); ?>; }
+		.color_mood_dark .tallykit-shortcode-button.style-fill.color-default:hover{  color:<?php tallykitkit_color('color_headings_dark'); ?>; }
+			
 		.color_mood_light .tallykit-shortcode-button.style-fill.color-accent,
 		.color_mood_dark .tallykit-shortcode-button.style-fill.color-accent{ 
 			background:<?php tallykitkit_color('site_accent_color'); ?>; color:#FFF; border-color:<?php tallykitkit_color('site_accent_color'); ?>  !important; }

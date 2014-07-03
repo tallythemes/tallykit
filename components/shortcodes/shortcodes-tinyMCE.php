@@ -986,7 +986,7 @@ $tinymce_fields[] = array(
 		array(
 			'id' => 'prefix',
 			'class' => '',
-			'label' => 'Bar value',
+			'label' => 'Prefix',
 			'type' => 'text',
 			'std' => '',
 			'des' => '',
@@ -994,7 +994,7 @@ $tinymce_fields[] = array(
 		array(
 			'id' => 'suffix',
 			'class' => '',
-			'label' => 'Bar value',
+			'label' => 'Suffix',
 			'type' => 'text',
 			'std' => '',
 			'des' => '',
@@ -1249,8 +1249,8 @@ $tinymce_fields[] = array(
 			'std' => 'no',
 			'des' => '',
 			'options' => array(
-				array('value' => 'no', 'label' => 'html5'),
-				array('value' => 'yes', 'label' => 'oembed'),
+				array('value' => 'no', 'label' => 'oembed'),
+				array('value' => 'yes', 'label' => 'HTML5'),
 			)
 		),
 		array(
@@ -1311,8 +1311,8 @@ $tinymce_fields[] = array(
 			'std' => 'no',
 			'des' => '',
 			'options' => array(
-				array('value' => 'no', 'label' => 'html5'),
-				array('value' => 'yes', 'label' => 'oembed'),
+				array('value' => 'no', 'label' => 'oembed'),
+				array('value' => 'yes', 'label' => 'html5'),
 			)
 		),
 		array(
