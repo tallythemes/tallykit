@@ -70,3 +70,8 @@ The simplest way to install is to click on 'Plugins' then 'Add' and type 'tallyk
 
 = 1.4 =
 * Fix Slideshow CSS issue
+
+= 1.5 =
+* Fix shortcode button color issue
+* Fix Shortcode TinyMCE issue
+* Update Slideshow CSS
