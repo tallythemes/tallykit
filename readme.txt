@@ -4,7 +4,7 @@ Donate link: http://tallythemes.com/
 Tags: portfolio, faq, testimonials, slideshow, people, shortcodes, woocommerce, bbpress, buddypress, edd, cart66, doc, image gallery, logos, pricing table
 Requires at least: 3.8
 Tested up to: 3.9.1
-Stable tag: 1.5
+Stable tag: 1.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -75,3 +75,5 @@ The simplest way to install is to click on 'Plugins' then 'Add' and type 'tallyk
 * Fix shortcode button color issue
 * Fix Shortcode TinyMCE issue
 * Update Slideshow CSS
+
+= 1.5 =
