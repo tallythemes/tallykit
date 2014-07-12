@@ -59,21 +59,27 @@ The simplest way to install is to click on 'Plugins' then 'Add' and type 'tallyk
 * Improve Slideshow coloring option
 * Improve Slideshow Template design
 
-= 1.1 =
-* Maintenance Release 
 
-= 1.2 =
-* Improve Slideshow CSS
 
-= 1.3 =
-* Fix Slideshow CSS margin issue
-
-= 1.4 =
-* Fix Slideshow CSS issue
+= 1.6 =
+* fix portfolio image size
+* Added new Gallery Component
+* Added popup on gallery Component
+* fix column ShortCode clear issue
 
 = 1.5 =
 * Fix shortcode button color issue
 * Fix Shortcode TinyMCE issue
 * Update Slideshow CSS
 
-= 1.5 =
+= 1.4 =
+* Fix Slideshow CSS issue
+
+= 1.3 =
+* Fix Slideshow CSS margin issue
+
+= 1.2 =
+* Improve Slideshow CSS
+
+= 1.1 =
+* Maintenance Release 
