@@ -159,7 +159,8 @@ function tallykit_shortcodes_sc_column( $atts, $content = null ){
 	$output .= '<div id="'.$uid.'" class="tallykit-shortcode-column tallykit-shortcode-' . $size . ' tallykit-shortcode-column-'.$position.' '. $class .'" style="'.$bg_color.'">';
 		$output .= '<div class="tallykit-shortcode-column-inner" style="'.$padding.'">' . do_shortcode($content) . '</div>';
 	$output .= '</div>';
-	   
+	if($position == 'last'){$output .= '<div class="acoc-clear"></div><div class="tallykit-shortcode-clear"></div><div class="acoc-clear"></div>';}
+	
 	return $output;
 }
 
