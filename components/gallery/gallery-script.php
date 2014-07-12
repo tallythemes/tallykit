@@ -15,6 +15,10 @@ function tallykit_gallery_script_loader(){
 	
 	wp_enqueue_style( 'font-awesome');
 	
+	/**- magnific-popup -**/
+	wp_enqueue_script('jquery-magnific-popup' );
+	wp_enqueue_style( 'jquery-magnific-popup' );
+	
 	wp_enqueue_script( 'tallykit-gallery', TALLYKIT_COMPONENTS_URL.'gallery/assets/js/gallery.js', array('jquery'), '1.0', true );
 	wp_enqueue_style( 'tallykit-gallery', TALLYKIT_COMPONENTS_URL.'gallery/assets/css/gallery.css', '', '1.0' );
 }
