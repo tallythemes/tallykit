@@ -692,3 +692,105 @@ function tallykit_shortcodes_sc_audio($atts, $content = null) {
 	
 	if($src != ''){ return $output; }
 }
+
+
+
+/*---------|- Blog Timeline -|-------------------------------------*/
+add_shortcode('tk_blog_timeline', 'tallykit_shortcodes_sc_blog_timeline');
+function tallykit_shortcodes_sc_blog_timeline($atts, $content = null) {
+	extract(shortcode_atts(array(
+		/*query*/
+		'category'         => '',
+		'exclude_category' => '',
+		'tags'             => '',
+		'exclude_tags'     => '',
+		'relation'         => 'AND',
+		'limit'            => '-1',
+		'orderby'          => 'post_date',
+		'order'            => 'DESC',
+		'ids'              => '',
+	), $atts));
+	
+	$query = array(
+		'post_type'      => 'post',
+		'posts_per_page' => $limit,
+		'orderby'        => $orderby,
+		'order'          => $order
+	);
+
+	switch ( $orderby ) {
+		case 'title':
+			$query['orderby'] = 'title';
+		break;
+
+		case 'id':
+			$query['orderby'] = 'ID';
+		break;
+
+		case 'random':
+			$query['orderby'] = 'rand';
+		break;
+
+		default:
+			$query['orderby'] = 'post_date';
+		break;
+	}
+
+	if ( $tags || $category || $exclude_category || $exclude_tags ) {
+		$query['tax_query'] = array(
+			'relation'     => $relation
+		);
+
+		if ( $tags ) {
+			$query['tax_query'][] = array(
+				'taxonomy' => 'post_tag',
+				'terms'    => explode( ',', $tags ),
+				'field'    => 'slug'
+			);
+		}
+
+		if ( $category ) {
+			$query['tax_query'][] = array(
+				'taxonomy' => 'category',
+				'terms'    => explode( ',', $category ),
+				'field'    => 'slug'
+			);
+		}
+
+		if ( $exclude_category ) {
+			$query['tax_query'][] = array(
+				'taxonomy' => 'category',
+				'terms'    => explode( ',', $exclude_category ),
+				'field'    => 'slug',
+				'operator' => 'NOT IN',
+			);
+		}
+
+		if ( $exclude_tags ) {
+			$query['tax_query'][] = array(
+				'taxonomy' => 'post_tag',
+				'terms'    => explode( ',', $exclude_tags ),
+				'field'    => 'slug',
+				'operator' => 'NOT IN',
+			);
+		}
+	}
+
+	if( ! empty( $ids ) )
+		$query['post__in'] = explode( ',', $ids );
+
+	if ( get_query_var( 'paged' ) )
+		$query['paged'] = get_query_var('paged');
+	else if ( get_query_var( 'page' ) )
+		$query['paged'] = get_query_var( 'page' );
+	else
+		$query['paged'] = 1;
+
+	
+	ob_start();
+	include(tallykit_shortcodes_template_path('dri').'blog/blog-timeline.php');
+	$output = ob_get_contents();
+	ob_end_clean();
+	
+	return 	$output;
+}
