@@ -492,7 +492,7 @@ body .ui-tooltip {
 .tallykit-blog-timeline .tallykit-blog-timeline-list .tallykit-blog-author-img img{ width:50px; height:50px; border:5px solid #fa6dab; border-radius: 50%; margin-bottom: -50px; }
 .tallykit-blog-timeline-post{ width:100%; height:auto; position:relative; margin-bottom:55px; float:left; }
 
-.tallykit-blog-timeline-post .tk-post-content{ 
+.tallykit-blog-timeline .tallykit-blog-timeline-list .tallykit-blog-timeline-post .tk-post-content{ 
 	width: 36.4%;	
 	float: left;
 	border: 1px solid #efecec;
@@ -522,7 +522,6 @@ body .ui-tooltip {
 	position: absolute;
 	width: 10px;
 	height: 10px;
-	border: 1px solid #EAE9E9;
 	content: '';
 	border-right: 0;
 	border-bottom: 0;
@@ -543,8 +542,9 @@ body .ui-tooltip {
 	border-left: none;
 	
 }
+.tallykit-blog-timeline-post .tk-timeline-thum .entry-video-om.entry-media iframe{ width:100% !important; }
 .tallykit-blog-timeline-post .tk-timeline-thum{ width:43.4%; float: right; }
-.tallykit-blog-timeline-post .tk-timeline-thum img{ border: 5px solid #FFF; box-shadow: 0 0 2px rgba(0, 0, 0, 0.17); margin-left: 1px;  }
+.tallykit-blog-timeline-post .tk-timeline-thum img{ border: 5px solid transparent !important; box-shadow: 0 0 2px rgba(0, 0, 0, 0.17); margin-left: 1px; max-width:96%;  }
 .tallykit-blog-timeline-post .tk-timeline-thum .date{ 
 	width:100%; 
 	height:auto; 
@@ -558,9 +558,11 @@ body .ui-tooltip {
 	text-transform:uppercase;
 }
 .tallykit-blog-timeline-post .tk-timeline-thum ul{ margin:0px; padding:0px; }
-.tallykit-blog-timeline-post .tk-timeline-thum ul li{ list-style-type:none; float:left; margin-left: 4px; margin-right: 4px; margin-bottom: 3px;  }
+.tallykit-blog-timeline-post .tk-timeline-thum ul li{ list-style-type:none; float:left; margin-left: 0px; margin-right: 4px; margin-bottom: 10px;  }
 .tallykit-blog-timeline-post .tk-timeline-thum ul li a{ text-decoration:none; }
 .tallykit-blog-clear{ width:100%; height:1px; position:relative; }
+
+
 
 .tallykit-blog-timeline .tallykit-blog-timeline-list:nth-child(2n+2) .tallykit-blog-timeline-post .tk-post-content{ float:right; }
 .tallykit-blog-timeline .tallykit-blog-timeline-list:nth-child(2n+2) .tallykit-blog-timeline-post .tk-post-content:before {
