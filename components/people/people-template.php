@@ -8,7 +8,7 @@
  * @uses class acoc_template_file_loader  
 **/
 if(!function_exists('tallykit_people_template_path')):
-function tallykit_people_template_path($type='url'){
+function tallykit_people_template_path($type='url', $extra = ''){
 	$settings = array(
 		'child_url'  => TALLYKIT_CHILD_TPL_URL.'people/',
 		'theme_url'  => TALLYKIT_THEME_TPL_URL.'people/',
@@ -21,9 +21,9 @@ function tallykit_people_template_path($type='url'){
 	$template = new acoc_template_file_loader($settings);
 	
 	if($type == 'url'){
-		return $template->url();
+		return $template->url($extra);
 	}else{
-		return $template->dri();
+		return $template->dri($extra);
 	}
 }
 endif;

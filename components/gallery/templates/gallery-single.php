@@ -7,7 +7,7 @@ echo '<div class="tallykit_single_gallery">';
 		$isotope->start();
 			foreach($all_images as $image_item){
 				$isotope->in_loop_start();
-					include(tallykit_gallery_template_path('dri').'content/single-image.php');
+					include(tallykit_gallery_template_path('dri', 'content/single-image.php'));
 				$isotope->in_loop_end();
 			}
 		$isotope->end();

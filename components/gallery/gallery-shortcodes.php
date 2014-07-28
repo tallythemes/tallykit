@@ -88,7 +88,7 @@ function tallykit_gallery_album_sc_grid( $atts, $content = null ) {
 
 	
 	ob_start();
-	include(tallykit_gallery_template_path('dri').'gallery-grid.php');
+	include(tallykit_gallery_template_path('dri', 'gallery-grid.php'));
 	$output = ob_get_contents();
 	ob_end_clean();
 	
@@ -109,7 +109,7 @@ function tallykit_gallery_sc_single( $atts, $content = null  ) {
 	$output = '';
 	
 	ob_start();
-	include(tallykit_gallery_template_path('dri').'gallery-single.php');
+	include(tallykit_gallery_template_path('dri', 'gallery-single.php'));
 	$output = ob_get_contents();
 	ob_end_clean();
 	

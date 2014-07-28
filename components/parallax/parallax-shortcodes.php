@@ -17,7 +17,7 @@ function tallykit_parallax_sc( $atts, $content = null ) {
 	);
 	
 	ob_start();
-	include(tallykit_parallax_template_path('dri').'parallax-template.php');
+	include(tallykit_parallax_template_path('dri', 'parallax-template.php'));
 	$output = ob_get_contents();
 	ob_end_clean();
 	

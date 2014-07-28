@@ -82,7 +82,7 @@ function tallykit_logo_sc_grid( $atts, $content = null ) {
 
 	
 	ob_start();
-	include(tallykit_logo_template_path('dri').'logo-grid.php');
+	include(tallykit_logo_template_path('dri', 'logo-grid.php'));
 	$output = ob_get_contents();
 	ob_end_clean();
 	
@@ -168,7 +168,7 @@ function tallykit_logo_sc_carousel( $atts, $content = null ) {
 
 	
 	ob_start();
-	include(tallykit_logo_template_path('dri').'logo-carousel.php');
+	include(tallykit_logo_template_path('dri', 'logo-carousel.php'));
 	$output = ob_get_contents();
 	ob_end_clean();
 	
@@ -256,7 +256,7 @@ function tallykit_logo_sc_slideshow( $atts, $content = null ) {
 
 	
 	ob_start();
-	include(tallykit_logo_template_path('dri').'logo-slideshow.php');
+	include(tallykit_logo_template_path('dri', 'logo-slideshow.php'));
 	$output = ob_get_contents();
 	ob_end_clean();
 	

@@ -8,7 +8,7 @@ $blog_query = new WP_Query( $query );
     	<?php $isotope->start(); ?>
         	<?php while ( $blog_query->have_posts() ) : $blog_query->the_post(); ?>
             	<?php $isotope->in_loop_start( $isotope->post_tax_class(get_the_ID(), 'category')); ?>
-                	<?php include(tallykit_shortcodes_template_path('dri').'blog/content/content-grid.php'); ?>
+                	<?php include(tallykit_shortcodes_template_path('dri', 'blog/content/content-grid.php')); ?>
                 <?php $isotope->in_loop_end(); ?>
             <?php endwhile; ?>
         <?php $isotope->end(); ?>

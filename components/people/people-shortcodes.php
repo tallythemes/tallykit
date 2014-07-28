@@ -82,7 +82,7 @@ function tallykit_people_sc_grid( $atts, $content = null ) {
 
 	
 	ob_start();
-	include(tallykit_people_template_path('dri').'people-grid.php');
+	include(tallykit_people_template_path('dri', 'people-grid.php'));
 	$output = ob_get_contents();
 	ob_end_clean();
 	
@@ -168,7 +168,7 @@ function tallykit_people_sc_carousel( $atts, $content = null ) {
 
 	
 	ob_start();
-	include(tallykit_people_template_path('dri').'people-carousel.php');
+	include(tallykit_people_template_path('dri', 'people-carousel.php'));
 	$output = ob_get_contents();
 	ob_end_clean();
 	
@@ -256,7 +256,7 @@ function tallykit_people_sc_slideshow( $atts, $content = null ) {
 
 	
 	ob_start();
-	include(tallykit_people_template_path('dri').'people-slideshow.php');
+	include(tallykit_people_template_path('dri', 'people-slideshow.php'));
 	$output = ob_get_contents();
 	ob_end_clean();
 	
@@ -280,7 +280,7 @@ function tallykit_people_sc_single( $atts, $content = null  ) {
 	);
 	
 	ob_start();
-	include(tallykit_people_template_path('dri').'people-single.php');
+	include(tallykit_people_template_path('dri', 'people-single.php'));
 	$output = ob_get_contents();
 	ob_end_clean();
 	

@@ -18,7 +18,7 @@ $testimonial_query = new WP_Query( $query );
     	<?php $flexslider2->start(); ?>
         	<?php while ( $testimonial_query->have_posts() ) : $testimonial_query->the_post(); ?>
             	<?php $flexslider2->in_loop_start(); ?>
-                	<?php include(tallykit_testimonial_template_path('dri').'content/content-grid.php'); ?>
+                	<?php include(tallykit_testimonial_template_path('dri', 'content/content-grid.php')); ?>
                 <?php $flexslider2->in_loop_end(); ?>
             <?php endwhile; ?>
         <?php $flexslider2->end(); ?>

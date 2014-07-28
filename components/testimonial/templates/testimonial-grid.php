@@ -8,7 +8,7 @@ $testimonial_query = new WP_Query( $query );
     	<?php $isotope->start(); ?>
         	<?php while ( $testimonial_query->have_posts() ) : $testimonial_query->the_post(); ?>
             	<?php $isotope->in_loop_start( $isotope->post_tax_class(get_the_ID(), 'tallykit_testimonial_category')); ?>
-                	<?php include(tallykit_testimonial_template_path('dri').'content/content-grid.php'); ?>
+                	<?php include(tallykit_testimonial_template_path('dri', 'content/content-grid.php')); ?>
                 <?php $isotope->in_loop_end(); ?>
             <?php endwhile; ?>
         <?php $isotope->end(); ?>

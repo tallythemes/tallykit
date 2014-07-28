@@ -17,7 +17,7 @@ function tallykit_slideshow_sc( $atts, $content = null  ) {
 	$output = '';
 	
 	ob_start();
-	include(tallykit_slideshow_template_path('dri').'slideshow.php');
+	include(tallykit_slideshow_template_path('dri', 'slideshow.php'));
 	$output = ob_get_contents();
 	ob_end_clean();
 	

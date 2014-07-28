@@ -23,27 +23,27 @@ class acoc_template_file_loader{
 	}
 	
 	
-	function url(){
+	function url($extra = ''){
 		$url = '';
-		if(file_exists($this->child_url)){
-			$url = $this->child_url;
-		}elseif(file_exists($this->theme_url)){
-			$url = $this->theme_url;
-		}elseif(file_exists($this->plugin_url)){
-			$url = $this->plugin_url;
+		if(file_exists($this->child_url.$extra)){
+			$url = $this->child_url.$extra;
+		}elseif(file_exists($this->theme_url.$extra)){
+			$url = $this->theme_url.$extra;
+		}elseif(file_exists($this->plugin_url.$extra)){
+			$url = $this->plugin_url.$extra;
 		}
 		return $url;
 	}
 	
 	
-	function dri(){
+	function dri($extra = ''){
 		$url = '';
-		if(file_exists($this->child_dri)){
-			$url = $this->child_dri;
-		}elseif(file_exists($this->theme_dri)){
-			$url = $this->theme_dri;
-		}elseif(file_exists($this->plugin_dri)){
-			$url = $this->plugin_dri;
+		if(file_exists($this->child_dri.$extra)){
+			$url = $this->child_dri.$extra;
+		}elseif(file_exists($this->theme_dri.$extra)){
+			$url = $this->theme_dri.$extra;
+		}elseif(file_exists($this->plugin_dri.$extra)){
+			$url = $this->plugin_dri.$extra;
 		}
 		return $url;
 	}

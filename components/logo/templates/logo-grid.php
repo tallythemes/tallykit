@@ -8,7 +8,7 @@ $logo_query = new WP_Query( $query );
     	<?php $isotope->start(); ?>
         	<?php while ( $logo_query->have_posts() ) : $logo_query->the_post(); ?>
             	<?php $isotope->in_loop_start( $isotope->post_tax_class(get_the_ID(), 'tallykit_logo_category')); ?>
-                	<?php include(tallykit_logo_template_path('dri').'content/content-grid.php'); ?>
+                	<?php include(tallykit_logo_template_path('dri', 'content/content-grid.php')); ?>
                 <?php $isotope->in_loop_end(); ?>
             <?php endwhile; ?>
         <?php $isotope->end(); ?>

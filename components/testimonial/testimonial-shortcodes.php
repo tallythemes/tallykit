@@ -82,7 +82,7 @@ function tallykit_testimonial_sc_grid( $atts, $content = null ) {
 
 	
 	ob_start();
-	include(tallykit_testimonial_template_path('dri').'testimonial-grid.php');
+	include(tallykit_testimonial_template_path('dri', 'testimonial-grid.php'));
 	$output = ob_get_contents();
 	ob_end_clean();
 	
@@ -168,7 +168,7 @@ function tallykit_testimonial_sc_carousel( $atts, $content = null ) {
 
 	
 	ob_start();
-	include(tallykit_testimonial_template_path('dri').'testimonial-carousel.php');
+	include(tallykit_testimonial_template_path('dri', 'testimonial-carousel.php'));
 	$output = ob_get_contents();
 	ob_end_clean();
 	
@@ -256,7 +256,7 @@ function tallykit_testimonial_sc_slideshow( $atts, $content = null ) {
 
 	
 	ob_start();
-	include(tallykit_testimonial_template_path('dri').'testimonial-slideshow.php');
+	include(tallykit_testimonial_template_path('dri', 'testimonial-slideshow.php'));
 	$output = ob_get_contents();
 	ob_end_clean();
 	

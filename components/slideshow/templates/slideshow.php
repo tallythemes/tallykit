@@ -13,7 +13,7 @@ $flexslider2 = new acoc_flexslider2_html(array(
 
 //print_r($slider_items);
 
-include(tallykit_slideshow_template_path('dri').'slideshow-style.php');
+include(tallykit_slideshow_template_path('dri', 'slideshow-style.php'));
 ?>
 <?php if(is_array($slider_items)): $i = 1; ?>    
     <div class="tallykit_slideshow">
@@ -25,7 +25,7 @@ include(tallykit_slideshow_template_path('dri').'slideshow-style.php');
                     $flexslider2->in_loop_start();
                         echo '<div class="tallykit_slideshow_item '.$slider_item['type'].' color_mood_'.$slider_item['color_mood'].'" id="tallykit_slideshow_item_'.$i.'">';
                             echo '<div class="tallykit_slideshow_item_inner">';
-                                include(tallykit_slideshow_template_path('dri').'_'.$slider_item['type'].'.php');
+                                include(tallykit_slideshow_template_path('dri', '_'.$slider_item['type'].'.php'));
                             echo '</div>';
                         echo '</div>';
                     $flexslider2->in_loop_end();
@@ -35,5 +35,5 @@ include(tallykit_slideshow_template_path('dri').'slideshow-style.php');
         </div>
     </div>
 <?php else: ?>
-	No slider Item's found
+	<?php _e('No slider Item\'s found', 'tallykit_textdomain'); ?>
 <?php endif; ?>

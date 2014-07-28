@@ -105,7 +105,7 @@ function tallykit_portfolio_sc_grid( $atts, $content = null ) {
 
 	
 	ob_start();
-	include(tallykit_portfolio_template_path('dri').'portfolio-grid.php');
+	include(tallykit_portfolio_template_path('dri', 'portfolio-grid.php'));
 	$output = ob_get_contents();
 	ob_end_clean();
 	
@@ -214,7 +214,7 @@ function tallykit_portfolio_sc_carousel( $atts, $content = null ) {
 
 	
 	ob_start();
-	include(tallykit_portfolio_template_path('dri').'portfolio-carousel.php');
+	include(tallykit_portfolio_template_path('dri', 'portfolio-carousel.php'));
 	$output = ob_get_contents();
 	ob_end_clean();
 	
@@ -325,7 +325,7 @@ function tallykit_portfolio_sc_slideshow( $atts, $content = null ) {
 
 	
 	ob_start();
-	include(tallykit_portfolio_template_path('dri').'portfolio-slideshow.php');
+	include(tallykit_portfolio_template_path('dri', 'portfolio-slideshow.php'));
 	$output = ob_get_contents();
 	ob_end_clean();
 	
@@ -427,7 +427,7 @@ function tallykit_portfolio_sc_list( $atts, $content = null ) {
 
 	
 	ob_start();
-	include(tallykit_portfolio_template_path('dri').'portfolio-list.php');
+	include(tallykit_portfolio_template_path('dri', 'portfolio-list.php'));
 	$output = ob_get_contents();
 	ob_end_clean();
 	
@@ -450,7 +450,7 @@ function tallykit_portfolio_sc_single( $atts, $content = null  ) {
 	);
 	
 	ob_start();
-	include(tallykit_portfolio_template_path('dri').'portfolio-single.php');
+	include(tallykit_portfolio_template_path('dri', 'portfolio-single.php'));
 	$output = ob_get_contents();
 	ob_end_clean();
 	

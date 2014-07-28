@@ -446,7 +446,7 @@ function tallykit_shortcodes_sc_blog_grid( $atts, $content = null ) {
 
 	
 	ob_start();
-	include(tallykit_shortcodes_template_path('dri').'blog/blog-grid.php');
+	include(tallykit_shortcodes_template_path('dri', 'blog/blog-grid.php'));
 	$output = ob_get_contents();
 	ob_end_clean();
 	
@@ -788,7 +788,7 @@ function tallykit_shortcodes_sc_blog_timeline($atts, $content = null) {
 
 	
 	ob_start();
-	include(tallykit_shortcodes_template_path('dri').'blog/blog-timeline.php');
+	include(tallykit_shortcodes_template_path('dri', 'blog/blog-timeline.php'));
 	$output = ob_get_contents();
 	ob_end_clean();
 	
