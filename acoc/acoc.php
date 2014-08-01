@@ -3,7 +3,7 @@
 Plugin Name: ACOC
 Plugin URI: https://github.com/tallythemes/acoc
 Description: WordPress Plugin Development framework.
-Version: 0.7
+Version: 0.8
 Author: TallyThemes
 Author URI: http://tallythemes.com/
 
@@ -49,6 +49,7 @@ include('classes/template-file-loader-class.php');
 include('classes/script-register-class.php');
 include('classes/tinymce-register-class.php');
 include('classes/post-taxonomy-filter.php');
+include('classes/theme-compat-class.php');
 
 
 //Loading html-classes
@@ -61,6 +62,7 @@ include('html-classes/masonry-html-class.php');
 
 //Loading vandors
 include('vandors/mr-image-resize/mr-image-resize.php');
+include('vandors/cmb/init.php');
 
 
 

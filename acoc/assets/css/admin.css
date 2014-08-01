@@ -67,3 +67,14 @@
 .acoc_tinymce_shortcode_holder .acoc_tinymce_toggle_trigger.active:hover { color: #000; background-color: #eee; text-decoration: none; }
 .acoc_tinymce_shortcode_holder .acoc_tinymce_toggle_trigger.active:after, .acoc_tinymce_shortcode_holder .acoc_tinymce_toggle_trigger.active:hover:after{ content: '\f460'; }
 .acoc_tinymce_shortcode_holder .acoc_tinymce_shortcode_fields { display: none; overflow: hidden; padding: 15px; border: 1px solid #ddd; border-top: 0px; }
+
+
+
+.cmb-nested-table tr td{ width:80%; }
+
+.ot-metabox-wrapper .format-settings .format-setting.type-textarea iframe{ 
+	min-height:300px; 
+	border-left:solid 1px rgba(204, 204, 204, 0.33); 
+	border-right:solid 1px rgba(204, 204, 204, 0.33); 
+	width:99.7% !important; 
+}
