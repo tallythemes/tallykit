@@ -30,7 +30,7 @@ $settings = array(
 	'labels'             => $labels,
 	'rewrite'            => array( 'slug' => 'doc-item' ),
 	'supports'           => array( 'title', 'editor' ),
-	'menu_icon'          => 'dashicons-book',
+	'menu_icon'          => 'dashicons-welcome-learn-more',
 );
 new acoc_post_type_register($settings);
 

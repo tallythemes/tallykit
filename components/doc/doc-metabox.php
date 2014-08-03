@@ -25,7 +25,7 @@ function tallykit_doc_content_metabox_register() {
 			'class'       => '',
 			'settings'     => array(
 				array(
-				 	'id'          => 'Content',
+				 	'id'          => 'content',
 					'label'       => __('Content', 'tallykit_textdomain'),
 					'desc'        => '',
 					'std'         => '',

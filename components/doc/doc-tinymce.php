@@ -20,7 +20,7 @@ $tinymce_fields[] = array(
 			'class' => '',
 			'label' => 'Category',
 			'type' => 'taxonomy_multi_select',
-			'std' => 'no',
+			'std' => '',
 			'des' => __( 'Select one or more category to filter your query', 'tallykit_textdomain' ),
 			'taxonomy' => 'tallykit_doc_category'
 		),
@@ -97,37 +97,13 @@ $tinymce_fields[] = array(
 			'des' => '',
 			'post_type' => 'tallykit_doc'
 		),
-		array(
-			'id' => 'top_nav',
-			'class' => '',
-			'label' => 'Top Nav',
-			'type' => 'select',
-			'std' => 'no',
-			'des' => '',
-			'options' => array(
-				array('label' => 'no', 'value' => 'no'),
-				array('label' => 'yes', 'value' => 'yes'),
-			)
-		),
-		array(
-			'id' => 'side_nav',
-			'class' => '',
-			'label' => 'Side Nav',
-			'type' => 'select',
-			'std' => 'yes',
-			'des' => '',
-			'options' => array(
-				array('label' => 'yes', 'value' => 'yes'),
-				array('label' => 'no', 'value' => 'no'),
-			)
-		),
 	)
 );
 
 
 $settings = array(
 	'uid' => 'tallykit_doc_tinymce',
-	'button_title' => '<div class="dashicons dashicons-book" style="line-height:24px;"></div>',
+	'button_title' => '<div class="dashicons dashicons-welcome-learn-more" style="line-height:24px;"></div>',
 	'button_url' => '',
 	'title' => 'Doc Shortcodes',
 	'options' => $tinymce_fields,

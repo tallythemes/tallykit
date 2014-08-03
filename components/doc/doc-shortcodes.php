@@ -92,8 +92,6 @@ add_shortcode('tk_doc_single', 'tallykit_doc_sc_single');
 function tallykit_doc_sc_single( $atts, $content = null  ) {
 	extract( shortcode_atts( array(
 		'id'		=> '',
-		'top_nav'	=> 'no',
-		'side_nav'	=> 'yes',
 	), $atts ) );
 	
 	$output = '';

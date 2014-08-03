@@ -65,7 +65,7 @@ new acoc_theme_compat($options);
 
 
 function tallykit_doc_theme_compact_single_content(){
-	return do_shortcode('[tk_doc_single id="'.get_the_ID().'" top_nav="no" side_nav="yes" /]');
+	return do_shortcode('[tk_doc_single id="'.get_the_ID().'"/]');
 }
 function tallykit_doc_theme_compact_archive_content(){
 	return do_shortcode('[tk_doc_archive category="" exclude_category="" limit="10" orderby="post_date" order="DESC" ids="" /]');
@@ -104,4 +104,12 @@ function tallykit_doc_do_reset_page_content(){
 		remove_action( 'tally_after_entry', 'tally_do_author_box_single', 8 );
 		remove_action( 'tally_after_endwhile', 'tally_do_posts_nav' );
 	}
+}
+
+add_filter('tally_ot_page_metabox', 'tallykit_doc_tally_ot_page_metabox');
+function tallykit_doc_tally_ot_page_metabox($post){
+	if(post_type_exists('tallykit_doc')){
+		$post[] = 'tallykit_doc';
+	}
+	return $post;
 }

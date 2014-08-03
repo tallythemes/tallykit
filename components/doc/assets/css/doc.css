@@ -1,0 +1,64 @@
+/*===================================================
+	Single Page
+===================================================*/
+
+/* Content
+--------------------------------------*/
+.tallykit_doc_single .tk_doc_content{ width:72%; float:right; }
+.tallykit_doc_single .tk_doc_content_inner{  }
+
+.tallykit_doc_single .tk_doc_content .tk_doc_entry{ position:relative; }
+.tallykit_doc_single .tk_doc_content .tk_doc_entry .tk_doc_entry_inner{ margin-top:90px; padding-bottom:60px; border-bottom:solid 3px; }
+.tallykit_doc_single .tk_doc_content .tk_doc_entry:first-child .tk_doc_entry_inner{ margin:0; }
+
+.tallykit_doc_single .tk_doc_content .tk_doc_title{ 
+	font-size:24px; 
+	font-weight:bold; 
+	margin-bottom:25px; 
+	padding:10px 20px; 
+	text-transform:uppercase;
+	 background:#F00; 
+	color:#FFF !important; 
+}
+.tallykit_doc_single .tk_doc_content .tk_doc_title a{ float:right; margin-top:10px; }
+.tallykit_doc_single .tk_doc_content .tk_doc_title a i{ color:#FFF !important; }
+.tallykit_doc_single .tk_doc_content .tk_doc_title a:hover{ text-decoration:none; }
+
+.tallykit_doc_single .tk_doc_content .tk_doc_backtotop{ 
+	background:#F00; 
+	color:#FFF !important; 
+	text-align:center; 
+	border-radius: 30px;
+	padding: 4px 0;
+	position: absolute;
+	width: 140px;
+	bottom: -15px;
+	left: 50%;
+	margin-left: -70px;
+	font-size:11px;
+	text-transform:uppercase;
+	font-weight:bold;
+}
+.tallykit_doc_single .tk_doc_content .tk_doc_backtotop i.dashicons{ color:#FFF !important; font-size:90%; padding-top:8px; }
+.tallykit_doc_single .tk_doc_content .tk_doc_backtotop:hover{ text-decoration:none; }
+
+
+/* Nav
+--------------------------------------*/
+.tallykit_doc_single .tk_doc_side_nav{ width:25%; float:left; }
+.tallykit_doc_single .tk_doc_side_nav .tk_doc_side_nav_inner{ background-color:#F1F1F1; border:solid 1px;  }
+.tallykit_doc_single .tk_doc_side_nav ul{ margin:0; padding:0; list-style-type:none; }
+.tallykit_doc_single .tk_doc_side_nav ul li{ margin:0; padding:0; list-style-type:none; border-bottom:solid 1px; padding:10px 15px;  }
+.tallykit_doc_single .tk_doc_side_nav ul li:last-child{ border:0; }
+.tallykit_doc_single .tk_doc_side_nav ul li a{  }
+.tallykit_doc_single .tk_doc_side_nav ul li a:hover{ text-decoration:none; }
+
+
+
+/*===================================================
+	Archive Page
+===================================================*/
+.tallykit_doc_archive .tk_doc_entry{ border-bottom:solid 1px; margin-top:18px; }
+.tallykit_doc_archive .tk_doc_entry h2{ font-size:20px; line-height:30px; font-weight:bold; }
+.tallykit_doc_archive .tk_doc_entry h2 i.dashicons{ font-size: 26px; line-height: 36px; margin-right: 10px; }
+.tallykit_doc_archive .tk_doc_entry h2 a:hover{ text-decoration:none; }
