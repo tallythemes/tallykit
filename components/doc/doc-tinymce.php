@@ -3,7 +3,7 @@
  *
  * Add TinyMCE buttons for the Shortcodes
  *
- * @since TallyKit (1.0)
+ * @since TallyKit (2.0)
  *
  * @uses class acoc_tinymce_register  
 **/

@@ -2,6 +2,8 @@
 /**
  * TallyKit Doc
  *
+ * @since TallyKit (2.0)
+ *
  * This file generate portfolio post type, shortcode, 
  * widgets, theme compat and other require elements
  *

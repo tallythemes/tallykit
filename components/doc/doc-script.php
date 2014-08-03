@@ -3,7 +3,7 @@
  *
  * Register CSS and JavaSctipts
  *
- * @since TallyKit (1.0)
+ * @since TallyKit (2.0)
  *
  * @uses action wp_enqueue_scripts  
 **/

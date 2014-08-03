@@ -3,7 +3,7 @@
  *
  * Register Metabox
  *
- * @since TallyKit (1.0)
+ * @since TallyKit (2.0)
  *
  * @uses class acoc_metabox_register  
 **/

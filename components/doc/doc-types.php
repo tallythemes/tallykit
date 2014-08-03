@@ -3,7 +3,7 @@
  *
  * Register Post type
  *
- * @since TallyKit (1.0)
+ * @since TallyKit (2.0)
  *
  * @uses class acoc_post_type_register  
 **/

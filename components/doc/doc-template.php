@@ -3,7 +3,7 @@
  *
  * Setup Template Folder path
  *
- * @since TallyKit (1.8)
+ * @since TallyKit (2.0)
  *
  * @uses class acoc_template_file_loader  
 **/
