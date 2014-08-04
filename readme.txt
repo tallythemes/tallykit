@@ -4,7 +4,7 @@ Donate link: http://tallythemes.com/
 Tags: portfolio, faq, testimonials, slideshow, people, shortcodes, gallery, logos
 Requires at least: 3.8
 Tested up to: 3.9.1
-Stable tag: 2.0
+Stable tag: 2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -37,6 +37,14 @@ The simplest way to install is to click on 'Plugins' then 'Add' and type 'tallyk
 
 
 == Changelog ==
+
+= 2.1 =
+* Add Theme Compact on "GALLERY" component
+
+* Add Theme Compact on "PEOPLE" component
+* Add Theme Compact on "TESTIMONIAL" component
+* Add Theme Compact on "LOGO" component
+* Add Theme Compact on "PORTFOLIO" component
 
 = 2.0 =
 * Update ACOC framework
