@@ -82,7 +82,7 @@ function tallykit_doc_theme_compact_category_content(){
  *
  * Making the Component compatible with Tally Framework Theme
  *
- * @since TallyKit (1.8)
+ * @since TallyKit (2.0)
  *
 **/
 add_action('tally_reset_loops', 'tallykit_doc_do_reset_page_content', 40);
