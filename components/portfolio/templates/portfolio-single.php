@@ -13,7 +13,7 @@ $portfolio_query = new WP_Query( $query );
             
 			<div class="tk_portfolio_single_content">
             	<h3><?php _e('Project Description', 'tallykit_portfolio'); ?></h3>
-                <?php the_content(); ?>
+                <?php echo apply_filters('tallykit_portfolio_content', get_the_content()); ?>
             </div>
             <div class="tk_portfolio_single_info">
             	<h3><?php _e('Project Details', 'tallykit_portfolio'); ?></h3>
