@@ -27,17 +27,3 @@ function tallykit_logo_template_path($type='url', $extra = ''){
 	}
 }
 endif;
-
-
-
-
-
-
-/*************************** Theme Compat *****************************
- *
- * Making the Component compatible with any theme
- *
- * @since TallyKit (1.0)
- *
- * @uses class acoc_theme_compat
-**/

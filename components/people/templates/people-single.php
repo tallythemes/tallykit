@@ -5,7 +5,7 @@ $people_query = new WP_Query( $query );
 	<?php if( $people_query->have_posts()): ?>
 		<?php while ( $people_query->have_posts() ) : $people_query->the_post(); ?>
             <div class="tk_people_single_content">
-                <?php the_content(); ?>
+               <?php echo apply_filters('tallykit_people_content', get_the_content()); ?>
             </div>
             <div class="tk_people_single_info">
             	<?php $image_url = acoc_image_size(get_post_meta(get_the_ID(), 'tallykit_people_single_image', true) ,'500', ''); ?>
@@ -74,7 +74,7 @@ $people_query = new WP_Query( $query );
             </div>
             <div class="clear"></div>
 		<?php endwhile; ?>
-        <?php wp_reset_postdata(); ?>
+        
     <?php else: ?>
     	<?php _e('No People found.', 'tallykit_textdomain'); ?>
     <?php endif; ?>
