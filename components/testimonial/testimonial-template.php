@@ -53,8 +53,8 @@ $options = array(
 	'archive_content'	=> 'tallykit_testimonial_theme_compact_archive_content',
 	'taxonomy_content'	=> 'tallykit_testimonial_theme_compact_category_content',
 			
-	'archive_title'		=> _('Testimonials Archive', 'tallykit_textdomain'),
-	'taxonomy_title'	=> _('Testimonials of ', 'tallykit_textdomain'),
+	'archive_title'		=> __('Testimonials Archive', 'tallykit_textdomain'),
+	'taxonomy_title'	=> __('Testimonials of ', 'tallykit_textdomain'),
 			
 	'content_filter_name'	=> NULL,
 );

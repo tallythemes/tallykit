@@ -55,8 +55,8 @@ $options = array(
 	'archive_content'	=> 'tallykit_gallery_theme_compact_archive_content',
 	'taxonomy_content'	=> 'tallykit_gallery_theme_compact_category_content',
 			
-	'archive_title'		=> _('Gallery Archive', 'tallykit_textdomain'),
-	'taxonomy_title'	=> _('Gallery of ', 'tallykit_textdomain'),
+	'archive_title'		=> __('Gallery Archive', 'tallykit_textdomain'),
+	'taxonomy_title'	=> __('Gallery of ', 'tallykit_textdomain'),
 			
 	'content_filter_name'	=> NULL,
 );

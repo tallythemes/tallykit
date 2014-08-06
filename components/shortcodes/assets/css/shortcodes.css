@@ -594,35 +594,55 @@ body .ui-tooltip {
 /* * ---styles for browsers smaller than 800px;
 ================================================== */
 @media only screen and (max-width: 800px) {
-	
+ 
 }
 
 
 /*---styles for browsers smaller than 768px;
 ================================================== */
-@media only screen and (max-width: 768px) {	
+@media only screen and (max-width: 768px) { 
+	.tallykit_single_gallery .tk_single_gallery_image .icon-search-plus { bottom: 0px; right: 2px; }
+	.tallykit-shortcode-about-icon { display:none; }
+	.tallykit-shortcode-about { width: 368px; }
 
 }
 
 /*---styles for browsers smaller than 600px;
 ================================================== */
-@media only screen and (max-width: 600px) {	
-	/*Shortcode Coloum*/
-.tallykit-shortcode-one-half, 
-.tallykit-shortcode-one-third, 
-.tallykit-shortcode-two-third, 
-.tallykit-shortcode-three-fourth, 
-.tallykit-shortcode-one-fourth, 
-.tallykit-shortcode-one-fifth, 
-.tallykit-shortcode-two-fifth, 
-.tallykit-shortcode-three-fifth, 
-.tallykit-shortcode-four-fifth, 
-.tallykit-shortcode-one-sixth, 
-.tallykit-shortcode-five-sixth { width: 100%; }
+@media only screen and (max-width: 600px) { 
+	 /*Shortcode Coloum*/
+	.tallykit-shortcode-one-half, 
+	.tallykit-shortcode-one-third, 
+	.tallykit-shortcode-two-third, 
+	.tallykit-shortcode-three-fourth, 
+	.tallykit-shortcode-one-fourth, 
+	.tallykit-shortcode-one-fifth, 
+	.tallykit-shortcode-two-fifth, 
+	.tallykit-shortcode-three-fifth, 
+	.tallykit-shortcode-four-fifth, 
+	.tallykit-shortcode-one-sixth, 
+	.tallykit-shortcode-five-sixth { width: 100%; }
+
+	.tally-social-icons { float:none; margin-left: 0px; }
+	
+	.tallykit-blog-timeline-post .tk-timeline-thum{ width:100%; }
+	.tallykit-blog-timeline .tallykit-blog-timeline-list .tallykit-blog-timeline-post .tk-post-content { width:85%; }
+	.tallykit-blog-timeline-post .tk-timeline-thum ul li { width: 92px; height: 82px; }
+	.tallykit-blog-timeline-post .tk-timeline-thum img { border: 2px solid transparent !important; }
+	
+	.tallykit-blog-timeline .tallykit-blog-timeline-list .tallykit-blog-author-img { height:70px; }
+	.tallykit-blog-timeline .tallykit-blog-timeline-list .tallykit-blog-author-img img { margin-bottom:0px; }
+	
+	.tk_people_item_image img { width:100%; }
 }
 
 /*---styles for browsers smaller than 480px;
 ================================================== */
-@media only screen and (max-width: 480px) {	
-
+@media only screen and (max-width: 480px) { 
+	 .tallykit-blog-timeline .tallykit-blog-timeline-list .tallykit-blog-timeline-post .tk-post-content {width: 90%; }
+	 .tallykit-blog-timeline-post .tk-timeline-thum img { max-width: 98%; }
+	 
+	 .tallykit-shortcode-about .tallykit-about-content { padding: 30px 79px 45px 79px; }
+	 
+	 .tallykit_single_gallery .tk_single_gallery_image .icon-search-plus { bottom: 1px; }
 }

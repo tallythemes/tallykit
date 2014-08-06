@@ -52,8 +52,8 @@ $options = array(
 	'archive_content'	=> 'tallykit_people_theme_compact_archive_content',
 	'taxonomy_content'	=> 'tallykit_people_theme_compact_category_content',
 			
-	'archive_title'		=> _('People Archive', 'tallykit_textdomain'),
-	'taxonomy_title'	=> _('People of ', 'tallykit_textdomain'),
+	'archive_title'		=> __('People Archive', 'tallykit_textdomain'),
+	'taxonomy_title'	=> __('People of ', 'tallykit_textdomain'),
 			
 	'content_filter_name'	=> 'tallykit_people_content',
 );

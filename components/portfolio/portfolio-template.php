@@ -52,8 +52,8 @@ $options = array(
 	'archive_content'	=> 'tallykit_portfolio_theme_compact_archive_content',
 	'taxonomy_content'	=> 'tallykit_portfolio_theme_compact_category_content',
 			
-	'archive_title'		=> _('Portfolio Archive', 'tallykit_textdomain'),
-	'taxonomy_title'	=> _('Portfolio of ', 'tallykit_textdomain'),
+	'archive_title'		=> __('Portfolio Archive', 'tallykit_textdomain'),
+	'taxonomy_title'	=> __('Portfolio of ', 'tallykit_textdomain'),
 			
 	'content_filter_name'	=> 'tallykit_portfolio_content',
 );
