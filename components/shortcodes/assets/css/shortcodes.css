@@ -591,6 +591,12 @@ body .ui-tooltip {
 .tallykit-blog-timeline .tallykit-blog-timeline-list:nth-child(2n+2) .tallykit-blog-timeline-post .tk-timeline-thum .date{ text-align:right; }
 
 
+.aq-template-wrapper .aq-block-aq_row_block{ margin-left: -1000px;
+padding-left: 1000px;
+margin-right: -1000px;
+padding-right: 1000px; }
+
+
 /* * ---styles for browsers smaller than 800px;
 ================================================== */
 @media only screen and (max-width: 800px) {

@@ -38,3 +38,10 @@ function tallykit_shortcodes_script_loader(){
 	wp_enqueue_style( 'tallykit-shortcodes', TALLYKIT_COMPONENTS_URL.'shortcodes/assets/css/shortcodes.css', '', '1.0' );
 	
 }
+
+
+add_action('admin_enqueue_scripts', 'tallykit_shortcode_admin_scripts');
+function tallykit_shortcode_admin_scripts(){
+	wp_enqueue_style( 'tallykit-admin-shortcodes', TALLYKIT_COMPONENTS_URL.'shortcodes/assets/css/shortcode-admin.css', '', '1.0' );	
+	wp_enqueue_script( 'tallykit-admin-shortcodes', TALLYKIT_COMPONENTS_URL.'shortcodes/assets/js/shortcode-admin.js', '', '1.0' );
+}

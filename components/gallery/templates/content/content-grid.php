@@ -2,7 +2,14 @@
 	<a href="<?php the_permalink(); ?>">
 		<?php
 			$all_images = get_post_meta(get_the_ID(), 'tallykit_gallery_images', true);
-			if(is_array($all_images) && !empty($all_images)){ $the_image = $all_images[0]; }
+			if(is_array($all_images) && !empty($all_images)){ 
+				$i = 0;
+				foreach($all_images as $all_image){		
+					if($i == 0){ $the_image = $all_image; }
+					$i++;	
+				}
+			
+			}
 			
 			$image_url = $the_image['Image'];
 			if(($the_image['custom_thumbnail'] == 'on') && ($the_image['thumbnail'] != '')){ $image_url = $the_image['thumbnail']; }

@@ -1,0 +1,61 @@
+#blocks-to-edit .block-container.block-aq_column_block,
+#blocks-to-edit .block-container.block-aq_column2_block{ margin-bottom:5px; background-color: #D3D3D3;  }
+
+#blocks-to-edit .block-container.block-aq_column_block a.row-edit,
+#blocks-to-edit .block-container.block-aq_column2_block a.row-edit{ border-bottom:0; text-decoration:none; color: }
+
+#blocks-to-edit .block-container.block-aq_column_block a.delete,
+#blocks-to-edit .block-container.block-aq_column2_block a.delete{ color:#F00 !important; }
+
+#blocks-to-edit .block-container.block-aq_column_block a.delete,
+#blocks-to-edit .block-container.block-aq_column2_block a.delete,
+#blocks-to-edit .block-container.block-aq_column_block a.row-edit,
+#blocks-to-edit .block-container.block-aq_column2_block a.row-edit{ position:absolute; top:10px; right:10px; }
+
+#blocks-to-edit .block-container.block-aq_column_block a.delete,
+#blocks-to-edit .block-container.block-aq_column2_block a.delete{ right:34px; }
+
+
+#page-builder #blocks-to-edit .block-handle{ border: 1px solid #0074a2; background-color: #0074a2; }
+#page-builder #blocks-to-edit .block-handle .block-title, 
+#page-builder #blocks-to-edit .block-handle .block-title .in-block-title{ color:#FFF; }
+
+#page-builder-column #blocks-archive .block {
+	margin-bottom: 2%;
+	margin-left: 2%;
+	width: 46%;
+	text-align: center;
+}
+
+#page-builder .aqua-watermark{ 
+	content: " ";
+	background: rgba(0, 0, 0, 0.8);
+	z-index: 3;
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	left: 0;
+	top: 0;
+	display: none;
+}
+#page-builder .block-edit-active>.aqua-watermark{ display:block; }
+
+#page-builder .block-controls .block-edit:before{ content: "\f119" !important; color:#FFF; font-size:15px; margin-top:5px; }
+
+#page-builder .block-settings {
+	display: none;
+	border: solid;
+	border-width: 0 1px 1px 1px;
+	border-color: #dfdfdf;
+	padding: 10px 12px;
+	position: fixed;
+	width: 80%;
+	height: 80%;
+	left: 10%;
+	top: 10%;
+	z-index: 6;
+	background: #fff;
+	overflow-y: scroll;
+}
+
+#page-builder .block-settings{  }
