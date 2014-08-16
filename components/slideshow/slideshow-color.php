@@ -17,6 +17,11 @@ function tallykit_slideshow_color_action_hook(){
 		.tallykit_slideshow_item.color_mood_light .tallykit_slideshow_item_inner .tk_slideshow_content{ color:<?php tallykitkit_color('color_headings_light'); ?> !important; }
 		
 		.tallykit_slideshow_item.color_mood_dark .tallykit_slideshow_item_inner .tk_slideshow_content{ color:<?php tallykitkit_color('color_headings_dark'); ?> !important; }
+		
+		/*subtitle*/
+		.tallykit_slideshow_item.color_mood_light .tallykit_slideshow_item_inner .tk_slideshow_subtitle{ color:<?php tallykitkit_color('color_headings_light'); ?> !important; }
+		
+		.tallykit_slideshow_item.color_mood_dark .tallykit_slideshow_item_inner .tk_slideshow_subtitle{ color:<?php tallykitkit_color('color_headings_dark'); ?> !important; }
 	</style>
     <?php	
 }
