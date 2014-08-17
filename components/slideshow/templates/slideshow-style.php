@@ -4,7 +4,7 @@ if(is_array($slider_items)):
 ?>
     <style type="text/css">
 		<?php foreach($slider_items as $slider_style_item): ?>
-			#tallykit_slideshow_item_<?php echo $style_count; ?>{
+			#tallykit_slideshow_item_<?php echo $id; ?>_<?php echo $style_count; ?>{
 				height:<?php echo get_post_meta($id, 'tallykit_slideshow_h', true ); ?>;
 				<?php if(is_array($slider_style_item['bg'])): ?>
 					<?php if(isset($slider_style_item['bg']['background-attachment'])): ?>background-attachment:<?php echo $slider_style_item['bg']['background-attachment'] ?>;<?php endif; ?>
@@ -16,13 +16,13 @@ if(is_array($slider_items)):
 				<?php endif; ?>
 			}			
 			<?php if($slider_style_item['active_padding'] == 'on'): ?>
-				#tallykit_slideshow_item_<?php echo $style_count; ?> .tallykit_slideshow_item_inner{
+				#tallykit_slideshow_item_<?php echo $id; ?>_<?php echo $style_count; ?> .tallykit_slideshow_item_inner{
 					<?php if($slider_style_item['padding_top'] != ''): ?> padding-top: <?php echo $slider_style_item['padding_top']; ?>px; <?php endif; ?>
 					<?php if($slider_style_item['padding_bottom'] != ''): ?> padding-bottom: <?php echo $slider_style_item['padding_bottom']; ?>px; <?php endif; ?>
 				}
 			<?php endif; ?>
 			
-			#tallykit_slideshow_item_<?php echo $style_count; ?> .tallykit_slideshow_item_inner{ max-width:<?php echo $slider_style_item['content_width']; ?>; }
+			#tallykit_slideshow_item_<?php echo $id; ?>_<?php echo $style_count; ?> .tallykit_slideshow_item_inner{ max-width:<?php echo $slider_style_item['content_width']; ?>; }
 		<?php 
 			$style_count++; 
 			endforeach; 

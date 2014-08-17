@@ -32,8 +32,10 @@ endif;
 add_filter('the_content', 'tallykit_parallax_wp_content_filter');
 function tallykit_parallax_wp_content_filter($content){
 	
-	if(get_post_meta(get_the_ID(), 'tallykit_parallax_active', true) == 'yes'){
-		$content = do_shortcode('[tk_parallax id="'.get_the_ID().'"]');
+	if(!is_404() && get_post()){
+		if(get_post_meta(get_the_ID(), 'tallykit_parallax_active', true) == 'yes'){
+			$content = do_shortcode('[tk_parallax id="'.get_the_ID().'"]');
+		}
 	}
 	
 	return $content;	
@@ -43,36 +45,51 @@ function tallykit_parallax_wp_content_filter($content){
 /*Stting for tally framework*/
 add_filter('tally_main_class', 'tallykit_parallax_tally_main_class_filter',20);
 function tallykit_parallax_tally_main_class_filter($class){
-	if(get_post_meta(get_the_ID(), 'tallykit_parallax_active', true) == 'yes'){ $class = '';}
+	
+	if(!is_404() && get_post()){
+		if(get_post_meta(get_the_ID(), 'tallykit_parallax_active', true) == 'yes'){ $class = '';}
+	}
 	return $class;	
 }
 
 
 add_filter('tally_sitebar_layout_option', 'tallykit_parallax_tally_sitebar_layout_option', 12);
 function tallykit_parallax_tally_sitebar_layout_option($layout){
-	if(get_post_meta(get_the_ID(), 'tallykit_parallax_active', true) == 'yes'){ $layout = 'full-width-content';}
+	
+	if(!is_404() && get_post()){
+		if(get_post_meta(get_the_ID(), 'tallykit_parallax_active', true) == 'yes'){ $layout = 'full-width-content';}
+	}
 	return $layout;	
 }
 
 add_filter('tally_is_subheader', 'tallykit_parallax_tally_is_subheader', 12);
 function tallykit_parallax_tally_is_subheader($layout){
-	if(get_post_meta(get_the_ID(), 'tallykit_parallax_active', true) == 'yes'){
-		$layout = 'no';
+	
+	if(!is_404() && get_post()){
+		if(get_post_meta(get_the_ID(), 'tallykit_parallax_active', true) == 'yes'){
+			$layout = 'no';
+		}
 	}
 	return $layout;	
 }
 
 add_filter('tally_is_comment_template', 'tallykit_parallax_tally_is_comment_template', 12);
 function tallykit_parallax_tally_is_comment_template($layout){
-	if(get_post_meta(get_the_ID(), 'tallykit_parallax_active', true) == 'yes'){
-		$layout = 'no';
+	
+	if(!is_404() && get_post()){
+		if(get_post_meta(get_the_ID(), 'tallykit_parallax_active', true) == 'yes'){
+			$layout = 'no';
+		}
 	}
 	return $layout;	
 }
 
 function tallykit_parallax_custom_body_class( array $classes ){
-	if(get_post_meta(get_the_ID(), 'tallykit_parallax_active', true) == 'yes'){
-		$classes[] = 'parallax';
+	
+	if(!is_404() && get_post()){
+		if(get_post_meta(get_the_ID(), 'tallykit_parallax_active', true) == 'yes'){
+			$classes[] = 'parallax';
+		}
 	}
 	return $classes;
 }

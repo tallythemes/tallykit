@@ -1,18 +1,9 @@
 <div class="tk_gallery_item">
 	<a href="<?php the_permalink(); ?>">
-		<?php
-			$all_images = get_post_meta(get_the_ID(), 'tallykit_gallery_images', true);
-			if(is_array($all_images) && !empty($all_images)){ 
-				$i = 0;
-				foreach($all_images as $all_image){		
-					if($i == 0){ $the_image = $all_image; }
-					$i++;	
-				}
-			
-			}
-			
-			$image_url = $the_image['Image'];
-			if(($the_image['custom_thumbnail'] == 'on') && ($the_image['thumbnail'] != '')){ $image_url = $the_image['thumbnail']; }
+		<?php		
+			$image_url = '';
+			$thumb_data = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full' ); // Get post by ID
+			if( $thumb_data[0] != '' ){ $image_url = $thumb_data[0]; }
 		?>
 		<img src="<?php echo acoc_image_size($image_url, TALLYKIT_GALLERY_THUMB_W, TALLYKIT_GALLERY_THUMB_H, true); ?>" width="<?php echo TALLYKIT_GALLERY_THUMB_W; ?>" height="<?php echo TALLYKIT_GALLERY_THUMB_H; ?>" alt="<?php the_title(); ?>"  />
 		<div class="tk_gallery_item_details">
