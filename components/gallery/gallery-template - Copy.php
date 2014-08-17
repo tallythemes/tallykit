@@ -41,32 +41,26 @@ endif;
  *
  * @uses class acoc_theme_compat
 **/
-
-$tallykit_gallery_theme_compact = new acoc_theme_compat2;
-
-$tallykit_gallery_theme_compact->add_single(array(
-	'post_type'		=> 'tallykit_gallery', 
-	'filter'		=> '',
-	'template_3'	=> 'acoc.php',
-	'template_2'	=> 'page.php',
-	'template_1'	=> 'index.php',
-	'content'		=> 'tallykit_gallery_theme_compact_single_content',
-));
-$tallykit_gallery_theme_compact->add_archive(array(
-	'post_type'		=> 'tallykit_gallery',
-	'title'			=> 'Gallry Archive', 
-	'template_3'	=> 'acoc.php',
-	'template_2'	=> 'page.php',
-	'template_1'	=> 'index.php',
-	'content'		=> 'tallykit_gallery_theme_compact_archive_content',
-));
-$tallykit_gallery_theme_compact->add_taxonomy(array(
-	'taxonomy'		=> 'tallykit_gallery_category', 
-	'template_3'	=> 'acoc.php',
-	'template_2'	=> 'page.php',
-	'template_1'	=> 'index.php',
-	'content'		=> 'tallykit_gallery_theme_compact_category_content',
-));
+$options = array(
+	'post_type'			=> 'tallykit_gallery',
+	'taxonomy'			=> 'tallykit_gallery_category',
+	'single_page' 		=> true,
+	'archive_page'		=> true,
+	'taxonomy_page'		=> true,
+	'template_3'		=> 'acoc.php',
+	'template_2'		=> 'page.php',
+	'template_1'		=> 'index.php',
+		
+	'single_content'	=> 'tallykit_gallery_theme_compact_single_content',
+	'archive_content'	=> 'tallykit_gallery_theme_compact_archive_content',
+	'taxonomy_content'	=> 'tallykit_gallery_theme_compact_category_content',
+			
+	'archive_title'		=> __('Gallery Archive', 'tallykit_textdomain'),
+	'taxonomy_title'	=> __('Gallery of ', 'tallykit_textdomain'),
+			
+	'content_filter_name'	=> NULL,
+);
+new acoc_theme_compat($options);
 
 
 
