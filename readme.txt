@@ -51,6 +51,7 @@ The simplest way to install is to click on 'Plugins' then 'Add' and type 'tallyk
 * Update theme compact loader class
 
 * Use Featured image for images
+* improve Blog Timeline shortcode CSS
 
 = 2.3 =
 * Fix gallery template issue.
