@@ -38,32 +38,23 @@ endif;
  *
  * @uses class acoc_theme_compat
 **/
-$options = array(
-	'post_type'			=> 'tallykit_logo',
-	'taxonomy'			=> 'tallykit_logo_category',
-	'single_page' 		=> false,
-	'archive_page'		=> true,
-	'taxonomy_page'		=> true,
-	'template_3'		=> 'acoc.php',
-	'template_2'		=> 'page.php',
-	'template_1'		=> 'index.php',
-		
-	'single_content'	=> 'tallykit_logo_theme_compact_single_content',
-	'archive_content'	=> 'tallykit_logo_theme_compact_archive_content',
-	'taxonomy_content'	=> 'tallykit_logo_theme_compact_category_content',
-			
-	'archive_title'		=> __('Logo Archive', 'tallykit_textdomain'),
-	'taxonomy_title'	=> __('Logo of ', 'tallykit_textdomain'),
-			
-	'content_filter_name'	=> NULL,
-);
-new acoc_theme_compat($options);
+$tallykit_logo_theme_compact = new acoc_theme_compat2;
 
+$tallykit_logo_theme_compact->add_archive(array(
+	'post_type'		=> 'tallykit_logo',
+	'template_3'	=> 'acoc.php',
+	'template_2'	=> 'page.php',
+	'template_1'	=> 'index.php',
+	'content'		=> 'tallykit_logo_theme_compact_archive_content',
+));
+$tallykit_logo_theme_compact->add_taxonomy(array(
+	'taxonomy'		=> 'tallykit_logo_category', 
+	'template_3'	=> 'acoc.php',
+	'template_2'	=> 'page.php',
+	'template_1'	=> 'index.php',
+	'content'		=> 'tallykit_logo_theme_compact_category_content',
+));
 
-
-function tallykit_logo_theme_compact_single_content(){
-	
-}
 function tallykit_logo_theme_compact_archive_content(){
 	return do_shortcode('[tk_logo_grid limit="12" columns="4" filter="no" /]');
 }
@@ -99,12 +90,4 @@ function tallykit_logo_do_reset_page_content(){
 		remove_action( 'tally_after_entry', 'tally_do_author_box_single', 8 );
 		remove_action( 'tally_after_endwhile', 'tally_do_posts_nav' );
 	}
-}
-
-add_filter('tally_ot_page_metabox', 'tallykit_logo_tally_ot_page_metabox');
-function tallykit_logo_tally_ot_page_metabox($post){
-	if(post_type_exists('tallykit_logo')){
-		$post[] = 'tallykit_logo';
-	}
-	return $post;
 }

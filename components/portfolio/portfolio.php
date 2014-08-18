@@ -14,7 +14,6 @@ if ( !defined( 'ABSPATH' ) ) exit;
 
 include('portfolio-types.php');
 include('portfolio-metabox.php');
-include('portfolio-options.php');
 include('portfolio-template.php');
 include('portfolio-script.php'); 
 include('portfolio-shortcodes.php');

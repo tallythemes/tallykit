@@ -8,7 +8,10 @@ $people_query = new WP_Query( $query );
                <?php echo apply_filters('tallykit_people_content', get_the_content()); ?>
             </div>
             <div class="tk_people_single_info">
-            	<?php $image_url = acoc_image_size(get_post_meta(get_the_ID(), 'tallykit_people_single_image', true) ,'500', ''); ?>
+            	<?php
+					$thumb_data = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full' ); // Get post by ID
+					$image_url = acoc_image_size($thumb_data[0] ,'500', ''); 
+				?>
                 <div class="tk_people_image">
             		<img src="<?php echo $image_url; ?>" alt="<?php the_title(); ?>"  />
                     <h3><?php the_title(); ?></h3>

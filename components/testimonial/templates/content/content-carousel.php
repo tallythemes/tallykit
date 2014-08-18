@@ -3,7 +3,8 @@
 	<div class="tallykit_testimonial_item_info">
     	<div class="tallykit_testimonial_item_arrow_wrap"><div class="tallykit_testimonial_item_arrow"></div></div>
     	<?php
-			$image_url = get_post_meta(get_the_ID(), 'tallykit_testimonial_image', true);
+			$thumb_data = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full' ); // Get post by ID
+            $image_url = $thumb_data[0];
 		?>
 		<img src="<?php echo acoc_image_size($image_url, '150', '150'); ?>" alt="<?php the_title(); ?>"  />
 		<span class="tallykit_testimonial_item_author"><?php the_title(); ?></span><br />

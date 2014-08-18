@@ -29,7 +29,7 @@ $settings = array(
 	'args'               => array(),
 	'labels'             => $labels,
 	'rewrite'            => array( 'slug' => 'logo-item' ),
-	'supports'           => array( 'title'),
+	'supports'           => array( 'title', 'thumbnail'),
 	'menu_icon'          => 'dashicons-forms',
 );
 new acoc_post_type_register($settings);
@@ -61,16 +61,10 @@ $post_columns->add_column('title',
 $post_columns->add_column('post_thumb_logo',
   array(
 		'label' => __('Thumb', 'tallykit_textdomain'),
-		'type'  => 'text',
-		'text'  => ''
+		'type'  => 'thumb',
+		'size'  => 'thumbnail'
 	)
 );
-add_filter('cpt_columns_text_post_thumb_logo', 'tallykit_logo_cpt_column_Thumb_filter');
-function tallykit_logo_cpt_column_Thumb_filter(){
-	$meta = get_post_meta(get_the_ID(), 'tallykit_logo_image', true);
-	$post_columns_image = ( $meta == "" ) ? 'http://placehold.it/70x70' : $meta;
-	return '<img src="'. $post_columns_image .'" style="max-height:100px; max-width:100px;">';
-}
 
 
 
@@ -103,7 +97,7 @@ new acoc_post_taxonomy_filter(array('tallykit_logo' => array('tallykit_logo_cate
  * @uses class acoc_taxonomy_register  
 **/
 $labels = array(
-	'name'                       => _x( 'Categories', 'taxonomy general name', 'tallykit_textdomain' ),
+	'name'                       => _x( 'Logo Categories', 'taxonomy general name', 'tallykit_textdomain' ),
 	'singular_name'              => _x( 'Category', 'taxonomy singular name', 'tallykit_textdomain' ),
 	'search_items'               => __( 'Search Categories', 'tallykit_textdomain' ),
 	'popular_items'              => __( 'Popular Categories', 'tallykit_textdomain' ),

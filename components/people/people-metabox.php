@@ -10,26 +10,6 @@
 $fields = array(); $prefix = 'tallykit_people_';
 
 $fields[] = array(
-	'id' => $prefix.'archive_image',
-	'class' => '',
-	'label' => __( 'Archive Page Image (600x400)', 'tallykit_textdomain' ),
-	'type' => 'image_upload',
-	'std' => '',
-	'des' => __( 'This image will display on the archivbe page of the People. <strong>Image Size 600x400 px</strong>', 'tallykit_textdomain' ),
-	'filter' => '', //sanitize_text_field, esc_attr
-	'size' => '600x400',
-);
-$fields[] = array(
-	'id' => $prefix.'single_image',
-	'class' => '',
-	'label' => __( 'Single Page Image', 'tallykit_textdomain' ),
-	'type' => 'image_upload',
-	'std' => '',
-	'des' => __( 'This image will display on the single page of the People. <strong>Minimume image width will be 500px</strong>', 'tallykit_textdomain' ),
-	'filter' => '', //sanitize_text_field, esc_attr
-	'size' => '500x500',
-);
-$fields[] = array(
 	'id' => $prefix.'position',
 	'class' => '',
 	'label' => __( 'Position Title', 'tallykit_textdomain' ),

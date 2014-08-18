@@ -38,28 +38,37 @@ endif;
  *
  * @uses class acoc_theme_compat
 **/
-$options = array(
-	'post_type'			=> 'tallykit_portfolio',
-	'taxonomy'			=> 'tallykit_portfolio_category',
-	'single_page' 		=> true,
-	'archive_page'		=> true,
-	'taxonomy_page'		=> true,
-	'template_3'		=> 'acoc.php',
-	'template_2'		=> 'page.php',
-	'template_1'		=> 'index.php',
-		
-	'single_content'	=> 'tallykit_portfolio_theme_compact_single_content',
-	'archive_content'	=> 'tallykit_portfolio_theme_compact_archive_content',
-	'taxonomy_content'	=> 'tallykit_portfolio_theme_compact_category_content',
-			
-	'archive_title'		=> __('Portfolio Archive', 'tallykit_textdomain'),
-	'taxonomy_title'	=> __('Portfolio of ', 'tallykit_textdomain'),
-			
-	'content_filter_name'	=> 'tallykit_portfolio_content',
-);
-new acoc_theme_compat($options);
+$tallykit_portfolio_theme_compact = new acoc_theme_compat2;
 
-
+$tallykit_portfolio_theme_compact->add_single(array(
+	'post_type'		=> 'tallykit_portfolio', 
+	'filter'		=> 'tallykit_portfolio_content',
+	'template_3'	=> 'acoc.php',
+	'template_2'	=> 'page.php',
+	'template_1'	=> 'index.php',
+	'content'		=> 'tallykit_portfolio_theme_compact_single_content',
+));
+$tallykit_portfolio_theme_compact->add_archive(array(
+	'post_type'		=> 'tallykit_portfolio',
+	'template_3'	=> 'acoc.php',
+	'template_2'	=> 'page.php',
+	'template_1'	=> 'index.php',
+	'content'		=> 'tallykit_portfolio_theme_compact_archive_content',
+));
+$tallykit_portfolio_theme_compact->add_taxonomy(array(
+	'taxonomy'		=> 'tallykit_portfolio_category', 
+	'template_3'	=> 'acoc.php',
+	'template_2'	=> 'page.php',
+	'template_1'	=> 'index.php',
+	'content'		=> 'tallykit_portfolio_theme_compact_category_content',
+));
+$tallykit_portfolio_theme_compact->add_taxonomy(array(
+	'taxonomy'		=> 'tallykit_portfolio_tag', 
+	'template_3'	=> 'acoc.php',
+	'template_2'	=> 'page.php',
+	'template_1'	=> 'index.php',
+	'content'		=> 'tallykit_portfolio_theme_compact_tag_content',
+));
 
 function tallykit_portfolio_theme_compact_single_content(){
 	return do_shortcode('[tk_portfolio_single id="'.get_the_ID().'" /]');
@@ -69,6 +78,9 @@ function tallykit_portfolio_theme_compact_archive_content(){
 }
 function tallykit_portfolio_theme_compact_category_content(){
 	return do_shortcode('[tk_portfolio_grid category="'.get_query_var('tallykit_portfolio_category').'" limit="9" column="3" filter="no" /]');
+}
+function tallykit_portfolio_theme_compact_tag_content(){
+	return do_shortcode('[tk_portfolio_grid tags="'.get_query_var('tallykit_portfolio_tag').'" limit="9" column="3" filter="no" /]');
 }
 
 
@@ -83,7 +95,7 @@ function tallykit_portfolio_theme_compact_category_content(){
 add_action('tally_reset_loops', 'tallykit_portfolio_do_reset_page_content', 40);
 function tallykit_portfolio_do_reset_page_content(){
 		
-	if( (is_single() && get_post_type() == 'tallykit_portfolio') || is_post_type_archive( 'tallykit_portfolio' ) || (is_tax('tallykit_portfolio_category')) ) {
+	if( (is_single() && get_post_type() == 'tallykit_portfolio') || is_post_type_archive( 'tallykit_portfolio' ) || (is_tax('tallykit_portfolio_category')) || (is_tax('tallykit_portfolio_tag')) ) {
 		
 		remove_action( 'tally_entry_header', 'tally_do_post_media', 4 );
 		remove_action( 'tally_entry_header', 'tally_entry_header_markup_open', 5 );

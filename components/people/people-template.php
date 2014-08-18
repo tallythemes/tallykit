@@ -38,26 +38,30 @@ endif;
  *
  * @uses class acoc_theme_compat
 **/
-$options = array(
-	'post_type'			=> 'tallykit_people',
-	'taxonomy'			=> 'tallykit_people_category',
-	'single_page' 		=> true,
-	'archive_page'		=> true,
-	'taxonomy_page'		=> true,
-	'template_3'		=> 'acoc.php',
-	'template_2'		=> 'page.php',
-	'template_1'		=> 'index.php',
-		
-	'single_content'	=> 'tallykit_people_theme_compact_single_content',
-	'archive_content'	=> 'tallykit_people_theme_compact_archive_content',
-	'taxonomy_content'	=> 'tallykit_people_theme_compact_category_content',
-			
-	'archive_title'		=> __('People Archive', 'tallykit_textdomain'),
-	'taxonomy_title'	=> __('People of ', 'tallykit_textdomain'),
-			
-	'content_filter_name'	=> 'tallykit_people_content',
-);
-new acoc_theme_compat($options);
+$tallykit_people_theme_compact = new acoc_theme_compat2;
+
+$tallykit_people_theme_compact->add_single(array(
+	'post_type'		=> 'tallykit_people', 
+	'filter'		=> 'tallykit_people_content',
+	'template_3'	=> 'acoc.php',
+	'template_2'	=> 'page.php',
+	'template_1'	=> 'index.php',
+	'content'		=> 'tallykit_people_theme_compact_single_content',
+));
+$tallykit_people_theme_compact->add_archive(array(
+	'post_type'		=> 'tallykit_people',
+	'template_3'	=> 'acoc.php',
+	'template_2'	=> 'page.php',
+	'template_1'	=> 'index.php',
+	'content'		=> 'tallykit_people_theme_compact_archive_content',
+));
+$tallykit_people_theme_compact->add_taxonomy(array(
+	'taxonomy'		=> 'tallykit_people_category', 
+	'template_3'	=> 'acoc.php',
+	'template_2'	=> 'page.php',
+	'template_1'	=> 'index.php',
+	'content'		=> 'tallykit_people_theme_compact_category_content',
+));
 
 function tallykit_people_theme_compact_single_content(){
 	return do_shortcode('[tk_people_single id="'.get_the_ID().'"/]');

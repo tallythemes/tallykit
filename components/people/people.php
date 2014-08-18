@@ -14,10 +14,8 @@ if ( !defined( 'ABSPATH' ) ) exit;
 
 include('people-types.php');
 include('people-metabox.php');
-include('people-options.php');
 include('people-template.php');
 include('people-script.php'); 
 include('people-shortcodes.php');
 include('people-tinymce.php');
-include('people-widgets.php');
 include('people-color.php');

@@ -8,17 +8,6 @@
  * @uses class acoc_metabox_register  
 **/
 $fields = array(); $prefix = 'tallykit_logo_';
-
-$fields[] = array(
-	'id' => $prefix.'image',
-	'class' => '',
-	'label' => __( 'Logo Image', 'tallykit_textdomain' ),
-	'type' => 'image_upload',
-	'std' => '',
-	'des' => __( 'Upload the logo image.', 'tallykit_textdomain' ),
-	'filter' => '', //sanitize_text_field, esc_attr
-	'size' => '400x400',
-);
 $fields[] = array(
 	'id' => $prefix.'external_link',
 	'class' => '',

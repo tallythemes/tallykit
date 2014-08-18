@@ -2,7 +2,8 @@
 	<a href="<?php the_permalink(); ?>">
 		<div class="tallykit_portfolio_item_image">
         	<?php
-			$image_url = get_post_meta(get_the_ID(), 'tallykit_portfolio_archive_image', true);
+				$thumb_data = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full' ); // Get post by ID
+                $image_url = $thumb_data[0];
 			?>
 			<img src="<?php echo acoc_image_size($image_url, $width = '600', $height = '400', $crop = true); ?>" alt="<?php the_title(); ?>"  />
         </div>

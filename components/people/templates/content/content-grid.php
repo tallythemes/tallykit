@@ -2,7 +2,8 @@
 		<div class="tk_people_item_image">
         	<a href="<?php the_permalink(); ?>">
         	<?php
-			$image_url = get_post_meta(get_the_ID(), 'tallykit_people_archive_image', true);
+				$thumb_data = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full' ); // Get post by ID
+                $image_url = $thumb_data[0];
 			?>
 			<img src="<?php echo acoc_image_size($image_url, $width = '600', $height = '400', $crop = true); ?>" width="" height="" alt=""  />
             </a>

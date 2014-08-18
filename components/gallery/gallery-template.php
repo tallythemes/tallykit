@@ -54,7 +54,6 @@ $tallykit_gallery_theme_compact->add_single(array(
 ));
 $tallykit_gallery_theme_compact->add_archive(array(
 	'post_type'		=> 'tallykit_gallery',
-	'title'			=> 'Gallry Archive', 
 	'template_3'	=> 'acoc.php',
 	'template_2'	=> 'page.php',
 	'template_1'	=> 'index.php',

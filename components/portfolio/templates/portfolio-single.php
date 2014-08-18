@@ -8,7 +8,11 @@ $portfolio_query = new WP_Query( $query );
             <?php if(get_post_meta(get_the_ID(), 'tallykit_portfolio_video', true) != ''): ?>
             	<div class="tk_portfolio_video_holder"><?php echo wp_oembed_get(get_post_meta(get_the_ID(), 'tallykit_portfolio_video', true)); ?></div>
             <?php else: ?>
-            	<img src="<?php echo acoc_image_size(get_post_meta(get_the_ID(), 'tallykit_portfolio_single_image', true) , '1000'); ?>" alt="<?php the_title(); ?>"  />
+            	<?php
+				$thumb_data = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full' ); // Get post by ID
+                $image_url = $thumb_data[0];
+				?>
+            	<img src="<?php echo acoc_image_size($image_url , '1000'); ?>" alt="<?php the_title(); ?>"  />
             <?php endif; ?>
             
 			<div class="tk_portfolio_single_content">

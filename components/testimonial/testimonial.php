@@ -14,7 +14,6 @@ if ( !defined( 'ABSPATH' ) ) exit;
 
 include('testimonial-types.php');
 include('testimonial-metabox.php');
-include('testimonial-options.php');
 include('testimonial-template.php');
 include('testimonial-script.php'); 
 include('testimonial-shortcodes.php');

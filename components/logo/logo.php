@@ -14,7 +14,6 @@ if ( !defined( 'ABSPATH' ) ) exit;
 
 include('logo-types.php');
 include('logo-metabox.php');
-include('logo-options.php');
 include('logo-template.php');
 include('logo-script.php'); 
 include('logo-shortcodes.php');
