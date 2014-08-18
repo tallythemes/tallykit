@@ -489,7 +489,7 @@ body .ui-tooltip {
 }
 .tallykit-blog-timeline .tallykit-blog-timeline-list{ height:auto; overflow: hidden; }
 .tallykit-blog-timeline .tallykit-blog-timeline-list .tallykit-blog-author-img{ width:100%; height:auto; position:relative; text-align:center; }
-.tallykit-blog-timeline .tallykit-blog-timeline-list .tallykit-blog-author-img img{ width:50px; height:50px; border:5px solid #fa6dab; border-radius: 50%; margin-bottom: -50px; }
+.tallykit-blog-timeline .tallykit-blog-timeline-list .tallykit-blog-author-img img{ width:50px; height:50px; border:5px solid #fa6dab; border-radius: 50%; margin-bottom: -44px; }
 .tallykit-blog-timeline-post{ width:100%; height:auto; position:relative; margin-bottom:55px; float:left; }
 
 .tallykit-blog-timeline .tallykit-blog-timeline-list .tallykit-blog-timeline-post .tk-post-content{ 
@@ -505,17 +505,19 @@ body .ui-tooltip {
 	position: relative;
 	background-color:#FFF;
 	line-height:20px;
-	font-family: 'Open Sans', sans-serif;
 	font-size:12px;
 	color:#a7a6a2;
+	margin-top:-6px;
 }
+#wrapper #main #main-inner #content-sidebar-wrap #content 
+#content-inner .entry-content .color_mood_dark .tk_content  
+.tallykit-blog-timeline .tallykit-blog-timeline-list .tallykit-blog-timeline-post .tk-post-content p{ color:#a7a6a2; }
 .tallykit-blog-timeline-post .tk-post-content h3{ 
 	font-size:16px; 
 	font-weight:bold; 
 	text-transform:uppercase; 
-	margin-top:7px; 
-	font-family: 'Open Sans', sans-serif; 
-	margin-bottom: 0px; 
+	margin-top:1px; 
+	margin-bottom: 4px; 
 }
 .tallykit-blog-timeline-post .tk-post-content h3 a{ text-decoration:none; color:#464141; }
 .tallykit-blog-timeline-post .tk-post-content:before {
@@ -551,14 +553,13 @@ body .ui-tooltip {
 	display:block; 
 	position:relative; 
 	line-height:20px;
-	font-family: 'Open Sans', sans-serif;
 	font-size:12px;
 	color:#a7a6a2;
 	padding-bottom: 8px;
 	text-transform:uppercase;
 }
 .tallykit-blog-timeline-post .tk-timeline-thum ul{ margin:0px; padding:0px; }
-.tallykit-blog-timeline-post .tk-timeline-thum ul li{ list-style-type:none; float:left; margin-left: 0px; margin-right: 4px; margin-bottom: 10px;  }
+.tallykit-blog-timeline-post .tk-timeline-thum ul li{ list-style-type:none; float:left; margin-left: 0px; margin-right: 7px; margin-bottom: 7px; height: 89px;  }
 .tallykit-blog-timeline-post .tk-timeline-thum ul li a{ text-decoration:none; }
 .tallykit-blog-clear{ width:100%; height:1px; position:relative; }
 
@@ -566,31 +567,33 @@ body .ui-tooltip {
 
 .tallykit-blog-timeline .tallykit-blog-timeline-list:nth-child(2n+2) .tallykit-blog-timeline-post .tk-post-content{ float:right; }
 .tallykit-blog-timeline .tallykit-blog-timeline-list:nth-child(2n+2) .tallykit-blog-timeline-post .tk-post-content:before {
-		position: absolute;
-		width: 10px;
-		height: 10px;
-		border: 1px solid #EAE9E9;
-		content: '';
-		border-right: 0;
-		border-bottom: 0;
-		display: block;
-		-moz-background-clip: padding;
-		-webkit-background-clip: padding-box;
-		background-clip: padding-box;
-		left: -6px;
-		-webkit-transform: rotate(-45deg);
-		-moz-transform: rotate(-45deg);
-		-ms-transform: rotate(-45deg);
-		-o-transform: rotate(-45deg);
-		transform: rotate(-45deg);
-		top:10px;
-	
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	border: 1px solid #EAE9E9;
+	content: '';
+	border-right: 0;
+	border-bottom: 0;
+	display: block;
+	-moz-background-clip: padding;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+	left: -6px;
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	top:10px;
 }
 
 .tallykit-blog-timeline .tallykit-blog-timeline-list:nth-child(2n+2) .tallykit-blog-timeline-post .tk-timeline-thum{ float:left; }
 .tallykit-blog-timeline .tallykit-blog-timeline-list:nth-child(2n+2) .tallykit-blog-timeline-post .tk-timeline-thum .date{ text-align:right; }
 
 
+
+/* * Aquea Page builder
+================================================== */
 .aq-template-wrapper .aq-block-aq_row_block{ margin-left: -1000px;
 padding-left: 1000px;
 margin-right: -1000px;

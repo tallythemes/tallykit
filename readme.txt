@@ -39,6 +39,18 @@ The simplest way to install is to click on 'Plugins' then 'Add' and type 'tallyk
 == Changelog ==
 
 = 2.4 =
+* Update Gallery component image handler
+* Improve Gallery CSS design
+* Fix PHP error on Parallax Component
+
+* Improve Slideshow color styling
+* Improve Slideshow Template design
+* update acoc framework
+
+* Remove Some unused files
+* Update theme compact loader class
+
+* Use Featured image for images
 
 = 2.3 =
 * Fix gallery template issue.
