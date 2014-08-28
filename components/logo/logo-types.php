@@ -62,7 +62,7 @@ $post_columns->add_column('post_thumb_logo',
   array(
 		'label' => __('Thumb', 'tallykit_textdomain'),
 		'type'  => 'thumb',
-		'size'  => 'thumbnail'
+		'size'  => 'full'
 	)
 );
 

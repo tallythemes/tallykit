@@ -91,11 +91,3 @@ function tallykit_testimonial_do_reset_page_content(){
 		remove_action( 'tally_after_endwhile', 'tally_do_posts_nav' );
 	}
 }
-
-add_filter('tally_ot_page_metabox', 'tallykit_testimonial_tally_ot_page_metabox');
-function tallykit_testimonial_tally_ot_page_metabox($post){
-	if(post_type_exists('tallykit_testimonial')){
-		$post[] = 'tallykit_testimonial';
-	}
-	return $post;
-}

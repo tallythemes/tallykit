@@ -9,6 +9,180 @@
  */
 $tinymce_fields = array();
 
+/*---------|- Row -|----------*/
+$tinymce_fields[] = array(
+	'title' => 'Row',
+	'shortcode' => 'tk_row',
+	'content' => 'yes',//yes, no
+	'fields' => array(
+		array(
+			'id' => 'content',
+			'class' => '',
+			'label' => 'Content',
+			'type' => 'textarea',
+			'std' => '........',
+			'des' => '',
+			'content' => 'yes',//yes, no
+		),
+		array(
+			'id' => 'color_mood',
+			'class' => '',
+			'label' => 'Color Mood',
+			'type' => 'select',
+			'std' => '',
+			'des' => '',
+			'options' => array(
+				array('value' => 'dark', 'label' => 'dark'),
+				array('value' => 'light', 'label' => 'light'),
+			)
+		),
+		array(
+			'id' => 'width',
+			'class' => '',
+			'label' => 'Content Width',
+			'type' => 'text',
+			'std' => '960px',
+			'des' => '',
+		),
+		array(
+			'id' => 'menu_anchor',
+			'class' => '',
+			'label' => 'Menu Anchor',
+			'type' => 'text',
+			'std' => '',
+			'des' => '',
+		),
+		array(
+			'id' => 'bg_color',
+			'class' => '',
+			'label' => 'Background Color',
+			'type' => 'color',
+			'std' => '',
+			'des' => '',
+		),
+		array(
+			'id' => 'bg_image',
+			'class' => '',
+			'label' => 'Background Image',
+			'type' => 'text',
+			'std' => '',
+			'des' => '',
+		),
+		array(
+			'id' => 'bg_repeat',
+			'class' => '',
+			'label' => 'Background Repeat',
+			'type' => 'select',
+			'std' => '',
+			'des' => '',
+			'options' => array(
+				array('value' => 'repeat', 'label' => 'repeat'),
+				array('value' => 'no-repeat', 'label' => 'no-repeat'),
+				array('value' => 'repeat-x', 'label' => 'repeat-x'),
+				array('value' => 'repeat-y', 'label' => 'repeat-y'),
+				array('value' => 'inherit', 'label' => 'inherit'),
+			)
+		),
+		array(
+			'id' => 'bg_attachment',
+			'class' => '',
+			'label' => 'Background Attachment',
+			'type' => 'select',
+			'std' => '',
+			'des' => '',
+			'options' => array(
+				array('value' => 'fixed', 'label' => 'fixed'),
+				array('value' => 'scroll', 'label' => 'scroll'),
+				array('value' => 'inherit', 'label' => 'inherit'),
+			)
+		),
+		array(
+			'id' => 'bg_position',
+			'class' => '',
+			'label' => 'Background Position',
+			'type' => 'select',
+			'std' => '',
+			'des' => '',
+			'options' => array(
+				array('value' => 'left top', 'label' => 'left top'),
+				array('value' => 'left center', 'label' => 'left center'),
+				array('value' => 'left bottom', 'label' => 'left bottom'),
+				array('value' => 'center top', 'label' => 'center top'),
+				array('value' => 'center center', 'label' => 'center center'),
+				array('value' => 'center bottom', 'label' => 'center bottom'),
+				array('value' => 'right top', 'label' => 'right top'),
+				array('value' => 'right center', 'label' => 'right center'),
+				array('value' => 'right bottom', 'label' => 'right bottom'),
+			)
+		),
+		array(
+			'id' => 'bg_size',
+			'class' => '',
+			'label' => 'Background Size',
+			'type' => 'text',
+			'std' => 'cover',
+			'des' => '',
+		),
+		array(
+			'id' => 'border_size',
+			'class' => '',
+			'label' => 'Border Size',
+			'type' => 'text',
+			'std' => '0px',
+			'des' => '',
+		),
+		array(
+			'id' => 'border_color',
+			'class' => '',
+			'label' => 'Border Color',
+			'type' => 'text',
+			'std' => '',
+			'des' => '',
+		),
+		array(
+			'id' => 'border_style',
+			'class' => '',
+			'label' => 'Border style',
+			'type' => 'text',
+			'std' => 'solid',
+			'des' => '',
+		),
+		array(
+			'id' => 'padding_top',
+			'class' => '',
+			'label' => 'padding_top',
+			'type' => 'text',
+			'std' => '20px',
+			'des' => '',
+		),
+		array(
+			'id' => 'padding_bottom',
+			'class' => '',
+			'label' => 'padding_bottom',
+			'type' => 'text',
+			'std' => '20px',
+			'des' => '',
+		),
+		array(
+			'id' => 'class',
+			'class' => '',
+			'label' => 'Class',
+			'type' => 'text',
+			'std' => '',
+			'des' => '',
+		),
+		array(
+			'id' => 'id',
+			'class' => '',
+			'label' => 'ID',
+			'type' => 'text',
+			'std' => '',
+			'des' => '',
+		),
+	)
+);
+
+
 /*---------|- Accordion -|----------*/
 $tinymce_fields[] = array(
 	'title' => 'Accordion',

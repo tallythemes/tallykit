@@ -1,4 +1,10 @@
 /*---------------------------------------------
+     Row
+--------------------------------------------- */
+.tallykit-shortcode-row{ width:100%; }
+.tallykit-shortcode-row .tk-shortcode-row-inner{ width:90%; margin:0 auto; }
+
+/*---------------------------------------------
      Accordion
 --------------------------------------------- */
 .tallykit-shortcode-accordion h3.tallykit-shortcode-accordion-trigger { display: block; color: #555; display: block; padding: 15px; border: 1px solid #ddd; background: #f9f9f9 ; outline: 0; text-transform: none; letter-spacing: normal; font-weight: normal; font-size: 1em; line-height: 1.5em; margin: 10px 0 0 !important; cursor: pointer; }

@@ -9,6 +9,53 @@
 **/
 
 
+/*---------|- Row -|-------------------------------------*/
+add_shortcode('tk_row', 'tallykit_shortcodes_sc_row');
+function tallykit_shortcodes_sc_row( $atts, $content = null  ) {
+	extract( shortcode_atts( array(
+		'color_mood' => '',
+		'width' => '',
+		'menu_anchor' => '',
+		'bg_color' => '',
+		'bg_image' => '',
+		'bg_repeat' => '',
+		'bg_attachment' => '',
+		'bg_position' => '',
+		'bg_size' => '',
+		'border_size' => '',
+		'border_color' => '',
+		'border_style' => '',
+		'padding_top' => '',
+		'padding_bottom' => '',
+		'class' => '',
+		'id' => '',
+	), $atts ) );
+	
+	$output = '';
+	
+	$style = '';
+	$style .= 'background-color:'.$bg_color.'; ';
+	$style .= 'background-image:url('.$bg_image.'); ';
+	$style .= 'background-repeat:'.$bg_repeat.'; ';
+	$style .= 'background-attachment:'.$bg_attachment.'; ';
+	$style .= 'background-position:'.$bg_position.'; ';
+	$style .= 'background-size:'.$bg_size.'; ';
+	$style .= 'border-top:'.$border_size.'; border-bottom:'.$border_size.'; ';
+	$style .= 'border-color:'.$border_color.'; ';
+	$style .= 'border-style:'.$border_style.'; ';
+	$style .= 'padding-top:'.$padding_top.'; ';
+	$style .= 'padding-bottom:'.$padding_bottom.'; ';
+	
+	$output .= '<div class="tallykit-shortcode-row '.$class.' color_mood_'.$color_mood.'" style="'.$style.' ">';
+		$output .= '<div class="tk-shortcode-row-inner" style="max-width:'.$width.';">';
+			$output .= do_shortcode($content);
+		$output .= '</div>';
+	$output .= '</div>';
+	
+	return $output;
+}
+
+
 /*---------|- accordion -|-------------------------------------*/
 add_shortcode('tk_accordion', 'tallykit_shortcodes_sc_accordion');
 function tallykit_shortcodes_sc_accordion( $atts, $content = null  ) {
