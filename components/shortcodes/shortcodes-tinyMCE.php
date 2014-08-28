@@ -164,6 +164,21 @@ $tinymce_fields[] = array(
 			'des' => '',
 		),
 		array(
+			'id' => 'text_align',
+			'class' => '',
+			'label' => 'Text Align',
+			'type' => 'select',
+			'std' => '',
+			'des' => '',
+			'options' => array(
+				array('value' => '', 'label' => ''),
+				array('value' => 'left', 'label' => 'left'),
+				array('value' => 'right', 'label' => 'right'),
+				array('value' => 'center', 'label' => 'center'),
+				array('value' => 'inherit', 'label' => 'inherit'),
+			)
+		),
+		array(
 			'id' => 'class',
 			'class' => '',
 			'label' => 'Class',

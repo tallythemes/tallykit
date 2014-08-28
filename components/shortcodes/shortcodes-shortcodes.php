@@ -29,6 +29,7 @@ function tallykit_shortcodes_sc_row( $atts, $content = null  ) {
 		'padding_bottom' => '',
 		'class' => '',
 		'id' => '',
+		'text_align' => '',
 	), $atts ) );
 	
 	$output = '';
@@ -45,14 +46,27 @@ function tallykit_shortcodes_sc_row( $atts, $content = null  ) {
 	$style .= 'border-style:'.$border_style.'; ';
 	$style .= 'padding-top:'.$padding_top.'; ';
 	$style .= 'padding-bottom:'.$padding_bottom.'; ';
+	$style .= 'text-align:'.$text_align.'; ';
+	$the_width = '';
+	if( $width == '100%' ){ $the_width = 'width:100%;'; }
 	
 	$output .= '<div class="tallykit-shortcode-row '.$class.' color_mood_'.$color_mood.'" style="'.$style.' ">';
-		$output .= '<div class="tk-shortcode-row-inner" style="max-width:'.$width.';">';
+		$output .= '<div class="tk-shortcode-row-inner" style="max-width:'.$width.'; '.$the_width.'">';
 			$output .= do_shortcode($content);
 		$output .= '</div>';
 	$output .= '</div>';
 	
 	return $output;
+}
+
+/*---------|- admon only -|-------------------------------------*/
+add_shortcode('ato', 'tallykit_shortcodes_sc_admin_only');
+function tallykit_shortcodes_sc_admin_only( $atts, $content = null  ) {
+	extract( shortcode_atts( array(
+		't'	=> ''
+	), $atts ) );
+	
+	return '<!--'.$t.'-->';
 }
 
 
