@@ -8,7 +8,10 @@ function acoc_image_size($url, $width = '', $height = '', $crop = true, $align =
     $query = "SELECT ID FROM {$wpdb->posts} WHERE guid='$url'";
     $id = $wpdb->get_var($query);
 	
-	$url = ( $url == "" ) ? 'http://placehold.it/'.$width.'x'.$height.'' : $url;
+	if($url == NULL){ 
+		$url = 'http://placehold.it/'.$width.'x'.$height; 
+		return $url;
+	}
 	
 	if(function_exists('mr_image_resize')){
 		if($id == false){

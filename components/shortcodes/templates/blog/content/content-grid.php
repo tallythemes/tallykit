@@ -5,7 +5,7 @@
 		</a>
 	</div>
 	<div class="tk-shortcode-blog-content">
-		<h5 class="tk-shortcode-blog-title"><a href="<?php the_permalink(); ?>" target="_self" title=""><?php the_title(); ?></a></h5>
+		<h4 class="tk-shortcode-blog-title"><a href="<?php the_permalink(); ?>" target="_self" title=""><?php the_title(); ?></a></h4>
 		<p class="tk-shortcode-blog-text"><?php echo acoc_max_charlength(120); ?></p>
 	</div>
     <div class="tk-shortcode-blog-info"><span class="time"><?php the_date(); ?></span> / <?php comments_popup_link('No Comments', '1 Comment', '% Comments'); ?></div>

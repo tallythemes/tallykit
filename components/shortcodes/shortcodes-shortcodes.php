@@ -208,8 +208,9 @@ function tallykit_shortcodes_sc_column( $atts, $content = null ){
 		  
 	  $output = '';
 	  $uid = 'tallykit-shortcode-column'.rand();
-	  $bg_color = ($bg_color) ? 'background-color:'.$bg_color.';' : '';
+	  $bg_color = ($bg_color) ? 'background-color:'.$bg_color.'; ' : '';
 	  $padding = ($padding) ? 'padding:'.$padding.';' : '';
+	  $text_align = ($text_align) ? 'text-align:'.$text_align.'; ' : '';
 		  
 	  $output .= '<style type="text/css">
 				#'.$uid.'{ color:'.$text_color.'; }
@@ -217,7 +218,7 @@ function tallykit_shortcodes_sc_column( $atts, $content = null ){
 				#'.$uid.' h1, #'.$uid.' h2, #'.$uid.' h3, #'.$uid.' h4, #'.$uid.' h5, #'.$uid.' h6{ color:'.$heading_color.'; }
 			</style>';
 		  
-	$output .= '<div id="'.$uid.'" class="tallykit-shortcode-column tallykit-shortcode-' . $size . ' tallykit-shortcode-column-'.$position.' '. $class .'" style="'.$bg_color.'">';
+	$output .= '<div id="'.$uid.'" class="tallykit-shortcode-column tallykit-shortcode-' . $size . ' tallykit-shortcode-column-'.$position.' '. $class .'" style="'.$bg_color.$text_align.'">';
 		$output .= '<div class="tallykit-shortcode-column-inner" style="'.$padding.'">' . do_shortcode($content) . '</div>';
 	$output .= '</div>';
 	if($position == 'last'){$output .= '<div class="acoc-clear"></div><div class="tallykit-shortcode-clear"></div><div class="acoc-clear"></div>';}
