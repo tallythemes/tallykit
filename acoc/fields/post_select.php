@@ -20,6 +20,7 @@ class acoc_field_post_select{
 			'des' => '',
 			'filter' => '', //sanitize_text_field, esc_attr
 			'rows' => '4',
+			'output' => 'id',
 		), $atts );
 		
 		return $options;
@@ -32,7 +33,7 @@ class acoc_field_post_select{
 		
 		if($value == ""){ $value = $option['std']; }
 		
-		$the_query = new WP_Query( array('post_type' => $option['post_type'], 'posts_per_page' => -1) );
+		$the_query = new WP_Query( array('post_type' => $option['post_type'], 'posts_per_page' => -1, 'post_status' => 'publish',) );
 		
 		echo '<div class="acoc-form-field field-type-post_select">';
 			echo '<label for="'.$option['id'].'">'.$option['label'].'</label><br>';
@@ -40,7 +41,14 @@ class acoc_field_post_select{
 			
 				if ( $the_query->have_posts() ){
 					while ( $the_query->have_posts() ) { $the_query->the_post();
-						echo '<option value="'.get_the_ID().'" '.selected( $value, get_the_ID(), false ).'>'.get_the_title().'</option>';
+					
+						if($option['output'] == 'slug'){ 
+							echo '<option value="'.$the_query->post->post_name.'" '.selected( $value, $the_query->post->post_name, false ).'>'.get_the_title().'</option>'; 
+						}
+						else{ 
+							echo '<option value="'.get_the_ID().'" '.selected( $value, get_the_ID(), false ).'>'.get_the_title().'</option>'; 
+						}
+						
 					}
 				}
 				

@@ -16,13 +16,14 @@ $tinymce_fields[] = array(
 	'content' => 'no',//yes, no
 	'fields' => array(
 		array(
-			'id' => 'id',
+			'id' => 'slug',
 			'class' => '',
 			'label' => 'Slideshow ID',
 			'type' => 'post_select',
 			'std' => '',
 			'des' => '',
-			'post_type' => 'tallykit_slideshow'
+			'post_type' => 'tallykit_slideshow',
+			'output' => 'slug',
 		),
 	)
 );

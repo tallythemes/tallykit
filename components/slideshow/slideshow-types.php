@@ -58,16 +58,15 @@ $post_columns->add_column('title',
 	)
 );
 //add thumbnail column
-$post_columns->add_column('post_thumb_slideshow',
+$post_columns->add_column('post_shortcode_slideshow',
   array(
-		'label' => __('Thumb', 'tallykit_textdomain'),
+		'label' => __('Shortcode', 'tallykit_textdomain'),
 		'type'  => 'text',
 		'text'  => ''
 	)
 );
-add_filter('cpt_columns_text_post_thumb_slideshow', 'tallykit_slideshow_cpt_column_Thumb_filter');
-function tallykit_slideshow_cpt_column_Thumb_filter(){
-	$meta = get_post_meta(get_the_ID(), 'tallykit_slideshow_image', true);
-	$post_columns_image = ( $meta == "" ) ? 'http://placehold.it/70x70' : $meta;
-	return '<img src="'. $post_columns_image .'" style="max-height:100px; max-width:100px;">';
+add_filter('cpt_columns_text_post_shortcode_slideshow', 'tallykit_slideshow_cpt_column_shortcode_filter');
+function tallykit_slideshow_cpt_column_shortcode_filter(){
+	global $post;
+	return '<input type="text" value=\'[tk_slideshow slug="'.$post->post_name.'" /]\' onclick="this.focus();this.select()" style="width: 100%;" />';
 }
