@@ -5,9 +5,9 @@
 	</div>
     
 	<div class="tk-bp-info">
-		<div class="tk-bp-title">
+		<h4 class="tk-bp-title">
         	<a href="<?php bp_member_permalink() ?>" title="<?php bp_member_name() ?>"><?php bp_member_name() ?></a>
-		</div>
+		</h4>
 		<div class="tk-bp-meta">
 			<span class="tk-bp-activity">
 				<?php

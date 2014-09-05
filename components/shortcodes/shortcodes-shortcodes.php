@@ -16,6 +16,9 @@ function tallykit_shortcodes_sc_row( $atts, $content = null  ) {
 		'color_mood' => '',
 		'width' => '',
 		'menu_anchor' => '',
+		'heading_color' => '',
+		'text_color' => '',
+		'inner_border_color' => '',
 		'bg_color' => '',
 		'bg_image' => '',
 		'bg_repeat' => '',
@@ -33,24 +36,39 @@ function tallykit_shortcodes_sc_row( $atts, $content = null  ) {
 	), $atts ) );
 	
 	$output = '';
+	$rand = 'tallykit-shortcode-row-'.rand();
 	
 	$style = '';
-	$style .= 'background-color:'.$bg_color.'; ';
-	$style .= 'background-image:url('.$bg_image.'); ';
-	$style .= 'background-repeat:'.$bg_repeat.'; ';
-	$style .= 'background-attachment:'.$bg_attachment.'; ';
-	$style .= 'background-position:'.$bg_position.'; ';
-	$style .= 'background-size:'.$bg_size.'; ';
-	$style .= 'border-top:'.$border_size.'; border-bottom:'.$border_size.'; ';
-	$style .= 'border-color:'.$border_color.'; ';
-	$style .= 'border-style:'.$border_style.'; ';
-	$style .= 'padding-top:'.$padding_top.'; ';
-	$style .= 'padding-bottom:'.$padding_bottom.'; ';
-	$style .= 'text-align:'.$text_align.'; ';
-	$the_width = '';
-	if( $width == '100%' ){ $the_width = 'width:100%;'; }
+	if($bg_color){ $style .= 'background-color:'.$bg_color.'; '; }
+	if($bg_image){ $style .= 'background-image:url('.$bg_image.'); '; }
+	if($bg_repeat){ $style .= 'background-repeat:'.$bg_repeat.'; '; }
+	if($bg_attachment){ $style .= 'background-attachment:'.$bg_attachment.'; '; }
+	if($bg_position){ $style .= 'background-position:'.$bg_position.'; '; }
+	if($bg_size){ $style .= 'background-size:'.$bg_size.'; '; }
+	if($border_size){ $style .= 'border-top:'.$border_size.'; border-bottom:'.$border_size.'; '; }
+	if($border_color){ $style .= 'border-color:'.$border_color.'; '; }
+	if($border_style){ $style .= 'border-style:'.$border_style.'; '; }
+	if($padding_top){ $style .= 'padding-top:'.$padding_top.'; '; }
+	if($padding_bottom){ $style .= 'padding-bottom:'.$padding_bottom.'; '; }
+	if($text_align){ $style .= 'text-align:'.$text_align.'; '; }
 	
-	$output .= '<div class="tallykit-shortcode-row '.$class.' color_mood_'.$color_mood.'" style="'.$style.' ">';
+	$the_width = '';
+	if( $width == '100%' ){ $the_width = 'width:100%;'; }	
+	
+	$output .= '<style type="text/css">';
+		if($text_color){ $output .= '#'.$rand.'{ color:'.$text_color.'; }'; }
+		if($inner_border_color){ $output .= '#'.$rand.' *{ border-color:'.$inner_border_color.'; }'; }
+		if($text_color){ $output .= '#'.$rand.' *{ color:'.$text_color.'; }'; }
+		if($heading_color){ $output .= '#'.$rand.' h1{ color:'.$heading_color.'; }'; }
+		if($heading_color){ $output .= '#'.$rand.' h2{ color:'.$heading_color.'; }'; }
+		if($heading_color){ $output .= '#'.$rand.' h3{ color:'.$heading_color.'; }'; }
+		if($heading_color){ $output .= '#'.$rand.' h4{ color:'.$heading_color.'; }'; }
+		if($heading_color){ $output .= '#'.$rand.' h5{ color:'.$heading_color.'; }'; }
+		if($heading_color){ $output .= '#'.$rand.' h6{ color:'.$heading_color.'; }'; }
+	$output .= '</style>';
+	
+	$output .= '<div id="'.$id.'"></div>';
+	$output .= '<div class="tallykit-shortcode-row '.$class.' color_mood_'.$color_mood.'" style="'.$style.' " id="'.$rand.'">';
 		$output .= '<div class="tk-shortcode-row-inner" style="max-width:'.$width.'; '.$the_width.'">';
 			$output .= do_shortcode($content);
 		$output .= '</div>';

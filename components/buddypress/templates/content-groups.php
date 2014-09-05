@@ -8,7 +8,7 @@
 		<div class="tk-bp-title">
         	<a href="<?php bp_group_permalink() ?>" title="<?php bp_group_name() ?>"><?php bp_group_name() ?></a>
 		</div>
-        <div class="tk-bp-count"><?php bp_group_total_members(); _e(' Members', 'tallykit_textdomain'); ?></div>
+        <div class="tk-bp-count"><strong><?php bp_group_total_members(); ?></strong> <span><?php _e(' Members', 'tallykit_textdomain'); ?></span></div>
         <div class="tk-bp-desc"><?php bp_group_description_excerpt(); ?></div>
 		<div class="tk-bp-meta">
 			<span class="tk-bp-activity">
