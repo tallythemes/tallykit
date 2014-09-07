@@ -16,6 +16,6 @@ $people_query = new WP_Query( $query );
         <?php wp_reset_postdata(); ?>
         <?php echo acoc_paginate($people_query); ?>
     <?php else: ?>
-    	<?php _e('No Portfolio found.', 'tallykit_people'); ?>
+    	<?php _e('No People found.', 'tallykit_textdomain'); ?>
     <?php endif; ?>
 </div>

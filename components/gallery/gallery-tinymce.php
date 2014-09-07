@@ -135,13 +135,14 @@ $tinymce_fields[] = array(
 	'content' => 'no',//yes, no
 	'fields' => array(
 		array(
-			'id' => 'id',
+			'id' => 'slug',
 			'class' => '',
-			'label' => 'Gallery ID',
+			'label' => 'Select A Gallery',
 			'type' => 'post_select',
 			'std' => '',
 			'des' => '',
-			'post_type' => 'tallykit_gallery'
+			'post_type' => 'tallykit_gallery',
+			'output' => 'slug',
 		),
 		array(
 			'id' => 'columns',

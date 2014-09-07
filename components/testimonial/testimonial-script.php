@@ -16,6 +16,9 @@ function tallykit_testimonial_script_loader(){
 	
 	wp_enqueue_style( 'acoc-flexslider');
 	
+	wp_enqueue_script( 'jquery-wow');
+	wp_enqueue_style( 'acoc-animate');
+	
 	wp_enqueue_script( 'tallykit-testimonial', TALLYKIT_COMPONENTS_URL.'testimonial/assets/js/testimonial.js', array('jquery'), '1.0', true );
 	wp_enqueue_style( 'tallykit-testimonial', TALLYKIT_COMPONENTS_URL.'testimonial/assets/css/testimonial.css', '', '1.0' );
 }

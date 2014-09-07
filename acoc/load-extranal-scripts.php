@@ -34,7 +34,7 @@ function acoc_load_extranal_scripts(){
 	wp_register_script( 'jquery-masonry', $js.'masonry.pkgd.min.js', array('jquery'), '2.1.1', true );
 	
 	/**- Font Awesome -**/
-	wp_register_style( 'font-awesome', $css.'font-awesome.min.css', '', '4.0.3' );
+	wp_register_style( 'font-awesome', $css.'font-awesome.min.css', '', ' 4.2.0' );
 	
 	/**- Google Map -**/
 	wp_register_script( 'google-map', 'http://maps.google.com/maps/api/js?sensor=true', array(), '', true);
@@ -49,6 +49,12 @@ function acoc_load_extranal_scripts(){
 	/**- magnific-popup -**/
 	wp_register_script('jquery-magnific-popup', $js.'jquery.magnific-popup.min.js', array(), '0.9.9 ', true);
 	wp_register_style( 'jquery-magnific-popup', $css.'magnific-popup.css', '', '0.9.9 ' );
+	
+	/**- animate CSS -**/
+	wp_register_style( 'animate', $css.'animate.css', '', '3.2.0 ' );
+	
+	/**- wow JS -**/
+	wp_register_script('jquery-wow', $js.'wow.min.js', array(), '1.0.1 ', true);
 	
 	wp_enqueue_style( 'acoc', $css.'acoc.css', '', '1.0' );
 }

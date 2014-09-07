@@ -101,10 +101,23 @@ function tallykit_gallery_album_sc_grid( $atts, $content = null ) {
 add_shortcode('tk_gallery', 'tallykit_gallery_sc_single');
 function tallykit_gallery_sc_single( $atts, $content = null  ) {
 	extract( shortcode_atts( array(
-		'id'	  => '',
-		'columns' => '3',
-		'margin'  => '3'
+		'id'		=> '',
+		'slug'		=> '',
+		'columns'	=> '3',
+		'margin'	=> '3'
 	), $atts ) );
+	
+	if($id == ''){
+		$get_id = get_posts(array(
+			'name' => $slug,
+			'post_type' => 'tallykit_gallery',
+			'post_status' => 'publish',
+			'posts_per_page' => 1
+		));
+		if( $get_id ) {
+			$id = $get_id[0]->ID;
+		}
+	}
 	
 	$output = '';
 	

@@ -27,6 +27,6 @@ $people_query = new WP_Query( $query );
         <div style="clear:both;"></div>
         <?php wp_reset_postdata(); ?>
     <?php else: ?>
-    	<?php _e('No Portfolio found.', 'tallykit_people'); ?>
+    	<?php _e('No People found.', 'tallykit_textdomain'); ?>
     <?php endif; ?>
 </div>
