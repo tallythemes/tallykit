@@ -11,3 +11,4 @@ include(ACOC_DRI.'fields/taxonomy_select.php');
 include(ACOC_DRI.'fields/text.php');
 include(ACOC_DRI.'fields/textarea.php');
 include(ACOC_DRI.'fields/color.php');
+include(ACOC_DRI.'fields/animate_css_select.php');

@@ -2,7 +2,7 @@
 $isotope = new acoc_isotope_html(array('column'=>$columns, 'margin'=>$margin));
 $blog_query = new WP_Query( $query );
 ?>
-<div class="tallykit-shortcode-blog tallykit-shortcode-blog-grid">
+<div class="tallykit-shortcode-blog tallykit-shortcode-blog-grid wow <?php echo $animation_type; ?>"  data-wow-duration="<?php echo $animation_duration; ?>" data-wow-offset="0">
 	<?php if( $blog_query->have_posts()): ?>
     	<?php if($filter == 'yes'){ $isotope->filter('category'); } ?>
     	<?php $isotope->start(); ?>
