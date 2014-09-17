@@ -38,6 +38,17 @@ The simplest way to install is to click on 'Plugins' then 'Add' and type 'tallyk
 
 == Changelog ==
 
+= 3.0 =
+* Update ACOC Framework
+* Improve column shortcode
+* Improve row shortcode
+* Improve slideshow component's UI and shortcode
+* ADDed a new component "BuddyPress"
+* Added Scrolling effect on shortcode component
+* Fix typo in people component
+* Fix a PHP error on Gallery component
+* Update shortcode of gallery component
+
 = 2.6 =
 * Improve Row Shortcode
 
