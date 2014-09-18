@@ -77,7 +77,7 @@ function tallykit_shortcodes_sc_row( $atts, $content = null  ) {
 	return $output;
 }
 
-/*---------|- admon only -|-------------------------------------*/
+/*---------|- admin only -|-------------------------------------*/
 add_shortcode('ato', 'tallykit_shortcodes_sc_admin_only');
 function tallykit_shortcodes_sc_admin_only( $atts, $content = null  ) {
 	extract( shortcode_atts( array(
@@ -899,7 +899,7 @@ function tallykit_shortcodes_sc_blog_timeline($atts, $content = null) {
 
 
 
-/*---------|- audio -|-------------------------------------*/
+/*---------|- Heading -|-------------------------------------*/
 add_shortcode('tk_heading', 'tallykit_shortcodes_sc_heading');
 function tallykit_shortcodes_sc_heading($atts, $content = null) {
 	extract(shortcode_atts(array(
