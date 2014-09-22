@@ -28,6 +28,8 @@ if(!class_exists('tallykit_FrontPage_content_builder')):
 									
 									if($this->column_count($option, $columns) == $option['max_columns']){
 										//all is ok
+									}elseif($this->column_count($option, $columns) == 0){
+										//all is ok
 									}else{
 										$column['col'] = 12/$this->column_count($option, $columns);
 									}
@@ -105,12 +107,12 @@ if(!class_exists('tallykit_FrontPage_content_builder')):
 				<?php 
 				$bg = ot_get_option($option['uid'].'_bg');
 				?>
-				background-color:<?php echo $bg['background-color']; ?>;
-				background-image:url(<?php echo $bg['background-image']; ?>);
-				background-attachment:<?php echo $bg['background-attachment']; ?>; 
-				background-position:<?php echo $bg['background-position']; ?>; 
-				background-repeat:<?php echo $bg['background-repeat']; ?>; 
-				background-size:<?php echo $bg['background-size']; ?>; 
+				<?php if(isset($bg['background-color']) && !empty($bg['background-color'])): ?>background-color:<?php echo $bg['background-color']; ?>;<?php endif; ?>
+				<?php if(isset($bg['background-color']) && !empty($bg['background-image'])): ?>background-image:url(<?php echo $bg['background-image']; ?>);<?php endif; ?>
+				<?php if(isset($bg['background-color']) && !empty($bg['background-attachment'])): ?>background-attachment:<?php echo $bg['background-attachment']; ?>; <?php endif; ?>
+				<?php if(isset($bg['background-color']) && !empty($bg['background-position'])): ?>background-position:<?php echo $bg['background-position']; ?>;<?php endif; ?>
+				<?php if(isset($bg['background-color']) && !empty($bg['background-repeat'])): ?>background-repeat:<?php echo $bg['background-repeat']; ?>;<?php endif; ?>
+				<?php if(isset($bg['background-color']) && !empty($bg['background-size'])): ?>background-size:<?php echo $bg['background-size']; ?>;<?php endif; ?>
 				border-top-width:<?php echo ot_get_option($option['uid'].'_border_width'); ?>px;
 				border-bottom-width:<?php echo ot_get_option($option['uid'].'_border_width'); ?>px;
 				border-style:<?php echo ot_get_option($option['uid'].'_border_style'); ?>;

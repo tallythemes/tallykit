@@ -1860,14 +1860,6 @@ $tinymce_fields[] = array(
 			'des' => '',
 		),
 		array(
-			'id' => 'animation_type',
-			'class' => '',
-			'label' => 'Animation Type',
-			'type' => 'animate_css_select',
-			'std' => '',
-			'des' => '',
-		),
-		array(
 			'id' => 'animation_duration',
 			'class' => '',
 			'label' => 'Animation Duration',

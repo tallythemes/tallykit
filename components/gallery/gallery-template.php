@@ -90,24 +90,11 @@ function tallykit_gallery_theme_compact_category_content(){
  * @since TallyKit (2.1)
  *
 **/
-add_action('tally_reset_loops', 'tallykit_gallery_do_reset_page_content', 40);
+add_action('tally_template_init', 'tallykit_gallery_do_reset_page_content');
 function tallykit_gallery_do_reset_page_content(){
-		
 	if( (is_single() && get_post_type() == 'tallykit_gallery') || is_post_type_archive( 'tallykit_gallery' ) || (is_tax('tallykit_gallery_category')) ) {
-		
-		remove_action( 'tally_entry_header', 'tally_do_post_media', 4 );
-		remove_action( 'tally_entry_header', 'tally_entry_header_markup_open', 5 );
-		remove_action( 'tally_entry_header', 'tally_entry_header_markup_close', 15 );
-		remove_action( 'tally_entry_header', 'tally_do_post_title' );
-		remove_action( 'tally_entry_header', 'tally_do_post_info', 12 );
-		remove_action( 'tally_entry_header', 'tally_do_post_format_link', 13 );
-		remove_action( 'tally_entry_content', 'tally_do_post_format_quote', 10 );
-		remove_action( 'tally_entry_content', 'tally_do_post_content_nav', 12 );
-		remove_action( 'tally_entry_footer', 'tally_entry_footer_markup_open', 5 );
-		remove_action( 'tally_entry_footer', 'tally_entry_footer_markup_close', 15 );
-		remove_action( 'tally_entry_footer', 'tally_do_post_meta' );
-		remove_action( 'tally_after_entry', 'tally_do_author_box_single', 8 );
-		remove_action( 'tally_after_endwhile', 'tally_do_posts_nav' );
+		remove_all_actions('tally_loop');
+		add_action('tally_loop', 'tally_deafult_page_content');
 	}
 }
 

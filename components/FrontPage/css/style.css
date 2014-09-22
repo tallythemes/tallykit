@@ -1,2 +1,9 @@
-.page-template-front-page-template-php #main{ padding:0 !important; width:100%; max-width:100%; padding-left:1000px; padding-right:1000px; margin-left:-1000px; margin-right:-1000px; }
+.page-template-front-page-template-php #main{ padding:0 !important; width:100%; max-width:100%;  }
 .page-template-front-page-template-php #main #main-inner{  width:100%; max-width:100%; }
+.tallykit_FrontPage_row { padding-left:1000px; padding-right:1000px; margin-left:-1000px; margin-right:-1000px; }
+.tallykit_FrontPage_row:before,
+.tallykit_FrontPage_row:after{
+	content:" ";
+	display:table;
+}
+.tallykit_FrontPage_row .tallykit_FrontPage_row_inner{ margin:0 auto; }
