@@ -3,7 +3,7 @@
 Plugin Name: TallyKit
 Plugin URI: https://github.com/tallythemes/tallykit
 Description: A collection of features and functionality for <strong>Tally Framework</strong> theme.
-Version: 3.0
+Version: 3.1
 Author: TallyThemes
 Author URI: http://tallythemes.com/
 
@@ -12,7 +12,6 @@ http://www.opensource.org/licenses/mit-license.php
 http://www.gnu.org/licenses/gpl.html
 
 textdomain: tallykit_textdomain
-
 namespace: tallykit
 
 TALLYKIT
@@ -25,7 +24,7 @@ function load_tallykit(){
 	define('TALLYKIT', 'TallyKit' );
 	define('TALLYKIT_URL', site_url(str_replace( $path_abs, '', $path_dir )) );
 	define('TALLYKIT_DRI', $path_dir );
-	define('TALLYKIT_VERSION', 3.0 );
+	define('TALLYKIT_VERSION', 3.1 );
 	
 	define('TALLYKIT_COMPONENTS_URL', TALLYKIT_URL.'components/' );
 	define('TALLYKIT_COMPONENTS_DRI', TALLYKIT_DRI.'components/' );
