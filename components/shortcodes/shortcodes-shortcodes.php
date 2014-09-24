@@ -55,19 +55,20 @@ function tallykit_shortcodes_sc_row( $atts, $content = null  ) {
 	$the_width = '';
 	if( $width == '100%' ){ $the_width = 'width:100%;'; }	
 	
-	$output .= '<style type="text/css">';
-		if($text_color){ $output .= '#'.$rand.'{ color:'.$text_color.'; }'; }
-		if($inner_border_color){ $output .= '#'.$rand.' *{ border-color:'.$inner_border_color.'; }'; }
-		if($text_color){ $output .= '#'.$rand.' *{ color:'.$text_color.'; }'; }
-		if($heading_color){ $output .= '#'.$rand.' h1{ color:'.$heading_color.'; }'; }
-		if($heading_color){ $output .= '#'.$rand.' h2{ color:'.$heading_color.'; }'; }
-		if($heading_color){ $output .= '#'.$rand.' h3{ color:'.$heading_color.'; }'; }
-		if($heading_color){ $output .= '#'.$rand.' h4{ color:'.$heading_color.'; }'; }
-		if($heading_color){ $output .= '#'.$rand.' h5{ color:'.$heading_color.'; }'; }
-		if($heading_color){ $output .= '#'.$rand.' h6{ color:'.$heading_color.'; }'; }
-	$output .= '</style>';
+	$custom_style = '<style type="text/css">';
+		if($text_color){ $custom_style .= '#'.$rand.'{ color:'.$text_color.'; }'; }
+		if($inner_border_color){ $custom_style .= '#'.$rand.' *{ border-color:'.$inner_border_color.'; }'; }
+		if($text_color){ $custom_style .= '#'.$rand.' *{ color:'.$text_color.'; }'; }
+		if($heading_color){ $custom_style .= '#'.$rand.' h1{ color:'.$heading_color.'; }'; }
+		if($heading_color){ $custom_style .= '#'.$rand.' h2{ color:'.$heading_color.'; }'; }
+		if($heading_color){ $custom_style .= '#'.$rand.' h3{ color:'.$heading_color.'; }'; }
+		if($heading_color){ $custom_style .= '#'.$rand.' h4{ color:'.$heading_color.'; }'; }
+		if($heading_color){ $custom_style .= '#'.$rand.' h5{ color:'.$heading_color.'; }'; }
+		if($heading_color){ $custom_style .= '#'.$rand.' h6{ color:'.$heading_color.'; }'; }
+	$custom_style .= '</style>';
 	
-	$output .= '<div id="'.$id.'"></div>';
+	
+	$output .= $custom_style. '<div id="'.$id.'"></div>';
 	$output .= '<div class="tallykit-shortcode-row '.$class.' color_mood_'.$color_mood.'" style="'.$style.' " id="'.$rand.'">';
 		$output .= '<div class="tk-shortcode-row-inner" style="max-width:'.$width.'; '.$the_width.'">';
 			$output .= do_shortcode($content);

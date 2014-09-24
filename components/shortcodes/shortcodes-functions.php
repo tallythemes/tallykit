@@ -20,3 +20,17 @@ if( !function_exists('tallykit_shortcodes_fix_shortcodes') ) {
 	}
 	add_filter('the_content', 'tallykit_shortcodes_fix_shortcodes');
 }
+
+
+
+class tallykit_shortcode_styling{
+	public $content;
+	function __construct($content) {
+		$this->content = $content;
+		add_action('wp_head', array($this, 'content'));
+	}
+	
+	function content(){
+		echo $this->content;
+	}
+}

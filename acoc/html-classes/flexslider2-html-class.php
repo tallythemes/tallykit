@@ -111,22 +111,20 @@ class acoc_flexslider2_html{
 	function start(){
 				
 		$output = '';
-		$output .= '<style type="text/css">';
-			if(($this->itemWidth != '0') && ($this->itemMargin != '0')) { 
-				$output .= '#'.$this->uid.' .wfs-viewport ul.slides{ margin-left: -'.$this->itemMargin.'px;  }'; 
-				$output .= '#'.$this->uid.' .wfs-viewport ul.slides li{ margin-left: '.$this->itemMargin.'px; }';
-			}
-		$output .= '</style>';
+		$css_style = '';
+		if(($this->itemWidth != '0') && ($this->itemMargin != '0')) { $css_style .= 'margin-left: -'.$this->itemMargin.'px; '; }
 		$output .= '<div class="acoc-flexslider-clear"></div>';
 		$output .= '<div class="acoc-flexslider2" id="'.$this->uid.'">';
-			$output .= '<ul class="slides">';
+			$output .= '<ul class="slides" style="'.$css_style.'">';
 		
 		if($this->display == false){ return $output; }else{  echo $output; }
 	}
 	
 		function in_loop_start(){
 			$output = '';
-			$output .= '<li>';
+			$css_style = '';
+			if(($this->itemWidth != '0') && ($this->itemMargin != '0')) { $css_style .= 'margin-left: '.$this->itemMargin.'px; ';}
+			$output .= '<li style="'.$css_style.'">';
 			if($this->display == false){ return $output; }else{  echo $output; }
 		}
 		

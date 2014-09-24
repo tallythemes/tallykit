@@ -5,6 +5,7 @@ class acoc_isotope_html{
 	public $display;
 	public $uid;
 	public $column;
+	public $column_width;
 	public $margin;
 	
 	function __construct($data){
@@ -26,23 +27,10 @@ class acoc_isotope_html{
 		$output = '';
 		$width = 100 + $this->margin;
 		$column_width = (100 - ( $this->margin * $this->column )) / $this->column;
-		$output .= '<style type="text/css">';
-			$output .= '#'.$this->uid.'{ width: '.$width.'%; margin-left:-'.$this->margin.'%; }';
-			$output .= '.'.$this->uid.'-item{ width: '.$column_width.'%; margin-bottom:'.$this->margin.'%; margin-left:'.$this->margin.'%; }';
-			
-			$output .= '@media only screen and (max-width: 600px) {';
-				$output .= '#'.$this->uid.'{ width: 102%; margin-left:-2%; }';
-				$output .= '.'.$this->uid.'-item{ width:48%; margin-left:2%;}';
-			$output .= '}';
-			
-			$output .= '@media only screen and (max-width: 420px) {';
-				$output .= '#'.$this->uid.'{ width: 100%; margin-left:0; }';
-				$output .= '.'.$this->uid.'-item{ width:100%; margin-left:0;}';
-			$output .= '}';
-		$output .= '</style>';
+		$this->column_width = $column_width;
+		$css_style = 'width: '.$width.'%; margin-left:-'.$this->margin.'%;';
 		
-		/*$output .= '<div id="'.$this->uid.'" class="js-isotope" data-isotope-options=\'{ "columnWidth": 200, "itemSelector": ".'.$this->uid.'-item" }\'>';*/
-		$output .= '<div id="'.$this->uid.'">';
+		$output .= '<div id="'.$this->uid.'" style="'.$css_style.'" class="acoc_isotope_html">';
 		if($this->display == false){ return $output; }else{  echo $output; }
 	}
 	
@@ -82,7 +70,8 @@ class acoc_isotope_html{
 	
 	
 		function in_loop_start($class = NULL){
-			$output = '<div class="'.$this->uid.'-item '.$class.' isotope-wp-child-item">';
+			$css_style = 'width: '.$this->column_width.'%; margin-bottom:'.$this->margin.'%; margin-left:'.$this->margin.'%;';
+			$output = '<div class="'.$this->uid.'-item '.$class.' isotope-wp-child-item"  style="'.$css_style.'">';
 			if($this->display == false){ return $output; }else{  echo $output; }
 		}
 	

@@ -27,3 +27,14 @@ ul.masonry-acoc-filter li.active{ background:#333; }
 .pagenav-acoc span.current {background: #FAFAFA; color: #444444; font-weight: 600;}
 
 .acoc-clear{ height:1px; width:100%; margin:0; padding:0; clear:both; }
+
+
+@media only screen and (max-width: 600px) {
+	.acoc_isotope_html{ width: 102% !important; margin-left:-2% !important; }
+	.acoc_isotope_html .isotope-wp-child-item{ width:48% !important; margin-left:2% !important; }
+}
+
+@media only screen and (max-width: 420px) {
+	.acoc_isotope_html{ width: 100% !important; margin-left:0 !important; }
+	.acoc_isotope_html .isotope-wp-child-item{ width:100% !important; margin-left:0 !important; }
+}
