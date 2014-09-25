@@ -1,19 +1,21 @@
 <?php
 class tallykit_FrontPage_block_option_accordion{
 	public $section;
+	public $section_name;
 	public $prefix;
 	
 	function __construct(){
-		$this->section = 'home_page_accordion_';
+		$this->section = 'home_page_accordion';
+		$this->section_name = 'Home Accordion';
 		$this->prefix = 'home_page_accordion_';
 		add_filter('option_tree_settings_args', array($this, 'options'), 20);
 	}
 	
 	
 	function options($custom_settings){
-		$custom_settings['sections'][] = array( 'id' => $option['uid'],'title' => $option['lable']);
+		$custom_settings['sections'][] = array( 'id' => $this->section,'title' => $this->section_name);
 		
-		$custom_settings[] = array(
+		$custom_settings['settings'][] = array(
 			'id'          => $this->prefix.'enable',
 			'label'       => __('Enable Toggle', 'tallykit_taxdomain'),
 			'desc'        => '',
@@ -26,7 +28,7 @@ class tallykit_FrontPage_block_option_accordion{
 			'class'       => '',
 		);
 		
-		$custom_settings[] = array(
+		$custom_settings['settings'][] = array(
 			'id'          => $this->prefix.'title',
 			'label'       => __('Title', 'tallykit_taxdomain'),
 			'desc'        => '',
@@ -41,8 +43,8 @@ class tallykit_FrontPage_block_option_accordion{
 			'settings'    => '',
 		);
 		
-		$custom_settings[] = array(
-			'id'          => $this->uid.'_items',
+		$custom_settings['settings'][] = array(
+			'id'          => $this->prefix.'items',
 			'label'       => __('Accordion Items', 'tallykit_taxdomain'),
 			'desc'        => '',
 			'std'         => tally_option_std($this->prefix.'items'),

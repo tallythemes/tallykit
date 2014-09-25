@@ -1178,7 +1178,7 @@ $tinymce_fields[] = array(
 		array(
 			'id' => 'ids',
 			'class' => '',
-			'label' => 'Portfolio IDs',
+			'label' => 'Post IDs',
 			'type' => 'post_multi_select',
 			'std' => '',
 			'des' => '',

@@ -17,7 +17,6 @@ $component_folder_name = 'FrontPage';
 
 
 include('blocks/blocks.php');
-include('class-option-builder.php');
 include('class-content-builder.php');
 
 $tallykit_FrontPage = apply_filters('tallykit_FrontPage', array());
@@ -26,11 +25,24 @@ $tallykit_FrontPage = apply_filters('tallykit_FrontPage', array());
 /*
 	Create Theme Options
 ==================================================*/
-if(is_array($tallykit_FrontPage) && !empty($$tallykit_FrontPage)){
+if(is_array($tallykit_FrontPage) && !empty($tallykit_FrontPage)){
 	foreach($tallykit_FrontPage as $option){
-		
+		$columns = $option['columns'];
+		if(is_array($columns) && !empty($columns)){
+			foreach($columns as $column){
+				$blocks = $column['blocks'];
+				if(is_array($blocks) && !empty($blocks)){
+					foreach($blocks as $block){
+						$block_class_name = 'tallykit_FrontPage_block_option_'.$block['type'];
+						if(class_exists($block_class_name)){
+							$block_class_data = new $block_class_name;
+						}
+					}
+				}
+			}
+		}// IF - $columns
 	}
-}
+} // IF - $tallykit_FrontPage
 
 
 

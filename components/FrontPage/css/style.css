@@ -7,3 +7,5 @@
 	display:table;
 }
 .tallykit_FrontPage_row .tallykit_FrontPage_row_inner{ margin:0 auto; }
+.tallykit_FrontPage_row.width_1170 .tallykit_FrontPage_row_inner{ max-width:1170px; }
+.tallykit_FrontPage_row.width_960 .tallykit_FrontPage_row_inner{ max-width:960px; }
