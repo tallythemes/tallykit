@@ -53,23 +53,15 @@ function tallykit_shortcodes_sc_row( $atts, $content = null  ) {
 	if($text_align){ $style .= 'text-align:'.$text_align.'; '; }
 	
 	$the_width = '';
-	if( $width == '100%' ){ $the_width = 'width:100%;'; }	
+	if( $width == '100%' ){ $the_width = 'width:100%;'; }
+		
+	$child_element_colors = '';
+	if($text_color)			{ $child_element_colors .= 'data-tk-shortcode-row-text-color="'.$text_color.'"'; } //
+	if($inner_border_color)	{ $child_element_colors .= 'data-tk-shortcode-row-border-color="'.$inner_border_color.'"'; }
+	if($heading_color)		{ $child_element_colors .= 'data-tk-shortcode-row-h-color="'.$heading_color.'"'; }
 	
-	$custom_style = '<style type="text/css">';
-		if($text_color){ $custom_style .= '#'.$rand.'{ color:'.$text_color.'; }'; }
-		if($inner_border_color){ $custom_style .= '#'.$rand.' *{ border-color:'.$inner_border_color.'; }'; }
-		if($text_color){ $custom_style .= '#'.$rand.' *{ color:'.$text_color.'; }'; }
-		if($heading_color){ $custom_style .= '#'.$rand.' h1{ color:'.$heading_color.'; }'; }
-		if($heading_color){ $custom_style .= '#'.$rand.' h2{ color:'.$heading_color.'; }'; }
-		if($heading_color){ $custom_style .= '#'.$rand.' h3{ color:'.$heading_color.'; }'; }
-		if($heading_color){ $custom_style .= '#'.$rand.' h4{ color:'.$heading_color.'; }'; }
-		if($heading_color){ $custom_style .= '#'.$rand.' h5{ color:'.$heading_color.'; }'; }
-		if($heading_color){ $custom_style .= '#'.$rand.' h6{ color:'.$heading_color.'; }'; }
-	$custom_style .= '</style>';
-	
-	
-	$output .= $custom_style. '<div id="'.$id.'"></div>';
-	$output .= '<div class="tallykit-shortcode-row '.$class.' color_mood_'.$color_mood.'" style="'.$style.' " id="'.$rand.'">';
+	if($id){ $output .= '<div id="'.$id.'"></div>'; }
+	$output .= '<div class="tallykit-shortcode-row '.$class.' color_mood_'.$color_mood.'" style="'.$style.' " id="'.$rand.'" '.$child_element_colors.'>';
 		$output .= '<div class="tk-shortcode-row-inner" style="max-width:'.$width.'; '.$the_width.'">';
 			$output .= do_shortcode($content);
 		$output .= '</div>';
@@ -193,8 +185,8 @@ function tallykit_shortcodes_sc_checklist( $atts, $content = null ) {
 	extract(shortcode_atts(array(
 		'icon' => 'arrow', //check, star, arrow, asterik, cross, plus
 		'iconcolor' => 'initial',
-		'iconbg' => 'rgba(0,0,0,0)',
-		'iconsize' => '9px',
+		'iconbg' => '',
+		'iconsize' => '1x',
 		'circle' => 'yes',
 		'animation_type' => '',
 		'animation_duration' => '0.5s',
@@ -202,13 +194,13 @@ function tallykit_shortcodes_sc_checklist( $atts, $content = null ) {
 	
 	$rand = rand();
 	$output = '';
-	$output .= "<style type='text/css'>
-	#tallykit-shortcode-checklist-".$rand." ul li:before{color:{$iconcolor} !important;}
-	#tallykit-shortcode-checklist-".$rand." ul li:before{background-color:{$iconbg} !important;}
-	#tallykit-shortcode-checklist-".$rand." ul li:before{font-size:{$iconsize} !important;}
-	</style>";
 	
-	$output .= '<div class="tallykit-shortcode-checklist tallykit-shortcode-checklist-circle-'.$circle.' tallykit-shortcode-checklist-icon-'.$icon.' wow '.$animation_type.'" data-wow-duration="'.$animation_duration.'" data-wow-offset="0" id="tallykit-shortcode-checklist-'.$rand.'">';
+	$color_settings = '';
+	if($iconcolor){ $color_settings .= 'data-tk-shortcode-checklist-iconcolor="'.$iconcolor.'"'; }
+	if($iconcolor){ $color_settings .= 'data-tk-shortcode-checklist-iconbg="'.$iconbg.'"'; }
+	if($iconcolor){ $color_settings .= 'data-tk-shortcode-checklist-iconsize="'.$iconsize.'"'; }
+	
+	$output .= '<div class="tallykit-shortcode-checklist tallykit-shortcode-checklist-circle-'.$circle.' tallykit-shortcode-checklist-icon-'.$icon.' wow '.$animation_type.'" data-wow-duration="'.$animation_duration.'" data-wow-offset="0" id="tallykit-shortcode-checklist-'.$rand.'" '.$color_settings.'>';
 		$output .= do_shortcode($content);
 	$output .= '</div>';
 	
@@ -228,7 +220,7 @@ function tallykit_shortcodes_sc_column( $atts, $content = null ){
 		'text_align' => '',
 		'text_color' => '',
 		'heading_color' => '',
-		'link_color' => '',
+		'border_color' => '',
 		'padding' => '',
 		
 		'animation_type' => '',
@@ -241,13 +233,12 @@ function tallykit_shortcodes_sc_column( $atts, $content = null ){
 	  $padding = ($padding) ? 'padding:'.$padding.';' : '';
 	  $text_align = ($text_align) ? 'text-align:'.$text_align.'; ' : '';
 		  
-	  $output .= '<style type="text/css">
-				#'.$uid.'{ color:'.$text_color.'; }
-				#'.$uid.' a{ color:'.$link_color.'; }
-				#'.$uid.' h1, #'.$uid.' h2, #'.$uid.' h3, #'.$uid.' h4, #'.$uid.' h5, #'.$uid.' h6{ color:'.$heading_color.'; }
-			</style>';
+	$child_element_colors = '';
+	if($text_color)			{ $child_element_colors .= 'data-tk-text-color="'.$text_color.'"'; } //
+	if($border_color)	{ $child_element_colors .= 'data-tk-border-color="'.$border_color.'"'; }
+	if($heading_color)		{ $child_element_colors .= 'data-tk-h-color="'.$heading_color.'"'; }
 		  
-	$output .= '<div id="'.$uid.'" class="tallykit-shortcode-column tallykit-shortcode-' . $size . ' tallykit-shortcode-column-'.$position.' '. $class .' wow '.$animation_type.'" data-wow-duration="'.$animation_duration.'" data-wow-offset="0" style="'.$bg_color.$text_align.'">';
+	$output .= '<div id="'.$uid.'" class="tallykit-shortcode-column tallykit-shortcode-' . $size . ' tallykit-shortcode-column-'.$position.' '. $class .' wow '.$animation_type.'" data-wow-duration="'.$animation_duration.'" data-wow-offset="0" style="'.$bg_color.$text_align.'" '.$child_element_colors.'>';
 		$output .= '<div class="tallykit-shortcode-column-inner" style="'.$padding.'">' . do_shortcode($content) . '</div>';
 	$output .= '</div>';
 	if($position == 'last'){$output .= '<div class="acoc-clear"></div><div class="tallykit-shortcode-clear"></div><div class="acoc-clear"></div>';}
@@ -268,10 +259,10 @@ function tallykit_shortcodes_sc_divider($atts, $content = null) {
 	
 	$output = '';
 	$rand = rand();
+	$css = 'margin-bottom:'.$margin_bottom.'; margin-top:'.$margin_top.';';
 	
-	$output .= '<style type="text/css">#tallykit-shortcode-divider-'.$rand.'{  margin-bottom:'.$margin_bottom.'; margin-top:'.$margin_top.'; }</style>';
 	$output .= '<div class="acoc-clear"></div>';
-	$output .= '<div class="tallykit-shortcode-divider tallykit-shortcode-divider-style-'.$style.'" id="tallykit-shortcode-divider-'.$rand.'"></div>';
+	$output .= '<div class="tallykit-shortcode-divider tallykit-shortcode-divider-style-'.$style.'" id="tallykit-shortcode-divider-'.$rand.'" style="'.$css.'"></div>';
 	$output .= '<div class="acoc-clear"></div>';
 	
 	return $output;
@@ -314,14 +305,12 @@ function tallykit_shortcodes_sc_icon( $atts, $content = null ) {
 	$output = '';
 	$rand = rand();
 	
-	$output .= '<style type="text/css">
-		#shortallykit-shortcodetwell-icon-'.$rand.'{ color:'.$color.'; }
-		#tallykit-shortcode-icon-'.$rand.'.tallykit-shortcode-icon-style-background{ background-color:'.$color.'; color:#ffffff !important; }
-		#tallykit-shortcode-icon-'.$rand.'.tallykit-shortcode-icon-style-border{ border-color:'.$color.'; }
-	</style>';
+	$css = 'color:'.$color.'; ';
+	if($style == 'background'){ $css .= 'background-color:'.$color.'; color:#ffffff !important; '; }
+	if($style == 'border'){ $css .= 'border-color:'.$color.'; '; }
 	
 	if(!empty($link)){ $output .= '<a href="'.$link.'" target="'.$link_target.'">'; }
-	$output .= '<i class="tallykit-shortcode-icon  tallykit-shortcode-icon-shape-'.$shape.'  tallykit-shortcode-icon-size-'.$size.' tallykit-shortcode-icon-effect-'.$effect.' tallykit-shortcode-icon-align-'.$align.' tallykit-shortcode-icon-style-'.$style.' fa '.$icon.' wow '.$animation_type.'" data-wow-duration="'.$animation_duration.'" data-wow-offset="0" id="tallykit-shortcode-icon-'.$rand.'"></i>';
+	$output .= '<i class="tallykit-shortcode-icon  tallykit-shortcode-icon-shape-'.$shape.'  tallykit-shortcode-icon-size-'.$size.' tallykit-shortcode-icon-effect-'.$effect.' tallykit-shortcode-icon-align-'.$align.' tallykit-shortcode-icon-style-'.$style.' fa '.$icon.' wow '.$animation_type.'" data-wow-duration="'.$animation_duration.'" data-wow-offset="0" id="tallykit-shortcode-icon-'.$rand.'" style="'.$css.'"></i>';
 	if(!empty($link)){ $output .= '</a>'; }
 	
 	return $output;	

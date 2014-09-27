@@ -5,7 +5,7 @@
 				$thumb_data = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full' ); // Get post by ID
                 $image_url = $thumb_data[0];
 			?>
-			<img src="<?php echo acoc_image_size($image_url, $width = '600', $height = '400', $crop = true); ?>" width="" height="" alt=""  />
+			<img src="<?php echo acoc_image_size($image_url, $width = '600', $height = '400', $crop = true); ?>" width="600" height="400" alt="<?php the_title(); ?>"  />
             </a>
         </div>
 		<div class="tk_people_item_details">

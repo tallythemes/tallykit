@@ -69,6 +69,5 @@ jQuery(document).ready(function($){
 			triggerOnce: true,
 			offset: '100%'
 		});
-	}
-	
+	}	
 });

@@ -6,7 +6,7 @@
                 $thumb_data = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full' ); // Get post by ID
                 $image_url = $thumb_data[0];
                 ?>
-                <img src="<?php echo acoc_image_size($image_url, $width = '', $height = '', $crop = true); ?>" width="" height="" alt=""  />
+                <img src="<?php echo acoc_image_size($image_url, $width = '', $height = '', $crop = true); ?>" alt="<?php the_title(); ?>"  />
             </div>
         </div>
 	</a>
