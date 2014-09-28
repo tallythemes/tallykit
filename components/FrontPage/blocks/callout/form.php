@@ -13,7 +13,7 @@ class tallykit_FrontPage_block_option_callout{
 	
 	
 	function options($custom_settings){
-		$custom_settings['sections'][] = array( 'id' => $this->section,'title' => $this->section_name);
+		$custom_settings['sections'][] = array( 'id' => $this->section,'title' => '<div class="dashicons dashicons-admin-home"></div> '.$this->section_name);
 		
 		$custom_settings['settings'][] = array(
 			'id'          => $this->prefix.'enable',

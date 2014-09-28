@@ -1,13 +1,13 @@
 <?php
-class tallykit_FrontPage_block_option_blog_grid{
+class tallykit_FrontPage_block_option_portfolio_slideshow{
 	public $section;
 	public $section_name;
 	public $prefix;
 	
 	function __construct(){
-		$this->section = 'home_page_blog_grid';
-		$this->section_name = 'Home Blog Grid';
-		$this->prefix = 'home_page_blog_grid_';
+		$this->section = 'home_page_portfolio_slideshow';
+		$this->section_name = 'Home Portfolio Slider';
+		$this->prefix = 'home_page_portfolio_slideshow_';
 		add_filter('option_tree_settings_args', array($this, 'options'), 20);
 	}
 	
@@ -17,7 +17,7 @@ class tallykit_FrontPage_block_option_blog_grid{
 		
 		$custom_settings['settings'][] = array(
 			'id'          => $this->prefix.'enable',
-			'label'       => __('Enable Blog Grid', 'tallykit_taxdomain'),
+			'label'       => __('Enable Portfolio Slider', 'tallykit_taxdomain'),
 			'desc'        => '',
 			'std'         => tally_option_std($this->prefix.'enable'),
 			'type'        => 'on_off',
@@ -45,28 +45,28 @@ class tallykit_FrontPage_block_option_blog_grid{
 			'id'          => $this->prefix.'category',
 			'label'       => __('Category', 'tallykit_taxdomain'),
 			'desc'        => '',
-			'std'         => tally_option_std($this->prefix.'address'),
-			'type'        => 'category-select',
+			'std'         => tally_option_std($this->prefix.'category'),
+			'type'        => 'taxonomy-select',
 			'section'     => $this->section,
 			'rows'        => '',
 			'post_type'   => '',
-			'taxonomy'    => '',
-			'class'       => '',
-			'condition'   => $this->prefix.'enable'.':is(on)',
-		);	
-		$custom_settings['settings'][] = array(
-			'id'          => $this->prefix.'tags',
-			'label'       => __('Tag', 'tallykit_taxdomain'),
-			'desc'        => '',
-			'std'         => tally_option_std($this->prefix.'tags'),
-			'type'        => 'tag-select',
-			'section'     => $this->section,
-			'rows'        => '',
-			'post_type'   => '',
-			'taxonomy'    => '',
+			'taxonomy'    => 'tallykit_portfolio_category',
 			'class'       => '',
 			'condition'   => $this->prefix.'enable'.':is(on)',
 		);
+		$custom_settings['settings'][] = array(
+			'id'          => $this->prefix.'tag',
+			'label'       => __('Tag', 'tallykit_taxdomain'),
+			'desc'        => '',
+			'std'         => tally_option_std($this->prefix.'tag'),
+			'type'        => 'taxonomy-select',
+			'section'     => $this->section,
+			'rows'        => '',
+			'post_type'   => '',
+			'taxonomy'    => 'tallykit_portfolio_tag',
+			'class'       => '',
+			'condition'   => $this->prefix.'enable'.':is(on)',
+		);	
 		$custom_settings['settings'][] = array(
 			'id'          => $this->prefix.'relation',
 			'label'       => __('Relation', 'tallykit_taxdomain'),
@@ -88,20 +88,7 @@ class tallykit_FrontPage_block_option_blog_grid{
 			'id'          => $this->prefix.'limit',
 			'label'       => __('Limit', 'tallykit_taxdomain'),
 			'desc'        => '',
-			'std'         => tally_option_std($this->prefix.'height', '4'),
-			'type'        => 'text',
-			'section'     => $this->section,
-			'rows'        => '',
-			'post_type'   => '',
-			'taxonomy'    => '',
-			'class'       => '',
-			'condition'   => $this->prefix.'enable'.':is(on)',
-		);
-		$custom_settings['settings'][] = array(
-			'id'          => $this->prefix.'columns',
-			'label'       => __('Columns', 'tallykit_taxdomain'),
-			'desc'        => '',
-			'std'         => tally_option_std($this->prefix.'columns', '4'),
+			'std'         => tally_option_std($this->prefix.'limit'),
 			'type'        => 'text',
 			'section'     => $this->section,
 			'rows'        => '',
@@ -151,10 +138,10 @@ class tallykit_FrontPage_block_option_blog_grid{
 			)
 		);
 		$custom_settings['settings'][] = array(
-			'id'          => $this->prefix.'filter',
-			'label'       => __('Filter', 'tallykit_taxdomain'),
+			'id'          => $this->prefix.'animation',
+			'label'       => __('Animation', 'tallykit_taxdomain'),
 			'desc'        => '',
-			'std'         => tally_option_std($this->prefix.'filter'),
+			'std'         => tally_option_std($this->prefix.'animation'),
 			'type'        => 'select',
 			'section'     => $this->section,
 			'rows'        => '',
@@ -163,15 +150,15 @@ class tallykit_FrontPage_block_option_blog_grid{
 			'class'       => '',
 			'condition'   => $this->prefix.'enable'.':is(on)',
 			'choices'     => array(
-				 array( 'label' => 'yes', 'value' => 'yes' ),
-				 array( 'label' => 'no', 'value' => 'no'),
+				array('label' => 'slide', 'value' => 'slide'),
+				array('label' => 'fade', 'value' => 'fade'),
 			)
 		);
 		$custom_settings['settings'][] = array(
-			'id'          => $this->prefix.'pagination',
-			'label'       => __('Pagination', 'tallykit_taxdomain'),
+			'id'          => $this->prefix.'direction',
+			'label'       => __('Direction', 'tallykit_taxdomain'),
 			'desc'        => '',
-			'std'         => tally_option_std($this->prefix.'pagination'),
+			'std'         => tally_option_std($this->prefix.'direction'),
 			'type'        => 'select',
 			'section'     => $this->section,
 			'rows'        => '',
@@ -180,15 +167,66 @@ class tallykit_FrontPage_block_option_blog_grid{
 			'class'       => '',
 			'condition'   => $this->prefix.'enable'.':is(on)',
 			'choices'     => array(
-				array( 'label' => 'yes', 'value' => 'yes' ),
-				 array( 'label' => 'no', 'value' => 'no'),
+				array('label' => 'horizontal', 'value' => 'horizontal'),
+				array('label' => 'vertical', 'value' => 'vertical'),
 			)
 		);
 		$custom_settings['settings'][] = array(
-			'id'          => $this->prefix.'margin',
-			'label'       => __('Margin', 'tallykit_taxdomain'),
+			'id'          => $this->prefix.'smooth_height',
+			'label'       => __('Smooth Height', 'tallykit_taxdomain'),
 			'desc'        => '',
-			'std'         => tally_option_std($this->prefix.'margin', '3'),
+			'std'         => tally_option_std($this->prefix.'smooth_height'),
+			'type'        => 'select',
+			'section'     => $this->section,
+			'rows'        => '',
+			'post_type'   => '',
+			'taxonomy'    => '',
+			'class'       => '',
+			'condition'   => $this->prefix.'enable'.':is(on)',
+			'choices'     => array(
+				array('label' => 'false', 'value' => 'false'),
+				array('label' => 'true', 'value' => 'true'),
+			)
+		);
+		$custom_settings['settings'][] = array(
+			'id'          => $this->prefix.'slideshow',
+			'label'       => __('Slideshow', 'tallykit_taxdomain'),
+			'desc'        => '',
+			'std'         => tally_option_std($this->prefix.'slideshow'),
+			'type'        => 'select',
+			'section'     => $this->section,
+			'rows'        => '',
+			'post_type'   => '',
+			'taxonomy'    => '',
+			'class'       => '',
+			'condition'   => $this->prefix.'enable'.':is(on)',
+			'choices'     => array(
+				array('label' => 'true', 'value' => 'true'),
+				array('label' => 'false', 'value' => 'false'),
+			)
+		);
+		$custom_settings['settings'][] = array(
+			'id'          => $this->prefix.'animation_loop',
+			'label'       => __('Animation Loop', 'tallykit_taxdomain'),
+			'desc'        => '',
+			'std'         => tally_option_std($this->prefix.'animation_loop'),
+			'type'        => 'select',
+			'section'     => $this->section,
+			'rows'        => '',
+			'post_type'   => '',
+			'taxonomy'    => '',
+			'class'       => '',
+			'condition'   => $this->prefix.'enable'.':is(on)',
+			'choices'     => array(
+				array('label' => 'true', 'value' => 'true'),
+				array('label' => 'false', 'value' => 'false'),
+			)
+		);
+		$custom_settings['settings'][] = array(
+			'id'          => $this->prefix.'slideshow_speed',
+			'label'       => __('Slideshow Speed', 'tallykit_taxdomain'),
+			'desc'        => '',
+			'std'         => tally_option_std($this->prefix.'slideshow_speed', '7000'),
 			'type'        => 'text',
 			'section'     => $this->section,
 			'rows'        => '',
@@ -198,10 +236,10 @@ class tallykit_FrontPage_block_option_blog_grid{
 			'condition'   => $this->prefix.'enable'.':is(on)',
 		);
 		$custom_settings['settings'][] = array(
-			'id'          => $this->prefix.'animation_type',
-			'label'       => __('Animation Type', 'tallykit_taxdomain'),
+			'id'          => $this->prefix.'animation_speed',
+			'label'       => __('Animation Speed', 'tallykit_taxdomain'),
 			'desc'        => '',
-			'std'         => tally_option_std($this->prefix.'animation_type'),
+			'std'         => tally_option_std($this->prefix.'animation_speed', '600'),
 			'type'        => 'text',
 			'section'     => $this->section,
 			'rows'        => '',
@@ -211,17 +249,38 @@ class tallykit_FrontPage_block_option_blog_grid{
 			'condition'   => $this->prefix.'enable'.':is(on)',
 		);
 		$custom_settings['settings'][] = array(
-			'id'          => $this->prefix.'animation_duration',
-			'label'       => __('Animation Duration', 'tallykit_taxdomain'),
+			'id'          => $this->prefix.'control_nav',
+			'label'       => __('Animation Speed', 'tallykit_taxdomain'),
 			'desc'        => '',
-			'std'         => tally_option_std($this->prefix.'animation_duration'),
-			'type'        => 'text',
+			'std'         => tally_option_std($this->prefix.'control_nav', '7000'),
+			'type'        => 'select',
 			'section'     => $this->section,
 			'rows'        => '',
 			'post_type'   => '',
 			'taxonomy'    => '',
 			'class'       => '',
 			'condition'   => $this->prefix.'enable'.':is(on)',
+			'choices'     => array(
+				array('label' => 'true', 'value' => 'true'),
+				array('label' => 'false', 'value' => 'false'),
+			)
+		);
+		$custom_settings['settings'][] = array(
+			'id'          => $this->prefix.'direction_nav',
+			'label'       => __('Direction Nav', 'tallykit_taxdomain'),
+			'desc'        => '',
+			'std'         => tally_option_std($this->prefix.'direction_nav', '7000'),
+			'type'        => 'select',
+			'section'     => $this->section,
+			'rows'        => '',
+			'post_type'   => '',
+			'taxonomy'    => '',
+			'class'       => '',
+			'condition'   => $this->prefix.'enable'.':is(on)',
+			'choices'     => array(
+				array('label' => 'true', 'value' => 'true'),
+				array('label' => 'false', 'value' => 'false'),
+			)
 		);
 		
 		return $custom_settings;

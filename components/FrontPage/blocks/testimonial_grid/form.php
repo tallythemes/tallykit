@@ -1,13 +1,13 @@
 <?php
-class tallykit_FrontPage_block_option_blog_grid{
+class tallykit_FrontPage_block_option_testimonial_grid{
 	public $section;
 	public $section_name;
 	public $prefix;
 	
 	function __construct(){
-		$this->section = 'home_page_blog_grid';
-		$this->section_name = 'Home Blog Grid';
-		$this->prefix = 'home_page_blog_grid_';
+		$this->section = 'home_page_testimonial_grid';
+		$this->section_name = 'Home Testimonial Grid';
+		$this->prefix = 'home_page_testimonial_grid_';
 		add_filter('option_tree_settings_args', array($this, 'options'), 20);
 	}
 	
@@ -17,7 +17,7 @@ class tallykit_FrontPage_block_option_blog_grid{
 		
 		$custom_settings['settings'][] = array(
 			'id'          => $this->prefix.'enable',
-			'label'       => __('Enable Blog Grid', 'tallykit_taxdomain'),
+			'label'       => __('Enable Testimonial Grid', 'tallykit_taxdomain'),
 			'desc'        => '',
 			'std'         => tally_option_std($this->prefix.'enable'),
 			'type'        => 'on_off',
@@ -42,24 +42,32 @@ class tallykit_FrontPage_block_option_blog_grid{
 			'settings'    => '',
 		);		
 		$custom_settings['settings'][] = array(
-			'id'          => $this->prefix.'category',
-			'label'       => __('Category', 'tallykit_taxdomain'),
+			'id'          => $this->prefix.'columns',
+			'label'       => __('Columns', 'tallykit_taxdomain'),
 			'desc'        => '',
-			'std'         => tally_option_std($this->prefix.'address'),
-			'type'        => 'category-select',
+			'std'         => tally_option_std($this->prefix.'columns'),
+			'type'        => 'select',
 			'section'     => $this->section,
 			'rows'        => '',
 			'post_type'   => '',
 			'taxonomy'    => '',
 			'class'       => '',
 			'condition'   => $this->prefix.'enable'.':is(on)',
-		);	
+			'choices'     => array(
+				array('label' => '1', 'value' => '1'),
+				array('label' => '2', 'value' => '2'),
+				array('label' => '3', 'value' => '3'),
+				array('label' => '4', 'value' => '4'),
+				array('label' => '5', 'value' => '5'),
+				array('label' => '6', 'value' => '6'),
+			)
+		);
 		$custom_settings['settings'][] = array(
-			'id'          => $this->prefix.'tags',
-			'label'       => __('Tag', 'tallykit_taxdomain'),
+			'id'          => $this->prefix.'margin',
+			'label'       => __('Columns', 'tallykit_taxdomain'),
 			'desc'        => '',
-			'std'         => tally_option_std($this->prefix.'tags'),
-			'type'        => 'tag-select',
+			'std'         => tally_option_std($this->prefix.'margin', '3'),
+			'type'        => 'text',
 			'section'     => $this->section,
 			'rows'        => '',
 			'post_type'   => '',
@@ -67,6 +75,36 @@ class tallykit_FrontPage_block_option_blog_grid{
 			'class'       => '',
 			'condition'   => $this->prefix.'enable'.':is(on)',
 		);
+		$custom_settings['settings'][] = array(
+			'id'          => $this->prefix.'filter',
+			'label'       => __('Filter', 'tallykit_taxdomain'),
+			'desc'        => '',
+			'std'         => tally_option_std($this->prefix.'filter'),
+			'type'        => 'select',
+			'section'     => $this->section,
+			'rows'        => '',
+			'post_type'   => '',
+			'taxonomy'    => '',
+			'class'       => '',
+			'condition'   => $this->prefix.'enable'.':is(on)',
+			'choices'     => array(
+				array('label' => 'yes', 'value' => 'yes'),
+				array('label' => 'no', 'value' => 'no'),
+			)
+		);
+		$custom_settings['settings'][] = array(
+			'id'          => $this->prefix.'category',
+			'label'       => __('Category', 'tallykit_taxdomain'),
+			'desc'        => '',
+			'std'         => tally_option_std($this->prefix.'category'),
+			'type'        => 'taxonomy-select',
+			'section'     => $this->section,
+			'rows'        => '',
+			'post_type'   => '',
+			'taxonomy'    => 'tallykit_testimonial_category',
+			'class'       => '',
+			'condition'   => $this->prefix.'enable'.':is(on)',
+		);	
 		$custom_settings['settings'][] = array(
 			'id'          => $this->prefix.'relation',
 			'label'       => __('Relation', 'tallykit_taxdomain'),
@@ -88,20 +126,7 @@ class tallykit_FrontPage_block_option_blog_grid{
 			'id'          => $this->prefix.'limit',
 			'label'       => __('Limit', 'tallykit_taxdomain'),
 			'desc'        => '',
-			'std'         => tally_option_std($this->prefix.'height', '4'),
-			'type'        => 'text',
-			'section'     => $this->section,
-			'rows'        => '',
-			'post_type'   => '',
-			'taxonomy'    => '',
-			'class'       => '',
-			'condition'   => $this->prefix.'enable'.':is(on)',
-		);
-		$custom_settings['settings'][] = array(
-			'id'          => $this->prefix.'columns',
-			'label'       => __('Columns', 'tallykit_taxdomain'),
-			'desc'        => '',
-			'std'         => tally_option_std($this->prefix.'columns', '4'),
+			'std'         => tally_option_std($this->prefix.'limit'),
 			'type'        => 'text',
 			'section'     => $this->section,
 			'rows'        => '',
@@ -150,79 +175,7 @@ class tallykit_FrontPage_block_option_blog_grid{
 				 array( 'label' => 'ASC', 'value' => 'ASC'),
 			)
 		);
-		$custom_settings['settings'][] = array(
-			'id'          => $this->prefix.'filter',
-			'label'       => __('Filter', 'tallykit_taxdomain'),
-			'desc'        => '',
-			'std'         => tally_option_std($this->prefix.'filter'),
-			'type'        => 'select',
-			'section'     => $this->section,
-			'rows'        => '',
-			'post_type'   => '',
-			'taxonomy'    => '',
-			'class'       => '',
-			'condition'   => $this->prefix.'enable'.':is(on)',
-			'choices'     => array(
-				 array( 'label' => 'yes', 'value' => 'yes' ),
-				 array( 'label' => 'no', 'value' => 'no'),
-			)
-		);
-		$custom_settings['settings'][] = array(
-			'id'          => $this->prefix.'pagination',
-			'label'       => __('Pagination', 'tallykit_taxdomain'),
-			'desc'        => '',
-			'std'         => tally_option_std($this->prefix.'pagination'),
-			'type'        => 'select',
-			'section'     => $this->section,
-			'rows'        => '',
-			'post_type'   => '',
-			'taxonomy'    => '',
-			'class'       => '',
-			'condition'   => $this->prefix.'enable'.':is(on)',
-			'choices'     => array(
-				array( 'label' => 'yes', 'value' => 'yes' ),
-				 array( 'label' => 'no', 'value' => 'no'),
-			)
-		);
-		$custom_settings['settings'][] = array(
-			'id'          => $this->prefix.'margin',
-			'label'       => __('Margin', 'tallykit_taxdomain'),
-			'desc'        => '',
-			'std'         => tally_option_std($this->prefix.'margin', '3'),
-			'type'        => 'text',
-			'section'     => $this->section,
-			'rows'        => '',
-			'post_type'   => '',
-			'taxonomy'    => '',
-			'class'       => '',
-			'condition'   => $this->prefix.'enable'.':is(on)',
-		);
-		$custom_settings['settings'][] = array(
-			'id'          => $this->prefix.'animation_type',
-			'label'       => __('Animation Type', 'tallykit_taxdomain'),
-			'desc'        => '',
-			'std'         => tally_option_std($this->prefix.'animation_type'),
-			'type'        => 'text',
-			'section'     => $this->section,
-			'rows'        => '',
-			'post_type'   => '',
-			'taxonomy'    => '',
-			'class'       => '',
-			'condition'   => $this->prefix.'enable'.':is(on)',
-		);
-		$custom_settings['settings'][] = array(
-			'id'          => $this->prefix.'animation_duration',
-			'label'       => __('Animation Duration', 'tallykit_taxdomain'),
-			'desc'        => '',
-			'std'         => tally_option_std($this->prefix.'animation_duration'),
-			'type'        => 'text',
-			'section'     => $this->section,
-			'rows'        => '',
-			'post_type'   => '',
-			'taxonomy'    => '',
-			'class'       => '',
-			'condition'   => $this->prefix.'enable'.':is(on)',
-		);
+		
 		
 		return $custom_settings;
 	}

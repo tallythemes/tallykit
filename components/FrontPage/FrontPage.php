@@ -118,3 +118,9 @@ add_action('wp_enqueue_scripts', 'tallykit_FrontPage_script_loader');
 function tallykit_FrontPage_script_loader(){
 	wp_enqueue_style( 'tallykit-frontpage', TALLYKIT_COMPONENTS_URL.'FrontPage/css/style.css', '', '1.0' );
 }
+
+
+add_action('admin_enqueue_scripts', 'tallykit_FrontPage_admin_script_loader');
+function tallykit_FrontPage_admin_script_loader(){
+	wp_enqueue_style( 'tallykit-frontpage', TALLYKIT_COMPONENTS_URL.'FrontPage/css/admin-style.css', '', '1.0' );
+}

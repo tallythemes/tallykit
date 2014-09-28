@@ -13,11 +13,11 @@ class tallykit_FrontPage_block_option_accordion{
 	
 	
 	function options($custom_settings){
-		$custom_settings['sections'][] = array( 'id' => $this->section,'title' => $this->section_name);
+		$custom_settings['sections'][] = array( 'id' => $this->section,'title' => '<div class="dashicons dashicons-admin-home"></div> '.$this->section_name);
 		
 		$custom_settings['settings'][] = array(
 			'id'          => $this->prefix.'enable',
-			'label'       => __('Enable Toggle', 'tallykit_taxdomain'),
+			'label'       => __('Enable Accordion', 'tallykit_taxdomain'),
 			'desc'        => '',
 			'std'         => tally_option_std($this->prefix.'enable'),
 			'type'        => 'on_off',
@@ -61,7 +61,7 @@ class tallykit_FrontPage_block_option_accordion{
 					'label'       => __('Content', 'tallykit_taxdomain'),
 					'desc'        => '',
 					'std'         => '',
-					'type'        => 'text',
+					'type'        => 'textarea-simple',
 					'section'     => '',
 					'rows'        => '',
 					'post_type'   => '',

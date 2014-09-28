@@ -1,13 +1,13 @@
 <?php
-class tallykit_FrontPage_block_option_toggle{
+class tallykit_FrontPage_block_option_tab{
 	public $section;
 	public $section_name;
 	public $prefix;
 	
 	function __construct(){
-		$this->section = 'home_page_toggle';
-		$this->section_name = 'Home Toggle';
-		$this->prefix = 'home_page_toggle_';
+		$this->section = 'home_page_tab';
+		$this->section_name = 'Home Tabs';
+		$this->prefix = 'home_page_tab_';
 		add_filter('option_tree_settings_args', array($this, 'options'), 20);
 	}
 	
@@ -17,7 +17,7 @@ class tallykit_FrontPage_block_option_toggle{
 		
 		$custom_settings['settings'][] = array(
 			'id'          => $this->prefix.'enable',
-			'label'       => __('Enable Toggle', 'tallykit_taxdomain'),
+			'label'       => __('Enable Tabs', 'tallykit_taxdomain'),
 			'desc'        => '',
 			'std'         => tally_option_std($this->prefix.'enable'),
 			'type'        => 'on_off',
@@ -45,7 +45,7 @@ class tallykit_FrontPage_block_option_toggle{
 		
 		$custom_settings['settings'][] = array(
 			'id'          => $this->prefix.'items',
-			'label'       => __('Toggle Items', 'tallykit_taxdomain'),
+			'label'       => __('Tabs Items', 'tallykit_taxdomain'),
 			'desc'        => '',
 			'std'         => tally_option_std($this->prefix.'items'),
 			'type'        => 'list-item',
