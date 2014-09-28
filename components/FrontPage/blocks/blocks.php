@@ -46,3 +46,21 @@ include(TALLYKIT_FRONTPAGE_COMPONENT_BLOCKS_DRI.'portfolio_grid/output.php');
 
 include(TALLYKIT_FRONTPAGE_COMPONENT_BLOCKS_DRI.'portfolio_carousel/form.php');
 include(TALLYKIT_FRONTPAGE_COMPONENT_BLOCKS_DRI.'portfolio_carousel/output.php');
+
+include(TALLYKIT_FRONTPAGE_COMPONENT_BLOCKS_DRI.'people_carousel/form.php');
+include(TALLYKIT_FRONTPAGE_COMPONENT_BLOCKS_DRI.'people_carousel/output.php');
+
+include(TALLYKIT_FRONTPAGE_COMPONENT_BLOCKS_DRI.'people_grid/form.php');
+include(TALLYKIT_FRONTPAGE_COMPONENT_BLOCKS_DRI.'people_grid/output.php');
+
+include(TALLYKIT_FRONTPAGE_COMPONENT_BLOCKS_DRI.'people_slideshow/form.php');
+include(TALLYKIT_FRONTPAGE_COMPONENT_BLOCKS_DRI.'people_slideshow/output.php');
+
+include(TALLYKIT_FRONTPAGE_COMPONENT_BLOCKS_DRI.'logo_grid/form.php');
+include(TALLYKIT_FRONTPAGE_COMPONENT_BLOCKS_DRI.'logo_grid/output.php');
+
+include(TALLYKIT_FRONTPAGE_COMPONENT_BLOCKS_DRI.'logo_slideshow/form.php');
+include(TALLYKIT_FRONTPAGE_COMPONENT_BLOCKS_DRI.'logo_slideshow/output.php');
+
+include(TALLYKIT_FRONTPAGE_COMPONENT_BLOCKS_DRI.'logo_carousel/form.php');
+include(TALLYKIT_FRONTPAGE_COMPONENT_BLOCKS_DRI.'logo_carousel/output.php');
