@@ -10,6 +10,10 @@
 .tk_slideshow_title{ font-size: 40px; line-height: 60px; text-shadow: none; }
 .tk_slideshow_content{ color: #fff; text-align: center; font-size: 14px; line-height: 1.363157894736842em; font-weight: 400; margin: 10px 0 15px 0; }
 
+.acoc-flexslider2 ul.slides li .tallykit_slideshow_item .tk_slideshow_the_video{ opacity:0; display:none }
+.acoc-flexslider2 ul.slides li.wfs-active-slide .tallykit_slideshow_item .tk_slideshow_the_video{ opacity:1; display:block; }
+
+
 
 /*---------------------------------------------------------
   caption Video

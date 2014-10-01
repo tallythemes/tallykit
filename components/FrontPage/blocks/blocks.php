@@ -64,3 +64,6 @@ include(TALLYKIT_FRONTPAGE_COMPONENT_BLOCKS_DRI.'logo_slideshow/output.php');
 
 include(TALLYKIT_FRONTPAGE_COMPONENT_BLOCKS_DRI.'logo_carousel/form.php');
 include(TALLYKIT_FRONTPAGE_COMPONENT_BLOCKS_DRI.'logo_carousel/output.php');
+
+include(TALLYKIT_FRONTPAGE_COMPONENT_BLOCKS_DRI.'audio/form.php');
+include(TALLYKIT_FRONTPAGE_COMPONENT_BLOCKS_DRI.'audio/output.php');

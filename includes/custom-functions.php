@@ -15,9 +15,13 @@ function tallykit_components_loader(){
 				if( tallykit_component_check($name) == true ){
 					if(file_exists($file_path) && file_exists($active_file_path)){ include($file_path); }
 					
-					//echo tallykit_component_check_display($name).'<br>';
+					if(isset($_GET['tk_c_c']) && !empty($_GET['tk_c_c']) && current_user_can('manage_options')){
+						if($_GET['tk_c_c'] == 'active'){ echo tallykit_component_check_display($name).'<br>'; }
+					}
 				}else{
-					//echo tallykit_component_check_display($name).'<br>';
+					if(isset($_GET['tk_c_c']) && !empty($_GET['tk_c_c'])  && current_user_can('manage_options')){
+						if($_GET['tk_c_c'] == 'inactive'){ echo tallykit_component_check_display($name).'<br>'; }
+					}
 				}
 				
 				
