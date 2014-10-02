@@ -39,15 +39,6 @@ endif;
  * @uses class acoc_theme_compat
 **/
 $tallykit_people_theme_compact = new acoc_theme_compat2;
-
-$tallykit_people_theme_compact->add_single(array(
-	'post_type'		=> 'tallykit_people', 
-	'filter'		=> 'tallykit_people_content',
-	'template_3'	=> 'acoc.php',
-	'template_2'	=> 'page.php',
-	'template_1'	=> 'index.php',
-	'content'		=> 'tallykit_people_theme_compact_single_content',
-));
 $tallykit_people_theme_compact->add_archive(array(
 	'post_type'		=> 'tallykit_people',
 	'template_3'	=> 'acoc.php',
@@ -62,10 +53,6 @@ $tallykit_people_theme_compact->add_taxonomy(array(
 	'template_1'	=> 'index.php',
 	'content'		=> 'tallykit_people_theme_compact_category_content',
 ));
-
-function tallykit_people_theme_compact_single_content(){
-	return do_shortcode('[tk_people_single id="'.get_the_ID().'"/]');
-}
 function tallykit_people_theme_compact_archive_content(){
 	return do_shortcode('[tk_people_grid limit="12" column="4" /]');
 }
@@ -89,6 +76,13 @@ function tallykit_people_do_reset_page_content(){
 		remove_all_actions('tally_loop');
 		add_action('tally_loop', 'tally_deafult_page_content');
 	}
+	if( is_single() && (get_post_type() == 'tallykit_people')){
+		remove_all_actions('tally_loop');
+		add_action('tally_loop', 'tallykit_people_do_single_content');
+	}
+}
+function tallykit_people_do_single_content(){
+	include(tallykit_people_template_path('dri', 'people-single-template.php'));
 }
 
 add_filter('tally_ot_page_metabox', 'tallykit_people_tally_ot_page_metabox');

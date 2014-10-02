@@ -276,7 +276,8 @@ function tallykit_people_sc_single( $atts, $content = null  ) {
 	
 	$query = array(
 		'post_type'      => 'tallykit_people',
-		'p'          => $id
+		'p'          => $id,
+		'posts_per_page' => 1
 	);
 	
 	ob_start();

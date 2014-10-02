@@ -1,11 +1,8 @@
-<?php
-$people_query = new WP_Query( $query );
-?>
 <div class="tallykit_people_single">
-	<?php if( $people_query->have_posts() ): ?>
-		<?php while ( $people_query->have_posts() ) : $people_query->the_post(); ?>
+	<?php if( have_posts() ): ?>
+		<?php while (have_posts() ) : the_post(); ?>
             <div class="tk_people_single_content">
-               <?php echo apply_filters('tallykit_people_content', get_the_content()); ?>
+               <?php the_content(); ?>
             </div>
             <div class="tk_people_single_info">
             	<?php
@@ -81,5 +78,5 @@ $people_query = new WP_Query( $query );
     <?php else: ?>
     	<?php _e('No People found.', 'tallykit_textdomain'); ?>
     <?php endif; ?>
-    wp_reset_postdata();
+   <?php wp_reset_postdata(); ?>
 </div>
