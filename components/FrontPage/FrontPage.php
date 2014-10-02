@@ -19,9 +19,17 @@ $component_folder_name = 'FrontPage';
 include('blocks/blocks.php');
 include('class-content-builder.php');
 
-$tallykit_FrontPage = apply_filters('tallykit_FrontPage', array());
+function tallykit_frontPage_settings(){
+	$data = NULL;
+	if(file_exists(get_stylesheet_directory().'/FrontPage-settings.php')){
+		$data = include(get_stylesheet_directory().'/FrontPage-settings.php');
+	}elseif(file_exists(get_template_directory().'/FrontPage-settings.php')){
+		$data = include(get_template_directory().'/FrontPage-settings.php');
+	}
+	return $data;
+}
 
-
+$tallykit_FrontPage = tallykit_frontPage_settings();
 /*
 	Create Theme Options
 ==================================================*/
@@ -51,7 +59,7 @@ if(is_array($tallykit_FrontPage) && !empty($tallykit_FrontPage)){
 ==================================================*/
 add_shortcode('frontpage', 'tallykit_FrontPage_shortcode');
 function tallykit_FrontPage_shortcode(){
-	$content = new tallykit_FrontPage_content_builder( apply_filters('tallykit_FrontPage', array()) );
+	$content = new tallykit_FrontPage_content_builder( tallykit_frontPage_settings() );
 	ob_start();
 	echo $content->render();
 	$output = ob_get_contents();
