@@ -58,7 +58,7 @@ $options = array(
 	'archive_title'		=> __('Documentation Archive', 'tallykit_textdomain'),
 	'taxonomy_title'	=> __('Documentation of ', 'tallykit_textdomain'),
 			
-	'content_filter_name'	=> NULL,
+	'content_filter_name'	=> 'tallykit_doc_the_content',
 );
 new acoc_theme_compat($options);
 

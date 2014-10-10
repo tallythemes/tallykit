@@ -59,7 +59,7 @@ function tallykit_doc_content_metabox_register() {
 			'pages'     => array( 'tallykit_doc'),
 			'context'   => 'normal',
 			'priority'  => 'high',
-			'fields'    => $settings,
+			'fields'    => apply_filters('tallykit_doc_contents_metabox_fields', $settings),
 		);
 		ot_register_meta_box( $metabox );
 	endif;

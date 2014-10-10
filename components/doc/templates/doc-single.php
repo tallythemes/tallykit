@@ -1,6 +1,7 @@
 <?php $entrys = get_post_meta(get_the_ID(), 'tallykit_doc_contents', true); $i = 0; ?>
 <div class="tallykit_doc_single" id="tallykit_doc_single">
-	    
+	<?php echo apply_filters('tallykit_doc_the_content', get_the_content()); ?>
+    <div class="clear"></div>
     <div class="tk_doc_content">
     	 <div class="tk_doc_content_inner">
     		<?php 
