@@ -27,6 +27,10 @@ function tallykit_shortcodes_script_loader(){
 	wp_enqueue_style( 'jquery-prettyPhoto');
 	wp_enqueue_script('jquery-prettyPhoto');
 	
+	//magnific-popup
+	wp_enqueue_style( 'jquery-magnific-popup');
+	wp_enqueue_script('jquery-magnific-popup');
+	
 	//font-awesome
 	wp_enqueue_style('font-awesome');
 	

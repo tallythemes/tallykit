@@ -10,14 +10,18 @@ jQuery(document).ready(function($) {
 	);
 	wow.init();
 	
-	 $( ".wow" ).each(function() {
-        if ($(this).attr('data-wow-center-offset')) {
-            offset = windowHeight / 100 * $(this).attr('data-wow-center-offset');
-        }
-        else {
-            offset = windowHeight * 0.25;
-        }
-        offset = offset + $(this).height() / 2;
-      $(this).attr( "data-wow-offset", parseInt(offset) );
-    });
+
+	if(jQuery().magnificPopup){
+		$('.acoc-magnificPopup-image').magnificPopup({type:'image'});
+		$('.acoc-magnificPopup-iframe').magnificPopup({type:'iframe'});
+		$('.acoc-magnificPopup-image-group').magnificPopup({ 
+			delegate: '.acoc-magnificPopup-child',
+			type:'image',
+			gallery: {
+				enabled: true,
+				navigateByImgClick: true,
+				preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+			},
+		});
+	}
 });

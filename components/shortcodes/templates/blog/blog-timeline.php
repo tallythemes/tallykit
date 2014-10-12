@@ -45,7 +45,7 @@
 								}
 							}elseif(get_post_format() == 'gallery'){
 								echo '<div class="entry-gallery ">';
-									echo '<ul class="" >';
+									echo '<ul class="acoc-magnificPopup-image-group" >';
 										$attachments = explode(",", get_post_meta(get_the_ID(), 'tally_postformat_gallery', true));
 										if ( $attachments ) {
 											foreach ( $attachments as $attachment ) {
@@ -53,7 +53,7 @@
 												$imagefull = wp_get_attachment_image_src($attachment, 'full');
 												
 												echo '<li>';
-													echo '<a href="'.$imagefull[0].'" rel="prettyPhoto[g_'.get_the_ID().']"><img src="' . mr_image_resize($image[0], 90, 78) . '" height="78" width="90" alt="" /></a>';
+													echo '<a href="'.$imagefull[0].'" class="acoc-magnificPopup-child"><img src="' . mr_image_resize($image[0], 90, 78) . '" height="78" width="90" alt="" /></a>';
 												echo '</li>';
 											}
 										}
@@ -62,7 +62,7 @@
 							}elseif(get_post_format() == 'image'){
 								echo '<div class="entry-image entry-media">';
 									$large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full');
-									echo '<a href="'.$large_image_url[0].'" rel="prettyPhoto">';
+									echo '<a href="'.$large_image_url[0].'" class="acoc-magnificPopup-image">';
 										echo get_the_post_thumbnail(get_the_ID(), 'image_format');
 									echo '</a>';
 								echo '</div>';

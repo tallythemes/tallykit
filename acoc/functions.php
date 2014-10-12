@@ -1,4 +1,72 @@
 <?php
+/* Make oembed_result HTML5 Validate
+-------------------------------------------------*/
+add_filter('oembed_result', 'acoc_oembed_result_frameborder_remove', 1, true);
+function acoc_oembed_result_frameborder_remove($embed) {
+	
+	$output = $embed;
+	
+	if (strstr($embed,'frameborder="0"')) {
+		$output = str_replace('frameborder="0"','',$embed);
+	}elseif (strstr($embed,'frameborder="no"')) {
+		$output = str_replace('frameborder="no"','',$embed);
+	}
+	
+	
+	return $output;
+}
+
+add_filter('oembed_result', 'acoc_oembed_result_scrolling_remove', 1, true);
+function acoc_oembed_result_scrolling_remove($embed) {
+	
+	$output = $embed;
+
+	if (strstr($embed,'scrolling="no"')) {
+		$output = str_replace('scrolling="no"','',$embed);
+	}
+
+	return $output;
+}
+
+add_filter('oembed_result', 'acoc_oembed_result_soundcloud_fix', 1, true);
+function acoc_oembed_result_soundcloud_fix($embed) {
+	
+	$output = $embed;
+
+	if (strstr($embed,'soundcloud.com/player/')) {
+		$output = str_replace('&','&amp;',$embed);
+	}
+
+	return $output;
+}
+
+add_filter('oembed_result', 'acoc_oembed_result_webkitallowfullscreen_remove', 1, true);
+function acoc_oembed_result_webkitallowfullscreen_remove($embed) {
+	
+	$output = $embed;
+
+	if (strstr($embed,'webkitallowfullscreen')) {
+		$output = str_replace('webkitallowfullscreen','',$embed);
+	}
+
+	return $output;
+}
+
+add_filter('oembed_result', 'acoc_oembed_result_mozallowfullscreen_remove', 1, true);
+function acoc_oembed_result_mozallowfullscreen_remove($embed) {
+	
+	$output = $embed;
+
+	if (strstr($embed,'mozallowfullscreen')) {
+		$output = str_replace('mozallowfullscreen','',$embed);
+	}
+
+	return $output;
+}
+
+
+
+
 /* Resize image
 -------------------------------------------------*/
 if(!function_exists('acoc_image_size')):

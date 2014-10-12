@@ -341,11 +341,14 @@ function tallykit_shortcodes_sc_lightbox($atts, $content = null) {
 		'class' => '',
 		'src' => '',
 		'title' => '',
+		'type' => 'image', //iframe, image
 	), $atts ) );
 	
-	$uid = 'tallykit-shortcode-lightbox'.rand();	
+	$magnificPopup = 'acoc-magnificPopup-image';
+	
+	
 	$output = '';
-	$output .= '<a href="'.$src.'" rel="prettyPhoto" title="'.$title.'" class="'.$class.'">';
+	$output .= '<a href="'.$src.'" title="'.$title.'" class="acoc-magnificPopup-'.$type.' '.$class.'">';
 		$output .= do_shortcode($content);
 	$output .= '</a>'; 
 

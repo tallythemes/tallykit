@@ -57,7 +57,7 @@ function acoc_load_extranal_scripts(){
 	wp_register_script('jquery-wow', $js.'wow.min.js', array(), '1.0.1 ', true);
 	
 	wp_enqueue_style( 'acoc', $css.'acoc.css', '', '1.0' );
-	wp_enqueue_style( 'acoc', $js.'acoc.js', '', '1.0' );
+	wp_enqueue_script( 'acoc', $js.'acoc.js', '', '1.0' );
 }
 
 
