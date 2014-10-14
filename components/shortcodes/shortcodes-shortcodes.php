@@ -56,9 +56,9 @@ function tallykit_shortcodes_sc_row( $atts, $content = null  ) {
 	if( $width == '100%' ){ $the_width = 'width:100%;'; }
 		
 	$child_element_colors = '';
-	if($text_color)			{ $child_element_colors .= 'data-tk-shortcode-row-text-color="'.$text_color.'"'; } //
-	if($inner_border_color)	{ $child_element_colors .= 'data-tk-shortcode-row-border-color="'.$inner_border_color.'"'; }
-	if($heading_color)		{ $child_element_colors .= 'data-tk-shortcode-row-h-color="'.$heading_color.'"'; }
+	if($text_color)			{ $child_element_colors .= 'data-tk-shortcode-row-text-color="'.$text_color.'" '; } //
+	if($inner_border_color)	{ $child_element_colors .= 'data-tk-shortcode-row-border-color="'.$inner_border_color.'" '; }
+	if($heading_color)		{ $child_element_colors .= 'data-tk-shortcode-row-h-color="'.$heading_color.'" '; }
 	
 	if($id){ $output .= '<div id="'.$id.'"></div>'; }
 	$output .= '<div class="tallykit-shortcode-row '.$class.' color_mood_'.$color_mood.'" style="'.$style.' " id="'.$rand.'" '.$child_element_colors.'>';
@@ -196,9 +196,9 @@ function tallykit_shortcodes_sc_checklist( $atts, $content = null ) {
 	$output = '';
 	
 	$color_settings = '';
-	if($iconcolor){ $color_settings .= 'data-tk-shortcode-checklist-iconcolor="'.$iconcolor.'"'; }
-	if($iconcolor){ $color_settings .= 'data-tk-shortcode-checklist-iconbg="'.$iconbg.'"'; }
-	if($iconcolor){ $color_settings .= 'data-tk-shortcode-checklist-iconsize="'.$iconsize.'"'; }
+	if($iconcolor){ $color_settings .= 'data-tk-shortcode-checklist-iconcolor="'.$iconcolor.'" '; }
+	if($iconcolor){ $color_settings .= 'data-tk-shortcode-checklist-iconbg="'.$iconbg.'" '; }
+	if($iconcolor){ $color_settings .= 'data-tk-shortcode-checklist-iconsize="'.$iconsize.'" '; }
 	
 	$output .= '<div class="tallykit-shortcode-checklist tallykit-shortcode-checklist-circle-'.$circle.' tallykit-shortcode-checklist-icon-'.$icon.' wow '.$animation_type.'" data-wow-duration="'.$animation_duration.'" data-wow-offset="0" id="tallykit-shortcode-checklist-'.$rand.'" '.$color_settings.'>';
 		$output .= do_shortcode($content);

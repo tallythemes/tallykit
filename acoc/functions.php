@@ -65,6 +65,19 @@ function acoc_oembed_result_mozallowfullscreen_remove($embed) {
 }
 
 
+add_filter('oembed_result', 'acoc_oembed_result_embed_remove', 1, true);
+function acoc_oembed_result_embed_remove($embed) {
+	
+	$output = $embed;
+
+	if (strstr($embed,'</embed>')) {
+		$output = str_replace('</embed>','',$embed);
+	}
+
+	return $output;
+}
+
+
 
 
 /* Resize image
