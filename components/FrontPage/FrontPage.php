@@ -19,6 +19,11 @@ $component_folder_name = 'FrontPage';
 include('blocks/blocks.php');
 include('class-content-builder.php');
 
+
+
+/*
+	Get the Options
+==================================================*/
 function tallykit_frontPage_settings(){
 	$data = NULL;
 	if(file_exists(get_stylesheet_directory().'/FrontPage-settings.php')){
@@ -28,8 +33,11 @@ function tallykit_frontPage_settings(){
 	}
 	return $data;
 }
-
 $tallykit_FrontPage = tallykit_frontPage_settings();
+
+
+
+
 /*
 	Create Theme Options
 ==================================================*/
@@ -54,6 +62,15 @@ if(is_array($tallykit_FrontPage) && !empty($tallykit_FrontPage)){
 
 
 
+
+/*
+	Sections Settings
+==================================================*/
+include('sections-settings.php');
+
+
+
+
 /*
 	Register Shortcode
 ==================================================*/
@@ -66,6 +83,7 @@ function tallykit_FrontPage_shortcode(){
 	ob_end_clean();
 	return 	$output;	
 }
+
 
 
 /*

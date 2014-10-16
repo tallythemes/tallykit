@@ -15,7 +15,6 @@ if(!class_exists('tallykit_FrontPage_content_builder')):
 			$options = $this->options;			
 			if(is_array($options) && !empty($options)){
 				foreach($options as $option){
-					
 					if($this->check_empty_row($option) != 0){
 					echo '<div class="tallykit_FrontPage_row '.$option['class'].'" id="'.$option['div_id'].'">';
 						echo '<div class="tallykit_FrontPage_row_inner">';

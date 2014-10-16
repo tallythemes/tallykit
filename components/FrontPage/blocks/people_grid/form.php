@@ -64,7 +64,7 @@ class tallykit_FrontPage_block_option_people_grid{
 		);
 		$custom_settings['settings'][] = array(
 			'id'          => $this->prefix.'margin',
-			'label'       => __('Columns', 'tallykit_taxdomain'),
+			'label'       => __('Margin', 'tallykit_taxdomain'),
 			'desc'        => '',
 			'std'         => tally_option_std($this->prefix.'margin', '3'),
 			'type'        => 'text',

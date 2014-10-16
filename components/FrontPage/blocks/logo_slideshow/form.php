@@ -237,7 +237,7 @@ class tallykit_FrontPage_block_option_logo_slideshow{
 		);
 		$custom_settings['settings'][] = array(
 			'id'          => $this->prefix.'control_nav',
-			'label'       => __('Animation Speed', 'tallykit_taxdomain'),
+			'label'       => __('Control Nav', 'tallykit_taxdomain'),
 			'desc'        => '',
 			'std'         => tally_option_std($this->prefix.'control_nav', '7000'),
 			'type'        => 'select',

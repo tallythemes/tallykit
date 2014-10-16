@@ -176,7 +176,9 @@ function acoc_post_thumbnail($args = array()){
 	if ( function_exists( 'has_post_thumbnail' ) && has_post_thumbnail( $args['id'] ) ){
 		$thumb_id = get_post_thumbnail_id($args['id']);
 		$thumb_url = wp_get_attachment_image_src($thumb_id, 'full', true);
-		$output = acoc_image_size($thumb_url[0], $args['w'], $args['h'], $args['crop']);
+		$the_image_url = $thumb_url[0];
+		if(strpos($thumb_url[0], 'default.png')){ $the_image_url = ''; }
+		$output = acoc_image_size($the_image_url, $args['w'], $args['h'], $args['crop']);
 	}elseif($args['placeholder'] != ''){
 		$output = $args['placeholder'];
 	}
