@@ -7,5 +7,20 @@
 	display:table;
 }
 .tallykit_FrontPage_row .tallykit_FrontPage_row_inner{ margin:0 auto; }
+
 .tallykit_FrontPage_row.width_1170 .tallykit_FrontPage_row_inner{ max-width:1170px; }
+.tallykit_FrontPage_row.width_1060 .tallykit_FrontPage_row_inner{ max-width:1060px; }
 .tallykit_FrontPage_row.width_960 .tallykit_FrontPage_row_inner{ max-width:960px; }
+.tallykit_FrontPage_row.width_800 .tallykit_FrontPage_row_inner{ max-width:800px; }
+.tallykit_FrontPage_row.width_700 .tallykit_FrontPage_row_inner{ max-width:700px; }
+
+.tallykit_FrontPage_row.border_top_1{ border-top:1px solid; }
+.tallykit_FrontPage_row.border_bottom_1{ border-bottom:1px solid; }
+.tallykit_FrontPage_row.border_top_2{ border-top:2px solid; }
+.tallykit_FrontPage_row.border_bottom_2{ border-bottom:2px solid; }
+.tallykit_FrontPage_row.border_top_3{ border-top:3px solid; }
+.tallykit_FrontPage_row.border_bottom_3{ border-bottom:3px solid; }
+.tallykit_FrontPage_row.border_top_4{ border-top:4px solid; }
+.tallykit_FrontPage_row.border_bottom_4{ border-bottom:4px solid; }
+.tallykit_FrontPage_row.border_top_5{ border-top:5px solid; }
+.tallykit_FrontPage_row.border_bottom_6{ border-bottom:6px solid; }
