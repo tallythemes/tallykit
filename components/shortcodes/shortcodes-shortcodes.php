@@ -573,14 +573,14 @@ add_shortcode('tk_counter_box', 'tallykit_shortcodes_sc_tk_counter_box');
 function tallykit_shortcodes_sc_tk_counter_box($atts, $content = null) {
 	extract(shortcode_atts(array(
 		'value' => '70',
-		'prefix' => '',
+		'prefix' => '', 
 		'suffix' => '',
 		'animation_type' => '',
 		'animation_duration' => '0.5s',
 	), $atts));
 	
 	if($prefix){ $prefix = '<span class="prefix">'.$prefix.'</span>'; }
-	if($suffix){ $prefix = '<span class="suffix">'.$suffix.'</span>'; }
+	if($suffix){ $suffix = '<span class="suffix">'.$suffix.'</span>'; }
 
 	$output = '';
 	$output .= '<div class="tallykit-shortcode-counterBox-wrapper wow '.$animation_type.'" data-wow-duration="'.$animation_duration.'" data-wow-offset="0">';

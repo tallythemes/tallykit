@@ -14,7 +14,7 @@ $logo_query = new WP_Query( $query );
         <?php $isotope->end(); ?>
         <div style="clear:both;"></div>
         <?php wp_reset_postdata(); ?>
-        <?php echo acoc_paginate($logo_query); ?>
+        <?php if($pagination != 'no'){ echo acoc_paginate($logo_query); } ?>
     <?php else: ?>
     	<?php _e('No Logo found.', 'tallykit_textdomain'); ?>
     <?php endif; ?>

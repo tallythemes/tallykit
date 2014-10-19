@@ -25,7 +25,7 @@ class tallykit_FrontPage_block_output_blog_grid{
 		
 		if($enable == 'on'):
 			echo '<div class="front_page_blog_grid">';
-				if($title != ''){ echo '<h4>'.$title.'</h4>'; }
+				if($title != ''){ echo '<h4 class="block_title">'.$title.'</h4>'; }
 				
 				$output = '[tk_blog_grid category="'.$category.'" exclude_category="" tags="'.$tags.'" exclude_tags="" relation="'.$relation.'" limit="'.$limit.'" columns="'.$columns.'" orderby="'.$orderby.'" order="'.$order.'" ids="" filter="'.$filter.'" pagination="'.$pagination.'" margin="'.$margin.'" animation_type="'.$animation_type.'" animation_duration="'.$animation_duration.'" /]';
 				

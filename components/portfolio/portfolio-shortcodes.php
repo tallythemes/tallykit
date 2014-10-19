@@ -23,7 +23,8 @@ function tallykit_portfolio_sc_grid( $atts, $content = null ) {
 			'order'            => 'DESC',
 			'ids'              => '',
 			'filter'		   => 'yes',
-			'margin'		   => '3'
+			'margin'		   => '3',
+			'pagination'		=> 'yes'
 		), $atts)
 	);
 	

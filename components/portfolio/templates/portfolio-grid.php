@@ -14,7 +14,7 @@ $portfolio_query = new WP_Query( $query );
         <?php $isotope->end(); ?>
         <div style="clear:both;"></div>
         <?php wp_reset_postdata(); ?>
-        <?php echo acoc_paginate($portfolio_query); ?>
+        <?php if($pagination != 'no'){ echo acoc_paginate($portfolio_query); } ?>
     <?php else: ?>
     	<?php _e('No Portfolio found.', 'tallykit_textdomain'); ?>
     <?php endif; ?>

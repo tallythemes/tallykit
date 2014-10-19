@@ -125,6 +125,18 @@ $tinymce_fields[] = array(
 			'std' => '3',
 			'des' => '',
 		),
+		array(
+			'id' => 'pagination',
+			'class' => '',
+			'label' => 'Pagination',
+			'type' => 'select',
+			'std' => 'yes',
+			'des' => '',
+			'options' => array(
+				array('label' => 'yes', 'value' => 'yes'),
+				array('label' => 'no', 'value' => 'no'),
+			)
+		),
 	)
 );
 

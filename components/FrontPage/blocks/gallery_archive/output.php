@@ -1,9 +1,9 @@
 <?php
-class tallykit_FrontPage_block_output_people_grid{
+class tallykit_FrontPage_block_output_gallery_archive{
 	public $prefix;
 	
 	function __construct(){
-		$this->prefix = 'home_page_people_grid_';
+		$this->prefix = 'home_page_gallery_archive_';
 	}
 	
 	
@@ -21,11 +21,12 @@ class tallykit_FrontPage_block_output_people_grid{
 		$margin = tally_option($this->prefix.'margin');
 		$pagination = tally_option($this->prefix.'pagination');
 		
+		
 		if($enable == 'on'):
-			echo '<div class="front_page_people_grid">';
+			echo '<div class="front_page_gallery_archive">';
 				if($title != ''){ echo '<h4>'.$title.'</h4>'; }
 				
-				$output = '[tk_people_grid category="'.$category.'" exclude_category="" relation="'.$relation.'" limit="'.$limit.'" columns="'.$columns.'" orderby="'.$orderby.'" order="'.$order.'" ids="" filter="'.$filter.'" margin="'.$margin.'" pagination="'.$pagination.'" /]';
+				$output = '[tk_album category="'.$category.'" relation="'.$relation.'" limit="'.$limit.'" columns="'.$columns.'" orderby="'.$orderby.'" order="'.$order.'" filter="'.$filter.'" margin="'.$margin.'" pagination="'.$pagination.'" /]';
 				
 				echo do_shortcode($output);
 			echo '</div>';

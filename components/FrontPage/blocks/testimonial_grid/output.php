@@ -19,13 +19,13 @@ class tallykit_FrontPage_block_output_testimonial_grid{
 		$columns = tally_option($this->prefix.'columns');
 		$filter = tally_option($this->prefix.'filter');
 		$margin = tally_option($this->prefix.'margin');
-		
+		$pagination = tally_option($this->prefix.'pagination');
 		
 		if($enable == 'on'):
 			echo '<div class="front_page_testimonial_grid">';
 				if($title != ''){ echo '<h4>'.$title.'</h4>'; }
 				
-				$output = '[tk_testimonial_grid category="'.$category.'" exclude_category="" relation="'.$relation.'" limit="'.$limit.'" columns="'.$columns.'" orderby="'.$orderby.'" order="'.$order.'" ids="" filter="'.$filter.'" margin="'.$margin.'" /]';
+				$output = '[tk_testimonial_grid category="'.$category.'" exclude_category="" relation="'.$relation.'" limit="'.$limit.'" columns="'.$columns.'" orderby="'.$orderby.'" order="'.$order.'" ids="" filter="'.$filter.'" margin="'.$margin.'" pagination="'.$pagination.'" /]';
 				
 				echo do_shortcode($output);
 			echo '</div>';

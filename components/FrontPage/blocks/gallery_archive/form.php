@@ -1,13 +1,13 @@
 <?php
-class tallykit_FrontPage_block_option_people_grid{
+class tallykit_FrontPage_block_option_gallery_archive{
 	public $section;
 	public $section_name;
 	public $prefix;
 	
 	function __construct(){
-		$this->section = 'home_page_people_grid';
-		$this->section_name = 'Home People Grid';
-		$this->prefix = 'home_page_people_grid_';
+		$this->section = 'home_page_gallery_archive';
+		$this->section_name = 'Home Gallery Album';
+		$this->prefix = 'home_page_gallery_archive_';
 		add_filter('option_tree_settings_args', array($this, 'options'), 20);
 	}
 	
@@ -17,7 +17,7 @@ class tallykit_FrontPage_block_option_people_grid{
 		
 		$custom_settings['settings'][] = array(
 			'id'          => $this->prefix.'enable',
-			'label'       => __('Enable People Grid', 'tallykit_taxdomain'),
+			'label'       => __('Enable Gallery Album', 'tallykit_taxdomain'),
 			'desc'        => '',
 			'std'         => tally_option_std($this->prefix.'enable'),
 			'type'        => 'on_off',
@@ -64,7 +64,7 @@ class tallykit_FrontPage_block_option_people_grid{
 		);
 		$custom_settings['settings'][] = array(
 			'id'          => $this->prefix.'margin',
-			'label'       => __('Margin', 'tallykit_taxdomain'),
+			'label'       => __('Columns', 'tallykit_taxdomain'),
 			'desc'        => '',
 			'std'         => tally_option_std($this->prefix.'margin', '3'),
 			'type'        => 'text',
@@ -101,7 +101,7 @@ class tallykit_FrontPage_block_option_people_grid{
 			'section'     => $this->section,
 			'rows'        => '',
 			'post_type'   => '',
-			'taxonomy'    => 'tallykit_people_category',
+			'taxonomy'    => 'tallykit_gallery_category',
 			'class'       => '',
 			'condition'   => $this->prefix.'enable'.':is(on)',
 		);	

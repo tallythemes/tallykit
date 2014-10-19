@@ -13,14 +13,15 @@ add_shortcode('tk_logo_grid', 'tallykit_logo_sc_grid');
 function tallykit_logo_sc_grid( $atts, $content = null ) {
 	extract( shortcode_atts( array(
 			'category'         => '',
-			'exclude_category' => '',
+			'exclude_category'	=> '',
 			'limit'            => 12,
 			'columns'          => 3,
 			'orderby'          => 'post_date',
 			'order'            => 'DESC',
 			'ids'              => '',
 			'filter'		   => 'yes',
-			'margin'		   => '3'
+			'margin'		   => '3',
+			'pagination'		=> 'yes'
 		), $atts)
 	);
 	

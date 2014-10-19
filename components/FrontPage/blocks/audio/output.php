@@ -19,7 +19,7 @@ class tallykit_FrontPage_block_output_audio{
 		
 		if($enable == 'on'):
 			echo '<div class="front_page_audio">';
-				if($title != ''){ echo '<h4>'.$title.'</h4>'; }
+				if($title != ''){ echo '<h4 class="block_title">'.$title.'</h4>'; }
 				
 				$output = '[tk_audio html5="'.$html5.'" src="'.$src.'" w="'.$w.'" h="'.$h.'" poster="'.$poster.'" class="'.$class.'" /]';
 				

@@ -14,7 +14,7 @@ class tallykit_FrontPage_block_output_accordion{
 		
 		if($enable == 'on'):
 			echo '<div class="front_page_accordion">';
-				if($title != ''){ echo '<h4>'.$title.'</h4>'; }
+				if($title != ''){ echo '<h4 class="block_title">'.$title.'</h4>'; }
 				
 				$output = '[tk_accordion class="" ]';
 					if(is_array($items) && !empty($items)){

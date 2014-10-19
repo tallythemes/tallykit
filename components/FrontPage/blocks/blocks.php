@@ -67,3 +67,12 @@ include(TALLYKIT_FRONTPAGE_COMPONENT_BLOCKS_DRI.'logo_carousel/output.php');
 
 include(TALLYKIT_FRONTPAGE_COMPONENT_BLOCKS_DRI.'audio/form.php');
 include(TALLYKIT_FRONTPAGE_COMPONENT_BLOCKS_DRI.'audio/output.php');
+
+include(TALLYKIT_FRONTPAGE_COMPONENT_BLOCKS_DRI.'gallery_single/form.php');
+include(TALLYKIT_FRONTPAGE_COMPONENT_BLOCKS_DRI.'gallery_single/output.php');
+
+include(TALLYKIT_FRONTPAGE_COMPONENT_BLOCKS_DRI.'gallery_archive/form.php');
+include(TALLYKIT_FRONTPAGE_COMPONENT_BLOCKS_DRI.'gallery_archive/output.php');
+
+/*include(TALLYKIT_FRONTPAGE_COMPONENT_BLOCKS_DRI.'counter_box/form.php');
+include(TALLYKIT_FRONTPAGE_COMPONENT_BLOCKS_DRI.'counter_box/output.php');*/

@@ -175,7 +175,23 @@ class tallykit_FrontPage_block_option_testimonial_grid{
 				 array( 'label' => 'ASC', 'value' => 'ASC'),
 			)
 		);
-		
+		$custom_settings['settings'][] = array(
+			'id'          => $this->prefix.'pagination',
+			'label'       => __('Pagination', 'tallykit_taxdomain'),
+			'desc'        => '',
+			'std'         => tally_option_std($this->prefix.'pagination'),
+			'type'        => 'select',
+			'section'     => $this->section,
+			'rows'        => '',
+			'post_type'   => '',
+			'taxonomy'    => '',
+			'class'       => '',
+			'condition'   => $this->prefix.'enable'.':is(on)',
+			'choices'     => array(
+				array('label' => 'yes', 'value' => 'yes'),
+				array('label' => 'no', 'value' => 'no'),
+			)
+		);
 		
 		return $custom_settings;
 	}
