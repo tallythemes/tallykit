@@ -32,7 +32,7 @@ class tallykit_FrontPage_section_options{
 		$this->id = $id;
 		$this->lable = $lable;
 		add_filter('option_tree_settings_args', array($this, 'options'), 20);
-		add_action('wp_head', array($this, 'css'), 20);
+		add_action('tallykit_dynamic_css', array($this, 'css'));
 	}
 	
 	function options($custom_settings){
@@ -101,27 +101,18 @@ class tallykit_FrontPage_section_options{
 		$top_padding = tally_option($this->id.'_top_padding');
 		$bottom_padding = tally_option($this->id.'_bottom_padding');
 		?>
-        <style type="text/css">
-			#<?php echo $this->id; ?>{
-				<?php 
-					if(isset($background['background-image']) && !empty($background['background-image'])){ 
-						echo 'background-image:url('.$background['background-image'].');'; }
-					if(isset($background['background-color']) && !empty($background['background-color'])){ 
-						echo 'background-color:'.$background['background-color'].';'; }
-					if(isset($background['background-repeat']) && !empty($background['background-repeat'])){ 
-						echo 'background-repeat:'.$background['background-repeat'].';'; }
-					if(isset($background['background-attachment']) && !empty($background['background-attachment'])){ 
-						echo 'background-attachment:'.$background['background-attachment'].';'; }
-					if(isset($background['background-position']) && !empty($background['background-position'])){ 
-						echo 'background-position:'.$background['background-position'].';'; }
-				 	if(isset($background['background-size']) && !empty($background['background-size'])){ 
-						echo 'background-size:'.$background['background-size'].';'; }
-						
-					if($top_padding != ''){ echo 'padding-top:'.$top_padding.';'; }
-					if($bottom_padding != ''){ echo 'padding-bottom:'.$bottom_padding.';'; }
-				?>
-			}
-		</style>
+		#<?php echo $this->id; ?>{
+			<?php 
+			if(isset($background['background-image']) && !empty($background['background-image'])){ echo 'background-image:url('.$background['background-image'].');'; }
+			if(isset($background['background-color']) && !empty($background['background-color'])){ echo 'background-color:'.$background['background-color'].';'; }
+			if(isset($background['background-repeat']) && !empty($background['background-repeat'])){ echo 'background-repeat:'.$background['background-repeat'].';'; }
+			if(isset($background['background-attachment'])&&!empty($background['background-attachment'])){echo 'background-attachment:'.$background['background-attachment'].';'; }
+			if(isset($background['background-position']) && !empty($background['background-position'])){ echo 'background-position:'.$background['background-position'].';'; }
+			if(isset($background['background-size']) && !empty($background['background-size'])){ echo 'background-size:'.$background['background-size'].';'; }
+			if($top_padding != ''){ echo 'padding-top:'.$top_padding.';'; }
+			if($bottom_padding != ''){ echo 'padding-bottom:'.$bottom_padding.';'; }
+			?>
+		}
         <?php	
 	}
 }
