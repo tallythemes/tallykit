@@ -6,8 +6,18 @@ add_filter('option_tree_settings_args', 'tallykit_FrontPage_section_options', 19
 function tallykit_FrontPage_section_options($custom_settings){
 	
 	$tallykit_FrontPage = tallykit_frontPage_settings();
+	$active_section = 0;
+	
+	foreach($tallykit_FrontPage as $option){
+		if(isset($option['div_id']) && !empty($option['div_id'])){
+			$active_section = 1;
+		}
+	}
+	
 	if(is_array($tallykit_FrontPage) && !empty($tallykit_FrontPage)){
-		$custom_settings['sections'][] = array( 'id' => 'tallykit_frontpage_sections','title' => '<div class="dashicons dashicons-admin-home"></div> Home Sections Settings');
+		if($active_section == 1){
+			$custom_settings['sections'][] = array( 'id' => 'tallykit_frontpage_sections','title' => '<div class="dashicons dashicons-admin-home"></div> Home Sections Settings');
+		}
 	} // IF - $tallykit_FrontPage
 	
 	return $custom_settings;
