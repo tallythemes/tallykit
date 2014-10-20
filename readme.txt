@@ -38,7 +38,7 @@ The simplest way to install is to click on 'Plugins' then 'Add' and type 'tallyk
 
 == Changelog ==
 
-= 4.0 =
+= 4.1 =
 * Update ACOC Framework
 
 * Improve CSS styling output
