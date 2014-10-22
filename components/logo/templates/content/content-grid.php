@@ -6,8 +6,10 @@
 				<?php
 				$thumb_data = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full' ); // Get post by ID
                 $image_url = $thumb_data[0];
+				$width = ''; $height = '';
+				if($image_url == ''){ $width = '300'; $height = '200'; }
                 ?>
-                <img src="<?php echo acoc_image_size($image_url, $width = '300', $height = '200', $crop = true); ?>" alt="<?php the_title(); ?>"  />
+                <img src="<?php echo acoc_image_size($image_url, $width, $height, $crop = true); ?>" alt="<?php the_title(); ?>"  />
             </div>
         </div>
 	</a>
