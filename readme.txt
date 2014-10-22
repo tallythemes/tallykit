@@ -4,7 +4,7 @@ Donate link: http://tallythemes.com/
 Tags: portfolio, faq, testimonials, slideshow, people, shortcodes, gallery, logos
 Requires at least: 3.8
 Tested up to: 4.0
-Stable tag: 4.2
+Stable tag: 4.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -38,12 +38,14 @@ The simplest way to install is to click on 'Plugins' then 'Add' and type 'tallyk
 
 == Changelog ==
 
+= 4.3 =
+* Fix Logo Component image size issue.
+
 = 4.2 =
 * Fix a bug of FrontPage Component
 
 = 4.1 =
 * Update ACOC Framework
-
 * Improve CSS styling output
 * Improve the Code quality
 * Make the code HTML5 Valid
