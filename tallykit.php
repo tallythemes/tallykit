@@ -16,7 +16,7 @@ namespace: tallykit
 
 TALLYKIT
 */
-add_action( 'after_setup_theme', 'load_tallykit', 2 );
+add_action( 'after_setup_theme', 'load_tallykit', 3 );
 function load_tallykit(){
 	$path_dir = trailingslashit(str_replace('\\','/',dirname(__FILE__)));
 	$path_abs = trailingslashit(str_replace('\\','/',ABSPATH));
