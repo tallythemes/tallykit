@@ -21,7 +21,7 @@
   */
 
 add_action('delete_attachment', 'mr_delete_resized_images');
-
+if(!function_exists('mr_image_resize')):
 function mr_image_resize($url, $width=null, $height=null, $crop=true, $align='c', $retina=false) {
 
   global $wpdb;
@@ -136,6 +136,7 @@ function mr_image_resize($url, $width=null, $height=null, $crop=true, $align='c'
   return $resized_url;
 
 }
+endif;
 
 // Returns common information shared by processing functions
 

@@ -71,3 +71,35 @@ function tallykit_hex2rgb($hex, $arry_format = false) {
 		return implode(",", $rgb); // returns the rgb values separated by commas
    } 
 }
+
+
+
+/**
+ * Helper function to return encoded strings
+ *
+ * @return    string
+ *
+ * @access    public
+ * @since     4.4
+ */
+function tallykit_encode( $value ) {
+
+  $func = 'base64' . '_encode';
+  return $func( $value );
+  
+}
+
+/**
+ * Helper function to return decoded strings
+ *
+ * @return    string
+ *
+ * @access    public
+ * @since     4.4
+ */
+function tallykit_decode( $value ) {
+
+  $func = 'base64' . '_decode';
+  return $func( $value );
+  
+}

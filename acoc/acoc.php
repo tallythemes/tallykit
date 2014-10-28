@@ -62,7 +62,7 @@ include('html-classes/masonry-html-class.php');
 
 
 //Loading vandors
-include('vandors/mr-image-resize/mr-image-resize.php');
+if(!function_exists('mr_image_resize')){include('vandors/mr-image-resize/mr-image-resize.php');}
 include('vandors/cmb/init.php');
 
 
