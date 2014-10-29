@@ -35,6 +35,8 @@ function load_tallykit(){
 	define('TALLYKIT_CHILD_TPL_URL', get_stylesheet_directory_uri().'/tallykit/' );
 	define('TALLYKIT_CHILD_TPL_DRI', get_stylesheet_directory().'/tallykit/' );
 	
+	if(!defined('TK_THEME_NAME')){ define('TK_THEME_NAME', '' );}
+	
 	include('includes/acoc-loader.php');
 	include('includes/custom-functions.php'); 
 	include('includes/color-management.php');

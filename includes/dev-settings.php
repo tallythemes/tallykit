@@ -4,6 +4,15 @@ $options = array();
 /* Component List
 ---------------------------------------------------*/
 $options[] = array(
+	'id'		=> 'theme_name',
+	'class'		=> '',
+	'label'		=> 'Theme Name',
+	'type'		=> 'text',
+	'std'		=> '',
+	'des'		=> '',
+	'filter'	=> '', //sanitize_text_field, esc_attr
+);
+$options[] = array(
 	'id'		=> 'heading_1',
 	'class'		=> '',
 	'label'		=> 'Component List',

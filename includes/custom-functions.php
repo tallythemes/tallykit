@@ -63,6 +63,12 @@ function tallykit_get_settings($name){
 		}
 	}
 	
+	if( isset($options['theme_name']) ){ 
+		if($options['theme_name'] != TK_THEME_NAME){
+			$output = 'no';
+		}
+	}
+	
 	return $output;
 }
 
