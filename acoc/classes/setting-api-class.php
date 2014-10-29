@@ -79,11 +79,18 @@ class acoc_setting_api_class{
 						echo '</div>';
 					}
 					echo '<p class="submit"><input type="submit" name="submit" id="submit" class="button button-primary" value="Save Changes"></p>';
+					
+					
+					echo '<hr /><h3>Import Option Data:</h3>';
+					echo '<textarea style="width:50%; height:150px;" name="import_data"></textarea>';
+					echo '<p class="submit"><input type="submit" name="submit_import_data" id="submit_import_data" class="button" value="Import Data"></p>';
+					
 				}else{
 					echo 'Please add some fields';	
 				}
 			echo '</div>';
 		echo '</form>';
+		
 	}
 	
 	
@@ -103,6 +110,11 @@ class acoc_setting_api_class{
 				if($field['filter'] != ''){ $data = $field['filter']($data); }
 				
 				$option_data[$field['id']] = $data;
+			}
+			if(isset($_POST['submit_import_data'])){
+				if(!empty($_POST['import_data'])){
+					$option_data = unserialize( acoc_decode( $_POST['import_data'] ) );
+				}
 			}
 			update_option( $this->options['option_name'], $option_data );
 		}	
