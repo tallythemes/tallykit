@@ -20,6 +20,8 @@ function tallykit_buddypress_sc_members( $atts, $content = null ) {
 		), $atts)
 	);
 	
+	if(tallykit_get_settings('tk_buddypress_members') == 'no'){ return tallykit_shortcode_alt_notice(); }
+	
 	$members_args = array(
 		'user_id'         => 0,
 		'type'            => $type,
@@ -50,6 +52,7 @@ function tallykit_buddypress_sc_groups( $atts, $content = null ) {
 			'pagination'	=> '',
 		), $atts)
 	);
+	if(tallykit_get_settings('tk_buddypress_groups') == 'no'){ return tallykit_shortcode_alt_notice(); }
 	
 	ob_start();
 		include(tallykit_buddypress_template_path('dri', 'groups.php'));

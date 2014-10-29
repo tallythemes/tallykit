@@ -39,6 +39,8 @@ function load_tallykit(){
 	include('includes/custom-functions.php'); 
 	include('includes/color-management.php');
 	include('includes/dynamic-css-loader.php');
+	include('includes/script-loader.php');
+	include('includes/dev-settings.php');
 	
 	if ( function_exists( 'acoc_forceLoadFirst' ) ) {
 		tallykit_components_loader();

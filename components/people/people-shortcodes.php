@@ -25,6 +25,7 @@ function tallykit_people_sc_grid( $atts, $content = null ) {
 		), $atts)
 	);
 	
+	if(tallykit_get_settings('tk_people_grid') == 'no'){ return tallykit_shortcode_alt_notice(); }
 	
 	$query = array(
 		'post_type'      => 'tallykit_people',
@@ -111,6 +112,7 @@ function tallykit_people_sc_carousel( $atts, $content = null ) {
 		), $atts)
 	);
 	
+	if(tallykit_get_settings('tk_people_carousel') == 'no'){ return tallykit_shortcode_alt_notice(); }
 	
 	$query = array(
 		'post_type'      => 'tallykit_people',
@@ -199,6 +201,8 @@ function tallykit_people_sc_slideshow( $atts, $content = null ) {
 			'direction_nav'     => 'true',
 		), $atts)
 	);
+	
+	if(tallykit_get_settings('tk_people_slideshow') == 'no'){ return tallykit_shortcode_alt_notice(); }
 	
 	$query = array(
 		'post_type'      => 'tallykit_people',

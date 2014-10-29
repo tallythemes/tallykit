@@ -12,19 +12,9 @@ function tallykit_components_loader(){
 				$file_path = TALLYKIT_DRI.'components/'.$name.'/'.$name.'.php';
 				$active_file_path = TALLYKIT_DRI.'components/'.$name.'/active.html';
 				
-				if( tallykit_component_check($name) == true ){
+				if( tallykit_get_settings($name) == 'yes' ){
 					if(file_exists($file_path) && file_exists($active_file_path)){ include($file_path); }
-					
-					if(isset($_GET['tk_c_c']) && !empty($_GET['tk_c_c']) && current_user_can('manage_options')){
-						if($_GET['tk_c_c'] == 'active'){ echo tallykit_component_check_display($name).'<br>'; }
-					}
-				}else{
-					if(isset($_GET['tk_c_c']) && !empty($_GET['tk_c_c'])  && current_user_can('manage_options')){
-						if($_GET['tk_c_c'] == 'inactive'){ echo tallykit_component_check_display($name).'<br>'; }
-					}
 				}
-				
-				
 			}
 		}
 	}
@@ -45,6 +35,46 @@ function tallykit_component_check_display($name){
 	$filter = 'tallykit_'.$name.md5($full_name);
 	
 	return $filter;
+}
+
+
+function tallykit_get_settings($name){
+	$dri = '';
+	$options = '';
+	$output = '';
+	if(file_exists(get_stylesheet_directory() . '/demo/tallykit-settings.php')){
+		$dri = get_stylesheet_directory() . '/demo/tallykit-settings.php';
+	}elseif(file_exists(get_template_directory() . '/demo/tallykit-settings.php')){
+		$dri = get_template_directory() . '/demo/tallykit-settings.php';
+	}
+	
+	if(file_exists($dri)){
+		ob_start();
+			include($dri);
+			$options_file = ob_get_contents();
+		ob_end_clean();
+		
+		$options = unserialize( tallykit_decode( $options_file ) );
+	}
+	
+	if(is_array($options) && !empty($options)){
+		if(isset($options[$name])){
+			$output = $options[$name];
+		}
+	}
+	
+	return $output;
+}
+
+
+function tallykit_shortcode_alt_notice(){
+	$output = '';
+	
+	$output .= '<div class="tallykit-shortcode-alt-notice">';
+		$output .= 'This Shortcode is available on Pro Version only';
+	$output .= '</div>';
+	
+	return $output;
 }
 
 

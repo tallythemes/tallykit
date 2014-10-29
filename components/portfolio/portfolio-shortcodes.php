@@ -28,6 +28,7 @@ function tallykit_portfolio_sc_grid( $atts, $content = null ) {
 		), $atts)
 	);
 	
+	if(tallykit_get_settings('tk_portfolio_grid') == 'no'){ return tallykit_shortcode_alt_notice(); }
 	
 	$query = array(
 		'post_type'      => 'tallykit_portfolio',
@@ -137,6 +138,7 @@ function tallykit_portfolio_sc_carousel( $atts, $content = null ) {
 		), $atts)
 	);
 	
+	if(tallykit_get_settings('tk_portfolio_carousel') == 'no'){ return tallykit_shortcode_alt_notice(); }
 	
 	$query = array(
 		'post_type'      => 'tallykit_portfolio',
@@ -248,6 +250,8 @@ function tallykit_portfolio_sc_slideshow( $atts, $content = null ) {
 			'direction_nav'     => 'true',
 		), $atts)
 	);
+	
+	if(tallykit_get_settings('tk_portfolio_slideshow') == 'no'){ return tallykit_shortcode_alt_notice(); }
 	
 	$query = array(
 		'post_type'      => 'tallykit_portfolio',

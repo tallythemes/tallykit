@@ -59,7 +59,7 @@ class acoc_setting_api_class{
 		
 		echo '<form action="" method="post">';
 			wp_nonce_field( $this->nonce_action, $this->nonce_name );
-			echo '<div class="wrap">';
+			echo '<div class="wrap" id="'.$this->options['id'].'">';
 				echo '<h2>'.$this->options['page_title'].'</h2>';
 				
 				//show success message
@@ -70,7 +70,7 @@ class acoc_setting_api_class{
 				}
 				if(is_array($this->options['fields']) && !empty($this->options['fields'])){
 					foreach($this->options['fields'] as $field){
-						echo '<div class="acoc-setting-item">';
+						echo '<div class="acoc-setting-item '.$field['class'].' acoc-setting-item-type-'.$field['type'].'">';
 							$all_value = get_option($this->options['option_name']);
 							$value = $all_value[$field['id']];
 							$class_name = 'acoc_field_'.$field['type'];

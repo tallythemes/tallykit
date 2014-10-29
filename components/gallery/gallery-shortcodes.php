@@ -28,6 +28,7 @@ function tallykit_gallery_album_sc_grid( $atts, $content = null ) {
 		), $atts)
 	);
 	
+	if(tallykit_get_settings('tk_album') == 'no'){ return tallykit_shortcode_alt_notice(); }
 	
 	$query = array(
 		'post_type'      => 'tallykit_gallery',
@@ -107,6 +108,8 @@ function tallykit_gallery_sc_single( $atts, $content = null  ) {
 		'columns'	=> '3',
 		'margin'	=> '3'
 	), $atts ) );
+	
+	if(tallykit_get_settings('tk_gallery') == 'no'){ return tallykit_shortcode_alt_notice(); }
 	
 	if($id == ''){
 		$get_id = get_posts(array(

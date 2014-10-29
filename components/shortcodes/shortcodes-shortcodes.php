@@ -35,6 +35,8 @@ function tallykit_shortcodes_sc_row( $atts, $content = null  ) {
 		'text_align' => '',
 	), $atts ) );
 	
+	if(tallykit_get_settings('tk_row') == 'no'){ return tallykit_shortcode_alt_notice(); }
+	
 	$output = '';
 	$rand = 'tallykit-shortcode-row-'.rand();
 	
@@ -87,6 +89,9 @@ function tallykit_shortcodes_sc_accordion( $atts, $content = null  ) {
 	extract( shortcode_atts( array(
 		'class'	=> ''
 	), $atts ) );
+	
+	if(tallykit_get_settings('tk_accordion') == 'no'){ return tallykit_shortcode_alt_notice(); }
+	
 	return '<div class="tallykit-shortcode-accordion '. $class .'">' . do_shortcode($content) . '<span class="acoc-clear"></span></div>';
 }
 
@@ -123,6 +128,8 @@ function tallykit_shortcodes_sc_alert( $atts, $content = null  ) {
 		'animation_duration' => '0.5s',
 	), $atts ) );
 	
+	if(tallykit_get_settings('tk_alert') == 'no'){ return tallykit_shortcode_alt_notice(); }
+	
 	$output = '';
 	
 	$output .= '<div class="tallykit-shortcode-alert tallykit-shortcode-alert-block tallykit-shortcode-alert-'.$type.' wow '.$animation_type.'" data-wow-duration="'.$animation_duration.'" data-wow-offset="0">';
@@ -155,6 +162,8 @@ function tallykit_shortcodes_sc_button( $atts, $content = null ) {
 		'animation_type' => '',
 		'animation_duration' => '0.5s',
 	), $atts ) );
+	
+	if(tallykit_get_settings('tk_button') == 'no'){ return tallykit_shortcode_alt_notice(); }
 	
 	$output = '';
 		
@@ -192,6 +201,8 @@ function tallykit_shortcodes_sc_checklist( $atts, $content = null ) {
 		'animation_duration' => '0.5s',
 	), $atts));
 	
+	if(tallykit_get_settings('tk_checklist') == 'no'){ return tallykit_shortcode_alt_notice(); }
+	
 	$rand = rand();
 	$output = '';
 	
@@ -226,6 +237,8 @@ function tallykit_shortcodes_sc_column( $atts, $content = null ){
 		'animation_type' => '',
 		'animation_duration' => '0.5s',
 	  ), $atts ) );
+	  
+	  if(tallykit_get_settings('tk_column') == 'no'){ return tallykit_shortcode_alt_notice(); }
 		  
 	  $output = '';
 	  $uid = 'tallykit-shortcode-column'.rand();
@@ -257,6 +270,8 @@ function tallykit_shortcodes_sc_divider($atts, $content = null) {
 		'margin_bottom' => '2px',
 	), $atts));
 	
+	if(tallykit_get_settings('tk_divider') == 'no'){ return tallykit_shortcode_alt_notice(); }
+	
 	$output = '';
 	$rand = rand();
 	$css = 'margin-bottom:'.$margin_bottom.'; margin-top:'.$margin_top.';';
@@ -276,6 +291,9 @@ function tallykit_shortcodes_sc_dropcap( $atts, $content = null ) {
 	extract(shortcode_atts(array(
 		'style' => 'none', //circle, box, round
 	), $atts));
+	
+	if(tallykit_get_settings('tk_dropcap') == 'no'){ return tallykit_shortcode_alt_notice(); }
+	
 	$output = '';
 	$rand = rand();
 	$output .= '<span class="tallykit-shortcode-dropcap tallykit-shortcode-dropcap-style-'.$style.'" id="tallykit-shortcode-dropcap-'.$rand.'">'.do_shortcode($content).'</span>';
@@ -302,6 +320,8 @@ function tallykit_shortcodes_sc_icon( $atts, $content = null ) {
 		'animation_duration' => '0.5s',
 	), $atts));
 	
+	if(tallykit_get_settings('tk_icon') == 'no'){ return tallykit_shortcode_alt_notice(); }
+	
 	$output = '';
 	$rand = rand();
 	
@@ -324,6 +344,8 @@ function tallykit_shortcodes_sc_highlight($atts, $content = null) {
 	$atts = shortcode_atts(array(
 		'color' => 'yellow',
 	), $atts);
+	
+	if(tallykit_get_settings('tk_highlight') == 'no'){ return tallykit_shortcode_alt_notice(); }
 			
 	if($atts['color'] == 'black') {
 		return '<span class="tallykit-shortcode-highlight2" style="background-color:'.$atts['color'].'; color:#fff;">' .do_shortcode($content). '</span>';
@@ -343,6 +365,8 @@ function tallykit_shortcodes_sc_lightbox($atts, $content = null) {
 		'title' => '',
 		'type' => 'image', //iframe, image
 	), $atts ) );
+	
+	if(tallykit_get_settings('tk_lightbox') == 'no'){ return tallykit_shortcode_alt_notice(); }
 	
 	$magnificPopup = 'acoc-magnificPopup-image';
 	
@@ -373,6 +397,8 @@ function tallykit_shortcodes_sc_map($atts, $content = null) {
 		'zoom_pancontrol' => 'true',
 		'icon' => NULL,
 	), $atts));
+	
+	if(tallykit_get_settings('tk_map') == 'no'){ return tallykit_shortcode_alt_notice(); }
 
 	$uid = 'tallykit-shortcode-map'.rand();
 
@@ -457,6 +483,7 @@ function tallykit_shortcodes_sc_blog_grid( $atts, $content = null ) {
 		), $atts)
 	);
 	
+	if(tallykit_get_settings('tk_blog_grid') == 'no'){ return tallykit_shortcode_alt_notice(); }	
 	
 	$query = array(
 		'post_type'      => 'post',
@@ -555,6 +582,8 @@ function tallykit_shortcodes_sc_tk_progress_bar($atts, $content = null) {
 		'animation_type' => '',
 		'animation_duration' => '0.5s',
 	), $atts));
+	
+	if(tallykit_get_settings('tk_progress_bar') == 'no'){ return tallykit_shortcode_alt_notice(); }
 
 	$output = '';
 	$output .= '<div class="tallykit-shortcode-progressBar wow '.$animation_type.'" data-wow-duration="'.$animation_duration.'" data-wow-offset="0" style="background-color:'.$unfilled_color.' !important;border-color:'.$unfilled_color.' !important;">';
@@ -578,6 +607,8 @@ function tallykit_shortcodes_sc_tk_counter_box($atts, $content = null) {
 		'animation_type' => '',
 		'animation_duration' => '0.5s',
 	), $atts));
+	
+	if(tallykit_get_settings('tk_counter_box') == 'no'){ return tallykit_shortcode_alt_notice(); }
 	
 	if($prefix){ $prefix = '<span class="prefix">'.$prefix.'</span>'; }
 	if($suffix){ $suffix = '<span class="suffix">'.$suffix.'</span>'; }
@@ -607,6 +638,8 @@ function tallykit_shortcodes_sc_tk_counter_circle($atts, $content = null) {
 		'animation_type' => '',
 		'animation_duration' => '0.5s',
 	), $atts));
+	
+	if(tallykit_get_settings('tk_counter_circle') == 'no'){ return tallykit_shortcode_alt_notice(); }
 
 	$uid = 'tallykit_shortcode_CounterCircle'.rand();
 
@@ -647,6 +680,9 @@ add_shortcode('tk_tab', 'tallykit_shortcodes_sc_tab');
 function tallykit_shortcodes_sc_tab( $atts, $content = null ) {
 	$defaults = array();
 	extract( shortcode_atts( $defaults, $atts ) );
+	
+	if(tallykit_get_settings('tk_tab') == 'no'){ return tallykit_shortcode_alt_notice(); }
+	
 	preg_match_all( '/tab_item title="([^\"]+)"/i', $content, $matches, PREG_OFFSET_CAPTURE );
 	$tab_titles = array();
 	if( isset($matches[1]) ){ $tab_titles = $matches[1]; }
@@ -692,6 +728,8 @@ function tallykit_shortcodes_sc_callout( $atts, $content = null ) {
 		'content_width'	=> '',
 	), $atts ) );
 	
+	if(tallykit_get_settings('tk_callout') == 'no'){ return tallykit_shortcode_alt_notice(); }
+	
 	$output = '';
 	
 	if(($content_width != '') && (($style == 'left') || ($style == 'left-border') || ($style == 'left-border-bg') )){ $content_width = 'width:'.$content_width.';'; }
@@ -717,6 +755,8 @@ function tallykit_shortcodes_sc_toggle( $atts, $content = null ) {
 		'class'	=> '',
 	), $atts ) );
 	
+	if(tallykit_get_settings('tk_toggle') == 'no'){ return tallykit_shortcode_alt_notice(); }
+	
 	// Display the Toggle
 	return '<div class="tallykit-shortcode-toggle '. $class .'"><h3 class="tallykit-shortcode-toggle-trigger">'. $title .'</h3><div class="tallykit-shortcode-toggle-container">' . do_shortcode($content) . '</div></div>';
 }
@@ -729,6 +769,8 @@ function tallykit_shortcodes_sc_tooltip($atts, $content = null) {
 	extract(shortcode_atts(array(
 		'title' => 'none',
 	), $atts));
+	
+	if(tallykit_get_settings('tk_tooltip') == 'no'){ return tallykit_shortcode_alt_notice(); }
 
 	$html = '<span class="tallykit-shortcode-tooltip" title="'.$title.'">';
 		$html .= do_shortcode($content);
@@ -750,6 +792,8 @@ function tallykit_shortcodes_sc_video($atts, $content = null) {
 		'html5' => 'no',
 		'poster' => '',
 	), $atts));
+	
+	if(tallykit_get_settings('tk_video') == 'no'){ return tallykit_shortcode_alt_notice(); }
 	
 	$output = '<div class="tallykit-shortcode-video '.$class.' tallykit-shortcode-video-html5-'.$html5.'">';
 		if($html5 == 'yes'){
@@ -775,6 +819,8 @@ function tallykit_shortcodes_sc_audio($atts, $content = null) {
 		'html5' => 'no',
 		'poster' => '',
 	), $atts));
+	
+	if(tallykit_get_settings('tk_audio') == 'no'){ return tallykit_shortcode_alt_notice(); }
 	
 	$output = '<div class="tallykit-shortcode-audio '.$class.' tallykit-shortcode-audio-html5-'.$html5.'">';
 		if($html5 == 'yes'){
@@ -805,6 +851,8 @@ function tallykit_shortcodes_sc_blog_timeline($atts, $content = null) {
 		'order'            => 'DESC',
 		'ids'              => '',
 	), $atts));
+	
+	if(tallykit_get_settings('tk_blog_timeline') == 'no'){ return tallykit_shortcode_alt_notice(); }
 	
 	$query = array(
 		'post_type'      => 'post',
@@ -902,6 +950,8 @@ function tallykit_shortcodes_sc_heading($atts, $content = null) {
 		'animation_type' => '',
 		'animation_duration' => '0.5s',
 	), $atts));
+	
+	if(tallykit_get_settings('tk_heading') == 'no'){ return tallykit_shortcode_alt_notice(); }
 	
 	$output = '<'.$tag.' class="'.$class.' wow '.$animation_type.'" id="'.$id.'" data-wow-duration="'.$animation_duration.'" data-wow-offset="0">'.do_shortcode($content).'</'.$tag.'>';
 	

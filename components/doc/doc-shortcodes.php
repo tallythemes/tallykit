@@ -20,6 +20,7 @@ function tallykit_doc_sc_archive( $atts, $content = null ) {
 			'ids'              => '',
 		), $atts)
 	);
+	if(tallykit_get_settings('tk_doc_archive') == 'no'){ return tallykit_shortcode_alt_notice(); }
 	
 	
 	$query = array(
@@ -93,6 +94,8 @@ function tallykit_doc_sc_single( $atts, $content = null  ) {
 	extract( shortcode_atts( array(
 		'id'		=> '',
 	), $atts ) );
+	
+	if(tallykit_get_settings('tk_doc_single') == 'no'){ return tallykit_shortcode_alt_notice(); }
 	
 	$output = '';
 	
