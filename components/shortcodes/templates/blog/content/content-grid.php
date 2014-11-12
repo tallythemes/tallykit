@@ -1,7 +1,7 @@
 <div class="tk-shortcode-blog-grid-item">
 	<div class="tk-shortcode-blog-image">
 		<a href="<?php the_permalink(); ?>" target="_self" title="<?php the_title(); ?>">
-			<img width="634" height="357" src="<?php echo acoc_post_thumbnail(array( 'w' => '634', 'h' => '357')); ?>" alt="<?php the_title(); ?>">
+			<img  height="<?php echo $image_size[0]; ?>" width="<?php echo $image_size[1]; ?>" src="<?php echo acoc_post_thumbnail(array( 'w' => $image_size[0], 'h' => $image_size[1])); ?>" alt="<?php the_title(); ?>">
 		</a>
 	</div>
 	<div class="tk-shortcode-blog-content">

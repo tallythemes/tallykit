@@ -476,10 +476,12 @@ function tallykit_shortcodes_sc_blog_grid( $atts, $content = null ) {
 			'filter'		   => 'yes',
 			'margin'		   => '3',
 			'columns'          => '3',
-			'pagination'          => 'yes',
+			'pagination'		=> 'yes',
 			
 			'animation_type' => '',
 			'animation_duration' => '0.5s',
+			
+			'image_size'	=> ''
 		), $atts)
 	);
 	
@@ -560,6 +562,13 @@ function tallykit_shortcodes_sc_blog_grid( $atts, $content = null ) {
 	else
 		$query['paged'] = 1;
 
+	
+	if($image_size != ''){
+		$image_size = explode("x", $image_size);
+	}else{
+		$image_size = array(300, 250);
+	}
+	
 	
 	ob_start();
 	include(tallykit_shortcodes_template_path('dri', 'blog/blog-grid.php'));

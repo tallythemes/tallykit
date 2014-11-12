@@ -137,6 +137,14 @@ $tinymce_fields[] = array(
 				array('label' => 'no', 'value' => 'no'),
 			)
 		),
+		array(
+			'id' => 'image_size',
+			'class' => '',
+			'label' => 'Image Size',
+			'type' => 'text',
+			'std' => '',
+			'des' => '',
+		),
 	)
 );
 
@@ -286,6 +294,14 @@ $tinymce_fields[] = array(
 			'label' => 'move',
 			'type' => 'text',
 			'std' => '0',
+			'des' => '',
+		),
+		array(
+			'id' => 'image_size',
+			'class' => '',
+			'label' => 'Image Size',
+			'type' => 'text',
+			'std' => '',
 			'des' => '',
 		),
 	)
@@ -492,6 +508,14 @@ $tinymce_fields[] = array(
 				array('label' => 'true', 'value' => 'true'),
 				array('label' => 'false', 'value' => 'false'),
 			)
+		),
+		array(
+			'id' => 'image_size',
+			'class' => '',
+			'label' => 'Image Size',
+			'type' => 'text',
+			'std' => '',
+			'des' => '',
 		),
 	)
 );

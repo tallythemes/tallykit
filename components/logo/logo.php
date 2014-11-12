@@ -12,6 +12,9 @@
 // Exit if accessed directly
 if ( !defined( 'ABSPATH' ) ) exit;
 
+if(!defined( 'TALLYKIT_LOGO_IMAGE_WIDTH' )){ define('TALLYKIT_LOGO_IMAGE_WIDTH', '307'); };
+if(!defined( 'TALLYKIT_LOGO_IMAGE_HEIGHT' )){ define('TALLYKIT_LOGO_IMAGE_HEIGHT', ''); };
+
 include('logo-types.php');
 include('logo-metabox.php');
 include('logo-template.php');

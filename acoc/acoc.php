@@ -56,6 +56,7 @@ include('classes/theme-compat-class2.php');
 //Loading html-classes
 include('html-classes/flexslider-html-class.php');
 include('html-classes/isotope-html-class.php');
+include('html-classes/isotope2-html-class.php');
 include('html-classes/flexslider2-html-class.php');
 include('html-classes/shuffle-html-class.php');
 include('html-classes/masonry-html-class.php');

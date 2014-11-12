@@ -1309,6 +1309,14 @@ $tinymce_fields[] = array(
 			'std' => '',
 			'des' => '',
 		),
+		array(
+			'id' => 'image_size',
+			'class' => '',
+			'label' => 'Image Size',
+			'type' => 'text',
+			'std' => '',
+			'des' => '',
+		),
 	)
 );
 

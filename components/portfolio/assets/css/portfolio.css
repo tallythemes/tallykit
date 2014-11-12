@@ -4,7 +4,7 @@
 .tallykit_portfolio_item .tallykit_portfolio_item_heading{ font-weight:normal; font-size: 18px; line-height:18px; color: #444; letter-spacing: -0.5px; margin-bottom:0px;}
 .tallykit_portfolio_item .tallykit_portfolio_item_heading:hover{ text-decoration:none; }
 .tallykit_portfolio_item .tallykit_portfolio_item_subheading{ line-height: 22px; font-size: 11px; color: #999; }
-.tallykit_portfolio_item a.tallykit_portfolio_item_image{  }
+.tallykit_portfolio_item .tallykit_portfolio_item_image img{ width:100%; }
 
 
 /*-----------------------------------------------------

@@ -24,7 +24,9 @@ function tallykit_portfolio_sc_grid( $atts, $content = null ) {
 			'ids'              => '',
 			'filter'		   => 'yes',
 			'margin'		   => '3',
-			'pagination'		=> 'yes'
+			'pagination'		=> 'yes',
+			
+			'image_size'	=> ''
 		), $atts)
 	);
 	
@@ -106,6 +108,13 @@ function tallykit_portfolio_sc_grid( $atts, $content = null ) {
 		$query['paged'] = 1;
 
 	
+	if($image_size != ''){
+		$image_size = explode("x", $image_size);
+	}else{
+		$image_size = array(TALLYKIT_PORTFOLIO_ARCHIVE_W, TALLYKIT_PORTFOLIO_ARCHIVE_H);
+	}
+	
+	
 	ob_start();
 	include(tallykit_portfolio_template_path('dri', 'portfolio-grid.php'));
 	$output = ob_get_contents();
@@ -135,6 +144,8 @@ function tallykit_portfolio_sc_carousel( $atts, $content = null ) {
 			'min_items'         => '2',
 			'max_items'         => '3',
 			'move'             => '0',
+			
+			'image_size'	=> ''
 		), $atts)
 	);
 	
@@ -216,6 +227,13 @@ function tallykit_portfolio_sc_carousel( $atts, $content = null ) {
 		$query['paged'] = 1;
 
 	
+	if($image_size != ''){
+		$image_size = explode("x", $image_size);
+	}else{
+		$image_size = array(TALLYKIT_PORTFOLIO_ARCHIVE_W, TALLYKIT_PORTFOLIO_ARCHIVE_H);
+	}
+	
+	
 	ob_start();
 	include(tallykit_portfolio_template_path('dri', 'portfolio-carousel.php'));
 	$output = ob_get_contents();
@@ -248,6 +266,8 @@ function tallykit_portfolio_sc_slideshow( $atts, $content = null ) {
 			'animation_speed'   => '600',
 			'control_nav'       => 'true',
 			'direction_nav'     => 'true',
+			
+			'image_size'	=> ''
 		), $atts)
 	);
 	
@@ -329,6 +349,13 @@ function tallykit_portfolio_sc_slideshow( $atts, $content = null ) {
 		$query['paged'] = 1;
 
 	
+	if($image_size != ''){
+		$image_size = explode("x", $image_size);
+	}else{
+		$image_size = array(TALLYKIT_PORTFOLIO_ARCHIVE_W, TALLYKIT_PORTFOLIO_ARCHIVE_H);
+	}
+	
+	
 	ob_start();
 	include(tallykit_portfolio_template_path('dri', 'portfolio-slideshow.php'));
 	$output = ob_get_contents();
@@ -352,6 +379,8 @@ function tallykit_portfolio_sc_list( $atts, $content = null ) {
 			'order'            => 'DESC',
 			'ids'              => '',
 			'filter'		   => 'yes',
+			
+			'image_size'	=> ''
 		), $atts)
 	);
 	
@@ -429,7 +458,14 @@ function tallykit_portfolio_sc_list( $atts, $content = null ) {
 		$query['paged'] = get_query_var( 'page' );
 	else
 		$query['paged'] = 1;
-
+	
+	
+	if($image_size != ''){
+		$image_size = explode("x", $image_size);
+	}else{
+		$image_size = array(TALLYKIT_PORTFOLIO_ARCHIVE_W, TALLYKIT_PORTFOLIO_ARCHIVE_H);
+	}
+	
 	
 	ob_start();
 	include(tallykit_portfolio_template_path('dri', 'portfolio-list.php'));

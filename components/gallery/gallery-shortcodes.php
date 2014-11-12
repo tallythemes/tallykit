@@ -21,10 +21,11 @@ function tallykit_gallery_album_sc_grid( $atts, $content = null ) {
 			'columns'          => 3,
 			'orderby'          => 'post_date',
 			'order'            => 'DESC',
-			'ids'              => '',
-			'filter'		   => 'yes',
-			'margin'		   => '3',
-			'pagination'		=> 'yes'
+			'ids'				=> '',
+			'filter'			=> 'yes',
+			'margin'			=> '3',
+			'pagination'		=> 'yes',
+			'image_size'		=> ''
 		), $atts)
 	);
 	
@@ -87,6 +88,13 @@ function tallykit_gallery_album_sc_grid( $atts, $content = null ) {
 		$query['paged'] = get_query_var( 'page' );
 	else
 		$query['paged'] = 1;
+		
+		
+	if($image_size != ''){
+		$image_size = explode("x", $image_size);
+	}else{
+		$image_size = array(TALLYKIT_GALLERY_ALBUM_WIDTH, TALLYKIT_GALLERY_ALBUM_HEIGHT);
+	}
 
 	
 	ob_start();
@@ -106,7 +114,8 @@ function tallykit_gallery_sc_single( $atts, $content = null  ) {
 		'id'		=> '',
 		'slug'		=> '',
 		'columns'	=> '3',
-		'margin'	=> '3'
+		'margin'	=> '3',
+		'image_size'	=> ''
 	), $atts ) );
 	
 	if(tallykit_get_settings('tk_gallery') == 'no'){ return tallykit_shortcode_alt_notice(); }
@@ -121,6 +130,12 @@ function tallykit_gallery_sc_single( $atts, $content = null  ) {
 		if( $get_id ) {
 			$id = $get_id[0]->ID;
 		}
+	}
+	
+	if($image_size != ''){
+		$image_size = explode("x", $image_size);
+	}else{
+		$image_size = array(TALLYKIT_GALLERY_SINGLE_WIDTH, TALLYKIT_GALLERY_SINGLE_HEIGHT);
 	}
 	
 	$output = '';

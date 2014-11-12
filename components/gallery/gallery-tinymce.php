@@ -137,6 +137,14 @@ $tinymce_fields[] = array(
 				array('label' => 'no', 'value' => 'no'),
 			)
 		),
+		array(
+			'id' => 'image_size',
+			'class' => '',
+			'label' => 'Image Size',
+			'type' => 'text',
+			'std' => '',
+			'des' => '',
+		),
 	)
 );
 
@@ -176,6 +184,14 @@ $tinymce_fields[] = array(
 			'label' => 'Column Margin',
 			'type' => 'text',
 			'std' => '3',
+			'des' => '',
+		),
+		array(
+			'id' => 'image_size',
+			'class' => '',
+			'label' => 'Image Size',
+			'type' => 'text',
+			'std' => '',
 			'des' => '',
 		),
 	)

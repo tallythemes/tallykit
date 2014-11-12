@@ -21,7 +21,8 @@ function tallykit_testimonial_sc_grid( $atts, $content = null ) {
 			'ids'              => '',
 			'filter'		   => 'yes',
 			'margin'		   => '3',
-			'pagination'		=> 'yes'
+			'pagination'		=> 'yes',
+			'image_size'	=> ''
 			
 		), $atts)
 	);
@@ -82,6 +83,13 @@ function tallykit_testimonial_sc_grid( $atts, $content = null ) {
 		$query['paged'] = get_query_var( 'page' );
 	else
 		$query['paged'] = 1;
+		
+		
+	if($image_size != ''){
+		$image_size = explode("x", $image_size);
+	}else{
+		$image_size = array(TALLYKIT_TESTIMONIAL_IMAGE_W, TALLYKIT_TESTIMONIAL_IMAGE_H);
+	}
 
 	
 	ob_start();
@@ -110,6 +118,7 @@ function tallykit_testimonial_sc_carousel( $atts, $content = null ) {
 			'min_items'         => '2',
 			'max_items'         => '3',
 			'move'             => '0',
+			'image_size'	=> ''
 		), $atts)
 	);
 	
@@ -169,6 +178,13 @@ function tallykit_testimonial_sc_carousel( $atts, $content = null ) {
 		$query['paged'] = get_query_var( 'page' );
 	else
 		$query['paged'] = 1;
+		
+		
+	if($image_size != ''){
+		$image_size = explode("x", $image_size);
+	}else{
+		$image_size = array(TALLYKIT_TESTIMONIAL_IMAGE_W, TALLYKIT_TESTIMONIAL_IMAGE_H);
+	}
 
 	
 	ob_start();
@@ -200,6 +216,7 @@ function tallykit_testimonial_sc_slideshow( $atts, $content = null ) {
 			'animation_speed'   => '600',
 			'control_nav'       => 'true',
 			'direction_nav'     => 'true',
+			'image_size'	=> ''
 		), $atts)
 	);
 	
@@ -259,6 +276,13 @@ function tallykit_testimonial_sc_slideshow( $atts, $content = null ) {
 		$query['paged'] = get_query_var( 'page' );
 	else
 		$query['paged'] = 1;
+		
+		
+	if($image_size != ''){
+		$image_size = explode("x", $image_size);
+	}else{
+		$image_size = array(TALLYKIT_TESTIMONIAL_IMAGE_W, TALLYKIT_TESTIMONIAL_IMAGE_H);
+	}
 
 	
 	ob_start();

@@ -12,8 +12,11 @@
 // Exit if accessed directly
 if ( !defined( 'ABSPATH' ) ) exit;
 
-if(!defined( 'TALLYKIT_GALLERY_THUMB_W' )){ define('TALLYKIT_GALLERY_THUMB_W', '400'); };
-if(!defined( 'TALLYKIT_GALLERY_THUMB_H' )){ define('TALLYKIT_GALLERY_THUMB_H', '400'); };
+if(!defined( 'TALLYKIT_GALLERY_ALBUM_WIDTH' )){ define('TALLYKIT_GALLERY_ALBUM_WIDTH', '400'); };
+if(!defined( 'TALLYKIT_GALLERY_ALBUM_HEIGHT' )){ define('TALLYKIT_GALLERY_ALBUM_HEIGHT', '400'); };
+
+if(!defined( 'TALLYKIT_GALLERY_SINGLE_WIDTH' )){ define('TALLYKIT_GALLERY_SINGLE_WIDTH', '400'); };
+if(!defined( 'TALLYKIT_GALLERY_SINGLE_HEIGHT' )){ define('TALLYKIT_GALLERY_SINGLE_HEIGHT', '400'); };
 
 include('gallery-types.php');
 include('gallery-metabox.php');
