@@ -566,7 +566,7 @@ function tallykit_shortcodes_sc_blog_grid( $atts, $content = null ) {
 	if($image_size != ''){
 		$image_size = explode("x", $image_size);
 	}else{
-		$image_size = array(300, 250);
+		$image_size = array(600, 500);
 	}
 	
 	
