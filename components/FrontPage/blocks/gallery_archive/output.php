@@ -20,13 +20,13 @@ class tallykit_FrontPage_block_output_gallery_archive{
 		$filter = tally_option($this->prefix.'filter');
 		$margin = tally_option($this->prefix.'margin');
 		$pagination = tally_option($this->prefix.'pagination');
-		
+		$image_size = tally_option($this->prefix.'image_size');
 		
 		if($enable == 'on'):
 			echo '<div class="front_page_gallery_archive">';
 				if($title != ''){ echo '<h4>'.$title.'</h4>'; }
 				
-				$output = '[tk_album category="'.$category.'" relation="'.$relation.'" limit="'.$limit.'" columns="'.$columns.'" orderby="'.$orderby.'" order="'.$order.'" filter="'.$filter.'" margin="'.$margin.'" pagination="'.$pagination.'" /]';
+				$output = '[tk_album category="'.$category.'" relation="'.$relation.'" limit="'.$limit.'" columns="'.$columns.'" orderby="'.$orderby.'" order="'.$order.'" filter="'.$filter.'" margin="'.$margin.'" pagination="'.$pagination.'" image_size="'.$image_size.'" /]';
 				
 				echo do_shortcode($output);
 			echo '</div>';

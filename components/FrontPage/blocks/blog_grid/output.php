@@ -22,12 +22,13 @@ class tallykit_FrontPage_block_output_blog_grid{
 		$margin = tally_option($this->prefix.'margin');
 		$animation_type = tally_option($this->prefix.'animation_type');
 		$animation_duration = tally_option($this->prefix.'animation_duration');
+		$image_size = tally_option($this->prefix.'image_size');
 		
 		if($enable == 'on'):
 			echo '<div class="front_page_blog_grid">';
 				if($title != ''){ echo '<h4 class="block_title">'.$title.'</h4>'; }
 				
-				$output = '[tk_blog_grid category="'.$category.'" exclude_category="" tags="'.$tags.'" exclude_tags="" relation="'.$relation.'" limit="'.$limit.'" columns="'.$columns.'" orderby="'.$orderby.'" order="'.$order.'" ids="" filter="'.$filter.'" pagination="'.$pagination.'" margin="'.$margin.'" animation_type="'.$animation_type.'" animation_duration="'.$animation_duration.'" /]';
+				$output = '[tk_blog_grid category="'.$category.'" exclude_category="" tags="'.$tags.'" exclude_tags="" relation="'.$relation.'" limit="'.$limit.'" columns="'.$columns.'" orderby="'.$orderby.'" order="'.$order.'" ids="" filter="'.$filter.'" pagination="'.$pagination.'" margin="'.$margin.'" animation_type="'.$animation_type.'" animation_duration="'.$animation_duration.'" image_size="'.$image_size.'" /]';
 				
 				echo do_shortcode($output);
 			echo '</div>';

@@ -21,13 +21,14 @@ class tallykit_FrontPage_block_output_portfolio_grid{
 		$filter = tally_option($this->prefix.'filter');
 		$margin = tally_option($this->prefix.'margin');
 		$pagination = tally_option($this->prefix.'pagination');
+		$image_size = tally_option($this->prefix.'image_size');
 		
 		
 		if($enable == 'on'):
 			echo '<div class="front_page_portfolio_grid">';
 				if($title != ''){ echo '<h4>'.$title.'</h4>'; }
 				
-				$output = '[tk_portfolio_grid category="'.$category.'" exclude_category="" tags="'.$tag.'" relation="'.$relation.'" limit="'.$limit.'" columns="'.$columns.'" orderby="'.$orderby.'" order="'.$order.'" ids="" filter="yes" margin="'.$margin.'" pagination="'.$pagination.'" /]';
+				$output = '[tk_portfolio_grid category="'.$category.'" exclude_category="" tags="'.$tag.'" relation="'.$relation.'" limit="'.$limit.'" columns="'.$columns.'" orderby="'.$orderby.'" order="'.$order.'" ids="" filter="yes" margin="'.$margin.'" pagination="'.$pagination.'" image_size="'.$image_size.'" /]';
 				
 				echo do_shortcode($output);
 			echo '</div>';

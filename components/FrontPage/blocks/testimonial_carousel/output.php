@@ -22,14 +22,15 @@ class tallykit_FrontPage_block_output_testimonial_carousel{
 		$item_margin = tally_option($this->prefix.'item_margin');
 		$min_items = tally_option($this->prefix.'min_items');
 		$max_items = tally_option($this->prefix.'max_items');
-		$move = tally_option($this->prefix.'move');
+		$move = '';
+		$image_size = tally_option($this->prefix.'image_size');
 		
 		
 		if($enable == 'on'):
 			echo '<div class="front_page_testimonial_carousel">';
 				if($title != ''){ echo '<h4>'.$title.'</h4>'; }
 				
-				$output = '[tk_testimonial_carousel category="'.$category.'" exclude_category="" relation="'.$relation.'" limit="'.$limit.'" orderby="'.$orderby.'" order="'.$order.'" ids="" control_nav="'.$control_nav.'" direction_nav="'.$direction_nav.'" item_width="'.$item_width.'" item_margin="'.$item_margin.'" min_items="'.$min_items.'" max_items="'.$max_items.'" move="'.$move.'" /]';
+				$output = '[tk_testimonial_carousel category="'.$category.'" exclude_category="" relation="'.$relation.'" limit="'.$limit.'" orderby="'.$orderby.'" order="'.$order.'" ids="" control_nav="'.$control_nav.'" direction_nav="'.$direction_nav.'" item_width="'.$item_width.'" item_margin="'.$item_margin.'" min_items="'.$min_items.'" max_items="'.$max_items.'" move="'.$move.'" image_size="'.$image_size.'" /]';
 				
 				echo do_shortcode($output);
 			echo '</div>';

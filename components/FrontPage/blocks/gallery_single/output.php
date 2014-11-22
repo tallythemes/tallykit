@@ -13,12 +13,13 @@ class tallykit_FrontPage_block_output_gallery_single{
 		$slug = tally_option($this->prefix.'slug');
 		$columns = tally_option($this->prefix.'columns');
 		$margin = tally_option($this->prefix.'margin');
+		$image_size = tally_option($this->prefix.'image_size');
 		
 		if($enable == 'on'):
 			echo '<div class="front_page_gallery_single">';
 				if($title != ''){ echo '<h4>'.$title.'</h4>'; }
 				
-				$output = '[tk_gallery id="'.$slug.'" columns="'.$columns.'" margin="'.$margin.'" /]';
+				$output = '[tk_gallery id="'.$slug.'" columns="'.$columns.'" margin="'.$margin.'" image_size="'.$image_size.'" /]';
 				
 				echo do_shortcode($output);
 			echo '</div>';

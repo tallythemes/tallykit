@@ -64,6 +64,20 @@ class tallykit_FrontPage_block_option_textblock{
 				 array( 'label' => '6 Column', 'value' => '6'),
 			)
 		);
+		$custom_settings['settings'][] = array(
+			'id'          => $this->prefix.'image_size',
+			'label'       => __('Image Size', 'tallykit_taxdomain'),
+			'desc'        => '',
+			'std'         => tally_option_std($this->prefix.'image_size'),
+			'type'        => 'text',
+			'section'     => $this->section,
+			'rows'        => '',
+			'post_type'   => '',
+			'taxonomy'    => '',
+			'class'       => '',
+			'condition'   => $this->prefix.'enable'.':is(on)',
+			'settings'    => '',
+		);
 		
 		$custom_settings['settings'][] = array(
 			'id'          => $this->prefix.'items',

@@ -12,6 +12,13 @@ class tallykit_FrontPage_block_output_textblock{
 		$title = tally_option($this->prefix.'title');
 		$items = tally_option($this->prefix.'items');
 		$column = tally_option($this->prefix.'column');
+		$image_size = tally_option($this->prefix.'image_size');
+		
+		if($image_size != ''){
+			$image_size = explode("x", $image_size);
+		}else{
+			$image_size = array(600, 260);
+		}
 		
 		if($enable == 'on'):
 			echo '<div class="front_page_textblock">';
@@ -25,7 +32,7 @@ class tallykit_FrontPage_block_output_textblock{
 							<div class="tk-FrontPage-textblock-item cl cl_<?php echo $column; ?>">
 								<div class="tk-FrontPage-textblock-item-inner">
 									<?php if( $item['image'] != ''): ?>
-										<a class="tk-fptb-image" href="<?php echo $item['link']; ?>"><img src="<?php echo $item['image']; ?>" alt="<?php echo $item['title']; ?>" /></a>
+										<a class="tk-fptb-image" href="<?php echo $item['link']; ?>"><img src="<?php echo acoc_image_size($item['image'], $image_size[0], $image_size[1], true); ?>"  width="<?php echo $image_size[0]; ?>" height="<?php echo $image_size[1]; ?>" alt="<?php echo $item['title']; ?>" /></a>
 									<?php else: ?>
 										<a class="tk-fptb-icon" href="<?php echo $item['link']; ?>"><i class="fa fa-<?php echo $item['icon']; ?>"></i></a>
 									<?php endif; ?>

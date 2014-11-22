@@ -241,10 +241,10 @@ class tallykit_FrontPage_block_option_portfolio_carousel{
 			'condition'   => $this->prefix.'enable'.':is(on)',
 		);
 		$custom_settings['settings'][] = array(
-			'id'          => $this->prefix.'move',
-			'label'       => __('Move', 'tallykit_taxdomain'),
+			'id'          => $this->prefix.'image_size',
+			'label'       => __('Image Size', 'tallykit_taxdomain'),
 			'desc'        => '',
-			'std'         => tally_option_std($this->prefix.'move', '0'),
+			'std'         => tally_option_std($this->prefix.'image_size'),
 			'type'        => 'text',
 			'section'     => $this->section,
 			'rows'        => '',
@@ -252,6 +252,7 @@ class tallykit_FrontPage_block_option_portfolio_carousel{
 			'taxonomy'    => '',
 			'class'       => '',
 			'condition'   => $this->prefix.'enable'.':is(on)',
+			'settings'    => '',
 		);
 		
 		return $custom_settings;

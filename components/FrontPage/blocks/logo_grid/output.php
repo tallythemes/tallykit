@@ -20,13 +20,14 @@ class tallykit_FrontPage_block_output_logo_grid{
 		$filter = tally_option($this->prefix.'filter');
 		$margin = tally_option($this->prefix.'margin');
 		$pagination = tally_option($this->prefix.'pagination');
+		$image_size = tally_option($this->prefix.'image_size');
 		
 		
 		if($enable == 'on'):
 			echo '<div class="front_page_logo_grid">';
 				if($title != ''){ echo '<h4>'.$title.'</h4>'; }
 				
-				$output = '[tk_logo_grid category="'.$category.'" exclude_category="" relation="'.$relation.'" limit="'.$limit.'" columns="'.$columns.'" orderby="'.$orderby.'" order="'.$order.'" ids="" filter="'.$filter.'" margin="'.$margin.'" pagination="'.$pagination.'" /]';
+				$output = '[tk_logo_grid category="'.$category.'" exclude_category="" relation="'.$relation.'" limit="'.$limit.'" columns="'.$columns.'" orderby="'.$orderby.'" order="'.$order.'" ids="" filter="'.$filter.'" margin="'.$margin.'" pagination="'.$pagination.'" image_size="'.$image_size.'" /]';
 				
 				echo do_shortcode($output);
 			echo '</div>';
