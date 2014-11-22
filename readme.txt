@@ -3,8 +3,8 @@ Contributors: tallythemes
 Donate link: http://tallythemes.com/
 Tags: portfolio, faq, testimonials, slideshow, people, shortcodes, gallery, logos
 Requires at least: 3.8
-Tested up to: 4.0
-Stable tag: 4.4
+Tested up to: 4.0.1
+Stable tag: 4.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -37,6 +37,10 @@ The simplest way to install is to click on 'Plugins' then 'Add' and type 'tallyk
 
 
 == Changelog ==
+
+= 4.5 =
+* Add image size option to all shortcode
+* add image size option to frontpage component
 
 = 4.4 =
 * Chance action order
