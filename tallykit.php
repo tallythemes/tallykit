@@ -35,6 +35,12 @@ function load_tallykit(){
 	define('TALLYKIT_CHILD_TPL_URL', get_stylesheet_directory_uri().'/tallykit/' );
 	define('TALLYKIT_CHILD_TPL_DRI', get_stylesheet_directory().'/tallykit/' );
 	
+	define('TALLYKIT_THEME_URL', get_template_directory_uri() );
+	define('TALLYKIT_THEME_DRI', get_template_directory() );
+	
+	define('TALLYKIT_CHILD_URL', get_stylesheet_directory_uri());
+	define('TALLYKIT_CHILD_DRI', get_stylesheet_directory());
+	
 	if(!defined('TK_THEME_NAME')){ define('TK_THEME_NAME', '' );}
 	
 	include('includes/acoc-loader.php');
