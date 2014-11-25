@@ -165,9 +165,9 @@ $options[] = array(
 	)
 );
 $options[] = array(
-	'id'		=> 'impoter',
+	'id'		=> 'importer',
 	'class'		=> 'component-list-item',
-	'label'		=> 'Impoter',
+	'label'		=> 'Importer',
 	'type'		=> 'select',
 	'std'		=> '',
 	'des'		=> '',

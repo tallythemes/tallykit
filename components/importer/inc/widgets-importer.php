@@ -18,7 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
  * @param string $file Path to .wie file uploaded
  * @global string $wie_import_results
  */
-function tallykit_impoter_process_import_widget_file( $file ) {
+function tallykit_importer_process_import_widget_file( $file ) {
 	// File exists?
 	if ( ! file_exists( $file ) ) {
 		wp_die(
@@ -33,7 +33,7 @@ function tallykit_impoter_process_import_widget_file( $file ) {
 
 	// Import the widget data
 	// Make results available for display on import/export page
-	$import_results = tallykit_impoter_import_widget_data( $data );
+	$import_results = tallykit_importer_import_widget_data( $data );
 	
 	return $import_results;
 }
@@ -47,7 +47,7 @@ function tallykit_impoter_process_import_widget_file( $file ) {
  * @param object $data JSON widget data from .wie file
  * @return array Results array
  */
-function tallykit_impoter_import_widget_data( $data ) {
+function tallykit_importer_import_widget_data( $data ) {
 
 	global $wp_registered_sidebars;
 	// Have valid data?
@@ -63,7 +63,7 @@ function tallykit_impoter_import_widget_data( $data ) {
 	do_action( 'wie_before_import' );
 	$data = apply_filters( 'wie_import_data', $data );
 	// Get all available widgets site supports
-	$available_widgets = tallykit_impoter_available_widgets();
+	$available_widgets = tallykit_importer_available_widgets();
 	// Get all existing widget instances
 	$widget_instances = array();
 	foreach ( $available_widgets as $widget_data ) {
@@ -174,9 +174,9 @@ function tallykit_impoter_import_widget_data( $data ) {
 		}
 	}
 	// Hook after import
-	do_action( 'tallykit_impoter_after_import' );
+	do_action( 'tallykit_importer_after_import' );
 	// Return results
-	return apply_filters( 'tallykit_impoter_import_results', $results );
+	return apply_filters( 'tallykit_importer_import_results', $results );
 
 }
 
@@ -191,7 +191,7 @@ function tallykit_impoter_import_widget_data( $data ) {
  * @global array $wp_registered_widget_updates
  * @return array Widget information
  */
-function tallykit_impoter_available_widgets() {
+function tallykit_importer_available_widgets() {
 
 	global $wp_registered_widget_controls;
 
