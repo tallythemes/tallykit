@@ -33,7 +33,9 @@ function tallykit_impoter_process_import_widget_file( $file ) {
 
 	// Import the widget data
 	// Make results available for display on import/export page
-	$wie_import_results = tallykit_impoter_import_widget_data( $data );
+	$import_results = tallykit_impoter_import_widget_data( $data );
+	
+	return $import_results;
 }
 
 
@@ -172,9 +174,9 @@ function tallykit_impoter_import_widget_data( $data ) {
 		}
 	}
 	// Hook after import
-	do_action( 'wie_after_import' );
+	do_action( 'tallykit_impoter_after_import' );
 	// Return results
-	return apply_filters( 'wie_import_results', $results );
+	return apply_filters( 'tallykit_impoter_import_results', $results );
 
 }
 

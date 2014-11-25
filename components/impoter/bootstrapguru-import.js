@@ -24,6 +24,10 @@
 			'action': 'tallykit_impoter_demo_import',
 			'target': 'setup_menu'
         };
+		var data5 = {
+			'action': 'tallykit_impoter_demo_import',
+			'target': 'update_option'
+        };
 
       	// since 2.8 ajaxurl is always defined in the admin header and points to admin-ajax.php
 	   	$( ".tallykit_impoter_import_message1" ).css( "display", 'block' );
@@ -46,6 +50,11 @@
 			$( ".tallykit_impoter_import_message4" ).css( "display", 'block' );
 			 $.post(ajaxurl, data4, function(response) {
 				  $('.tallykit_impoter_import_message4').html('<div class="import_message_success">'+ response +'</div>');
+			 });
+		})
+		.then( function( response ) {
+			 $.post(ajaxurl, data5, function(response) {
+				  $('.tallykit_impoter_import_message5').html('<div class="import_message_success">'+ response +'</div>');
 			 });
 		});
     });
