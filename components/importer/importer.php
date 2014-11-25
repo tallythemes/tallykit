@@ -1,13 +1,12 @@
 <?php
+add_option('tallykit_importer_is_xml', 'no');
+add_option('tallykit_importer_is_widget', 'no');
+add_option('tallykit_importer_is_menu', 'no');
+add_option('tallykit_importer_is_home', 'no');
+add_option('tallykit_importer_all_data_imported', 'no');	
+	
 add_action( 'wp_ajax_tallykit_importer_demo_import', 'tallykit_importer_demo_import' );
 function tallykit_importer_demo_import(){
-	
-	
-	add_option('tallykit_importer_is_xml', 'no');
-	add_option('tallykit_importer_is_widget', 'no');
-	add_option('tallykit_importer_is_menu', 'no');
-	add_option('tallykit_importer_is_home', 'no');
-	add_option('tallykit_importer_all_data_imported', 'no');
 
  	/*
 		1. XML importer
@@ -115,12 +114,7 @@ function tallykit_importer_demo_import(){
 	endif;
 	
 	if($_REQUEST['target'] == 'update_option'):
-		if((get_option('tallykit_importer_is_xml') == 'yes') 
-		&& (get_option('tallykit_importer_is_widget') == 'yes') 
-		&& (get_option('tallykit_importer_is_menu') == 'yes') 
-		&& (get_option('tallykit_importer_is_home') == 'yes')){
-			update_option('tallykit_importer_all_data_imported', 'yes');
-		}
+		echo '<p style="font-size:18px; color:#0A9900;">All Done</p>';
 	endif;
 	
    
@@ -142,7 +136,10 @@ function tallykit_importer_admin_page() {
 function tallykit_importer_importer_admin_page_html(){
 	?>
     <div class="wrap">
-		<?php if(get_option('tallykit_importer_all_data_imported') == 'yes'): ?>
+		<?php if((get_option('tallykit_importer_is_xml') == 'yes') 
+		&& (get_option('tallykit_importer_is_widget') == 'yes') 
+		&& (get_option('tallykit_importer_is_menu') == 'yes') 
+		&& (get_option('tallykit_importer_is_home') == 'yes')): ?>
         	<strong style="color:#930; font-size:16px; line-height:1.5;">Looks like you already import the sample data. So you don't need to do it again. If you import again duplicate content will be generated</strong>
         <?php endif; ?>
         <p style="font-weight:bold; color:#000; font-size:14px; line-height:1.5;">Sample data is not recommended for live site. It is recommended on a fresh wordpress installation. So if your current wordpress installation already have content( Images, Page's, Posts, etc. ) you should not import sample data. </p>
@@ -158,6 +155,9 @@ function tallykit_importer_importer_admin_page_html(){
         </div>
         <div class="tallykit_importer_import_message4" style="margin-bottom:40px; display:none;">
         	<img src="<?php echo TALLY_URL; ?>./core/assets/images/admin/loader.gif" />Setting Up Site Menu
+        </div>
+        <div class="tallykit_importer_import_message5" style="margin-bottom:40px;">
+        	
         </div>
         <a href="#" class="tallykit_importer_bootstrapguru_import button button-primary">Import Sample Data</a>
     </div>

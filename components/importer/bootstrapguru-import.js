@@ -4,10 +4,8 @@
 		
 		var $import_true = confirm('are you sure to import dummy content ? it will overwrite the existing data');
         if($import_true == false) return;
-		$('.tallykit_importer_import_message').html(' Data is being imported please be patient, while the awesomeness is being created :)  <i class="fa fa-spinner fa-3x fa-spin">');
-		
-		
-		
+		$('.tallykit_importer_import_message').html(' Data is being imported please be patient, while the awesomeness is being created :)');
+			
         var data = {
 			'action': 'tallykit_importer_demo_import',
 			'target': 'xml_import'
