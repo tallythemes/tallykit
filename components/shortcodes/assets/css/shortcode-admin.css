@@ -1,9 +1,9 @@
-#blocks-to-edit .block-container.block-aq_column_block{ margin-bottom:5px; background-color: #D3D3D3;  }
-#blocks-to-edit .block-container.block-aq_column_block a.row-edit{ border-bottom:0; text-decoration:none; color: }
-#blocks-to-edit .block-container.block-aq_column_block a.delete{ color:#F00 !important; }
-#blocks-to-edit .block-container.block-aq_column_block a.delete,
-#blocks-to-edit .block-container.block-aq_column_block a.row-edit{ position:absolute; top:10px; right:10px; }
-#blocks-to-edit .block-container.block-aq_column_block a.delete{ right:34px; }
+#blocks-to-edit .row-block-container.block-aq_row_block{ margin-bottom:5px; background-color: #D3D3D3;  }
+#blocks-to-edit .row-block-container.block-aq_row_block a.row-edit{ border-bottom:0; text-decoration:none; color: }
+#blocks-to-edit .row-block-container.block-aq_row_block a.delete{ color:#F00 !important; }
+#blocks-to-edit .row-block-container.block-aq_row_block a.delete,
+#blocks-to-edit .row-block-container.block-aq_row_block a.row-edit{ position:absolute; top:10px; right:10px; }
+#blocks-to-edit .row-block-container.block-aq_row_block a.delete{ right:34px; }
 
 
 #page-builder #blocks-to-edit .block-handle{ border: 1px solid #0074a2; background-color: #0074a2; }

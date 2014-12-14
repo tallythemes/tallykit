@@ -41,7 +41,7 @@ class AQ_Row_Block extends AQ_Block {
 		$title = $title ? '<span class="in-block-title"> : '.$title.'</span>' : '';
 		$resizable = $resizable ? '' : 'not-resizable';
 		
-		echo '<li id="template-block-'.$number.'" class="block row-block-container block-aq_row_block '. $size .' '.$resizable.' ui-sortable">',
+		echo '<li id="template-block-'.$number.'" class="block block-container block-aq_column_block '. $size .' '.$resizable.'">',
 				'<dl class="block-bar">',
 					'<dt class="block-handle">',
 						'<div class="block-title">',
@@ -56,10 +56,10 @@ class AQ_Row_Block extends AQ_Block {
 	}
 
 	function form($instance) {
-		echo '<p class="empty-row">',
+		echo '<p class="empty-column">',
 		__('Drag block items into this Row box', 'aqpb-l10n'),
 		'</p>';
-		echo '<ul class="blocks row-blocks cf"></ul>';
+		echo '<ul class="blocks column-blocks cf"></ul>';
 	}
 	
 	function form_callback($instance = array()) {
@@ -73,16 +73,16 @@ class AQ_Row_Block extends AQ_Block {
 		
 		$col_order = $order;
 		
-		//row block header
+		//column block header
 		if(isset($template_id)) {
-			echo '<li id="template-block-'.$number.'" class="block row-block-container block-aq_row_block '.$size.'">',
-					'<div class="block-settings-row cf" id="block-settings-'.$number.'">',
-						'<p class="empty-row">',
+			echo '<li id="template-block-'.$number.'" class="block block-container block-aq_column_block '.$size.'">',
+					'<div class="block-settings-column cf" id="block-settings-'.$number.'">',
+						'<p class="empty-column">',
 							__('Drag block items into this Row box', 'aqpb-l10n'),
 						'</p>',
-						'<ul class="blocks row-blocks cf">';
+						'<ul class="blocks column-blocks cf">';
 					
-			//check if row has blocks inside it
+			//check if column has blocks inside it
 			$blocks = aq_get_blocks($template_id);
 			
 			//outputs the blocks
@@ -232,7 +232,7 @@ class AQ_Row_Block extends AQ_Block {
 	
 	function before_block($instance) {
 		extract($instance);
-		$row_class = $first ? 'aq-first' : '';
+		$column_class = $first ? 'aq-first' : '';
 		
 		$style = '';
 		
@@ -248,7 +248,7 @@ class AQ_Row_Block extends AQ_Block {
 		if($bottom_border != ''){ $style .= ' border-bottom:'.$bottom_border.'px;'; }
 		if($section_id != ''){ $section_id = $section_id; }else{ $section_id = 'aq-block-'.$template_id.'-'.$number; }
 	 		
-		echo '<div id="'.$section_id.'" class="color_mood_'.$color_mood.' '.$section_class.' aq-block aq-block-'.$id_base.' aq_'.$size.' '.$row_class.' clearfix" style="'.$style.'">';
+		echo '<div id="'.$section_id.'" class="color_mood_'.$color_mood.' '.$section_class.' aq-block aq-block-'.$id_base.' aq_'.$size.' '.$column_class.' clearfix" style="'.$style.'">';
 	}
 	
 	function block_callback($instance) {
@@ -259,14 +259,14 @@ class AQ_Row_Block extends AQ_Block {
 		$col_order = $order;
 		$col_size = absint(preg_replace("/[^0-9]/", '', $size));
 		
-		//row block header
+		//column block header
 		if(isset($template_id)) {
 			$this->before_block($instance);
 			
 			//define vars
 			$overgrid = 0; $span = 0; $first = false;
 			
-			//check if row has blocks inside it
+			//check if column has blocks inside it
 			$blocks = aq_get_blocks($template_id);
 			
 			//outputs the blocks

@@ -29,7 +29,7 @@ ul.masonry-acoc-filter li.active{ background:#333; }
 .acoc-clear{ height:1px; width:100%; margin:0; padding:0; clear:both; }
 
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
 	.acoc_isotope_html{ width: 102% !important; margin-left:-2% !important; }
 	.acoc_isotope_html .isotope-wp-child-item{ width:48% !important; margin-left:2% !important; }
 }
