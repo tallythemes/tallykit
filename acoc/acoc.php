@@ -27,6 +27,7 @@ define('ACOC', "ACOC Framework" );
 define('ACOC_URL', site_url(str_replace( $path_abs, '', $path_dir )) );
 define('ACOC_DRI', $path_dir );
 if(!defined('ACOC_IMAGE_RETINA_SUPPORT'))define('ACOC_IMAGE_RETINA_SUPPORT', false );
+if(!defined('ACOC_DISABLE_IMAGE_RESIZER'))define('ACOC_DISABLE_IMAGE_RESIZER', false );
 
 
 //Loading custom functions
