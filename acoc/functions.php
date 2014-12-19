@@ -95,6 +95,8 @@ function acoc_image_size($url, $width = '', $height = '', $crop = true, $align =
 		return $output; 
 	}
 	
+	if( ACOC_DISABLE_IMAGE_RESIZER == true ){ return $output; }
+	
 	if(function_exists('mr_image_resize')){
 		if($id == false){
 			// do nothing
@@ -102,8 +104,6 @@ function acoc_image_size($url, $width = '', $height = '', $crop = true, $align =
 			$output = mr_image_resize($url, $width, $height, $crop, $align, $retina);
 		}
 	}
-	
-	if( ACOC_DISABLE_IMAGE_RESIZER == true ){ $output = $url; }
 	
 	return $output;
 }
