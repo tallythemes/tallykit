@@ -20,4 +20,5 @@ echo '<div class="tallykit_single_gallery">';
 }else{
 	_e('Invalid Gallery ID', 'tallykit_textdomain');
 }
+wp_reset_postdata();
 echo '</div>';
