@@ -32,7 +32,8 @@ class acoc_field_color{
 		$value = $this->value;
 		
 		if($value == ""){ $value = $option['std']; }
-		
+		wp_enqueue_script('wp-color-picker');
+    	wp_enqueue_style( 'wp-color-picker' );
 		?>
         <script type="text/javascript">
 			jQuery(document).ready(function($){
@@ -55,7 +56,7 @@ class acoc_field_color{
 	}
 	
 	function script(){
-		wp_enqueue_style( 'wp-color-picker' );
+		
 	}
 }
 endif;

@@ -961,8 +961,9 @@ function tallykit_shortcodes_sc_heading($atts, $content = null) {
 	), $atts));
 	
 	if(tallykit_get_settings('tk_heading') == 'no'){ return tallykit_shortcode_alt_notice(); }
+	if( !empty($id) ){ $id = 'id="'.$id.'"'; }else{ $id = ''; }
 	
-	$output = '<'.$tag.' class="'.$class.' wow '.$animation_type.'" id="'.$id.'" data-wow-duration="'.$animation_duration.'" data-wow-offset="0">'.do_shortcode($content).'</'.$tag.'>';
+	$output = '<'.$tag.' class="'.$class.' wow '.$animation_type.'" '.$id.' data-wow-duration="'.$animation_duration.'" data-wow-offset="0">'.do_shortcode($content).'</'.$tag.'>';
 	
 	return $output;
 }

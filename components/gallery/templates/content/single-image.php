@@ -1,7 +1,7 @@
 <div class="tk_single_gallery_image">
 	<?php
 		$link_class = 'magnificPopup-child';
-		$link_icon_class = 'fa-search-plus"';
+		$link_icon_class = 'fa-search-plus';
 		$link = NULL;
 		$image_url = '';
 		$image_caption = NULL;
