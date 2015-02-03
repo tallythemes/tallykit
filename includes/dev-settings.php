@@ -836,7 +836,7 @@ $options[] = array(
 	'label'		=> 'Get the Code',
 	'type'		=> 'heading',
 	'std'		=> '',
-	'des'		=> '<textarea rows="20"style="width:100%;" onclick="this.focus();this.select()" readonly="readonly">'.tallykit_encode( serialize(get_option('tk_dav_settings') )).'</textarea>',
+	'des'		=> '<textarea rows="20"style="width:100%;" onclick="this.focus();this.select()" readonly="readonly">'.tallyket_config_array_builder().'</textarea>',
 	'filter'	=> '', //sanitize_text_field, esc_attr
 );
 

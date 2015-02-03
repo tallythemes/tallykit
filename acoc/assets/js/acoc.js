@@ -1,4 +1,5 @@
 jQuery(document).ready(function($) {
+	
 	var wow = new WOW(
 	  {
 		boxClass:     'wow',      // animated element css class (default is wow)

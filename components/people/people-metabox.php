@@ -27,6 +27,24 @@ $fields[] = array(
 	'des' => __( 'Enter the full URL including http://', 'tallykit_textdomain' ),
 	'filter' => '', //sanitize_text_field, esc_attr
 );
+$fields[] = array(
+	'id' => $prefix.'phone',
+	'class' => '',
+	'label' => __( 'Phone', 'tallykit_textdomain' ),
+	'type' => 'text',
+	'std' => '',
+	'des' => __( 'Phone Number to contact.', 'tallykit_textdomain' ),
+	'filter' => '', //sanitize_text_field, esc_attr
+);
+$fields[] = array(
+	'id' => $prefix.'email',
+	'class' => '',
+	'label' => __( 'Email', 'tallykit_textdomain' ),
+	'type' => 'text',
+	'std' => '',
+	'des' => __( 'Email Address to contact.', 'tallykit_textdomain' ),
+	'filter' => '', //sanitize_text_field, esc_attr
+);
 
 $fields[] = array(
 	'id' => $prefix.'heading_1',

@@ -113,7 +113,7 @@ class acoc_setting_api_class{
 			}
 			if(isset($_POST['submit_import_data'])){
 				if(!empty($_POST['import_data'])){
-					$option_data = unserialize( acoc_decode( $_POST['import_data'] ) );
+					$option_data = unserialize( $_POST['import_data'] );
 				}
 			}
 			update_option( $this->options['option_name'], $option_data );

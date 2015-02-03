@@ -42,19 +42,34 @@ function tallykit_get_settings($name){
 	$dri = '';
 	$options = '';
 	$output = '';
-	if(file_exists(get_stylesheet_directory() . '/demo/tallykit-settings.php')){
+	$alt = false;
+	
+	if(file_exists(get_stylesheet_directory() . '/demo/tksettings.php')){
+		$alt = true;
+		$dri = get_stylesheet_directory() . '/demo/tksettings.php';
+	}elseif(file_exists(get_stylesheet_directory() . '/demo/tallykit-settings.php')){
 		$dri = get_stylesheet_directory() . '/demo/tallykit-settings.php';
+	}elseif(file_exists(get_template_directory() . '/demo/tksettings.php')){
+		$alt = true;
+		$dri = get_template_directory() . '/demo/tksettings.php';
 	}elseif(file_exists(get_template_directory() . '/demo/tallykit-settings.php')){
 		$dri = get_template_directory() . '/demo/tallykit-settings.php';
 	}
 	
 	if(file_exists($dri)){
-		ob_start();
-			include($dri);
-			$options_file = ob_get_contents();
-		ob_end_clean();
 		
-		$options = unserialize( tallykit_decode( $options_file ) );
+		
+		if($alt == true){
+			include($dri);
+			$options = $tallykit_config;
+		}else{
+			ob_start();
+				include($dri);
+				$options_file = ob_get_contents();
+			ob_end_clean();
+			
+			$options = unserialize( tallykit_decode( $options_file ) );
+		}
 	}
 	
 	if(is_array($options) && !empty($options)){
@@ -138,4 +153,21 @@ function tallykit_decode( $value ) {
   $func = 'base64' . '_decode';
   return $func( $value );
   
+}
+
+
+
+function tallyket_config_array_builder(){
+	$output = '';
+	$options = get_option('tk_dav_settings');
+	
+	if(is_array($options)){
+		$output .= '$tallykit_config = array('."\n";
+			foreach($options as $key => $option){
+				$output .= "'".$key."' => '".$option."',"."\n";
+			}
+		$output .= ');';
+	}
+	
+	return $output;
 }
