@@ -7,12 +7,14 @@ class acoc_isotope_html{
 	public $column;
 	public $column_width;
 	public $margin;
+	public $show_all_text;
 	
 	function __construct($data){
 		$default = array(			
 			'display' => true,
 			'column' => 3,
 			'margin' => 3,
+			'show_all_text' => __('All', 'tallykit_taxdomain'),
 		);
 		$data = array_merge($default, $data);
 		
@@ -20,6 +22,7 @@ class acoc_isotope_html{
 		$this->uid = 'acoc-isotope-uid-'.rand();
 		$this->column = $data['column'];
 		$this->margin = $data['margin'];
+		$this->show_all_text = $data['show_all_text'];
 	}
 	
 	
@@ -44,7 +47,7 @@ class acoc_isotope_html{
 			 
 			if ( $count > 0 ){
 				$output .= '<ul id="'.$this->uid.'-filter" class="isotope-acoc-filter">';
-				$output .= '<li class="filter" data-filter="*">'.__('All', 'zoohub_taxdomain').'</li>';
+				$output .= '<li class="filter" data-filter="*">'.$this->show_all_text.'</li>';
 				foreach ( $terms as $term ) {
 					$output .= '<li class="filter" data-filter=".'.$term->slug.'">'.$term->name.'</li>';
 				}
