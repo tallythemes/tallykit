@@ -28,10 +28,10 @@ class acoc_isotope_html{
 	
 	function start(){
 		$output = '';
-		$width = 100 + $this->margin;
-		$column_width = (100 - ( $this->margin * $this->column )) / $this->column;
+		$width = 100+$this->margin;
+		$column_width = (100 / $this->column);
 		$this->column_width = $column_width;
-		$css_style = 'width: '.$width.'%; margin-left:-'.$this->margin.'%;';
+		$css_style = 'width: '.$width.'%; margin-left:-'.$this->margin.'%';
 		
 		$output .= '<div id="'.$this->uid.'" style="'.$css_style.'" class="acoc_isotope_html">';
 		if($this->display == false){ return $output; }else{  echo $output; }
@@ -73,14 +73,17 @@ class acoc_isotope_html{
 	
 	
 		function in_loop_start($class = NULL){
-			$css_style = 'width: '.$this->column_width.'%; margin-bottom:'.$this->margin.'%; margin-left:'.$this->margin.'%;';
+			$css_style = 'width: '.$this->column_width.'%;';
+	
 			$output = '<div class="'.$this->uid.'-item '.$class.' isotope-wp-child-item"  style="'.$css_style.'">';
+				$output .= '<div class="isotope-wp-child-item-inner"  style="padding-bottom:'.$this->margin.'%; padding-left:'.$this->margin.'%">';
 			if($this->display == false){ return $output; }else{  echo $output; }
 		}
 	
 	
 		function in_loop_end(){
 			$output = '';
+				$output .= '</div>';
 			$output .= '</div>';
 			if($this->display == false){ return $output; }else{  echo $output; }
 		}
@@ -92,18 +95,22 @@ class acoc_isotope_html{
 		?>
         <script type="text/javascript">
 			jQuery(document).ready(function($){
-				var $isotop_acoc_container = $('#<?php echo $this->uid; ?>').imagesLoaded( function() {
+				var $isotop_acoc_container = $('#<?php echo $this->uid; ?>')
+				
+				$isotop_acoc_container.imagesLoaded( function() {
 					$isotop_acoc_container.isotope({
 						itemSelector: '.<?php echo $this->uid; ?>-item',
-						masonry:{},
 					});
 				});
+				
 				$('#<?php echo $this->uid; ?>-filter').on( 'click', 'li', function() {
 					$('#<?php echo $this->uid; ?>-filter li').removeClass('active');
 					var filterValue = $(this).attr('data-filter');
 					$isotop_acoc_container.isotope({ filter: filterValue });
 					$(this).addClass('active');
 				});
+				
+				jQuery($isotop_acoc_container.isotope({ filter: '*' })).trigger('load');
 			});
 		</script>
         <?php
