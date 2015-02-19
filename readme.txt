@@ -3,8 +3,8 @@ Contributors: tallythemes
 Donate link: http://tallythemes.com/
 Tags: portfolio, faq, testimonials, slideshow, people, shortcodes, gallery, logos
 Requires at least: 3.8
-Tested up to: 4.1
-Stable tag: 5.2
+Tested up to: 4.1.1
+Stable tag: 5.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -37,6 +37,11 @@ The simplest way to install is to click on 'Plugins' then 'Add' and type 'tallyk
 
 
 == Changelog ==
+
+= 5.3 =
+* Fix a issue on testimonial carousel
+* Removed The demo data
+* Improve People Component
 
 = 5.2 =
 * Fix a small bug on logo component
