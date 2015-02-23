@@ -30,7 +30,7 @@ class acoc_isotope_html{
 		$output = '';
 		$width = 100+$this->margin;
 		$column_width = (100 / $this->column);
-		$this->column_width = $column_width;
+		$this->column_width = $column_width-0.01;
 		$css_style = 'width: '.$width.'%; margin-left:-'.$this->margin.'%';
 		
 		$output .= '<div id="'.$this->uid.'" style="'.$css_style.'" class="acoc_isotope_html">';
