@@ -15,6 +15,7 @@ class acoc_isotope_html{
 			'column' => 3,
 			'margin' => 3,
 			'show_all_text' => __('All', 'tallykit_taxdomain'),
+			'disable_js' => false,
 		);
 		$data = array_merge($default, $data);
 		
@@ -23,6 +24,7 @@ class acoc_isotope_html{
 		$this->column = $data['column'];
 		$this->margin = $data['margin'];
 		$this->show_all_text = $data['show_all_text'];
+		$this->disable_js = $data['disable_js'];
 	}
 	
 	
@@ -92,28 +94,30 @@ class acoc_isotope_html{
 	function end(){
 		$output = "</div>\n";		
 		ob_start();
+		if($this->disable_js == false):
 		?>
-        <script type="text/javascript">
-			jQuery(document).ready(function($){
-				var $isotop_acoc_container = $('#<?php echo $this->uid; ?>')
-				
-				$isotop_acoc_container.imagesLoaded( function() {
-					$isotop_acoc_container.isotope({
-						itemSelector: '.<?php echo $this->uid; ?>-item',
-					});
-				});
-				
-				$('#<?php echo $this->uid; ?>-filter').on( 'click', 'li', function() {
-					$('#<?php echo $this->uid; ?>-filter li').removeClass('active');
-					var filterValue = $(this).attr('data-filter');
-					$isotop_acoc_container.isotope({ filter: filterValue });
-					$(this).addClass('active');
-				});
-				
-				jQuery($isotop_acoc_container.isotope({ filter: '*' })).trigger('load');
-			});
-		</script>
+			<script type="text/javascript">
+                jQuery(document).ready(function($){
+                    var $isotop_acoc_container = $('#<?php echo $this->uid; ?>')
+                    
+                    $isotop_acoc_container.imagesLoaded( function() {
+                        $isotop_acoc_container.isotope({
+                            itemSelector: '.<?php echo $this->uid; ?>-item',
+                        });
+                    });
+                    
+                    $('#<?php echo $this->uid; ?>-filter').on( 'click', 'li', function() {
+                        $('#<?php echo $this->uid; ?>-filter li').removeClass('active');
+                        var filterValue = $(this).attr('data-filter');
+                        $isotop_acoc_container.isotope({ filter: filterValue });
+                        $(this).addClass('active');
+                    });
+                    
+                    jQuery($isotop_acoc_container.isotope({ filter: '*' })).trigger('load');
+                });
+            </script>
         <?php
+		endif;
 		$output .= ob_get_contents();
 		ob_end_clean();
 		
