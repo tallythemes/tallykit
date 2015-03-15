@@ -45,6 +45,15 @@ $fields[] = array(
 	'des' => __( 'Email Address to contact.', 'tallykit_textdomain' ),
 	'filter' => '', //sanitize_text_field, esc_attr
 );
+$fields[] = array(
+	'id' => $prefix.'subtitle',
+	'class' => '',
+	'label' => __( 'Sub Title', 'tallykit_textdomain' ),
+	'type' => 'text',
+	'std' => '',
+	'des' => '',
+	'filter' => '', //sanitize_text_field, esc_attr
+);
 
 $fields[] = array(
 	'id' => $prefix.'heading_1',

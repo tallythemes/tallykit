@@ -18,6 +18,7 @@ $people_query = new WP_Query( $query );
                 </div>
             	
                 <ul>
+                
                 	<li>
                     	<strong><?php _e('Position', 'tallykit_textdomain'); ?></strong>: 
                     	<div class="people_tk">
@@ -25,9 +26,27 @@ $people_query = new WP_Query( $query );
                         </div>
                     </li>
                     <li>
+                    	<strong><?php _e('Sub Title', 'tallykit_textdomain'); ?></strong>: 
+                    	<div class="people_tk">
+                            <?php echo get_post_meta(get_the_ID(), 'tallykit_people_subtitle', true); ?>
+                        </div>
+                    </li>
+                    <li>
                     	<strong><?php _e('Personal Website', 'tallykit_textdomain'); ?></strong>: 
                     	<div class="people_tk">
                             <a href="<?php echo get_post_meta(get_the_ID(), 'tallykit_people_link', true); ?>" target="_blank"><?php _e('View Website', 'tallykit_textdomain'); ?></a>
+                        </div>
+                    </li>
+                    <li>
+                    	<strong><?php _e('Email Address', 'tallykit_textdomain'); ?></strong>: 
+                    	<div class="people_tk">
+                            <a href="mailto:<?php echo get_post_meta(get_the_ID(), 'tallykit_people_email', true); ?>"><?php echo get_post_meta(get_the_ID(), 'tallykit_people_email', true); ?></a>
+                        </div>
+                    </li>
+                    <li>
+                    	<strong><?php _e('Phone Number', 'tallykit_textdomain'); ?></strong>: 
+                    	<div class="people_tk">
+                            <a href="tel:<?php echo get_post_meta(get_the_ID(), 'tallykit_people_phone', true); ?>"><?php echo get_post_meta(get_the_ID(), 'tallykit_people_phone', true); ?></a>
                         </div>
                     </li>
                     
@@ -73,7 +92,7 @@ $people_query = new WP_Query( $query );
 						   ?>
                         </div>
                     </li>
-                </ul>
+                </ul> 
             </div>
             <div class="clear"></div>
 		<?php endwhile; ?>

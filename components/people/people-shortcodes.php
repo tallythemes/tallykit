@@ -22,7 +22,7 @@ function tallykit_people_sc_grid( $atts, $content = null ) {
 			'filter'		   => 'yes',
 			'margin'		   => '3',
 			'pagination'		=> 'yes',
-			
+			'all_text'			=> 'Show All',
 			'image_size'	=> ''
 		), $atts)
 	);

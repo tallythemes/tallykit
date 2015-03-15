@@ -15,10 +15,17 @@
                 </div>
             	
                 <ul>
+                
                 	<li>
                     	<strong><?php _e('Position', 'tallykit_textdomain'); ?></strong>: 
                     	<div class="people_tk">
                             <?php echo get_post_meta(get_the_ID(), 'tallykit_people_position', true); ?>
+                        </div>
+                    </li>
+                    <li>
+                    	<strong><?php _e('Sub Title', 'tallykit_textdomain'); ?></strong>: 
+                    	<div class="people_tk">
+                            <?php echo get_post_meta(get_the_ID(), 'tallykit_people_subtitle', true); ?>
                         </div>
                     </li>
                     <li>
