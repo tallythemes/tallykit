@@ -3,8 +3,8 @@ Contributors: tallythemes
 Donate link: http://tallythemes.com/
 Tags: portfolio, faq, testimonials, slideshow, people, shortcodes, gallery, logos
 Requires at least: 3.8
-Tested up to: 4.1.1
-Stable tag: 5.4
+Tested up to: 4.2.2
+Stable tag: 5.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
