@@ -77,7 +77,28 @@ function acoc_oembed_result_embed_remove($embed) {
 	return $output;
 }
 
+function fjarrett_get_attachment_id_by_url( $url ) {
+	// Split the $url into two parts with the wp-content directory as the separator
+	$parsed_url  = explode( parse_url( WP_CONTENT_URL, PHP_URL_PATH ), $url );
 
+	// Get the host of the current site and the host of the $url, ignoring www
+	$this_host = str_ireplace( 'www.', '', parse_url( home_url(), PHP_URL_HOST ) );
+	$file_host = str_ireplace( 'www.', '', parse_url( $url, PHP_URL_HOST ) );
+
+	// Return nothing if there aren't any $url parts or if the current host and $url host do not match
+	if ( ! isset( $parsed_url[1] ) || empty( $parsed_url[1] ) || ( $this_host != $file_host ) ) {
+		return;
+	}
+
+	// Now we're going to quickly search the DB for any attachment GUID with a partial path match
+	// Example: /uploads/2013/05/test-image.jpg
+	global $wpdb;
+
+	$attachment = $wpdb->get_col( $wpdb->prepare( "SELECT ID FROM {$wpdb->prefix}posts WHERE guid RLIKE %s;", $parsed_url[1] ) );
+
+	// Returns null if no attachment is found
+	return $attachment[0];
+}
 
 
 /* Resize image
@@ -88,7 +109,9 @@ function acoc_image_size($url, $width = '', $height = '', $crop = true, $align =
 	$output = $url;
 	
     $query = "SELECT ID FROM {$wpdb->posts} WHERE guid='$url'";
-    $id = $wpdb->get_var($query);
+   // $id = $wpdb->get_var($query);
+	
+	$id = fjarrett_get_attachment_id_by_url($url);
 	
 	if($id == NULL){ 
 		$output = 'http://placehold.it/'.$width.'x'.$height;

@@ -8,12 +8,14 @@ $people_query = new WP_Query( $query );
                <?php echo apply_filters('tallykit_people_content', get_the_content()); ?>
             </div>
             <div class="tk_people_single_info">
-            	<?php
-					$thumb_data = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full' ); // Get post by ID
-					$image_url = acoc_image_size($thumb_data[0] ,'500', ''); 
-				?>
                 <div class="tk_people_image">
-            		<img src="<?php echo $image_url; ?>" alt="<?php the_title(); ?>"  />
+            		<?php 
+						if(get_the_post_thumbnail() != ''){
+							the_post_thumbnail( 'tallykit_people', array( 'class' => '' ) ); 
+						}else{
+							echo '<img src="http://placehold.it/'.TALLYKIT_PEOPLE_IMAGE_ARCHIVE_W.'x'.TALLYKIT_PEOPLE_IMAGE_ARCHIVE_H.'">';	
+						}
+					?>
                     <h3><?php the_title(); ?></h3>
                 </div>
             	

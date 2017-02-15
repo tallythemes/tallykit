@@ -1,4 +1,61 @@
 <?php
+
+/*--------------------------------------------------
+	Setup the Settings
+---------------------------------------------------*/
+$options = array();
+
+$options[] = array(
+	'id'		=> 'google_api_key',
+	'class'		=> '',
+	'label'		=> 'Google API Key',
+	'type'		=> 'text',
+	'std'		=> '',
+	'des'		=> 'You will have to create a API key from <a href="https://developers.google.com/maps/documentation/javascript/get-api-key">Here</a>',
+	'filter'	=> '', //sanitize_text_field, esc_attr
+);
+$options[] = array(
+	'id'		=> 'portfolio_slug',
+	'class'		=> '',
+	'label'		=> 'Portfolio Slug',
+	'type'		=> 'text',
+	'std'		=> 'portfolio-item',
+	'des'		=> '',
+	'filter'	=> '',
+);
+$options[] = array(
+	'id'		=> 'people_slug',
+	'class'		=> '',
+	'label'		=> 'Peapule Slug',
+	'type'		=> 'text',
+	'std'		=> 'people-item',
+	'des'		=> '',
+	'filter'	=> '',
+);
+$options[] = array(
+	'id'		=> 'gallsey_slug',
+	'class'		=> '',
+	'label'		=> 'Gallery Slug',
+	'type'		=> 'text',
+	'std'		=> 'gallery-item',
+	'des'		=> '',
+	'filter'	=> '',
+);
+$settings = array(
+	'id'			=> 'tk_settings',
+	'option_name'	=> 'tk_settings',
+	'page_title'	=> "TallyKit",
+	'menu_title'	=> "TallyKit",
+	'capability'	=> 'manage_options',
+	'menu_slug'		=> 'tk_settings',
+	'parent_slug'	=> NULL,
+	'icon_url'		=> NULL,
+	'position'		=> NULL,
+	'fields'		=> $options
+);
+new acoc_setting_api_class($settings); 
+
+
 function tallykit_components_loader(){
 	$initial_scan = scandir(TALLYKIT_DRI.'components');
 	

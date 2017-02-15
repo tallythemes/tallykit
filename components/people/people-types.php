@@ -1,4 +1,6 @@
 <?php
+$tk_options = get_option('tk_settings');
+$tk_people_slug = (isset($tk_options['people_slug'])) ? $tk_options['people_slug'] : 'people-item';
 /*************************** POST TYPE **************************
  *
  * Register Post type
@@ -28,7 +30,7 @@ $settings = array(
 	'post_type_name'     => 'tallykit_people',
 	'args'               => array(),
 	'labels'             => $labels,
-	'rewrite'            => array( 'slug' => 'people-item' ),
+	'rewrite'            => array( 'slug' => $tk_people_slug ),
 	'supports'           => array( 'title', 'editor', 'thumbnail' ),
 	'menu_icon'          => 'dashicons-groups',
 );

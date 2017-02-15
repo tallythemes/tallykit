@@ -1,11 +1,13 @@
 <div class="tallykit_people_item">
 		<div class="tk_people_item_image">
         	<a href="<?php the_permalink(); ?>">
-        	<?php
-				$thumb_data = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full' ); // Get post by ID
-                $image_url = $thumb_data[0];
-			?>
-			<img src="<?php echo acoc_image_size($image_url, $image_size[0], $image_size[1], $crop = true); ?>" width="<?php echo $image_size[0]; ?>" height="<?php echo $image_size[1]; ?>" alt="<?php the_title(); ?>"  />
+        		<?php 
+					if(get_the_post_thumbnail() != ''){
+						the_post_thumbnail( 'tallykit_people', array( 'class' => '' ) ); 
+					}else{
+						echo '<img src="http://placehold.it/'.TALLYKIT_PEOPLE_IMAGE_ARCHIVE_W.'x'.TALLYKIT_PEOPLE_IMAGE_ARCHIVE_H.'">';	
+					}
+				?>
             </a>
         </div>
 		<div class="tk_people_item_details">

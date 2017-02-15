@@ -2,9 +2,9 @@
 Contributors: tallythemes
 Donate link: http://tallythemes.com/
 Tags: portfolio, faq, testimonials, slideshow, people, shortcodes, gallery, logos
-Requires at least: 3.8
-Tested up to: 4.2.2
-Stable tag: 5.5
+Requires at least: 4
+Tested up to: 4.6
+Stable tag: 5.10
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -37,6 +37,24 @@ The simplest way to install is to click on 'Plugins' then 'Add' and type 'tallyk
 
 
 == Changelog ==
+
+= 5.10 =
+* Fixed image issue.
+* Using wordpress nativ image functions for image display.
+
+
+= 5.9 =
+* Fixed image issue.
+* Using wordpress nativ image functions for image display.
+
+= 5.8 =
+* Added support to Portfolio, Gallery and People slug change
+
+= 5.7 =
+* Fixed google map API
+
+= 5.6 =
+* Fixed image issue
 
 = 5.4 =
 * Fix a small bug of grid

@@ -18,6 +18,9 @@ if(!defined( 'TALLYKIT_GALLERY_ALBUM_HEIGHT' )){ define('TALLYKIT_GALLERY_ALBUM_
 if(!defined( 'TALLYKIT_GALLERY_SINGLE_WIDTH' )){ define('TALLYKIT_GALLERY_SINGLE_WIDTH', '600'); };
 if(!defined( 'TALLYKIT_GALLERY_SINGLE_HEIGHT' )){ define('TALLYKIT_GALLERY_SINGLE_HEIGHT', '600'); };
 
+add_image_size('tallykit_gallery_album', 600, 600, true);
+add_image_size('tallykit_gallery_single', 600, 600, true);
+
 include('gallery-types.php');
 include('gallery-metabox.php');
 include('gallery-template.php');

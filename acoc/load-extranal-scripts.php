@@ -4,6 +4,10 @@ function acoc_load_extranal_scripts(){
 	$css = ACOC_URL . 'assets/css/';
 	$js = ACOC_URL . 'assets/js/';
 	
+	$tk_options = get_option('tk_settings');
+	$tk_map_api = (isset($tk_options['google_api_key'])) ? $tk_options['google_api_key'] : '';
+	
+	
 	/**- modernizr -**/
 	wp_enqueue_script( 'modernizr', $js.'modernizr.custom.97507.js', '', '2.8.1', false );
 	
@@ -25,7 +29,7 @@ function acoc_load_extranal_scripts(){
 	wp_register_script( 'jquery-imagesloaded', $js.'imagesloaded.pkgd.min.js', array('jquery'), '3.1.6', true );
 	
 	/**- isotope -**/
-	wp_register_script( 'jquery-isotope','http://cdn.jsdelivr.net/isotope/2.0.0/isotope.pkgd.min.js', array('jquery'), '2.0.0', true );
+	wp_register_script( 'jquery-isotope','//cdn.jsdelivr.net/isotope/2.0.0/isotope.pkgd.min.js', array('jquery'), '2.0.0', true );
 	
 	/**- Shuffle -**/
 	wp_register_script( 'jquery-shuffle', $js.'jquery.shuffle.min.js', array('jquery', 'modernizr'), '2.1.1', true );
@@ -37,7 +41,7 @@ function acoc_load_extranal_scripts(){
 	wp_register_style( 'font-awesome', $css.'font-awesome.min.css', '', ' 4.2.0' );
 	
 	/**- Google Map -**/
-	wp_register_script( 'google-map', 'http://maps.google.com/maps/api/js?sensor=true', array(), '', true);
+	wp_register_script( 'google-map', '//maps.google.com/maps/api/js?sensor=true&key='.$tk_map_api.'&callback=initMap', array(), '', true);
 	wp_register_script( 'jquery-gomap', $js.'jquery.gomap-1.3.2.min.js', array('jquery'), '', true);
 	
 	/**- gauge -**/
@@ -55,6 +59,10 @@ function acoc_load_extranal_scripts(){
 	
 	/**- wow JS -**/
 	wp_register_script('jquery-wow', $js.'wow.min.js', array(), '1.0.1 ', true);
+	
+	/**- owl.carousel -**/
+	wp_register_style( 'owl-carousel', $css.'owl.carousel.css', '', '2.4' );
+	wp_register_script( 'owl-carousel', $js.'owl.carousel.min.js', array('jquery'), '2.4', true );
 	
 	wp_enqueue_style( 'acoc', $css.'acoc.css', '', '1.0' );
 	wp_enqueue_script( 'acoc', $js.'acoc.js', '', '1.0' );

@@ -1,4 +1,6 @@
 <?php
+$tk_options = get_option('tk_settings');
+$tk_portfolio_slug = (isset($tk_options['portfolio_slug'])) ? $tk_options['portfolio_slug'] : 'portfolio-item';
 /*************************** POST TYPE **************************
  *
  * Register Post type
@@ -28,7 +30,7 @@ $settings = array(
 	'post_type_name'     => 'tallykit_portfolio',
 	'args'               => array(),
 	'labels'             => $labels,
-	'rewrite'            => array( 'slug' => 'portfolio-item' ),
+	'rewrite'            => array( 'slug' => apply_filters('tallykit_portfolio_slug', $tk_portfolio_slug) ),
 	'supports'           => array( 'title', 'editor', 'thumbnail' ),
 	'menu_icon'          => 'dashicons-portfolio',
 );
@@ -119,7 +121,7 @@ $settings = array(
 	'post_type' => 'tallykit_portfolio',
 	'args'      => array(),
 	'labels'    => $labels,
-	'rewrite'   => array( 'slug' => 'portfolio_category' ),
+	'rewrite'   => array( 'slug' => apply_filters('portfolio_category_slug', 'portfolio_category') ),
 	'hierarchical' => true,
 );
 new acoc_taxonomy_register($settings);
@@ -148,7 +150,7 @@ $settings = array(
 	'post_type' => 'tallykit_portfolio',
 	'args'      => array(),
 	'labels'    => $labels,
-	'rewrite'   => array( 'slug' => 'portfolio_tag' ),
+	'rewrite'   => array( 'slug' => apply_filters('portfolio_tag_slug', 'portfolio_tag') ),
 	'hierarchical' => false,
 );
 new acoc_taxonomy_register($settings);

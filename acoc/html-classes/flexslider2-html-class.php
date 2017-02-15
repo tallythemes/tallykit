@@ -142,6 +142,14 @@ class acoc_flexslider2_html{
 		$output .= '</div>';
 		$output .= '<div class="acoc-flexslider-clear"></div>';
 		$output .= '<script type="text/javascript">';
+		
+			$output = 'var $window = jQuery(window), flexslider = { vars:{} };';
+			
+			$output .= 'function getGridSize() {
+    return (window.innerWidth < 600) ? 2 :
+           (window.innerWidth < 900) ? 3 : 4;
+  }';
+			
 			$output .= 'jQuery(document).ready(function($){';
 				$output .= "$('#".$this->uid."').flexslider({
 						animation: '".$this->animation."',
@@ -164,10 +172,17 @@ class acoc_flexslider2_html{
 						
 						itemWidth: ".$this->itemWidth.",
 						itemMargin: ".$this->itemMargin.",
-						minItems: ".$this->minItems.",
-						maxItems: ".$this->maxItems.",
+						minItems: getGridSize(),
+						maxItems: getGridSize(),
 						move: ".$this->move.",
 					});";
+					
+					$output .= ' $window.resize(function() {
+    var gridSize = getGridSize();
+ 
+    flexslider.vars.minItems = gridSize;
+    flexslider.vars.maxItems = gridSize;
+  });';
 			$output .= '});';
 		$output .= '</script>';
 		

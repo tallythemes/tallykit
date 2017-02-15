@@ -1,9 +1,11 @@
 <div class="tk_testimonial_slider_item">
-	<?php 
-		$thumb_data = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full' ); // Get post by ID
-        $image_url = $thumb_data[0];
-	?>
-	<img src="<?php echo acoc_image_size($image_url, $image_size[0], $image_size[1], true); ?>" alt="<?php the_title(); ?>" height="<?php echo $image_size[0]; ?>" width="<?php echo $image_size[1]; ?>" />
+			<?php 
+				if(get_the_post_thumbnail() != ''){
+					the_post_thumbnail( 'tallykit_testimonial', array( 'class' => '' ) ); 
+				}else{
+					echo '<img src="http://placehold.it/'.TALLYKIT_TESTIMONIAL_IMAGE_W.'x'.TALLYKIT_TESTIMONIAL_IMAGE_H.'">';	
+				}
+			?>
     
 	<div class="tk_testimonial_item_content"><?php echo get_the_content(); ?></div>
 	<div class="tk_testimonial_item_info">

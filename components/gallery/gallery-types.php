@@ -1,4 +1,6 @@
 <?php
+$tk_options = get_option('tk_settings');
+$tk_gallery_slug = (isset($tk_options['gallsey_slug'])) ? $tk_options['gallsey_slug'] : 'gallery-item';
 /*************************** POST TYPE **************************
  *
  * Register Post type
@@ -28,7 +30,7 @@ $settings = array(
 	'post_type_name'     => 'tallykit_gallery',
 	'args'               => array(),
 	'labels'             => $labels,
-	'rewrite'            => array( 'slug' => 'gallery-item' ),
+	'rewrite'            => array( 'slug' => $tk_gallery_slug ),
 	'supports'           => array( 'title', 'thumbnail'),
 	'menu_icon'          => 'dashicons-images-alt',
 );
